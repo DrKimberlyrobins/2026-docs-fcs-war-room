@@ -1,0 +1,155 @@
+
+name: FCS 2026 Data Audit
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Audit 2026 FCS data
+        env:
+          CFBD_API_KEY: ${{ secrets.CFBD_API_KEY }}
+        run: |
+          python - <<'PY'
+          import os
+          import json
+          import urllib.request
+          import urllib.parse
+          import urllib.error
+
+          KEY = os.environ.get("CFBD_API_KEY", "")
+          BASE = "https://api.collegefootballdata.com"
+
+          if not KEY:
+              raise SystemExit("ERROR: Missing CFBD_API_KEY")
+
+          def fetch(path, params):
+              url = BASE + path + "?" + urllib.parse.urlencode(params)
+              request = urllib.request.Request(
+                  url,
+                  headers={
+                      "Authorization": "Bearer " + KEY,
+                      "Accept": "application/json"
+                  }
+              )
+              try:
+                  with urllib.request.urlopen(
+                      request, timeout=60
+                  ) as response:
+                      return json.load(response)
+              except urllib.error.HTTPError as error:
+                  print(
+                      "API ERROR:",
+                      error.code,
+                      path,
+                      error.reason
+                  )
+                  return None
+              except Exception as error:
+                  print("REQUEST ERROR:", path, str(error))
+                  return None
+
+          print("===== FCS 2026 DATA AUDIT =====")
+
+          games = fetch(
+              "/games",
+              {"year": 2026, "classification": "fcs"}
+          )
+
+          if not isinstance(games, list):
+              raise SystemExit("FCS game request failed")
+
+          teams = set()
+          completed = []
+
+          for game in games:
+              for field in ("home_team", "away_team"):
+                  if game.get(field):
+                      teams.add(game[field])
+
+              if (
+                  game.get("completed") is True
+                  and game.get("home_points") is not None
+                  and game.get("away_points") is not None
+              ):
+                  completed.append(game)
+
+          print("Total games:", len(games))
+          print("Unique teams:", len(teams))
+          print("Completed games:", len(completed))
+
+          print("\n===== TARGET SCHOOLS =====")
+
+          for target in ["Florida A&M", "Alabama State"]:
+              matches = [
+                  game for game in games
+                  if target.lower() in (
+                      str(game.get("home_team", "")).lower(),
+                      str(game.get("away_team", "")).lower()
+                  )
+              ]
+
+              print("\n", target, "Games:", len(matches))
+
+              for game in matches:
+                  print(
+                      game.get("start_date"),
+                      game.get("away_team"),
+                      game.get("away_points"),
+                      "@",
+                      game.get("home_team"),
+                      game.get("home_points"),
+                      "Completed:",
+                      game.get("completed")
+                  )
+
+          print("\n===== PLAYER DATA AUDIT =====")
+
+          success = 0
+          failures = 0
+
+          for game in completed[:10]:
+              game_id = game.get("id")
+
+              if not game_id:
+                  continue
+
+              data = fetch(
+                  "/games/players",
+                  {"id": game_id}
+              )
+
+              if isinstance(data, list):
+                  success += 1
+                  print(
+                      "Game:", game_id,
+                      "Player team records:", len(data)
+                  )
+              else:
+                  failures += 1
+
+          print("Successful player requests:", success)
+          print("Failed player requests:", failures)
+
+          print("\n===== AUDIT SUMMARY =====")
+          print("Teams:", len(teams))
+          print("Games:", len(games))
+          print("Completed:", len(completed))
+          print("Player requests succeeded:", success)
+          print("Player requests failed:", failures)
+          print("AUDIT COMPLETE")
+          PY
