@@ -3,190 +3,191 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Doc's 2026 FCS War Room</title>
 <style>
 :root{
- --bg:#08111e;--panel:#122236;--line:#30445c;
- --text:#eef5ff;--muted:#a8bad0;--gold:#f3c86d;
- --green:#23d883
+ --bg:#07111d;--card:#122337;--line:#31465f;
+ --gold:#f6cb70;--green:#28dd8b;--muted:#a8bbd0
 }
 *{box-sizing:border-box}
 body{
- margin:0;background:var(--bg);color:var(--text);
+ margin:0;background:var(--bg);color:#eef5ff;
  font-family:Arial,sans-serif;line-height:1.5
 }
 header{
- text-align:center;padding:24px 12px;
- background:linear-gradient(120deg,#122c49,#09251e);
+ text-align:center;padding:22px 12px;
+ background:linear-gradient(120deg,#142c49,#0c3029);
  border-bottom:2px solid var(--gold)
 }
-h1{margin:0;color:var(--gold);font-size:27px}
-h2{font-size:20px;margin:0 0 14px}
+h1{margin:0;color:var(--gold);font-size:26px}
+h2{margin:0 0 13px;font-size:20px}
 h3{margin:12px 0}
-small,.muted{color:var(--muted)}
-main{max-width:1250px;margin:auto;padding:16px}
-.panel{
- background:var(--panel);border:1px solid var(--line);
- border-radius:12px;padding:17px;margin-bottom:17px
+main{max-width:1250px;margin:auto;padding:15px}
+.card{
+ background:var(--card);border:1px solid var(--line);
+ border-radius:12px;padding:17px;margin-bottom:16px
 }
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
-@media(max-width:700px){.grid{grid-template-columns:1fr}}
-label{display:block;color:var(--muted);margin:8px 0}
+.grid{
+ display:grid;grid-template-columns:1fr 1fr;gap:13px
+}
+.grid3{
+ display:grid;grid-template-columns:repeat(3,1fr);gap:12px
+}
+@media(max-width:750px){
+ .grid,.grid3{grid-template-columns:1fr}
+}
+label{display:block;color:var(--muted);margin:7px 0}
 select,input,button{
- padding:12px;border-radius:8px;font-size:15px
+ width:100%;padding:11px;border-radius:8px;
+ font-size:15px
 }
 select,input{
- width:100%;background:#091626;color:white;
- border:1px solid #536b86
+ background:#091725;color:white;border:1px solid #58718b
 }
 button{
- background:#204365;color:white;
- border:1px solid #567c9c;cursor:pointer;font-weight:bold
+ background:#204665;color:white;border:1px solid #64819e;
+ cursor:pointer;font-weight:bold
 }
-button:hover{filter:brightness(1.15)}
+button:hover{filter:brightness(1.13)}
 button:disabled{opacity:.5;cursor:not-allowed}
-.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
-.tabs button{flex:1;min-width:135px}
-.tabs .active{background:#176443;border-color:var(--green)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:17px}
+.tabs button{flex:1;min-width:150px}
+.tabs .active{background:#16613f;border-color:var(--green)}
 .tab{display:none}
 .tab.active{display:block}
+.muted{color:var(--muted)}
+.gold{color:var(--gold)}
+.green{color:var(--green)}
+.notice{
+ padding:12px;background:#302a1b;
+ border-left:3px solid var(--gold);border-radius:6px
+}
 .metric{
- background:#0b1a2a;border:1px solid var(--line);
- padding:12px;border-radius:9px;margin:7px 0
+ background:#0a192a;border:1px solid var(--line);
+ border-radius:9px;padding:13px;margin:8px 0
 }
 .metric strong{float:right}
-.notice{
- padding:12px;background:#302b1d;
- border-left:3px solid var(--gold);border-radius:5px
+.big{font-size:29px;font-weight:bold}
+.tag{
+ display:inline-block;border:1px solid var(--line);
+ border-radius:20px;padding:4px 9px;margin:3px;
+ font-size:12px
 }
-.green{
- background:#103c2b!important;
- border:1px solid var(--green)!important;
- color:#baffd8!important
-}
-.good{color:var(--green)}
-.status{
- display:inline-block;padding:5px 10px;
- background:#34465c;border-radius:20px;font-size:12px
-}
-table{width:100%;border-collapse:collapse}
+table{border-collapse:collapse;width:100%}
 th,td{
  padding:10px;border-bottom:1px solid var(--line);
  text-align:left
 }
 th{color:var(--gold)}
-.tablewrap{overflow-x:auto}
+.scroll{overflow-x:auto}
 .player{
- padding:13px;border:1px solid var(--line);
+ padding:12px;border:1px solid var(--line);
  border-radius:8px;margin:7px 0;cursor:pointer
 }
 .player:hover{border-color:var(--gold)}
 .modal{
- display:none;position:fixed;inset:0;
- background:#000c;z-index:100;
- align-items:center;justify-content:center;padding:12px
+ display:none;position:fixed;inset:0;background:#000c;
+ z-index:99;align-items:center;justify-content:center;
+ padding:12px
 }
 .modal.open{display:flex}
 .modalbox{
- background:var(--panel);border:1px solid var(--gold);
- border-radius:12px;padding:18px;width:100%;
- max-width:720px;max-height:92vh;overflow:auto
+ width:100%;max-width:740px;max-height:92vh;
+ overflow:auto;background:var(--card);
+ border:1px solid var(--gold);border-radius:12px;
+ padding:18px
 }
-.close{float:right}
-.row{
- display:flex;align-items:center;justify-content:space-between;
- gap:12px;flex-wrap:wrap
+.close{width:auto;float:right}
+.pass{
+ color:#c9d6e5;font-weight:bold
 }
-.pill{
- display:inline-block;border:1px solid var(--line);
- padding:5px 9px;border-radius:20px;
- margin:3px;font-size:12px
-}
-#loadStatus{margin-top:12px}
 </style>
 </head>
 <body>
 
 <header>
 <h1>🏈 DOC'S 2026 FCS WAR ROOM</h1>
-<div>TEAM INTELLIGENCE • PLAYER INTELLIGENCE • PROVE IT</div>
-<small>Evidence First. Green Must Be Earned.</small>
-<div id="loadStatus">Connecting to 2026 FCS data...</div>
+<div>SCORING ENGINE • PLAYER INTELLIGENCE • PROVE IT</div>
+<div class="muted">Quality Over Quantity. No Evidence = PASS.</div>
+<div id="status">Connecting to FCS data...</div>
 </header>
 
 <main>
 
 <div class="tabs">
-<button class="active" onclick="tab('matchup',this)">
-Matchup
+<button class="active" onclick="showTab('matchup',this)">
+Matchup & Engine
 </button>
-<button onclick="tab('players',this)">
+<button onclick="showTab('players',this)">
 Player Intelligence
 </button>
-<button onclick="tab('memory',this)">
+<button onclick="showTab('memory',this)">
 Green Memory Bank
 </button>
 </div>
 
 <section id="matchup" class="tab active">
 
-<div class="panel">
-<h2>2026 FCS Matchup</h2>
+<div class="card">
+<h2>Choose Your Matchup</h2>
 <div class="grid">
 <div>
 <label>Search Away Team</label>
 <input id="awaySearch" placeholder="Type team name"
  oninput="filterTeams('away')">
 <label>Away Team</label>
-<select id="away" onchange="compare()"></select>
+<select id="away" onchange="analyze()"></select>
 </div>
 <div>
 <label>Search Home Team</label>
 <input id="homeSearch" placeholder="Type team name"
  oninput="filterTeams('home')">
 <label>Home Team</label>
-<select id="home" onchange="compare()"></select>
+<select id="home" onchange="analyze()"></select>
 </div>
 </div>
-<p class="muted">
-FCS-classified schools only. Opponents from other
-divisions remain included in their game histories.
-</p>
 </div>
 
-<div class="panel">
+<div class="card">
 <h2 id="matchTitle">Team Comparison</h2>
 <div id="comparison">Loading...</div>
 </div>
 
-<div class="panel">
-<h2>1Q / 1H / Full Game Intelligence</h2>
-<div id="scoring"></div>
+<div class="card">
+<h2>🧠 PROVE IT Scoring Engine</h2>
 <p class="muted">
-Historical scoring averages are not predictions.
-Missing scoring data is never treated as zero.
+Each team's projection combines its own scoring average
+with the opponent's points allowed. Location-specific
+history is used when enough games are available.
+</p>
+<div id="engine"></div>
+</div>
+
+<div class="card">
+<h2>📊 Six-Market Ranking</h2>
+<div id="markets"></div>
+<p class="notice">
+No market can qualify GREEN without a verified
+current line, evidence-supported projection,
+and conflict checks. Rankings remain unavailable
+until market data is connected.
 </p>
 </div>
 
-<div class="panel">
-<h2>Six-Market PROVE IT Engine</h2>
-<div id="markets"></div>
-<p class="notice">
-Markets remain PASS until independently validated
-projections, current lines, and qualification checks
-are connected.
-</p>
+<div class="card">
+<h2>Recent Game Evidence</h2>
+<div id="history"></div>
 </div>
 
 </section>
 
 <section id="players" class="tab">
-<div class="panel">
+<div class="card">
 <h2>Player Intelligence</h2>
 <p class="muted">
-Select a matchup first. Click a player's name
-to open their game-by-game intelligence.
+Click a player to view their collected game statistics.
+Missing games do not mean a player did not play.
 </p>
 <label>Search Player</label>
 <input id="playerSearch" placeholder="Player name"
@@ -197,310 +198,434 @@ to open their game-by-game intelligence.
 </section>
 
 <section id="memory" class="tab">
-<div class="panel">
+<div class="card">
 <h2>💚 Green Intelligence Memory Bank</h2>
 <p>
-Only verified, qualified green intelligence
-will be eligible for Google Sheets storage.
+Qualified plays will eventually be recorded here
+and saved to Google Sheets with pregame evidence.
 </p>
-<div class="notice">
-Google Sheets integration is not connected yet.
-No player records have been saved.
-</div>
-<div id="memoryList"></div>
+<p class="notice">
+No plays have qualified yet. Sheets integration
+is not connected. Historical projections alone
+are not betting recommendations.
+</p>
 </div>
 </section>
 
 </main>
 
-<div id="modal" class="modal" onclick="modalOutside(event)">
+<div id="modal" class="modal" onclick="outside(event)">
 <div class="modalbox">
-<button class="close" onclick="hideModal()">✕ Close</button>
-<h2 id="modalName"></h2>
-<div id="modalDetails"></div>
+<button class="close" onclick="closeModal()">✕ Close</button>
+<h2 id="playerName"></h2>
+<div id="playerDetails"></div>
 <h3>Game-by-Game Statistics</h3>
-<div id="modalStats"></div>
+<div id="playerStats"></div>
 <h3>Qualified Green Intelligence</h3>
-<div id="modalGreens"></div>
-<button id="saveGreen" disabled>
-💚 Save Green to Sheets
-</button>
-<p class="muted" id="saveNote">
-Available after the PROVE IT engine and
-Google Sheets connection are verified.
-</p>
+<p class="notice">No verified player props qualified.</p>
+<button disabled>💚 Save Green to Sheets</button>
 </div>
 </div>
 
 <script>
 "use strict";
 
-const DATA_ROOT="./data/";
 let teams=[];
 let games=[];
-let playerGames=[];
+let playerReports=[];
 let playerIndex=new Map();
-let activePlayer=null;
 
-// No qualifying greens until evidence is verified.
-const qualifiedGreens=[];
+const $=id=>document.getElementById(id);
 
 const markets=[
  "Spread","Moneyline","Game Total",
  "Team Total","First Half","First Quarter"
 ];
 
-function safe(s){
- return String(s??"").replace(/[&<>"']/g,c=>({
+function esc(value){
+ return String(value??"").replace(/[&<>"']/g,c=>({
   "&":"&amp;","<":"&lt;",">":"&gt;",
   '"':"&quot;","'":"&#39;"
  })[c]);
 }
 
-function fmt(v,d=1){
- return typeof v==="number" && Number.isFinite(v)
-  ?v.toFixed(d):"N/A";
+function num(v){
+ return typeof v==="number"&&Number.isFinite(v)
+  ?v:null;
 }
 
-function tab(id,btn){
+function fmt(v,d=1){
+ return num(v)!==null?v.toFixed(d):"N/A";
+}
+
+function avg(values){
+ const valid=values.filter(x=>num(x)!==null);
+ return valid.length
+  ?valid.reduce((a,b)=>a+b,0)/valid.length
+  :null;
+}
+
+function showTab(id,btn){
  document.querySelectorAll(".tab").forEach(x=>
   x.classList.remove("active"));
  document.querySelectorAll(".tabs button").forEach(x=>
   x.classList.remove("active"));
- document.getElementById(id).classList.add("active");
+ $(id).classList.add("active");
  btn.classList.add("active");
  if(id==="players")renderPlayers();
- if(id==="memory")renderMemory();
 }
 
-async function getJSON(name){
- const response=await fetch(
-  DATA_ROOT+name+"?v="+Date.now(),
+async function loadJSON(filename){
+ const r=await fetch(
+  "./data/"+filename+"?v="+Date.now(),
   {cache:"no-store"}
  );
- if(!response.ok){
-  throw new Error(name+": HTTP "+response.status);
- }
- return response.json();
+ if(!r.ok)throw Error(filename+" HTTP "+r.status);
+ return r.json();
 }
 
-async function loadData(){
- const status=document.getElementById("loadStatus");
-
+async function start(){
  try{
-  const results=await Promise.all([
-   getJSON("fcs-teams-2026.json"),
-   getJSON("fcs-games-2026.json"),
-   getJSON("fcs-players-2026.json")
+  const [t,g,p]=await Promise.all([
+   loadJSON("fcs-teams-2026.json"),
+   loadJSON("fcs-games-2026.json"),
+   loadJSON("fcs-players-2026.json")
   ]);
 
-  if(!Array.isArray(results[0]) ||
-     !Array.isArray(results[1]) ||
-     !Array.isArray(results[2]?.games)){
-   throw new Error("Unexpected JSON structure");
+  if(!Array.isArray(t)||!Array.isArray(g)||
+     !Array.isArray(p?.games)){
+   throw Error("Unexpected JSON structure");
   }
 
-  teams=results[0].filter(t=>
-   String(t.classification||"").toLowerCase()==="fcs"
+  teams=t.filter(x=>
+   String(x.classification||"").toLowerCase()==="fcs"
   ).sort((a,b)=>a.name.localeCompare(b.name));
 
-  games=results[1];
-  playerGames=results[2].games;
+  games=g;
+  playerReports=p.games;
 
-  if(!teams.length){
-   throw new Error("No FCS-classified teams found");
-  }
+  if(!teams.length)throw Error("No FCS teams found");
 
-  buildPlayerIndex();
-  populateTeams();
+  buildPlayers();
+  fillTeams();
 
-  status.innerHTML=
-   "<span class='good'>● DATA CONNECTED</span> | "+
+  $("status").innerHTML=
+   "<span class='green'>● DATA CONNECTED</span> | "+
    teams.length+" FCS teams | "+
    games.length+" games | "+
-   playerGames.length+" player-game reports";
+   playerReports.length+" player reports";
 
-  compare();
+  analyze();
 
- }catch(error){
-  status.textContent="DATA ERROR: "+error.message;
-  document.getElementById("comparison").textContent=
-   "Unable to load verified FCS data.";
-  console.error(error);
+ }catch(e){
+  $("status").textContent="DATA ERROR: "+e.message;
+  $("comparison").textContent=
+   "Unable to load verified data.";
+  console.error(e);
  }
 }
 
-function populateTeams(){
+function fillTeams(){
  const names=teams.map(t=>t.name);
 
  ["away","home"].forEach(side=>{
-  const sel=document.getElementById(side);
-  sel.innerHTML="";
-  names.forEach(name=>sel.add(new Option(name,name)));
+  $(side).innerHTML="";
+  names.forEach(n=>$(side).add(new Option(n,n)));
  });
 
- const has=name=>names.includes(name);
+ $("away").value=names.includes("Florida A&M")
+  ?"Florida A&M":names[0];
 
- document.getElementById("away").value=
-  has("Florida A&M")?"Florida A&M":names[0];
-
- document.getElementById("home").value=
-  has("Alabama State")?"Alabama State":
-  names.find(n=>n!==document.getElementById("away").value)
-  ||names[0];
+ $("home").value=names.includes("Alabama State")
+  ?"Alabama State":names.find(x=>x!==$("away").value);
 }
 
 function filterTeams(side){
- const input=document.getElementById(side+"Search");
- const sel=document.getElementById(side);
- const query=input.value.toLowerCase().trim();
- const current=sel.value;
+ const query=$(side+"Search").value.toLowerCase().trim();
+ const current=$(side).value;
 
  const matches=teams.filter(t=>
   t.name.toLowerCase().includes(query)
  );
 
- sel.innerHTML="";
-
+ $(side).innerHTML="";
  matches.forEach(t=>
-  sel.add(new Option(t.name,t.name))
+  $(side).add(new Option(t.name,t.name))
  );
 
  if(matches.some(t=>t.name===current)){
-  sel.value=current;
- }else if(matches.length){
-  sel.value=matches[0].name;
+  $(side).value=current;
  }
 
- if(matches.length)compare();
- else{
-  document.getElementById("comparison").textContent=
-   "No matching team found.";
- }
+ if(matches.length)analyze();
 }
 
-function row(label,a,b){
- return "<tr><td>"+safe(label)+"</td><td>"+
-  safe(a)+"</td><td>"+safe(b)+"</td></tr>";
+function table(a,h,scopeA,scopeH){
+ const x=a[scopeA]||{};
+ const y=h[scopeH]||{};
+
+ const rows=[
+  ["Games",x.games??0,y.games??0],
+  ["Wins",x.wins??0,y.wins??0],
+  ["Losses",x.losses??0,y.losses??0],
+  ["Points Scored",fmt(x.ppg),fmt(y.ppg)],
+  ["Points Allowed",fmt(x.allowed),fmt(y.allowed)],
+  ["1Q Scored",fmt(x.q1Scored),fmt(y.q1Scored)],
+  ["1Q Allowed",fmt(x.q1Allowed),fmt(y.q1Allowed)],
+  ["1H Scored",fmt(x.h1Scored),fmt(y.h1Scored)],
+  ["1H Allowed",fmt(x.h1Allowed),fmt(y.h1Allowed)]
+ ];
+
+ return "<div class='scroll'><table>"+
+  "<tr><th>Metric</th><th>"+esc(a.name)+
+  "</th><th>"+esc(h.name)+"</th></tr>"+
+  rows.map(r=>
+   "<tr><td>"+esc(r[0])+"</td><td>"+
+   esc(r[1])+"</td><td>"+esc(r[2])+
+   "</td></tr>"
+  ).join("")+
+  "</table></div>";
 }
 
-function record(s){
- if(!s)return "N/A";
- return [s.wins,s.losses,s.ties]
-  .filter((v,i)=>i<2 || v>0)
-  .join("-");
-}
-
-function metricTable(a,b,scope){
- const x=a[scope]||{};
- const y=b[scope]||{};
-
- let html="<div class='tablewrap'><table>";
- html+="<tr><th>Metric</th><th>"+
-  safe(a.name)+"</th><th>"+safe(b.name)+"</th></tr>";
-
- html+=row("Games",x.games??0,y.games??0);
- html+=row("Record",record(x),record(y));
- html+=row("Points Scored",fmt(x.ppg),fmt(y.ppg));
- html+=row("Points Allowed",fmt(x.allowed),fmt(y.allowed));
- html+=row("1Q Scored",fmt(x.q1Scored),fmt(y.q1Scored));
- html+=row("1Q Allowed",fmt(x.q1Allowed),fmt(y.q1Allowed));
- html+=row("1H Scored",fmt(x.h1Scored),fmt(y.h1Scored));
- html+=row("1H Allowed",fmt(x.h1Allowed),fmt(y.h1Allowed));
- html+="</table></div>";
-
- return html;
-}
-
-function compare(){
- const awayName=document.getElementById("away").value;
- const homeName=document.getElementById("home").value;
-
- const a=teams.find(t=>t.name===awayName);
- const h=teams.find(t=>t.name===homeName);
+function analyze(){
+ const a=teams.find(t=>t.name===$("away").value);
+ const h=teams.find(t=>t.name===$("home").value);
 
  if(!a||!h)return;
 
  if(a.name===h.name){
-  document.getElementById("comparison").textContent=
-   "Select two different teams.";
+  $("comparison").textContent="Select different teams.";
+  $("engine").textContent="Select different teams.";
   return;
  }
 
- document.getElementById("matchTitle").textContent=
-  a.name+" @ "+h.name;
+ $("matchTitle").textContent=a.name+" @ "+h.name;
 
- let html="<p><span class='pill'>"+
-  safe(a.conference||"Unknown conference")+
-  "</span> vs <span class='pill'>"+
-  safe(h.conference||"Unknown conference")+
-  "</span></p>";
+ $("comparison").innerHTML=
+  "<h3>Overall</h3>"+
+  table(a,h,"overall","overall")+
+  "<h3>Location Splits</h3>"+
+  "<p class='muted'>Away performance vs home performance</p>"+
+  table(a,h,"away","home");
 
- html+="<h3>Overall Performance</h3>";
- html+=metricTable(a,h,"overall");
-
- html+="<h3>Location-Based Performance</h3>";
- html+="<p class='muted'>Away team's away games "+
-  "vs. home team's home games.</p>";
-
- const awayView={...a,overall:a.away};
- const homeView={...h,overall:h.home};
- html+=metricTable(awayView,homeView,"overall");
-
- document.getElementById("comparison").innerHTML=html;
-
- renderScoring(a,h);
+ runEngine(a,h);
  renderMarkets();
+ renderHistory(a,h);
  renderPlayers();
 }
 
-function renderScoring(a,h){
- const x=a.away||{};
- const y=h.home||{};
+/*
+ SCORING ENGINE V1
 
- const categories=[
-  ["First Quarter","q1Scored","q1Allowed"],
-  ["First Half","h1Scored","h1Allowed"],
-  ["Full Game","ppg","allowed"]
+ A team's scoring outlook:
+ 50% own offense + 50% opponent defense allowed.
+
+ Use location splits only when BOTH teams have
+ at least 3 completed games at those locations.
+
+ Otherwise use overall averages.
+
+ Confidence is a data-coverage label, not
+ a calibrated probability of winning or covering.
+*/
+
+function chooseSamples(a,h){
+ const awayGames=a.away?.games??0;
+ const homeGames=h.home?.games??0;
+
+ if(awayGames>=3&&homeGames>=3){
+  return {
+   away:a.away,
+   home:h.home,
+   basis:"Away/Home splits",
+   awayCount:awayGames,
+   homeCount:homeGames
+  };
+ }
+
+ return {
+  away:a.overall||{},
+  home:h.overall||{},
+  basis:"Overall averages (location sample too small)",
+  awayCount:a.overall?.games??0,
+  homeCount:h.overall?.games??0
+ };
+}
+
+function projection(offense,defense){
+ if(num(offense)===null||num(defense)===null){
+  return null;
+ }
+ return (offense+defense)/2;
+}
+
+function modelPeriod(sample,scored,allowed){
+ const away=projection(
+  sample.away[scored],
+  sample.home[allowed]
+ );
+
+ const home=projection(
+  sample.home[scored],
+  sample.away[allowed]
+ );
+
+ return {
+  away,
+  home,
+  total:away!==null&&home!==null
+   ?away+home:null,
+  margin:away!==null&&home!==null
+   ?home-away:null
+ };
+}
+
+function confidence(sample){
+ const n=Math.min(sample.awayCount,sample.homeCount);
+
+ if(n>=8)return "STRONGER SAMPLE";
+ if(n>=5)return "MODERATE SAMPLE";
+ if(n>=3)return "LIMITED SAMPLE";
+ return "VERY SMALL SAMPLE";
+}
+
+function runEngine(a,h){
+ const sample=chooseSamples(a,h);
+
+ const periods=[
+  {
+   label:"First Quarter",
+   scored:"q1Scored",
+   allowed:"q1Allowed"
+  },
+  {
+   label:"First Half",
+   scored:"h1Scored",
+   allowed:"h1Allowed"
+  },
+  {
+   label:"Full Game",
+   scored:"ppg",
+   allowed:"allowed"
+  }
  ];
 
- let html="";
+ const label=confidence(sample);
 
- categories.forEach(([title,scored,allowed])=>{
-  html+="<div class='panel'><h3>"+title+"</h3>";
-  html+="<div class='grid'>";
+ let html=
+  "<p><span class='tag'>"+esc(sample.basis)+"</span>"+
+  "<span class='tag'>"+esc(label)+"</span></p>"+
+  "<p class='muted'>Evidence: "+sample.awayCount+
+  " away-team games and "+sample.homeCount+
+  " home-team games used for these averages.</p>";
+
+ for(const period of periods){
+  const p=modelPeriod(
+   sample,period.scored,period.allowed
+  );
+
+  html+="<div class='card'>"+
+   "<h3>"+esc(period.label)+"</h3>"+
+   "<div class='grid3'>";
 
   html+="<div class='metric'>"+
-   safe(a.name)+"<hr>"+
-   "Away scoring average: "+fmt(x[scored])+
-   "<br>Away points allowed: "+fmt(x[allowed])+
+   esc(a.name)+
+   "<div class='big'>"+fmt(p.away)+"</div>"+
+   "<span class='muted'>Projected points</span>"+
    "</div>";
 
   html+="<div class='metric'>"+
-   safe(h.name)+"<hr>"+
-   "Home scoring average: "+fmt(y[scored])+
-   "<br>Home points allowed: "+fmt(y[allowed])+
+   esc(h.name)+
+   "<div class='big'>"+fmt(p.home)+"</div>"+
+   "<span class='muted'>Projected points</span>"+
    "</div>";
 
-  html+="</div></div>";
- });
+  html+="<div class='metric'>Combined"+
+   "<div class='big'>"+fmt(p.total)+"</div>"+
+   "<span class='muted'>Projected total</span>"+
+   "</div>";
 
- document.getElementById("scoring").innerHTML=html;
+  html+="</div>";
+
+  if(p.margin!==null){
+   const favorite=p.margin>0?h.name:
+    p.margin<0?a.name:"Even";
+
+   html+="<p><strong>Model lean:</strong> "+
+    esc(favorite)+
+    " | Estimated margin: "+
+    fmt(Math.abs(p.margin))+
+    " points</p>";
+  }else{
+   html+="<p class='notice'>Insufficient scoring data "+
+    "for a complete projection.</p>";
+  }
+
+  html+="<p class='muted'>Descriptive model only. "+
+   "Does not account for injuries, QB changes, "+
+   "opponent strength, or market prices yet.</p>";
+
+  html+="</div>";
+ }
+
+ html+="<p class='notice'><strong>PROVE IT:</strong> "+
+  "No GREEN qualifications. The model needs "+
+  "historical validation, quarterback availability, "+
+  "strength-of-schedule adjustments, and current "+
+  "market lines before betting edges can be graded."+
+  "</p>";
+
+ $("engine").innerHTML=html;
 }
 
 function renderMarkets(){
- document.getElementById("markets").innerHTML=
-  markets.map(m=>
-   "<div class='metric'>"+safe(m)+
-   "<strong>PASS</strong></div>"
-  ).join("");
+ $("markets").innerHTML=markets.map(m=>
+  "<div class='metric'>"+esc(m)+
+  "<strong class='pass'>PASS</strong></div>"
+ ).join("");
 }
 
-function buildPlayerIndex(){
+function renderHistory(a,h){
+ let html="<div class='grid'>";
+
+ for(const t of [a,h]){
+  const recent=[...(t.games||[])]
+   .sort((x,y)=>
+    String(y.date||"").localeCompare(String(x.date||""))
+   ).slice(0,5);
+
+  html+="<div><h3>"+esc(t.name)+"</h3>";
+
+  if(!recent.length){
+   html+="<p class='muted'>No completed games.</p>";
+  }
+
+  for(const g of recent){
+   html+="<div class='metric'>"+
+    esc((g.date||"").slice(0,10))+
+    " vs "+esc(g.opponent)+
+    "<br><strong>"+
+    esc(g.pointsScored)+"–"+
+    esc(g.pointsAllowed)+
+    "</strong><br>"+
+    "<span class='muted'>"+
+    esc(g.location)+" | "+
+    (g.won?"W":g.tied?"T":"L")+
+    "</span></div>";
+  }
+
+  html+="</div>";
+ }
+
+ html+="</div>";
+ $("history").innerHTML=html;
+}
+
+function buildPlayers(){
  playerIndex=new Map();
 
- for(const game of playerGames){
-  for(const stat of game.stats||[]){
+ for(const report of playerReports){
+  for(const stat of report.stats||[]){
    if(!stat.playerId||!stat.player)continue;
 
    const id=String(stat.playerId);
@@ -514,20 +639,19 @@ function buildPlayerIndex(){
     });
    }
 
-   const player=playerIndex.get(id);
-   const gid=String(game.gameId);
+   const p=playerIndex.get(id);
+   const gid=String(report.gameId);
 
-   if(!player.games.has(gid)){
-    player.games.set(gid,{
-     gameId:game.gameId,
-     date:game.date,
-     homeTeam:game.homeTeam,
-     awayTeam:game.awayTeam,
+   if(!p.games.has(gid)){
+    p.games.set(gid,{
+     date:report.date,
+     homeTeam:report.homeTeam,
+     awayTeam:report.awayTeam,
      stats:[]
     });
    }
 
-   player.games.get(gid).stats.push({
+   p.games.get(gid).stats.push({
     category:stat.category,
     name:stat.stat,
     value:stat.value
@@ -537,14 +661,13 @@ function buildPlayerIndex(){
 }
 
 function renderPlayers(){
- const a=document.getElementById("away").value;
- const h=document.getElementById("home").value;
- const q=document.getElementById("playerSearch")
-  .value.toLowerCase().trim();
+ const a=$("away").value;
+ const h=$("home").value;
+ const q=$("playerSearch").value.toLowerCase().trim();
 
  const list=[...playerIndex.values()]
   .filter(p=>
-   (p.team===a||p.team===h) &&
+   (p.team===a||p.team===h)&&
    p.name.toLowerCase().includes(q)
   )
   .sort((x,y)=>
@@ -552,26 +675,22 @@ function renderPlayers(){
    x.name.localeCompare(y.name)
   );
 
- const coverage=document.getElementById("playerCoverage");
+ $("playerCoverage").textContent=
+  list.length+" players found in cached reports. "+
+  "Collection may still be incomplete.";
 
- coverage.innerHTML=
-  "<p class='muted'>"+
-  list.length+" players found in cached game reports. "+
-  "Player history is still being collected; "+
-  "missing appearances do not mean a player did not play."+
-  "</p>";
-
- const el=document.getElementById("playerList");
- el.innerHTML="";
+ const container=$("playerList");
+ container.innerHTML="";
 
  for(const p of list){
-  const item=document.createElement("div");
-  item.className="player";
-  item.textContent=
-   p.name+" — "+p.team+" | "+
-   p.games.size+" cached game(s)  →";
-  item.addEventListener("click",()=>openPlayer(p.id));
-  el.appendChild(item);
+  const div=document.createElement("div");
+  div.className="player";
+  div.textContent=
+   p.name+" — "+p.team+
+   " | "+p.games.size+" games →";
+
+  div.onclick=()=>openPlayer(p.id);
+  container.appendChild(div);
  }
 }
 
@@ -579,42 +698,41 @@ function openPlayer(id){
  const p=playerIndex.get(String(id));
  if(!p)return;
 
- activePlayer=p;
-
- document.getElementById("modalName").textContent=p.name;
- document.getElementById("modalDetails").textContent=
+ $("playerName").textContent=p.name;
+ $("playerDetails").textContent=
   p.team+" | Player ID: "+p.id+
   " | Cached games: "+p.games.size;
 
- const history=[...p.games.values()].sort((a,b)=>
-  String(b.date||"").localeCompare(String(a.date||""))
- );
+ const reports=[...p.games.values()]
+  .sort((x,y)=>
+   String(y.date||"").localeCompare(String(x.date||""))
+  );
 
  let html="";
 
- for(const game of history){
-  const opponent=
-   game.homeTeam===p.team?game.awayTeam:game.homeTeam;
+ for(const game of reports){
+  const opponent=game.homeTeam===p.team
+   ?game.awayTeam:game.homeTeam;
 
-  const grouped={};
+  const categories={};
 
-  for(const stat of game.stats){
-   const category=stat.category||"Other";
-   if(!grouped[category])grouped[category]=[];
-   grouped[category].push(stat);
+  for(const s of game.stats){
+   const key=s.category||"Other";
+   if(!categories[key])categories[key]=[];
+   categories[key].push(s);
   }
 
-  html+="<div class='panel'><h3>"+
-   safe((game.date||"").slice(0,10))+
-   " vs "+safe(opponent)+"</h3>";
+  html+="<div class='card'><h3>"+
+   esc((game.date||"").slice(0,10))+
+   " vs "+esc(opponent)+"</h3>";
 
-  for(const [category,stats] of Object.entries(grouped)){
-   html+="<h4>"+safe(category)+"</h4>";
-   html+="<div class='tablewrap'><table>";
+  for(const [category,stats] of Object.entries(categories)){
+   html+="<h4>"+esc(category)+"</h4>"+
+    "<div class='scroll'><table>";
 
-   for(const stat of stats){
-    html+="<tr><td>"+safe(stat.name)+
-     "</td><td>"+safe(stat.value)+"</td></tr>";
+   for(const s of stats){
+    html+="<tr><td>"+esc(s.name)+
+     "</td><td>"+esc(s.value)+"</td></tr>";
    }
 
    html+="</table></div>";
@@ -623,39 +741,21 @@ function openPlayer(id){
   html+="</div>";
  }
 
- document.getElementById("modalStats").innerHTML=
-  html||"<p>No game statistics available.</p>";
+ $("playerStats").innerHTML=html||
+  "<p>No collected statistics.</p>";
 
- const greens=qualifiedGreens.filter(g=>
-  String(g.playerId)===p.id
- );
-
- document.getElementById("modalGreens").innerHTML=
-  greens.length
-  ?greens.map(g=>
-    "<div class='metric green'>"+
-    safe(g.description)+"</div>"
-   ).join("")
-  :"<p class='notice'>No verified green qualifications.</p>";
-
- document.getElementById("saveGreen").disabled=true;
- document.getElementById("modal").classList.add("open");
+ $("modal").classList.add("open");
 }
 
-function hideModal(){
- document.getElementById("modal").classList.remove("open");
+function closeModal(){
+ $("modal").classList.remove("open");
 }
 
-function modalOutside(event){
- if(event.target.id==="modal")hideModal();
+function outside(e){
+ if(e.target.id==="modal")closeModal();
 }
 
-function renderMemory(){
- document.getElementById("memoryList").innerHTML=
-  "<p class='muted'>No saved green intelligence yet.</p>";
-}
-
-loadData();
+start();
 </script>
 </body>
 </html>
