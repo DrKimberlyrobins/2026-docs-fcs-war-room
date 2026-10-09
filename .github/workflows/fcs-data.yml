@@ -1,0 +1,405 @@
+
+name: FCS 2026 Data Collector
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 12 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fcs-data-collector
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Collect FCS games and player data
+        env:
+          CFBD_API_KEY: ${{ secrets.CFBD_API_KEY }}
+        run: |
+          python - <<'PY'
+          import os
+          import json
+          import time
+          import urllib.request
+          import urllib.parse
+          import urllib.error
+          from datetime import datetime, timezone
+          from collections import defaultdict
+
+          YEAR = 2026
+          BASE = "https://api.collegefootballdata.com"
+          KEY = os.environ.get("CFBD_API_KEY", "")
+
+          if not KEY:
+              raise SystemExit("Missing CFBD_API_KEY")
+
+          os.makedirs("data", exist_ok=True)
+
+          def fetch(path, params, retries=3):
+              url = BASE + path + "?" + urllib.parse.urlencode(params)
+              request = urllib.request.Request(
+                  url,
+                  headers={
+                      "Authorization": "Bearer " + KEY,
+                      "Accept": "application/json"
+                  }
+              )
+
+              for attempt in range(retries):
+                  try:
+                      with urllib.request.urlopen(
+                          request, timeout=60
+                      ) as response:
+                          return json.load(response)
+                  except urllib.error.HTTPError as e:
+                      print(
+                          "HTTP", e.code,
+                          path, params,
+                          "attempt", attempt + 1
+                      )
+                      if e.code in (401, 403):
+                          raise SystemExit(
+                              "API authorization failed"
+                          )
+                      if e.code not in (429, 500, 502, 503, 504):
+                          break
+                  except Exception as e:
+                      print("Request error:", str(e))
+
+                  time.sleep(2 ** attempt)
+
+              return None
+
+          def save(filename, data):
+              path = os.path.join("data", filename)
+              with open(path, "w", encoding="utf-8") as f:
+                  json.dump(
+                      data, f,
+                      indent=2,
+                      ensure_ascii=False
+                  )
+              print("SAVED:", path)
+
+          def number(value):
+              try:
+                  if value is None or str(value).strip() in ("", "--"):
+                      return None
+                  return float(value)
+              except (ValueError, TypeError):
+                  return None
+
+          def quarter_scores(values):
+              if not isinstance(values, list) or len(values) < 4:
+                  return None
+              result = [number(x) for x in values[:4]]
+              if any(x is None for x in result):
+                  return None
+              return [int(x) for x in result]
+
+          print("===== FETCH FCS GAMES =====")
+
+          games = fetch(
+              "/games",
+              {"year": YEAR, "classification": "fcs"}
+          )
+
+          if not isinstance(games, list) or not games:
+              raise SystemExit("No valid FCS game response")
+
+          game_records = []
+          team_games = defaultdict(list)
+          team_metadata = {}
+
+          for g in games:
+              gid = g.get("id")
+              home = g.get("homeTeam")
+              away = g.get("awayTeam")
+
+              if not gid or not home or not away:
+                  continue
+
+              completed = (
+                  g.get("completed") is True
+                  and g.get("homePoints") is not None
+                  and g.get("awayPoints") is not None
+              )
+
+              hq = quarter_scores(g.get("homeLineScores"))
+              aq = quarter_scores(g.get("awayLineScores"))
+
+              record = {
+                  "id": gid,
+                  "season": YEAR,
+                  "week": g.get("week"),
+                  "seasonType": g.get("seasonType"),
+                  "startDate": g.get("startDate"),
+                  "completed": completed,
+                  "homeTeam": home,
+                  "awayTeam": away,
+                  "homeId": g.get("homeId"),
+                  "awayId": g.get("awayId"),
+                  "homeClassification": g.get("homeClassification"),
+                  "awayClassification": g.get("awayClassification"),
+                  "homeConference": g.get("homeConference"),
+                  "awayConference": g.get("awayConference"),
+                  "homePoints": g.get("homePoints"),
+                  "awayPoints": g.get("awayPoints"),
+                  "homeQuarters": hq,
+                  "awayQuarters": aq,
+                  "home1Q": hq[0] if hq else None,
+                  "away1Q": aq[0] if aq else None,
+                  "home1H": sum(hq[:2]) if hq else None,
+                  "away1H": sum(aq[:2]) if aq else None
+              }
+
+              game_records.append(record)
+
+              for side in ("home", "away"):
+                  team = record[side + "Team"]
+                  opponent = record[
+                      "awayTeam" if side == "home" else "homeTeam"
+                  ]
+
+                  classification = record[
+                      side + "Classification"
+                  ]
+
+                  team_metadata[team] = {
+                      "name": team,
+                      "id": record[side + "Id"],
+                      "classification": classification,
+                      "conference": record[side + "Conference"]
+                  }
+
+                  if not completed:
+                      continue
+
+                  scored = record[side + "Points"]
+                  allowed = record[
+                      "awayPoints" if side == "home" else "homePoints"
+                  ]
+
+                  q = record[side + "Quarters"]
+                  opp_q = record[
+                      "awayQuarters" if side == "home"
+                      else "homeQuarters"
+                  ]
+
+                  team_games[team].append({
+                      "gameId": gid,
+                      "date": record["startDate"],
+                      "opponent": opponent,
+                      "location": side,
+                      "pointsScored": scored,
+                      "pointsAllowed": allowed,
+                      "won": scored > allowed,
+                      "tied": scored == allowed,
+                      "q1Scored": q[0] if q else None,
+                      "q1Allowed": opp_q[0] if opp_q else None,
+                      "h1Scored": sum(q[:2]) if q else None,
+                      "h1Allowed": sum(opp_q[:2]) if opp_q else None
+                  })
+
+          print("Games parsed:", len(game_records))
+
+          def average(values):
+              valid = [x for x in values if x is not None]
+              return (
+                  round(sum(valid) / len(valid), 2)
+                  if valid else None
+              )
+
+          def summarize(rows):
+              wins = sum(1 for x in rows if x["won"])
+              losses = sum(
+                  1 for x in rows
+                  if not x["won"] and not x["tied"]
+              )
+              ties = sum(1 for x in rows if x["tied"])
+
+              return {
+                  "games": len(rows),
+                  "wins": wins,
+                  "losses": losses,
+                  "ties": ties,
+                  "ppg": average([
+                      x["pointsScored"] for x in rows
+                  ]),
+                  "allowed": average([
+                      x["pointsAllowed"] for x in rows
+                  ]),
+                  "q1Scored": average([
+                      x["q1Scored"] for x in rows
+                  ]),
+                  "q1Allowed": average([
+                      x["q1Allowed"] for x in rows
+                  ]),
+                  "h1Scored": average([
+                      x["h1Scored"] for x in rows
+                  ]),
+                  "h1Allowed": average([
+                      x["h1Allowed"] for x in rows
+                  ])
+              }
+
+          teams = []
+
+          for name, meta in sorted(team_metadata.items()):
+              rows = team_games[name]
+              home_rows = [
+                  x for x in rows if x["location"] == "home"
+              ]
+              away_rows = [
+                  x for x in rows if x["location"] == "away"
+              ]
+
+              teams.append({
+                  **meta,
+                  "overall": summarize(rows),
+                  "home": summarize(home_rows),
+                  "away": summarize(away_rows),
+                  "games": sorted(
+                      rows,
+                      key=lambda x: x["date"] or ""
+                  )
+              })
+
+          save("fcs-games-2026.json", game_records)
+          save("fcs-teams-2026.json", teams)
+
+          print("Teams:", len(teams))
+
+          print("===== FETCH PLAYER GAME DATA =====")
+
+          # Preserve earlier collected player games.
+          player_path = "data/fcs-players-2026.json"
+
+          old_games = {}
+
+          if os.path.exists(player_path):
+              try:
+                  with open(player_path, encoding="utf-8") as f:
+                      previous = json.load(f)
+
+                  for item in previous.get("games", []):
+                      old_games[str(item["gameId"])] = item
+              except Exception as e:
+                  print("Existing cache unreadable:", e)
+
+          # Refresh recent games, keep previously collected games.
+          completed_games = sorted(
+              [g for g in game_records if g["completed"]],
+              key=lambda x: x["startDate"] or "",
+              reverse=True
+          )
+
+          new_requests = 0
+          failures = 0
+          max_requests = 80
+
+          for game in completed_games:
+              gid = str(game["id"])
+
+              if gid in old_games:
+                  continue
+
+              if new_requests >= max_requests:
+                  break
+
+              new_requests += 1
+
+              response = fetch(
+                  "/games/players",
+                  {"id": gid}
+              )
+
+              if not isinstance(response, list):
+                  failures += 1
+                  continue
+
+              parsed = []
+
+              for team_entry in response:
+                  team_name = team_entry.get("team")
+
+                  for category in team_entry.get("categories", []):
+                      category_name = category.get("name")
+
+                      for stat_type in category.get("types", []):
+                          stat_name = stat_type.get("name")
+
+                          for athlete in stat_type.get("athletes", []):
+                              parsed.append({
+                                  "playerId": str(
+                                      athlete.get("id", "")
+                                  ),
+                                  "player": athlete.get("name"),
+                                  "team": team_name,
+                                  "category": category_name,
+                                  "stat": stat_name,
+                                  "value": athlete.get("stat")
+                              })
+
+              old_games[gid] = {
+                  "gameId": game["id"],
+                  "date": game["startDate"],
+                  "homeTeam": game["homeTeam"],
+                  "awayTeam": game["awayTeam"],
+                  "stats": parsed
+              }
+
+              print(
+                  "Player game:", gid,
+                  "stat entries:", len(parsed)
+              )
+
+          save("fcs-players-2026.json", {
+              "season": YEAR,
+              "updated": datetime.now(
+                  timezone.utc
+              ).isoformat(),
+              "games": sorted(
+                  old_games.values(),
+                  key=lambda x: x["date"] or ""
+              )
+          })
+
+          print("===== COLLECTION SUMMARY =====")
+          print("Games:", len(game_records))
+          print("Teams:", len(teams))
+          print("Player games cached:", len(old_games))
+          print("Player requests this run:", new_requests)
+          print("Player request failures:", failures)
+
+          if not game_records or not teams:
+              raise SystemExit("DATA VALIDATION FAILED")
+
+          print("FCS DATA COLLECTION COMPLETE")
+          PY
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/fcs-games-2026.json data/fcs-teams-2026.json data/fcs-players-2026.json
+          if git diff --cached --quiet; then
+            echo "No data changes to commit"
+          else
+            git commit -m "Update 2026 FCS data"
+            git push
+          fi
