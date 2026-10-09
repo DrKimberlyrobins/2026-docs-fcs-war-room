@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Doc's 2026 FCS War Room</title>
+<style>
+:root {
+  --bg:#08111e;
+  --panel:#111f30;
+  --border:#2a4057;
+  --text:#f1f6ff;
+  --muted:#9db0c5;
+  --green:#28d783;
+  --gold:#f4c76b;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:Arial,sans-serif;line-height:1.5
+}
+header{
+  padding:25px 18px;text-align:center;
+  background:linear-gradient(120deg,#102943,#092015);
+  border-bottom:2px solid var(--gold)
+}
+h1{margin:0;color:var(--gold);font-size:28px}
+h2{font-size:19px;margin:0 0 15px}
+h3{margin:10px 0}
+small,.muted{color:var(--muted)}
+.container{max-width:1200px;margin:auto;padding:18px}
+.panel{
+  background:var(--panel);border:1px solid var(--border);
+  border-radius:12px;padding:18px;margin-bottom:18px
+}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(max-width:650px){.grid{grid-template-columns:1fr}}
+label{display:block;color:var(--muted);margin-bottom:6px}
+select,button{
+  width:100%;padding:12px;border-radius:8px;font-size:15px
+}
+select{background:#071421;color:white;border:1px solid #52708d}
+button{
+  background:#183953;color:white;border:1px solid #4d7594;
+  cursor:pointer;font-weight:bold
+}
+button:hover{filter:brightness(1.2)}
+button:disabled{opacity:.45;cursor:not-allowed}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.tabs button{width:auto;flex:1;min-width:135px}
+.tabs button.active{background:#196445;border-color:var(--green)}
+.tab{display:none}
+.tab.active{display:block}
+.metric{
+  padding:13px;border:1px solid var(--border);
+  border-radius:8px;margin:8px 0
+}
+.metric strong{float:right}
+.green{
+  border-color:var(--green)!important;
+  background:#103d2d!important;color:#b8ffda
+}
+.status{
+  display:inline-block;padding:5px 10px;border-radius:20px;
+  background:#344354;color:white;font-size:12px
+}
+.player{
+  padding:13px;margin:8px 0;border:1px solid var(--border);
+  border-radius:8px;cursor:pointer
+}
+.player:hover{border-color:var(--gold)}
+.modal{
+  display:none;position:fixed;inset:0;background:#000b;
+  align-items:center;justify-content:center;padding:16px;z-index:10
+}
+.modal.open{display:flex}
+.modal-content{
+  background:var(--panel);border:1px solid var(--gold);
+  border-radius:14px;padding:20px;width:100%;
+  max-width:560px;max-height:90vh;overflow:auto
+}
+.close{width:auto;float:right}
+.notice{border-left:3px solid var(--gold);padding:12px;background:#292719}
+table{width:100%;border-collapse:collapse}
+td,th{padding:10px;border-bottom:1px solid var(--border);text-align:left}
+th{color:var(--gold)}
+</style>
+</head>
+<body>
+
+<header>
+<h1>🏈 DOC'S 2026 FCS WAR ROOM</h1>
+<div>TEAM INTELLIGENCE • PLAYER INTELLIGENCE • PROVE IT</div>
+<small>Evidence First. Green Must Be Earned.</small>
+</header>
+
+<main class="container">
+
+<div class="tabs">
+<button class="active" onclick="showTab('matchup',this)">Matchup</button>
+<button onclick="showTab('players',this)">Player Intelligence</button>
+<button onclick="showTab('memory',this)">Green Memory Bank</button>
+</div>
+
+<section id="matchup" class="tab active">
+
+<div class="panel">
+<h2>Matchup Selection</h2>
+<div class="grid">
+<div>
+<label>Away Team</label>
+<select id="away" onchange="compare()"></select>
+</div>
+<div>
+<label>Home Team</label>
+<select id="home" onchange="compare()"></select>
+</div>
+</div>
+</div>
+
+<div class="panel">
+<h2 id="matchTitle">Team Comparison</h2>
+<div id="comparison"></div>
+</div>
+
+<div class="panel">
+<h2>Scoring Intelligence</h2>
+<p class="notice">
+PROVE IT: Projections remain unavailable until
+verified FCS game data and scoring splits are connected.
+</p>
+<div class="grid">
+<div class="metric">First Quarter <strong>Pending</strong></div>
+<div class="metric">First Half <strong>Pending</strong></div>
+<div class="metric">Full Game <strong>Pending</strong></div>
+<div class="metric">Team Totals <strong>Pending</strong></div>
+</div>
+</div>
+
+<div class="panel">
+<h2>Six-Market Intelligence</h2>
+<div id="markets"></div>
+<p class="muted">No verified projection + market line = PASS.</p>
+</div>
+
+</section>
+
+<section id="players" class="tab">
+<div class="panel">
+<h2>Player Intelligence</h2>
+<p class="muted">Click a player's name to open their intelligence report.</p>
+<div id="playerList"></div>
+</div>
+</section>
+
+<section id="memory" class="tab">
+<div class="panel">
+<h2>💚 Green Intelligence Memory Bank</h2>
+<p>
+Only qualified green intelligence can be saved.
+Each saved record will preserve its original evidence
+so results can be graded later.
+</p>
+<p id="memoryStatus" class="notice">
+Google Sheets connection pending.
+</p>
+<div id="memoryList"></div>
+</div>
+</section>
+
+</main>
+
+<div id="modal" class="modal" onclick="closeModal(event)">
+<div class="modal-content">
+<button class="close" onclick="hideModal()">✕</button>
+<h2 id="playerName"></h2>
+<p id="playerDetails"></p>
+<div id="playerStats"></div>
+<h3>Qualified Green Intelligence</h3>
+<div id="playerGreens"></div>
+<button id="saveGreen" disabled onclick="saveGreen()">
+💚 Save Green to Sheets
+</button>
+<p class="muted" id="saveMessage">
+Requires verified qualifications and a connected Google Sheet.
+</p>
+</div>
+</div>
+
+<script>
+"use strict";
+
+// Starter records are historical examples, not live feeds.
+// Missing values remain null rather than being invented.
+const teams=[
+ {id:"FAMU",name:"Florida A&M",record:"1-4",
+  ppg:17.4,allowed:36.8},
+ {id:"ALST",name:"Alabama State",record:"3-2",
+  ppg:26.4,allowed:16.4}
+];
+
+const players=[
+ {id:"PARKER",name:"Armond Parker",team:"FAMU",
+  position:"QB",passingYards:472,passingTD:5,
+  interceptions:2,completions:33,attempts:58,
+  note:"Freshman quarterback. Statistics from the initial matchup investigation."},
+ {id:"FRYE",name:"Aaron Frye",team:"ALST",
+  position:"QB",passingYards:230,passingTD:1,
+  interceptions:1,completions:22,attempts:44,
+  note:"Freshman quarterback replacing injured Andrew Body."}
+];
+
+// Never mark a metric green without verified evidence.
+const qualifiedGreens=[];
+
+const markets=[
+ "Spread","Moneyline","Game Total",
+ "Team Total","First Half","First Quarter"
+];
+
+function showTab(id,button){
+ document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));
+ document.querySelectorAll(".tabs button").forEach(x=>x.classList.remove("active"));
+ document.getElementById(id).classList.add("active");
+ button.classList.add("active");
+ if(id==="players")renderPlayers();
+ if(id==="memory")renderMemory();
+}
+
+function setup(){
+ const away=document.getElementById("away");
+ const home=document.getElementById("home");
+ teams.forEach(t=>{
+  away.add(new Option(t.name,t.id));
+  home.add(new Option(t.name,t.id));
+ });
+ away.value="FAMU";
+ home.value="ALST";
+ compare();
+ renderPlayers();
+ renderMemory();
+}
+
+function compare(){
+ const a=teams.find(t=>t.id===document.getElementById("away").value);
+ const h=teams.find(t=>t.id===document.getElementById("home").value);
+ const el=document.getElementById("comparison");
+
+ if(a.id===h.id){
+  el.textContent="Select two different teams.";
+  return;
+ }
+
+ document.getElementById("matchTitle").textContent=
+ a.name+" @ "+h.name;
+
+ const rows=[
+  ["Record",a.record,h.record],
+  ["Points Scored / Game",a.ppg,h.ppg],
+  ["Points Allowed / Game",a.allowed,h.allowed]
+ ];
+
+ let html="<table><tr><th>Metric</th><th>"+
+ escapeHTML(a.name)+"</th><th>"+escapeHTML(h.name)+"</th></tr>";
+
+ rows.forEach(r=>{
+  html+="<tr><td>"+escapeHTML(r[0])+"</td><td>"+
+   escapeHTML(String(r[1]))+"</td><td>"+
+   escapeHTML(String(r[2]))+"</td></tr>";
+ });
+
+ html+="</table><p class='muted'>Historical sample only. "+
+ "Not a live prediction.</p>";
+ el.innerHTML=html;
+
+ document.getElementById("markets").innerHTML=
+ markets.map(m=>"<div class='metric'>"+
+ escapeHTML(m)+" <strong>PASS — Awaiting data</strong></div>").join("");
+}
+
+function escapeHTML(value){
+ return String(value).replace(/[&<>"']/g,c=>({
+  "&":"&amp;","<":"&lt;",">":"&gt;",
+  '"':"&quot;","'":"&#39;"
+ })[c]);
+}
+
+function renderPlayers(){
+ const selected=[
+  document.getElementById("away").value,
+  document.getElementById("home").value
+ ];
+ document.getElementById("playerList").innerHTML=
+ players.filter(p=>selected.includes(p.team))
+ .map(p=>"<div class='player' data-id='"+p.id+"'>"+
+ escapeHTML(p.name)+" — "+escapeHTML(p.position)+
+ " | "+escapeHTML(teams.find(t=>t.id===p.team).name)+
+ " <span style='float:right'>View →</span></div>").join("");
+
+ document.querySelectorAll(".player").forEach(el=>{
+  el.addEventListener("click",()=>openPlayer(el.dataset.id));
+ });
+}
+
+function openPlayer(id){
+ const p=players.find(x=>x.id===id);
+ if(!p)return;
+
+ document.getElementById("playerName").textContent=p.name;
+ document.getElementById("playerDetails").textContent=
+ p.position+" | "+teams.find(t=>t.id===p.team).name;
+
+ const stats=[
+  ["Passing yards",p.passingYards],
+  ["Passing touchdowns",p.passingTD],
+  ["Interceptions",p.interceptions],
+  ["Completions",p.completions],
+  ["Attempts",p.attempts],
+  ["Completion percentage",
+   p.attempts?(100*p.completions/p.attempts).toFixed(1)+"%":"N/A"]
+ ];
+
+ document.getElementById("playerStats").innerHTML=
+ stats.map(([k,v])=>"<div class='metric'>"+
+ escapeHTML(k)+" <strong>"+escapeHTML(String(v))+
+ "</strong></div>").join("")+
+ "<p class='muted'>"+escapeHTML(p.note)+"</p>";
+
+ const greens=qualifiedGreens.filter(g=>g.playerId===id);
+ document.getElementById("playerGreens").innerHTML=
+ greens.length
+ ? greens.map(g=>"<div class='metric green'>"+
+   escapeHTML(g.description)+"</div>").join("")
+ : "<p class='notice'>No verified green qualifications yet.</p>";
+
+ document.getElementById("saveGreen").disabled=true;
+ document.getElementById("saveMessage").textContent=
+ "Sheets integration pending. No unqualified data will be saved.";
+ document.getElementById("modal").classList.add("open");
+}
+
+function hideModal(){
+ document.getElementById("modal").classList.remove("open");
+}
+
+function closeModal(e){
+ if(e.target.id==="modal")hideModal();
+}
+
+function saveGreen(){
+ // Future verified Google Sheets integration.
+ // Intentionally inactive until configured.
+}
+
+function renderMemory(){
+ document.getElementById("memoryList").innerHTML=
+ "<p class='muted'>No qualified records saved yet.</p>";
+}
+
+setup();
+</script>
+</body>
+</html>
