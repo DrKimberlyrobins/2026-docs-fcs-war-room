@@ -87,7 +87,10 @@ jobs:
                   and game.get("away_points") is not None
               ):
                   completed.append(game)
-
+                  
+          print("\n===== RAW GAME SAMPLE =====")
+          for game in games[:2]:
+              print(json.dumps(game, indent=2))
           print("Total games:", len(games))
           print("Unique teams:", len(teams))
           print("Completed games:", len(completed))
