@@ -7,53 +7,86 @@
 <title>Doc's 2026 FCS War Room</title>
 <style>
 :root{
- --bg:#08121e;--panel:#142438;--line:#344a62;
- --gold:#f2c66d;--green:#27dc8a;--muted:#aec0d3
+  --bg:#08121e;
+  --panel:#142438;
+  --line:#344a62;
+  --gold:#f2c66d;
+  --green:#27dc8a;
+  --muted:#aec0d3;
 }
 *{box-sizing:border-box}
 body{
- margin:0;background:var(--bg);color:#eef5ff;
- font:15px Arial,sans-serif;line-height:1.5
+  margin:0;
+  background:var(--bg);
+  color:#eef5ff;
+  font:15px Arial,sans-serif;
+  line-height:1.5;
 }
 header{
- text-align:center;padding:22px 12px;
- background:linear-gradient(110deg,#153451,#0a3029);
- border-bottom:2px solid var(--gold)
+  text-align:center;
+  padding:22px 12px;
+  background:linear-gradient(110deg,#153451,#0a3029);
+  border-bottom:2px solid var(--gold);
 }
 h1{color:var(--gold);margin:0;font-size:27px}
 h2{margin:0 0 12px;font-size:21px}
 h3{margin:12px 0}
 main{max-width:1250px;margin:auto;padding:16px}
 .card{
- background:var(--panel);border:1px solid var(--line);
- border-radius:12px;padding:16px;margin-bottom:16px
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:16px;
+  margin-bottom:16px;
 }
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:13px;
+}
 .grid3{
- display:grid;grid-template-columns:repeat(3,1fr);gap:12px
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
 }
 @media(max-width:750px){
- .grid,.grid3{grid-template-columns:1fr}
+  .grid,.grid3{grid-template-columns:1fr}
 }
-label{display:block;color:var(--muted);margin:8px 0 4px}
+label{
+  display:block;
+  color:var(--muted);
+  margin:8px 0 4px;
+}
 input,select,button{
- width:100%;padding:11px;border-radius:8px;font:inherit
+  width:100%;
+  padding:11px;
+  border-radius:8px;
+  font:inherit;
 }
 input,select{
- background:#091724;color:white;border:1px solid #57718d
+  background:#091724;
+  color:white;
+  border:1px solid #57718d;
 }
 button{
- background:#244766;color:white;border:1px solid #6083a3;
- cursor:pointer;font-weight:bold
+  background:#244766;
+  color:white;
+  border:1px solid #6083a3;
+  cursor:pointer;
+  font-weight:bold;
 }
 button:hover{filter:brightness(1.13)}
 button:disabled{opacity:.5;cursor:not-allowed}
 .tabs{
- display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:16px;
 }
 .tabs button{flex:1;min-width:130px}
 .tabs button.active{
- background:#14613f;border-color:var(--green)
+  background:#14613f;
+  border-color:var(--green);
 }
 .tab{display:none}
 .tab.active{display:block}
@@ -61,65 +94,97 @@ button:disabled{opacity:.5;cursor:not-allowed}
 .gold{color:var(--gold)}
 .green{color:var(--green)}
 .notice{
- padding:12px;background:#322b1c;
- border-left:3px solid var(--gold);
- border-radius:6px;margin:12px 0
+  padding:12px;
+  background:#322b1c;
+  border-left:3px solid var(--gold);
+  border-radius:6px;
+  margin:12px 0;
 }
 .metric{
- padding:13px;border:1px solid var(--line);
- border-radius:9px;background:#0a1a2b;margin:8px 0
+  padding:13px;
+  border:1px solid var(--line);
+  border-radius:9px;
+  background:#0a1a2b;
+  margin:8px 0;
 }
 .big{font-size:27px;font-weight:bold}
 .tag{
- display:inline-block;border:1px solid var(--line);
- border-radius:20px;padding:4px 9px;margin:3px;
- font-size:12px
+  display:inline-block;
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:4px 9px;
+  margin:3px;
+  font-size:12px;
 }
 table{width:100%;border-collapse:collapse}
 th,td{
- padding:9px;text-align:left;
- border-bottom:1px solid var(--line)
+  padding:9px;
+  text-align:left;
+  border-bottom:1px solid var(--line);
 }
 th{color:var(--gold)}
 .scroll{overflow-x:auto}
 .market{
- border:1px solid var(--line);border-radius:10px;
- padding:14px;margin:10px 0
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:14px;
+  margin:10px 0;
 }
 .markethead{
- display:flex;justify-content:space-between;
- align-items:center;gap:10px
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
 }
-.pass{color:#cbd8e7;font-weight:bold}
 .rank{color:var(--gold);font-weight:bold}
 .stop{
- border:2px solid var(--gold);border-radius:12px;
- padding:16px;background:#27271c;margin:15px 0
+  border:2px solid var(--gold);
+  border-radius:12px;
+  padding:16px;
+  background:#27271c;
+  margin:15px 0;
 }
 .player{
- padding:12px;border:1px solid var(--line);
- border-radius:8px;margin:7px 0;cursor:pointer
+  padding:12px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  margin:7px 0;
+  cursor:pointer;
 }
 .player:hover{border-color:var(--gold)}
 .modal{
- display:none;position:fixed;inset:0;
- background:#000c;align-items:center;
- justify-content:center;padding:12px;z-index:99
+  display:none;
+  position:fixed;
+  inset:0;
+  background:#000c;
+  align-items:center;
+  justify-content:center;
+  padding:12px;
+  z-index:99;
 }
 .modal.open{display:flex}
 .modalbox{
- background:var(--panel);border:1px solid var(--gold);
- border-radius:12px;padding:18px;width:100%;
- max-width:740px;max-height:92vh;overflow:auto
+  background:var(--panel);
+  border:1px solid var(--gold);
+  border-radius:12px;
+  padding:18px;
+  width:100%;
+  max-width:740px;
+  max-height:92vh;
+  overflow:auto;
 }
 .close{width:auto;float:right}
+.lean{color:var(--gold);font-weight:bold}
+.pass{color:#cbd8e7;font-weight:bold}
 </style>
 </head>
 <body>
 
 <header>
 <h1>🏈 DOC'S 2026 FCS WAR ROOM</h1>
-<div>SCORING • SIX MARKETS • FINAL DECISION ROOM</div>
+<div>
+SCORING • WALK-FORWARD TESTING • SIX MARKETS • DECISION ROOM
+</div>
 <div class="muted">
 PROVE IT — Quality Over Quantity — No Edge = No Bet
 </div>
@@ -148,20 +213,29 @@ Green Memory Bank
 <div class="card">
 <h2>Choose Matchup</h2>
 <div class="grid">
+
 <div>
 <label>Search Away Team</label>
-<input id="awaySearch" oninput="filterTeams('away')"
- placeholder="Search team">
+<input
+  id="awaySearch"
+  oninput="filterTeams('away')"
+  placeholder="Search team"
+>
 <label>Away Team</label>
 <select id="away" onchange="analyze()"></select>
 </div>
+
 <div>
 <label>Search Home Team</label>
-<input id="homeSearch" oninput="filterTeams('home')"
- placeholder="Search team">
+<input
+  id="homeSearch"
+  oninput="filterTeams('home')"
+  placeholder="Search team"
+>
 <label>Home Team</label>
 <select id="home" onchange="analyze()"></select>
 </div>
+
 </div>
 </div>
 
@@ -187,11 +261,13 @@ Green Memory Bank
 <div class="card">
 <h2>🏆 DOC'S FINAL DECISION ROOM</h2>
 <p class="muted" id="decisionMatch"></p>
+
 <p>
-No fixed number of selections. The engine lists
-every qualified opportunity, then displays STOP
-when no additional market meets the standard.
+All preliminary LEANs are displayed until the evidence
+fails, then STOP. There is no artificial limit of five.
+LEAN is research, not a certified bet.
 </p>
+
 <div id="decisionBoard"></div>
 </div>
 
@@ -200,51 +276,92 @@ when no additional market meets the standard.
 <p class="muted" id="marketMatch"></p>
 
 <p class="notice">
-Enter verified market lines. These are manual inputs,
-not a live sportsbook feed. The current scoring model
-has not passed historical validation, so raw differences
-cannot qualify as GREEN.
+Enter actual market lines and their observation time.
+These are not live feeds. No market is GREEN without
+verified pricing, team news, and market-level validation.
 </p>
 
 <div class="grid">
+
 <div>
 <label>Market source</label>
-<input id="source" placeholder="Kalshi, Kambi, DraftKings"
- oninput="rankMarkets()">
+<input
+  id="source"
+  placeholder="Kalshi, Kambi, DraftKings"
+  oninput="rankMarkets()"
+>
 </div>
+
 <div>
 <label>Line observed at (local time)</label>
-<input id="observed" type="datetime-local"
- oninput="rankMarkets()">
+<input
+  id="observed"
+  type="datetime-local"
+  oninput="rankMarkets()"
+>
 </div>
+
+<div>
+<label>Quarterback/team-news status</label>
+<select id="qbStatus" onchange="rankMarkets()">
+<option value="unknown">Not verified</option>
+<option value="verified">
+I checked current QB and team news
+</option>
+<option value="concern">
+Uncertain QB / major concern
+</option>
+</select>
+</div>
+
 </div>
 
 <h3>Full Game</h3>
 <div class="grid">
+
 <div>
-<label>Home spread (example: -14.5)</label>
-<input id="spread" type="number" step=".5"
- placeholder="Home spread" oninput="rankMarkets()">
+<label>Home spread (e.g. -14.5)</label>
+<input
+  id="spread"
+  type="number"
+  step=".5"
+  oninput="rankMarkets()"
+>
 </div>
+
 <div>
-<label>Game total</label>
-<input id="total" type="number" step=".5"
- placeholder="Total" oninput="rankMarkets()">
+<label>Full game total</label>
+<input
+  id="total"
+  type="number"
+  step=".5"
+  oninput="rankMarkets()"
+>
 </div>
+
 <div>
 <label>Away moneyline (American odds)</label>
-<input id="mlAway" type="number"
- placeholder="+480" oninput="rankMarkets()">
+<input
+  id="mlAway"
+  type="number"
+  oninput="rankMarkets()"
+>
 </div>
+
 <div>
 <label>Home moneyline (American odds)</label>
-<input id="mlHome" type="number"
- placeholder="-770" oninput="rankMarkets()">
+<input
+  id="mlHome"
+  type="number"
+  oninput="rankMarkets()"
+>
 </div>
+
 </div>
 
 <h3>Team Total</h3>
 <div class="grid">
+
 <div>
 <label>Team</label>
 <select id="teamTotalSide" onchange="rankMarkets()">
@@ -252,39 +369,61 @@ cannot qualify as GREEN.
 <option value="home">Home</option>
 </select>
 </div>
+
 <div>
 <label>Team total line</label>
-<input id="teamTotal" type="number" step=".5"
- placeholder="Team total" oninput="rankMarkets()">
+<input
+  id="teamTotal"
+  type="number"
+  step=".5"
+  oninput="rankMarkets()"
+>
 </div>
+
 </div>
 
 <h3>First Half / First Quarter</h3>
 <div class="grid">
+
 <div>
 <label>1H combined total</label>
-<input id="halfTotal" type="number" step=".5"
- placeholder="1H total" oninput="rankMarkets()">
+<input
+  id="halfTotal"
+  type="number"
+  step=".5"
+  oninput="rankMarkets()"
+>
 </div>
+
 <div>
 <label>1Q combined total</label>
-<input id="quarterTotal" type="number" step=".5"
- placeholder="1Q total" oninput="rankMarkets()">
+<input
+  id="quarterTotal"
+  type="number"
+  step=".5"
+  oninput="rankMarkets()"
+>
 </div>
+
 </div>
 
 <button onclick="rankMarkets()">
-Analyze All Six Markets
+Evaluate All Six Markets
 </button>
 </div>
 
 <div class="card">
-<h2>Research Queue — All Six Markets</h2>
+<h2>📐 Historical Error Check</h2>
+<div id="backtest"></div>
+</div>
+
+<div class="card">
+<h2>All Six Markets — Evidence</h2>
 <div id="ranked"></div>
 </div>
 
 <div class="card">
-<h2>🛑 PROVE IT Evidence Check</h2>
+<h2>🛑 PROVE IT Check</h2>
 <div id="stop"></div>
 </div>
 
@@ -294,12 +433,15 @@ Analyze All Six Markets
 <div class="card">
 <h2>Player Intelligence</h2>
 <p class="muted">
-Click a player to view collected game-by-game stats.
-Missing games do not mean a player did not play.
+Click a player for collected game-by-game stats.
+Coverage may be incomplete.
 </p>
 <label>Search Player</label>
-<input id="playerSearch" placeholder="Player name"
- oninput="renderPlayers()">
+<input
+  id="playerSearch"
+  placeholder="Player name"
+  oninput="renderPlayers()"
+>
 <div id="coverage" class="muted"></div>
 <div id="playerList"></div>
 </div>
@@ -309,21 +451,24 @@ Missing games do not mean a player did not play.
 <div class="card">
 <h2>💚 Green Intelligence Memory Bank</h2>
 <p class="notice">
-No verified qualified plays yet.
+No GREEN selections have been certified.
 Google Sheets saving is not connected.
 </p>
 <p>
-Once qualification and Sheets integration are
-validated, the Memory Bank will retain pregame
-evidence, market lines, and final results.
+When full qualification and Sheets integration are
+available, this section can preserve pregame evidence,
+verified lines, and results.
 </p>
 </div>
 </section>
 
 </main>
 
-<div id="modal" class="modal"
- onclick="if(event.target===this)closePlayer()">
+<div
+  id="modal"
+  class="modal"
+  onclick="if(event.target===this)closePlayer()"
+>
 <div class="modalbox">
 <button class="close" onclick="closePlayer()">
 ✕ Close
@@ -351,709 +496,1105 @@ let currentAway=null;
 let currentHome=null;
 let projections=null;
 let currentMatchKey="";
+let backtest={};
 
-const marketInputs=[
- "source","observed","spread","total",
- "mlAway","mlHome","teamTotalSide",
- "teamTotal","halfTotal","quarterTotal"
+const inputs=[
+  "source",
+  "observed",
+  "qbStatus",
+  "spread",
+  "total",
+  "mlAway",
+  "mlHome",
+  "teamTotalSide",
+  "teamTotal",
+  "halfTotal",
+  "quarterTotal"
 ];
 
 function esc(x){
- return String(x??"").replace(/[&<>"']/g,c=>({
-  "&":"&amp;","<":"&lt;",">":"&gt;",
-  '"':"&quot;","'":"&#39;"
- })[c]);
+  return String(x??"").replace(
+    /[&<>"']/g,
+    c=>({
+      "&":"&amp;",
+      "<":"&lt;",
+      ">":"&gt;",
+      '"':"&quot;",
+      "'":"&#39;"
+    })[c]
+  );
 }
 
 function numeric(x){
- return typeof x==="number"&&Number.isFinite(x)?x:null;
+  return typeof x==="number"&&Number.isFinite(x)
+    ?x:null;
 }
 
 function fmt(x,d=1){
- return numeric(x)!==null?x.toFixed(d):"N/A";
+  return numeric(x)!==null?x.toFixed(d):"N/A";
 }
 
 function val(id){
- const raw=$(id).value.trim();
- if(raw==="")return null;
- const n=Number(raw);
- return Number.isFinite(n)?n:null;
+  const x=$(id).value.trim();
+  if(x==="")return null;
+  const n=Number(x);
+  return Number.isFinite(n)?n:null;
 }
 
-function tab(id,button){
- document.querySelectorAll(".tab").forEach(x=>
-  x.classList.remove("active"));
- document.querySelectorAll(".tabs button").forEach(x=>
-  x.classList.remove("active"));
- $(id).classList.add("active");
- button.classList.add("active");
- if(id==="players")renderPlayers();
+function tab(id,b){
+  document.querySelectorAll(".tab").forEach(
+    x=>x.classList.remove("active")
+  );
+  document.querySelectorAll(".tabs button").forEach(
+    x=>x.classList.remove("active")
+  );
+  $(id).classList.add("active");
+  b.classList.add("active");
+  if(id==="players")renderPlayers();
 }
 
 async function getJSON(file){
- const r=await fetch(
-  "./data/"+file+"?v="+Date.now(),
-  {cache:"no-store"}
- );
- if(!r.ok)throw Error(file+" HTTP "+r.status);
- return r.json();
+  const r=await fetch(
+    "./data/"+file+"?v="+Date.now(),
+    {cache:"no-store"}
+  );
+  if(!r.ok){
+    throw Error(file+" HTTP "+r.status);
+  }
+  return r.json();
 }
 
 async function start(){
- try{
-  const [t,g,p]=await Promise.all([
-   getJSON("fcs-teams-2026.json"),
-   getJSON("fcs-games-2026.json"),
-   getJSON("fcs-players-2026.json")
-  ]);
+  try{
+    const [t,g,p]=await Promise.all([
+      getJSON("fcs-teams-2026.json"),
+      getJSON("fcs-games-2026.json"),
+      getJSON("fcs-players-2026.json")
+    ]);
 
-  if(!Array.isArray(t)||!Array.isArray(g)||
-     !Array.isArray(p?.games)){
-   throw Error("Invalid data structure");
+    if(
+      !Array.isArray(t)||
+      !Array.isArray(g)||
+      !Array.isArray(p?.games)
+    ){
+      throw Error("Invalid data structure");
+    }
+
+    teams=t.filter(
+      x=>String(x.classification||"").toLowerCase()==="fcs"
+    ).sort(
+      (a,b)=>a.name.localeCompare(b.name)
+    );
+
+    games=g;
+    playerReports=p.games;
+
+    if(!teams.length){
+      throw Error("No FCS teams found");
+    }
+
+    buildPlayers();
+    fillTeams();
+    backtest=runBacktest();
+
+    $("status").innerHTML=
+      "<span class='green'>● DATA CONNECTED</span> | "+
+      teams.length+" FCS teams | "+
+      games.length+" games | "+
+      playerReports.length+" player reports";
+
+    analyze();
+
+  }catch(e){
+    $("status").textContent="DATA ERROR: "+e.message;
+    console.error(e);
   }
-
-  teams=t.filter(x=>
-   String(x.classification||"").toLowerCase()==="fcs"
-  ).sort((a,b)=>a.name.localeCompare(b.name));
-
-  games=g;
-  playerReports=p.games;
-
-  if(!teams.length)throw Error("No FCS teams found");
-
-  buildPlayers();
-  fillTeams();
-
-  $("status").innerHTML=
-   "<span class='green'>● DATA CONNECTED</span> | "+
-   teams.length+" FCS teams | "+
-   games.length+" games | "+
-   playerReports.length+" player reports";
-
-  analyze();
-
- }catch(e){
-  $("status").textContent="DATA ERROR: "+e.message;
-  $("comparison").textContent=
-   "Unable to load verified data.";
-  console.error(e);
- }
 }
 
 function fillTeams(){
- const names=teams.map(t=>t.name);
+  const names=teams.map(t=>t.name);
 
- for(const side of ["away","home"]){
-  $(side).innerHTML="";
-  names.forEach(n=>$(side).add(new Option(n,n)));
- }
+  for(const side of ["away","home"]){
+    $(side).innerHTML="";
+    names.forEach(
+      n=>$(side).add(new Option(n,n))
+    );
+  }
 
- $("away").value=names.includes("Florida A&M")
-  ?"Florida A&M":names[0];
+  $("away").value=names.includes("Florida A&M")
+    ?"Florida A&M":names[0];
 
- $("home").value=names.includes("Alabama State")
-  ?"Alabama State":
-  names.find(n=>n!==$("away").value)||names[0];
+  $("home").value=names.includes("Alabama State")
+    ?"Alabama State":
+    names.find(n=>n!==$("away").value)||names[0];
 }
 
 function filterTeams(side){
- const q=$(side+"Search").value.toLowerCase().trim();
- const old=$(side).value;
+  const q=$(side+"Search").value.toLowerCase().trim();
+  const old=$(side).value;
 
- const matches=teams.filter(t=>
-  t.name.toLowerCase().includes(q)
- );
+  const matching=teams.filter(
+    t=>t.name.toLowerCase().includes(q)
+  );
 
- $(side).innerHTML="";
- matches.forEach(t=>
-  $(side).add(new Option(t.name,t.name))
- );
+  $(side).innerHTML="";
 
- if(matches.some(t=>t.name===old)){
-  $(side).value=old;
- }
+  matching.forEach(
+    t=>$(side).add(new Option(t.name,t.name))
+  );
 
- if(matches.length)analyze();
+  if(matching.some(t=>t.name===old)){
+    $(side).value=old;
+  }
+
+  if(matching.length)analyze();
 }
 
 function table(a,h,sa,sh){
- const x=a[sa]||{};
- const y=h[sh]||{};
+  const x=a[sa]||{};
+  const y=h[sh]||{};
 
- const rows=[
-  ["Games",x.games??0,y.games??0],
-  ["Wins",x.wins??0,y.wins??0],
-  ["Losses",x.losses??0,y.losses??0],
-  ["Points Scored",fmt(x.ppg),fmt(y.ppg)],
-  ["Points Allowed",fmt(x.allowed),fmt(y.allowed)],
-  ["1Q Scored",fmt(x.q1Scored),fmt(y.q1Scored)],
-  ["1Q Allowed",fmt(x.q1Allowed),fmt(y.q1Allowed)],
-  ["1H Scored",fmt(x.h1Scored),fmt(y.h1Scored)],
-  ["1H Allowed",fmt(x.h1Allowed),fmt(y.h1Allowed)]
- ];
+  const rows=[
+    ["Games",x.games??0,y.games??0],
+    ["Wins",x.wins??0,y.wins??0],
+    ["Losses",x.losses??0,y.losses??0],
+    ["Points Scored",fmt(x.ppg),fmt(y.ppg)],
+    ["Points Allowed",fmt(x.allowed),fmt(y.allowed)],
+    ["1Q Scored",fmt(x.q1Scored),fmt(y.q1Scored)],
+    ["1Q Allowed",fmt(x.q1Allowed),fmt(y.q1Allowed)],
+    ["1H Scored",fmt(x.h1Scored),fmt(y.h1Scored)],
+    ["1H Allowed",fmt(x.h1Allowed),fmt(y.h1Allowed)]
+  ];
 
- return "<div class='scroll'><table>"+
-  "<tr><th>Metric</th><th>"+esc(a.name)+
-  "</th><th>"+esc(h.name)+"</th></tr>"+
-  rows.map(r=>
-   "<tr><td>"+esc(r[0])+"</td><td>"+
-   esc(r[1])+"</td><td>"+esc(r[2])+
-   "</td></tr>"
-  ).join("")+"</table></div>";
+  return "<div class='scroll'><table>"+
+    "<tr><th>Metric</th><th>"+esc(a.name)+
+    "</th><th>"+esc(h.name)+"</th></tr>"+
+    rows.map(
+      r=>"<tr><td>"+esc(r[0])+"</td><td>"+
+      esc(r[1])+"</td><td>"+esc(r[2])+
+      "</td></tr>"
+    ).join("")+
+    "</table></div>";
 }
 
 function chooseSamples(a,h){
- const splits=
-  (a.away?.games??0)>=3 &&
-  (h.home?.games??0)>=3;
+  const split=
+    (a.away?.games??0)>=3 &&
+    (h.home?.games??0)>=3;
 
- return {
-  a:splits?a.away:a.overall||{},
-  h:splits?h.home:h.overall||{},
-  basis:splits?"Home/Away splits":"Overall averages",
-  countA:splits?a.away.games:a.overall?.games??0,
-  countH:splits?h.home.games:h.overall?.games??0
- };
+  return {
+    a:split?a.away:a.overall||{},
+    h:split?h.home:h.overall||{},
+    basis:split?"Home/Away splits":"Overall averages",
+    countA:split
+      ?a.away.games
+      :a.overall?.games??0,
+    countH:split
+      ?h.home.games
+      :h.overall?.games??0
+  };
 }
 
 function project(x,y){
- return numeric(x)!==null&&numeric(y)!==null
-  ?(x+y)/2:null;
+  return numeric(x)!==null&&numeric(y)!==null
+    ?(x+y)/2:null;
 }
 
 function period(s,off,def){
- const a=project(s.a[off],s.h[def]);
- const h=project(s.h[off],s.a[def]);
+  const away=project(s.a[off],s.h[def]);
+  const home=project(s.h[off],s.a[def]);
 
- return {
-  away:a,
-  home:h,
-  total:a!==null&&h!==null?a+h:null,
-  homeMargin:a!==null&&h!==null?h-a:null
- };
+  return {
+    away,
+    home,
+    total:away!==null&&home!==null
+      ?away+home:null,
+    homeMargin:away!==null&&home!==null
+      ?home-away:null
+  };
 }
 
-function clearMarketInputs(){
- for(const id of marketInputs){
-  if(id==="teamTotalSide"){
-   $(id).value="away";
-  }else{
-   $(id).value="";
-  }
- }
+function periods(s){
+  return {
+    q:period(s,"q1Scored","q1Allowed"),
+    half:period(s,"h1Scored","h1Allowed"),
+    full:period(s,"ppg","allowed"),
+    sample:s
+  };
+}
+
+function clearInputs(){
+  inputs.forEach(id=>{
+    $(id).value=
+      id==="teamTotalSide"?"away":
+      id==="qbStatus"?"unknown":"";
+  });
 }
 
 function analyze(){
- const a=teams.find(t=>t.name===$("away").value);
- const h=teams.find(t=>t.name===$("home").value);
+  const a=teams.find(
+    t=>t.name===$("away").value
+  );
+  const h=teams.find(
+    t=>t.name===$("home").value
+  );
 
- currentAway=a||null;
- currentHome=h||null;
+  currentAway=a||null;
+  currentHome=h||null;
 
- if(!a||!h||a.name===h.name){
-  projections=null;
-  $("comparison").textContent="Select two different teams.";
-  $("engine").textContent="";
+  if(!a||!h||a.name===h.name){
+    projections=null;
+    $("comparison").textContent=
+      "Select two different teams.";
+    $("engine").textContent="";
+    rankMarkets();
+    return;
+  }
+
+  const key=a.name+"|"+h.name;
+
+  if(key!==currentMatchKey){
+    clearInputs();
+    currentMatchKey=key;
+  }
+
+  $("matchTitle").textContent=
+    a.name+" @ "+h.name;
+
+  $("comparison").innerHTML=
+    "<h3>Overall</h3>"+
+    table(a,h,"overall","overall")+
+    "<h3>Location Splits</h3>"+
+    table(a,h,"away","home");
+
+  projections=periods(chooseSamples(a,h));
+
+  let html=
+    "<p><span class='tag'>"+
+    esc(projections.sample.basis)+
+    "</span><span class='tag'>"+
+    projections.sample.countA+
+    " away-team games</span>"+
+    "<span class='tag'>"+
+    projections.sample.countH+
+    " home-team games</span></p>";
+
+  for(const [name,p] of [
+    ["First Quarter",projections.q],
+    ["First Half",projections.half],
+    ["Full Game",projections.full]
+  ]){
+    html+=
+      "<div class='card'><h3>"+name+"</h3>"+
+      "<div class='grid3'>"+
+      "<div class='metric'>"+esc(a.name)+
+      "<div class='big'>"+fmt(p.away)+
+      "</div>Projected points</div>"+
+      "<div class='metric'>"+esc(h.name)+
+      "<div class='big'>"+fmt(p.home)+
+      "</div>Projected points</div>"+
+      "<div class='metric'>Combined"+
+      "<div class='big'>"+fmt(p.total)+
+      "</div>Projected total</div></div>"+
+      "<p class='muted'>Model home margin: "+
+      fmt(p.homeMargin)+"</p></div>";
+  }
+
+  html+=
+    "<p class='notice'>"+
+    "Descriptive scoring estimates, not certified "+
+    "probabilities. QB and SOS effects are not modeled."+
+    "</p>";
+
+  $("engine").innerHTML=html;
+
+  $("history").innerHTML=
+    "<div class='grid'>"+
+    [a,h].map(t=>
+      "<div><h3>"+esc(t.name)+"</h3>"+
+      [...(t.games||[])]
+        .sort(
+          (x,y)=>String(y.date||"").localeCompare(
+            String(x.date||"")
+          )
+        )
+        .slice(0,5)
+        .map(g=>
+          "<div class='metric'>"+
+          esc((g.date||"").slice(0,10))+
+          " vs "+esc(g.opponent)+
+          "<br>"+esc(g.pointsScored)+"–"+
+          esc(g.pointsAllowed)+" | "+
+          (g.won?"W":g.tied?"T":"L")+
+          "</div>"
+        ).join("")+
+      "</div>"
+    ).join("")+
+    "</div>";
+
+  $("marketMatch").textContent=
+    a.name+" @ "+h.name;
+
+  $("decisionMatch").textContent=
+    a.name+" @ "+h.name;
+
   rankMarkets();
-  return;
- }
-
- const matchKey=a.name+"|"+h.name;
-
- if(matchKey!==currentMatchKey){
-  clearMarketInputs();
-  currentMatchKey=matchKey;
- }
-
- $("matchTitle").textContent=a.name+" @ "+h.name;
-
- $("comparison").innerHTML=
-  "<h3>Overall</h3>"+
-  table(a,h,"overall","overall")+
-  "<h3>Location Splits</h3>"+
-  table(a,h,"away","home");
-
- const s=chooseSamples(a,h);
-
- const q=period(s,"q1Scored","q1Allowed");
- const half=period(s,"h1Scored","h1Allowed");
- const full=period(s,"ppg","allowed");
-
- projections={q,half,full,sample:s};
-
- let html=
-  "<p><span class='tag'>"+esc(s.basis)+"</span>"+
-  "<span class='tag'>"+s.countA+
-  " away-team games</span>"+
-  "<span class='tag'>"+s.countH+
-  " home-team games</span></p>";
-
- for(const [name,p] of [
-  ["First Quarter",q],
-  ["First Half",half],
-  ["Full Game",full]
- ]){
-  html+="<div class='card'><h3>"+name+"</h3>"+
-   "<div class='grid3'>"+
-   "<div class='metric'>"+esc(a.name)+
-   "<div class='big'>"+fmt(p.away)+"</div>"+
-   "Projected points</div>"+
-   "<div class='metric'>"+esc(h.name)+
-   "<div class='big'>"+fmt(p.home)+"</div>"+
-   "Projected points</div>"+
-   "<div class='metric'>Combined"+
-   "<div class='big'>"+fmt(p.total)+"</div>"+
-   "Projected total</div></div>"+
-   "<p class='muted'>Model home margin: "+
-   fmt(p.homeMargin)+"</p></div>";
- }
-
- html+="<p class='notice'>"+
-  "These are unvalidated offense/defense estimates. "+
-  "They do not yet account for quarterback changes, "+
-  "strength of schedule, or historical model error."+
-  "</p>";
-
- $("engine").innerHTML=html;
-
- $("history").innerHTML="<div class='grid'>"+
-  [a,h].map(t=>{
-   const recent=[...(t.games||[])]
-    .sort((x,y)=>
-     String(y.date||"").localeCompare(
-      String(x.date||"")
-     )
-    ).slice(0,5);
-
-   return "<div><h3>"+esc(t.name)+"</h3>"+
-    recent.map(g=>
-     "<div class='metric'>"+
-     esc((g.date||"").slice(0,10))+
-     " vs "+esc(g.opponent)+
-     "<br>"+esc(g.pointsScored)+"–"+
-     esc(g.pointsAllowed)+" | "+
-     (g.won?"W":g.tied?"T":"L")+
-     "</div>"
-    ).join("")+"</div>";
-  }).join("")+"</div>";
-
- $("marketMatch").textContent=a.name+" @ "+h.name;
- $("decisionMatch").textContent=a.name+" @ "+h.name;
-
- rankMarkets();
- renderPlayers();
+  renderPlayers();
 }
 
 /*
- FINAL DECISION RULES
+ WALK-FORWARD HISTORICAL TESTING
 
- Qualified selections are never created merely
- because a model projection differs from a line.
+ Each historical prediction uses only games played
+ before that target game's date.
 
- This model has not been historically validated.
- Therefore every current market remains PASS.
+ Entire same-day records are excluded because
+ their kickoff order may not be known.
 
- The board has no fixed maximum number of picks.
- Once qualification is implemented, it will show
- all qualified options, followed by STOP.
+ Historical score error is NOT historical
+ betting profitability.
+*/
+
+function pastSummary(t,cutoff){
+  const records=(t.games||[]).filter(g=>
+    String(g.date||"").slice(0,10)<cutoff &&
+    String(g.date||"")!=="" &&
+    numeric(g.pointsScored)!==null &&
+    numeric(g.pointsAllowed)!==null
+  );
+
+  function summary(list){
+    const m=k=>{
+      const v=list.map(g=>g[k]).filter(
+        x=>numeric(x)!==null
+      );
+
+      return v.length
+        ?v.reduce((a,b)=>a+b,0)/v.length
+        :null;
+    };
+
+    return {
+      games:list.length,
+      ppg:m("pointsScored"),
+      allowed:m("pointsAllowed"),
+      q1Scored:m("q1Scored"),
+      q1Allowed:m("q1Allowed"),
+      h1Scored:m("h1Scored"),
+      h1Allowed:m("h1Allowed")
+    };
+  }
+
+  return {
+    overall:summary(records),
+    away:summary(records.filter(
+      g=>String(g.location||"").toLowerCase()==="away"
+    )),
+    home:summary(records.filter(
+      g=>String(g.location||"").toLowerCase()==="home"
+    ))
+  };
+}
+
+function runBacktest(){
+  const byName=new Map(
+    teams.map(t=>[t.name,t])
+  );
+
+  const errors={
+    spread:[],
+    total:[],
+    teamTotal:[],
+    halfTotal:[],
+    quarterTotal:[]
+  };
+
+  let tested=0;
+
+  const completed=games.filter(g=>
+    g.completed===true &&
+    numeric(g.homePoints)!==null &&
+    numeric(g.awayPoints)!==null &&
+    g.startDate
+  ).sort(
+    (a,b)=>String(a.startDate).localeCompare(
+      String(b.startDate)
+    )
+  );
+
+  for(const g of completed){
+    const a=byName.get(g.awayTeam);
+    const h=byName.get(g.homeTeam);
+
+    if(!a||!h)continue;
+
+    const date=String(g.startDate).slice(0,10);
+
+    const ap=pastSummary(a,date);
+    const hp=pastSummary(h,date);
+
+    if(
+      ap.overall.games<3 ||
+      hp.overall.games<3
+    )continue;
+
+    const pred=periods(chooseSamples(ap,hp));
+
+    if(
+      pred.full.total===null ||
+      pred.full.homeMargin===null
+    )continue;
+
+    tested++;
+
+    function push(key,predicted,actual){
+      if(
+        numeric(predicted)!==null &&
+        numeric(actual)!==null
+      ){
+        errors[key].push(
+          Math.abs(predicted-actual)
+        );
+      }
+    }
+
+    push(
+      "spread",
+      pred.full.homeMargin,
+      g.homePoints-g.awayPoints
+    );
+
+    push(
+      "total",
+      pred.full.total,
+      g.homePoints+g.awayPoints
+    );
+
+    push(
+      "teamTotal",
+      pred.full.away,
+      g.awayPoints
+    );
+
+    push(
+      "teamTotal",
+      pred.full.home,
+      g.homePoints
+    );
+
+    const hq=g.homeLineScores;
+    const aq=g.awayLineScores;
+
+    if(
+      Array.isArray(hq) &&
+      Array.isArray(aq) &&
+      hq.length>=2 &&
+      aq.length>=2
+    ){
+      const all=[
+        hq[0],hq[1],
+        aq[0],aq[1]
+      ];
+
+      if(all.every(x=>numeric(x)!==null)){
+        push(
+          "quarterTotal",
+          pred.q.total,
+          hq[0]+aq[0]
+        );
+
+        push(
+          "halfTotal",
+          pred.half.total,
+          hq[0]+hq[1]+aq[0]+aq[1]
+        );
+      }
+    }
+  }
+
+  const result={tested};
+
+  for(const [key,values] of Object.entries(errors)){
+    result[key]={
+      n:values.length,
+      mae:values.length
+        ?values.reduce((a,b)=>a+b,0)/values.length
+        :null
+    };
+  }
+
+  return result;
+}
+
+/*
+ SIX-MARKET EVIDENCE SCREEN
+
+ This stage measures the model's difference
+ from the entered market line relative to
+ historical scoring error.
+
+ LEAN = preliminary research candidate.
+ PASS = did not meet preliminary screen.
+
+ GREEN remains unavailable until market pricing,
+ fees, independent team news, and profitability
+ validation are implemented.
+
+ Moneyline needs calibrated win probabilities.
 */
 
 function rankMarkets(){
- if(!projections||!currentAway||!currentHome){
-  $("decisionBoard").innerHTML=
-   "<p class='notice'>Choose a matchup.</p>";
-  $("ranked").innerHTML="";
-  $("stop").innerHTML="";
-  return;
- }
+  if(
+    !projections ||
+    !currentAway ||
+    !currentHome
+  ){
+    $("decisionBoard").innerHTML=
+      "<p class='notice'>Choose a matchup.</p>";
+    $("ranked").innerHTML="";
+    $("stop").innerHTML="";
+    return;
+  }
 
- const a=currentAway.name;
- const h=currentHome.name;
- const p=projections;
- const source=$("source").value.trim();
- const observed=$("observed").value;
+  const a=currentAway.name;
+  const h=currentHome.name;
+  const p=projections;
+  const source=$("source").value.trim();
+  const observed=$("observed").value;
+  const qb=$("qbStatus").value;
+  const entries=[];
 
- const entries=[];
+  const sample=Math.min(
+    p.sample.countA,
+    p.sample.countH
+  );
 
- function add(name,line,model,edge,selection,reason){
-  const comparable=
-   line!==null &&
-   numeric(model)!==null &&
-   numeric(edge)!==null;
+  const observedTime=observed
+    ?new Date(observed).getTime()
+    :NaN;
 
-  entries.push({
-   name,
-   line,
-   model,
-   edge:comparable?edge:null,
-   absEdge:comparable?Math.abs(edge):null,
-   selection:comparable?selection:"Unavailable",
-   reason:comparable
-    ?reason
-    :"Missing line or model data",
-   comparable,
-   status:"PASS",
-   qualified:false
-  });
- }
+  const age=Date.now()-observedTime;
 
- const spread=val("spread");
- const margin=p.full.homeMargin;
+  const fresh=
+    Number.isFinite(observedTime) &&
+    age>=0 &&
+    age<=3*3600000;
 
- const spreadEdge=
-  spread!==null&&margin!==null
-   ?margin+spread:null;
+  function add(
+    name,key,line,model,edge,selection
+  ){
+    const comparable=
+      line!==null &&
+      numeric(model)!==null &&
+      numeric(edge)!==null;
 
- const spreadChoice=spreadEdge===null?"Unavailable":
-  spreadEdge>0
-   ?h+" "+(spread>0?"+":"")+spread
-   :spreadEdge<0
-    ?a+" "+(-spread>0?"+":"")+(-spread)
-    :"No modeled side advantage";
+    const test=backtest[key]||{
+      n:0,
+      mae:null
+    };
 
- add(
-  "Spread",
-  spread,
-  margin,
-  spreadEdge,
-  spreadChoice,
-  "Projected home margin plus home spread"
- );
+    const ratio=
+      comparable &&
+      test.mae>0
+        ?Math.abs(edge)/test.mae
+        :null;
 
- function addTotal(name,id,model){
-  const line=val(id);
-  const edge=line!==null&&model!==null
-   ?model-line:null;
+    const reasons=[];
 
-  const choice=edge===null?"Unavailable":
-   edge>0?"Over "+line:
-   edge<0?"Under "+line:
-   "No modeled total advantage";
+    if(!comparable){
+      reasons.push(
+        "Market line or projection missing"
+      );
+    }
+
+    if(!source){
+      reasons.push(
+        "Market source missing"
+      );
+    }
+
+    if(!observed){
+      reasons.push(
+        "Observation time missing"
+      );
+    }else if(!fresh){
+      reasons.push(
+        "Line is older than 3 hours or future-dated"
+      );
+    }
+
+    if(sample<4){
+      reasons.push(
+        "Team sample below four games"
+      );
+    }
+
+    if(test.n<20){
+      reasons.push(
+        "Fewer than 20 historical backtest observations"
+      );
+    }
+
+    if(ratio===null){
+      reasons.push(
+        "Historical error unavailable"
+      );
+    }else if(ratio<1.25){
+      reasons.push(
+        "Difference below 1.25 × historical MAE"
+      );
+    }
+
+    if(qb==="concern"){
+      reasons.push(
+        "Quarterback uncertainty flagged"
+      );
+    }
+
+    if(qb==="unknown"){
+      reasons.push(
+        "Quarterback/team news unverified"
+      );
+    }
+
+    reasons.push(
+      "SOS and current market price not modeled"
+    );
+
+    const lean=
+      comparable &&
+      !!source &&
+      fresh &&
+      sample>=4 &&
+      test.n>=20 &&
+      ratio!==null &&
+      ratio>=1.25 &&
+      qb!=="concern";
+
+    entries.push({
+      name,
+      key,
+      line,
+      model,
+      edge:comparable?edge:null,
+      ratio,
+      selection:comparable
+        ?selection
+        :"Unavailable",
+      test,
+      comparable,
+      status:lean?"LEAN":"PASS",
+      reasons
+    });
+  }
+
+  const spread=val("spread");
+  const margin=p.full.homeMargin;
+
+  const se=
+    spread!==null &&
+    margin!==null
+      ?margin+spread
+      :null;
+
+  const spreadChoice=
+    se===null
+      ?"Unavailable"
+      :se>0
+        ?h+" "+(spread>0?"+":"")+spread
+        :se<0
+          ?a+" "+(-spread>0?"+":"")+(-spread)
+          :"No modeled advantage";
 
   add(
-   name,line,model,edge,choice,
-   "Projected total minus market total"
+    "Spread",
+    "spread",
+    spread,
+    margin,
+    se,
+    spreadChoice
   );
- }
 
- addTotal("Game Total","total",p.full.total);
+  function total(name,key,id,model){
+    const line=val(id);
 
- const side=$("teamTotalSide").value;
- const teamName=side==="away"?a:h;
- const teamModel=p.full[side];
- const teamLine=val("teamTotal");
+    const edge=
+      line!==null &&
+      model!==null
+        ?model-line
+        :null;
 
- const teamEdge=
-  teamLine!==null&&teamModel!==null
-   ?teamModel-teamLine:null;
+    const selection=
+      edge===null
+        ?"Unavailable"
+        :edge>0
+          ?"Over "+line
+          :edge<0
+            ?"Under "+line
+            :"No modeled advantage";
 
- const teamChoice=teamEdge===null?"Unavailable":
-  teamEdge>0?teamName+" Over "+teamLine:
-  teamEdge<0?teamName+" Under "+teamLine:
-  "No modeled team-total advantage";
+    add(
+      name,key,line,model,edge,selection
+    );
+  }
 
- add(
-  "Team Total",
-  teamLine,
-  teamModel,
-  teamEdge,
-  teamChoice,
-  "Team scoring projection minus team total"
- );
-
- addTotal(
-  "First Half",
-  "halfTotal",
-  p.half.total
- );
-
- addTotal(
-  "First Quarter",
-  "quarterTotal",
-  p.q.total
- );
-
- const mlAway=val("mlAway");
- const mlHome=val("mlHome");
-
- entries.push({
-  name:"Moneyline",
-  line:null,
-  model:null,
-  edge:null,
-  absEdge:null,
-  selection:"Unavailable",
-  reason:
-   "Win probability is not calibrated. "+
-   "Away odds: "+(mlAway??"N/A")+
-   "; Home odds: "+(mlHome??"N/A"),
-  comparable:false,
-  status:"PASS",
-  qualified:false
- });
-
- const comparable=entries
-  .filter(e=>e.comparable)
-  .sort((x,y)=>y.absEdge-x.absEdge);
-
- const unavailable=entries.filter(e=>!e.comparable);
- const ordered=[...comparable,...unavailable];
-
- $("ranked").innerHTML=ordered.map((e,i)=>{
-  const rank=e.comparable?"#"+(i+1):"UNRANKED";
-
-  return "<div class='market'>"+
-   "<div class='markethead'>"+
-   "<h3>"+esc(e.name)+"</h3>"+
-   "<span class='rank'>"+rank+"</span></div>"+
-   "<p><strong>Model direction:</strong> "+
-   esc(e.selection)+"</p>"+
-   "<p>Market line: "+esc(e.line??"N/A")+
-   " | Model: "+fmt(e.model)+
-   " | Raw difference: "+fmt(e.edge)+"</p>"+
-   "<p class='muted'>"+esc(e.reason)+"</p>"+
-   "<strong class='pass'>PASS — NOT QUALIFIED</strong>"+
-   "</div>";
- }).join("");
-
- renderDecisionRoom(entries,comparable);
-
- const reasons=[
-  "No out-of-sample historical validation",
-  "No market-specific error calibration",
-  "No verified transaction-cost or price edge",
-  "No quarterback availability adjustment",
-  "No strength-of-schedule adjustment",
-  "No correlated-play screening"
- ];
-
- if(!source){
-  reasons.unshift("Market source missing");
- }
-
- if(!observed){
-  reasons.unshift("Observation time missing");
- }
-
- const sample=Math.min(
-  p.sample.countA,p.sample.countH
- );
-
- if(sample<5){
-  reasons.unshift(
-   "Fewer than five games in at least one sample"
+  total(
+    "Game Total",
+    "total",
+    "total",
+    p.full.total
   );
- }
 
- $("stop").innerHTML=
-  "<p class='notice'><strong>STOP — "+
-  "0 VERIFIED QUALIFICATIONS</strong></p>"+
-  "<p>Comparable markets: "+
-  comparable.length+" of 6</p>"+
-  "<p>Source: "+esc(source||"Not entered")+
-  " | Observed: "+
-  esc(observed||"Not entered")+"</p>"+
-  "<p class='muted'>"+
-  reasons.map(esc).join(" • ")+"</p>"+
-  "<p>Raw point differences are not comparable "+
-  "betting-strength scores. We need calibrated "+
-  "prediction errors and actual prices before "+
-  "ranking qualified opportunities.</p>";
+  const side=$("teamTotalSide").value;
+
+  const teamName=
+    side==="away"?a:h;
+
+  const teamModel=p.full[side];
+  const teamLine=val("teamTotal");
+
+  const teamEdge=
+    teamLine!==null &&
+    teamModel!==null
+      ?teamModel-teamLine
+      :null;
+
+  const teamChoice=
+    teamEdge===null
+      ?"Unavailable"
+      :teamName+" "+
+       (
+         teamEdge>0
+           ?"Over "
+           :teamEdge<0
+             ?"Under "
+             :"Equal to "
+       )+teamLine;
+
+  add(
+    "Team Total",
+    "teamTotal",
+    teamLine,
+    teamModel,
+    teamEdge,
+    teamChoice
+  );
+
+  total(
+    "First Half",
+    "halfTotal",
+    "halfTotal",
+    p.half.total
+  );
+
+  total(
+    "First Quarter",
+    "quarterTotal",
+    "quarterTotal",
+    p.q.total
+  );
+
+  entries.push({
+    name:"Moneyline",
+    key:"moneyline",
+    line:null,
+    model:null,
+    edge:null,
+    ratio:null,
+    selection:"No calibrated win probability",
+    test:{
+      n:0,
+      mae:null
+    },
+    comparable:false,
+    status:"PASS",
+    reasons:[
+      "Moneyline cannot be evaluated from a scoring "+
+      "margin without calibrated win probabilities",
+      "Away odds: "+(val("mlAway")??"N/A")+
+      "; home odds: "+(val("mlHome")??"N/A")
+    ]
+  });
+
+  const compared=entries
+    .filter(e=>e.comparable)
+    .sort(
+      (x,y)=>(y.ratio??-1)-(x.ratio??-1)
+    );
+
+  const ordered=[
+    ...compared,
+    ...entries.filter(e=>!e.comparable)
+  ];
+
+  $("ranked").innerHTML=ordered.map((e,i)=>
+    "<div class='market'>"+
+    "<div class='markethead'>"+
+    "<h3>"+esc(e.name)+"</h3>"+
+    "<span class='rank'>"+
+    (e.comparable?"#"+(i+1):"UNRANKED")+
+    "</span></div>"+
+    "<p>"+esc(e.selection)+"</p>"+
+    "<p>Market line: "+esc(e.line??"N/A")+
+    " | Model: "+fmt(e.model)+
+    " | Difference: "+fmt(e.edge)+"</p>"+
+    "<p>Historical MAE: "+fmt(e.test.mae)+
+    " ("+e.test.n+" observations)"+
+    " | Difference / MAE: "+
+    fmt(e.ratio,2)+"×</p>"+
+    "<strong class='"+
+    (e.status==="LEAN"?"lean":"pass")+
+    "'>"+e.status+"</strong>"+
+    "<p class='muted'>"+
+    esc(e.reasons.join(" • "))+
+    "</p></div>"
+  ).join("");
+
+  renderDecisionRoom(entries,compared);
+
+  $("backtest").innerHTML=
+    "<p>Walk-forward completed games tested: "+
+    "<strong>"+backtest.tested+"</strong>. "+
+    "Only earlier-date team records are used "+
+    "for each historical prediction. "+
+    "MAE = mean absolute prediction error in points. "+
+    "These are scoring-error tests, NOT profitable-bet "+
+    "or spread-cover backtests.</p>"+
+    "<div class='scroll'><table>"+
+    "<tr><th>Market</th><th>Observations</th>"+
+    "<th>MAE</th></tr>"+
+    [
+      ["Spread","spread"],
+      ["Game Total","total"],
+      ["Team Total","teamTotal"],
+      ["1H Total","halfTotal"],
+      ["1Q Total","quarterTotal"]
+    ].map(([name,key])=>
+      "<tr><td>"+name+"</td><td>"+
+      backtest[key].n+"</td><td>"+
+      fmt(backtest[key].mae)+
+      "</td></tr>"
+    ).join("")+
+    "</table></div>";
+
+  $("stop").innerHTML=
+    "<div class='stop'>"+
+    "<h3>🛑 STOP — 0 certified GREEN plays</h3>"+
+    "<p>Preliminary LEANs: "+
+    entries.filter(e=>e.status==="LEAN").length+
+    " | PASS: "+
+    entries.filter(e=>e.status==="PASS").length+
+    "</p>"+
+    "<p>Historical MAE measures typical "+
+    "score-prediction error; it does not establish "+
+    "an expected betting profit. "+
+    "No price/fee validation, QB verification "+
+    "from an independent feed, or SOS adjustment "+
+    "is available.</p></div>";
 }
 
-function renderDecisionRoom(entries,comparable){
+function renderDecisionRoom(entries,compared){
+  const leans=compared.filter(
+    e=>e.status==="LEAN"
+  );
 
- const qualified=entries
-  .filter(e=>e.qualified===true);
+  const passes=entries.filter(
+    e=>e.status==="PASS"
+  );
 
- const research=comparable
-  .filter(e=>!e.qualified);
-
- let html=
-  "<div class='grid3'>"+
-  "<div class='metric'>"+
-  "QUALIFIED<div class='big green'>"+
-  qualified.length+"</div></div>"+
-  "<div class='metric'>"+
-  "RESEARCH COMPARISONS<div class='big'>"+
-  research.length+"</div></div>"+
-  "<div class='metric'>"+
-  "MARKETS CHECKED<div class='big'>"+
-  entries.length+"</div></div>"+
-  "</div>";
-
- if(qualified.length){
-  qualified.forEach((e,i)=>{
-   html+="<div class='market' "+
-    "style='border-color:#27dc8a'>"+
-    "<div class='markethead'>"+
-    "<h3>BEST "+(i+1)+
-    " — "+esc(e.name)+"</h3>"+
-    "<span class='green'>GREEN</span></div>"+
-    "<p>"+esc(e.selection)+"</p>"+
-    "<p>Model: "+fmt(e.model)+
-    " | Line: "+esc(e.line)+
-    " | Edge: "+fmt(e.edge)+"</p>"+
+  let html=
+    "<div class='grid3'>"+
+    "<div class='metric'>GREEN"+
+    "<div class='big green'>0</div></div>"+
+    "<div class='metric'>PRELIMINARY LEANS"+
+    "<div class='big gold'>"+
+    leans.length+
+    "</div></div>"+
+    "<div class='metric'>MARKETS CHECKED"+
+    "<div class='big'>"+
+    entries.length+
+    "</div></div>"+
     "</div>";
-  });
- }else{
-  html+="<div class='notice'>"+
-   "<strong>No qualified selections yet.</strong>"+
-   "<p>The six-market comparisons can identify "+
-   "numbers worth investigating, but the model "+
-   "has not met the PROVE IT requirements.</p>"+
-   "</div>";
- }
 
- html+="<div class='stop'>"+
-  "<h2>🛑 STOP</h2>"+
-  "<p><strong>"+qualified.length+
-  " qualified opportunities.</strong></p>"+
-  "<p>No additional market currently meets "+
-  "the required standards.</p>"+
-  "</div>";
+  if(leans.length){
+    leans.forEach((e,i)=>{
+      html+=
+        "<div class='market'>"+
+        "<div class='markethead'>"+
+        "<h3>RESEARCH "+(i+1)+
+        " — "+esc(e.name)+"</h3>"+
+        "<span class='lean'>LEAN</span>"+
+        "</div>"+
+        "<p><strong>"+
+        esc(e.selection)+
+        "</strong></p>"+
+        "<p>Line: "+esc(e.line)+
+        " | Projection: "+fmt(e.model)+
+        " | Difference: "+fmt(e.edge)+
+        "</p>"+
+        "<p>Historical MAE: "+
+        fmt(e.test.mae)+
+        " | Signal: "+
+        fmt(e.ratio,2)+
+        "× historical error</p>"+
+        "<p class='muted'>Still needs verified "+
+        "price, QB/news, SOS, and market "+
+        "profitability testing.</p>"+
+        "</div>";
+    });
+  }else{
+    html+=
+      "<div class='notice'>"+
+      "<strong>No preliminary LEANs meet "+
+      "today's evidence screen.</strong>"+
+      "<p>Enter recent verified lines below; "+
+      "some games may still correctly produce none."+
+      "</p></div>";
+  }
 
- html+="<h3>Research Queue — Not Picks</h3>";
-
- if(research.length){
-  research.forEach((e,i)=>{
-   html+="<div class='metric'>"+
-    "<span class='rank'>Research #"+
-    (i+1)+"</span>"+
-    "<h3>"+esc(e.name)+"</h3>"+
-    "<p>"+esc(e.selection)+"</p>"+
-    "<p>Raw difference: "+
-    fmt(e.absEdge)+" points</p>"+
-    "<strong class='pass'>PASS</strong>"+
+  html+=
+    "<div class='stop'>"+
+    "<h2>🛑 STOP</h2>"+
+    "<p>"+leans.length+
+    " preliminary research opportunities; "+
+    "0 certified GREEN selections.</p>"+
+    "<p>"+passes.length+
+    " markets did not meet the preliminary screen. "+
+    "Do not fill the list to reach five.</p>"+
     "</div>";
-  });
- }else{
-  html+="<p class='muted'>"+
-   "No comparable markets entered.</p>";
- }
 
- $("decisionBoard").innerHTML=html;
+  $("decisionBoard").innerHTML=html;
 }
 
 function buildPlayers(){
- players=new Map();
+  players=new Map();
 
- for(const report of playerReports){
-  for(const stat of report.stats||[]){
-   if(!stat.playerId||!stat.player)continue;
+  for(const report of playerReports){
+    for(const stat of report.stats||[]){
+      if(!stat.playerId||!stat.player)continue;
 
-   const id=String(stat.playerId);
+      const id=String(stat.playerId);
 
-   if(!players.has(id)){
-    players.set(id,{
-     id,
-     name:stat.player,
-     team:stat.team,
-     games:new Map()
-    });
-   }
+      if(!players.has(id)){
+        players.set(id,{
+          id,
+          name:stat.player,
+          team:stat.team,
+          games:new Map()
+        });
+      }
 
-   const player=players.get(id);
-   const gid=String(report.gameId);
+      const p=players.get(id);
+      const gid=String(report.gameId);
 
-   if(!player.games.has(gid)){
-    player.games.set(gid,{
-     date:report.date,
-     homeTeam:report.homeTeam,
-     awayTeam:report.awayTeam,
-     stats:[]
-    });
-   }
+      if(!p.games.has(gid)){
+        p.games.set(gid,{
+          date:report.date,
+          homeTeam:report.homeTeam,
+          awayTeam:report.awayTeam,
+          stats:[]
+        });
+      }
 
-   player.games.get(gid).stats.push({
-    category:stat.category,
-    name:stat.stat,
-    value:stat.value
-   });
+      p.games.get(gid).stats.push({
+        category:stat.category,
+        name:stat.stat,
+        value:stat.value
+      });
+    }
   }
- }
 }
 
 function renderPlayers(){
- const a=$("away").value;
- const h=$("home").value;
- const q=$("playerSearch").value.toLowerCase().trim();
+  const a=$("away").value;
+  const h=$("home").value;
+  const q=$("playerSearch").value.toLowerCase().trim();
 
- const list=[...players.values()]
-  .filter(p=>
-   (p.team===a||p.team===h)&&
-   p.name.toLowerCase().includes(q)
-  )
-  .sort((x,y)=>
-   x.team.localeCompare(y.team)||
-   x.name.localeCompare(y.name)
-  );
+  const list=[...players.values()]
+    .filter(p=>
+      (p.team===a||p.team===h) &&
+      p.name.toLowerCase().includes(q)
+    )
+    .sort(
+      (x,y)=>x.team.localeCompare(y.team)||
+      x.name.localeCompare(y.name)
+    );
 
- $("coverage").textContent=
-  list.length+" players in collected reports. "+
-  "Coverage may be incomplete.";
+  $("coverage").textContent=
+    list.length+
+    " players in collected reports. "+
+    "Coverage may be incomplete.";
 
- $("playerList").innerHTML="";
+  $("playerList").innerHTML="";
 
- for(const p of list){
-  const div=document.createElement("div");
-  div.className="player";
-  div.textContent=
-   p.name+" — "+p.team+
-   " | "+p.games.size+" games →";
+  for(const p of list){
+    const div=document.createElement("div");
+    div.className="player";
 
-  div.onclick=()=>openPlayer(p.id);
-  $("playerList").appendChild(div);
- }
+    div.textContent=
+      p.name+" — "+p.team+
+      " | "+p.games.size+" games →";
+
+    div.onclick=()=>openPlayer(p.id);
+
+    $("playerList").appendChild(div);
+  }
 }
 
 function openPlayer(id){
- const p=players.get(String(id));
- if(!p)return;
+  const p=players.get(String(id));
+  if(!p)return;
 
- $("playerName").textContent=p.name;
- $("playerInfo").textContent=
-  p.team+" | Player ID: "+p.id;
+  $("playerName").textContent=p.name;
 
- const history=[...p.games.values()]
-  .sort((x,y)=>
-   String(y.date||"").localeCompare(
-    String(x.date||"")
-   )
-  );
+  $("playerInfo").textContent=
+    p.team+" | Player ID: "+p.id;
 
- $("playerStats").innerHTML=history.map(g=>{
-  const opponent=g.homeTeam===p.team
-   ?g.awayTeam:g.homeTeam;
+  const history=[...p.games.values()]
+    .sort(
+      (x,y)=>String(y.date||"").localeCompare(
+        String(x.date||"")
+      )
+    );
 
-  const categories={};
+  $("playerStats").innerHTML=
+    history.map(g=>{
+      const opponent=
+        g.homeTeam===p.team
+          ?g.awayTeam
+          :g.homeTeam;
 
-  for(const stat of g.stats){
-   const key=stat.category||"Other";
-   (categories[key]??=[]).push(stat);
-  }
+      const categories={};
 
-  return "<div class='card'><h3>"+
-   esc((g.date||"").slice(0,10))+
-   " vs "+esc(opponent)+"</h3>"+
-   Object.entries(categories).map(([category,stats])=>
-    "<h4>"+esc(category)+"</h4>"+
-    "<div class='scroll'><table>"+
-    stats.map(s=>
-     "<tr><td>"+esc(s.name)+
-     "</td><td>"+esc(s.value)+
-     "</td></tr>"
-    ).join("")+
-    "</table></div>"
-   ).join("")+"</div>";
- }).join("")||
- "<p>No collected game statistics.</p>";
+      for(const s of g.stats){
+        (
+          categories[s.category||"Other"]??=[]
+        ).push(s);
+      }
 
- $("modal").classList.add("open");
+      return "<div class='card'>"+
+        "<h3>"+esc((g.date||"").slice(0,10))+
+        " vs "+esc(opponent)+"</h3>"+
+        Object.entries(categories)
+          .map(([category,stats])=>
+            "<h4>"+esc(category)+"</h4>"+
+            "<div class='scroll'><table>"+
+            stats.map(s=>
+              "<tr><td>"+esc(s.name)+
+              "</td><td>"+esc(s.value)+
+              "</td></tr>"
+            ).join("")+
+            "</table></div>"
+          ).join("")+
+        "</div>";
+    }).join("")||
+    "<p>No collected game statistics.</p>";
+
+  $("modal").classList.add("open");
 }
 
 function closePlayer(){
- $("modal").classList.remove("open");
+  $("modal").classList.remove("open");
 }
 
 start();
