@@ -420,28 +420,28 @@
     "classification": "fcs",
     "conference": "SWAC",
     "overall": {
-      "games": 5,
+      "games": 6,
       "wins": 3,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "ppg": 26.4,
-      "allowed": 16.4,
-      "q1Scored": 6.8,
-      "q1Allowed": 5.4,
-      "h1Scored": 12.6,
-      "h1Allowed": 12.0
+      "ppg": 26.5,
+      "allowed": 18.33,
+      "q1Scored": 6.83,
+      "q1Allowed": 5.67,
+      "h1Scored": 12.17,
+      "h1Allowed": 12.33
     },
     "home": {
-      "games": 3,
+      "games": 4,
       "wins": 3,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "ppg": 35.0,
-      "allowed": 10.67,
-      "q1Scored": 9.0,
-      "q1Allowed": 2.33,
-      "h1Scored": 17.67,
-      "h1Allowed": 7.67
+      "ppg": 33.0,
+      "allowed": 15.0,
+      "q1Scored": 8.5,
+      "q1Allowed": 3.5,
+      "h1Scored": 15.75,
+      "h1Allowed": 9.25
     },
     "away": {
       "games": 2,
@@ -525,6 +525,20 @@
         "q1Allowed": 6,
         "h1Scored": 3,
         "h1Allowed": 6
+      },
+      {
+        "gameId": 401868329,
+        "date": "2026-10-09T16:00:00.000Z",
+        "opponent": "Florida A&M",
+        "location": "home",
+        "pointsScored": 27,
+        "pointsAllowed": 28,
+        "won": false,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 7,
+        "h1Scored": 10,
+        "h1Allowed": 14
       }
     ]
   },
@@ -6415,16 +6429,16 @@
     "classification": "fcs",
     "conference": "SWAC",
     "overall": {
-      "games": 5,
-      "wins": 1,
+      "games": 6,
+      "wins": 2,
       "losses": 4,
       "ties": 0,
-      "ppg": 17.4,
-      "allowed": 36.8,
-      "q1Scored": 4.8,
-      "q1Allowed": 11.2,
-      "h1Scored": 7.8,
-      "h1Allowed": 21.2
+      "ppg": 19.17,
+      "allowed": 35.17,
+      "q1Scored": 5.17,
+      "q1Allowed": 10.5,
+      "h1Scored": 8.83,
+      "h1Allowed": 19.33
     },
     "home": {
       "games": 4,
@@ -6439,16 +6453,16 @@
       "h1Allowed": 14.25
     },
     "away": {
-      "games": 1,
-      "wins": 0,
+      "games": 2,
+      "wins": 1,
       "losses": 1,
       "ties": 0,
-      "ppg": 7.0,
-      "allowed": 77.0,
-      "q1Scored": 0.0,
-      "q1Allowed": 21.0,
-      "h1Scored": 0.0,
-      "h1Allowed": 49.0
+      "ppg": 17.5,
+      "allowed": 52.0,
+      "q1Scored": 3.5,
+      "q1Allowed": 14.0,
+      "h1Scored": 7.0,
+      "h1Allowed": 29.5
     },
     "games": [
       {
@@ -6520,6 +6534,20 @@
         "q1Allowed": 14,
         "h1Scored": 13,
         "h1Allowed": 23
+      },
+      {
+        "gameId": 401868329,
+        "date": "2026-10-09T16:00:00.000Z",
+        "opponent": "Alabama State",
+        "location": "away",
+        "pointsScored": 28,
+        "pointsAllowed": 27,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 7,
+        "h1Scored": 14,
+        "h1Allowed": 10
       }
     ]
   },
