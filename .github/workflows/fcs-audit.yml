@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -20,7 +20,7 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Audit 2026 FCS data
+      - name: Audit FCS games and players
         env:
           CFBD_API_KEY: ${{ secrets.CFBD_API_KEY }}
         run: |
@@ -31,15 +31,15 @@ jobs:
           import urllib.parse
           import urllib.error
 
-          KEY = os.environ.get("CFBD_API_KEY", "")
+          KEY = os.environ.get("CFBD_API_KEY")
           BASE = "https://api.collegefootballdata.com"
 
           if not KEY:
-              raise SystemExit("ERROR: Missing CFBD_API_KEY")
+              raise SystemExit("Missing CFBD_API_KEY")
 
           def fetch(path, params):
               url = BASE + path + "?" + urllib.parse.urlencode(params)
-              request = urllib.request.Request(
+              req = urllib.request.Request(
                   url,
                   headers={
                       "Authorization": "Bearer " + KEY,
@@ -47,112 +47,167 @@ jobs:
                   }
               )
               try:
-                  with urllib.request.urlopen(
-                      request, timeout=60
-                  ) as response:
-                      return json.load(response)
-              except urllib.error.HTTPError as error:
-                  print(
-                      "API ERROR:",
-                      error.code,
-                      path,
-                      error.reason
-                  )
+                  with urllib.request.urlopen(req, timeout=60) as r:
+                      return json.load(r)
+              except urllib.error.HTTPError as e:
+                  print("HTTP ERROR", e.code, path)
                   return None
-              except Exception as error:
-                  print("REQUEST ERROR:", path, str(error))
+              except Exception as e:
+                  print("REQUEST ERROR", path, str(e))
                   return None
 
-          print("===== FCS 2026 DATA AUDIT =====")
-
-          games = fetch(
-              "/games",
-              {"year": 2026, "classification": "fcs"}
-          )
+          games = fetch("/games", {
+              "year": 2026,
+              "classification": "fcs"
+          })
 
           if not isinstance(games, list):
-              raise SystemExit("FCS game request failed")
+              raise SystemExit("FCS games request failed")
 
           teams = set()
           completed = []
+          scoring_ready = []
 
-          for game in games:
-              for field in ("home_team", "away_team"):
-                  if game.get(field):
-                      teams.add(game[field])
+          for g in games:
+              for key in ("homeTeam", "awayTeam"):
+                  if g.get(key):
+                      teams.add(g[key])
 
               if (
-                  game.get("completed") is True
-                  and game.get("home_points") is not None
-                  and game.get("away_points") is not None
+                  g.get("completed") is True
+                  and g.get("homePoints") is not None
+                  and g.get("awayPoints") is not None
               ):
-                  completed.append(game)
-                  
-          print("\n===== RAW GAME SAMPLE =====")
-          for game in games[:2]:
-              print(json.dumps(game, indent=2))
-          print("Total games:", len(games))
+                  completed.append(g)
+
+                  home = g.get("homeLineScores")
+                  away = g.get("awayLineScores")
+
+                  if (
+                      isinstance(home, list)
+                      and isinstance(away, list)
+                      and len(home) >= 4
+                      and len(away) >= 4
+                      and all(
+                          isinstance(x, (int, float))
+                          for x in home[:4] + away[:4]
+                      )
+                  ):
+                      scoring_ready.append(g)
+
+          print("===== FCS COVERAGE =====")
+          print("Games:", len(games))
           print("Unique teams:", len(teams))
           print("Completed games:", len(completed))
+          print("Games with quarter scores:", len(scoring_ready))
 
-          print("\n===== TARGET SCHOOLS =====")
+          print("\n===== TARGET MATCHUP =====")
 
-          for target in ["Florida A&M", "Alabama State"]:
+          targets = ["Florida A&M", "Alabama State"]
+          target_games = []
+
+          for team in targets:
               matches = [
-                  game for game in games
-                  if target.lower() in (
-                      str(game.get("home_team", "")).lower(),
-                      str(game.get("away_team", "")).lower()
+                  g for g in games
+                  if team in (
+                      g.get("homeTeam"),
+                      g.get("awayTeam")
                   )
               ]
 
-              print("\n", target, "Games:", len(matches))
+              print("\nTEAM:", team)
+              print("Games discovered:", len(matches))
 
-              for game in matches:
+              for g in sorted(
+                  matches,
+                  key=lambda x: x.get("startDate") or ""
+              ):
                   print(
-                      game.get("start_date"),
-                      game.get("away_team"),
-                      game.get("away_points"),
+                      g.get("startDate"),
+                      g.get("awayTeam"),
+                      g.get("awayPoints"),
                       "@",
-                      game.get("home_team"),
-                      game.get("home_points"),
-                      "Completed:",
-                      game.get("completed")
+                      g.get("homeTeam"),
+                      g.get("homePoints"),
+                      "Completed:", g.get("completed")
                   )
 
-          print("\n===== PLAYER DATA AUDIT =====")
+                  if g.get("completed") is True:
+                      target_games.append(g)
+
+                      home = g.get("homeLineScores")
+                      away = g.get("awayLineScores")
+
+                      if home and away:
+                          print(
+                              "  QUARTERS:",
+                              "Away", away,
+                              "Home", home
+                          )
+                          print(
+                              "  FIRST HALF:",
+                              "Away", sum(away[:2]),
+                              "Home", sum(home[:2])
+                          )
+
+          print("\n===== PLAYER DATA TEST =====")
+
+          sample = []
+          seen = set()
+
+          for g in target_games + completed:
+              gid = g.get("id")
+              if gid and gid not in seen:
+                  seen.add(gid)
+                  sample.append(g)
+              if len(sample) >= 10:
+                  break
 
           success = 0
+          nonempty = 0
           failures = 0
 
-          for game in completed[:10]:
-              game_id = game.get("id")
-
-              if not game_id:
-                  continue
-
-              data = fetch(
-                  "/games/players",
-                  {"id": game_id}
-              )
+          for g in sample:
+              gid = g["id"]
+              data = fetch("/games/players", {"id": gid})
 
               if isinstance(data, list):
                   success += 1
+                  if data:
+                      nonempty += 1
+
                   print(
-                      "Game:", game_id,
+                      "Game", gid,
                       "Player team records:", len(data)
                   )
+
+                  if data:
+                      print(
+                          "Sample player response structure:",
+                          json.dumps(data[0], indent=2)[:3500]
+                      )
               else:
                   failures += 1
 
-          print("Successful player requests:", success)
-          print("Failed player requests:", failures)
-
-          print("\n===== AUDIT SUMMARY =====")
+          print("\n===== FINAL AUDIT =====")
           print("Teams:", len(teams))
           print("Games:", len(games))
           print("Completed:", len(completed))
-          print("Player requests succeeded:", success)
+          print("Quarter scoring:", len(scoring_ready))
+          print("Player requests successful:", success)
+          print("Player requests nonempty:", nonempty)
           print("Player requests failed:", failures)
-          print("AUDIT COMPLETE")
+
+          if not completed:
+              raise SystemExit(
+                  "AUDIT FAILED: No completed games recognized"
+              )
+
+          if not scoring_ready:
+              raise SystemExit(
+                  "AUDIT FAILED: No quarter scoring found"
+              )
+
+          print("GAME DATA AUDIT PASSED")
+          print("Player coverage still requires review")
           PY
