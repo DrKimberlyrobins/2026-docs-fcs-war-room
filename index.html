@@ -787,16 +787,10 @@ function calc(s) {
 */
 
 function green(x,y,lower,min) {
-  if(n(x) === null || n(y) === null) return 0;
-
-  const diff = Math.abs(x-y);
-
-  if(
-    diff < min ||
-    diff / Math.max(Math.abs(x),Math.abs(y),1) < .15
-  ) {
-    return 0;
-  }
+  // No automatic green highlights from raw averages.
+  // A verified qualification rule will be added next.
+  return 0;
+}
 
   return lower
     ? (x < y ? -1 : 1)
