@@ -655,29 +655,57 @@ function table(a,h,sa,sh){
   const y=h[sh]||{};
 
   const rows=[
-    ["Games",x.games??0,y.games??0],
-    ["Wins",x.wins??0,y.wins??0],
-    ["Losses",x.losses??0,y.losses??0],
-    ["Points Scored",fmt(x.ppg),fmt(y.ppg)],
-    ["Points Allowed",fmt(x.allowed),fmt(y.allowed)],
-    ["1Q Scored",fmt(x.q1Scored),fmt(y.q1Scored)],
-    ["1Q Allowed",fmt(x.q1Allowed),fmt(y.q1Allowed)],
-    ["1H Scored",fmt(x.h1Scored),fmt(y.h1Scored)],
-    ["1H Allowed",fmt(x.h1Allowed),fmt(y.h1Allowed)]
+    ["Games",x.games??0,y.games??0,null,0],
+    ["Wins",x.wins??0,y.wins??0,null,0],
+    ["Losses",x.losses??0,y.losses??0,null,0],
+    ["Points Scored",x.ppg,y.ppg,false,5],
+    ["Points Allowed",x.allowed,y.allowed,true,5],
+    ["1Q Scored",x.q1Scored,y.q1Scored,false,2],
+    ["1Q Allowed",x.q1Allowed,y.q1Allowed,true,2],
+    ["1H Scored",x.h1Scored,y.h1Scored,false,3],
+    ["1H Allowed",x.h1Allowed,y.h1Allowed,true,3]
   ];
+
+  const enough=(x.games??0)>=4&&(y.games??0)>=4;
+
+  function advantage(a,b,lower,min){
+    if(!enough || typeof a!=="number" ||
+       typeof b!=="number") return 0;
+
+    const difference=Math.abs(a-b);
+    const percent=difference/
+      Math.max(Math.abs(a),Math.abs(b),1);
+
+    if(difference<min || percent<0.15) return 0;
+
+    return lower
+      ?(a<b?1:2)
+      :(a>b?1:2);
+  }
 
   return "<div class='scroll'><table>"+
     "<tr><th>Metric</th><th>"+esc(a.name)+
     "</th><th>"+esc(h.name)+"</th></tr>"+
-    rows.map(
-      r=>"<tr><td>"+esc(r[0])+"</td><td>"+
-      esc(r[1])+"</td><td>"+esc(r[2])+
-      "</td></tr>"
-    ).join("")+
+    rows.map(r=>{
+      const winner=r[3]===null?0:
+        advantage(r[1],r[2],r[3],r[4]);
+
+      const left=typeof r[1]==="number"&&
+        r[3]!==null?fmt(r[1]):r[1];
+
+      const right=typeof r[2]==="number"&&
+        r[3]!==null?fmt(r[2]):r[2];
+
+      return "<tr><td>"+esc(r[0])+"</td>"+
+        "<td style='"+(winner===1?
+        "color:#27dc8a;font-weight:bold;":"")+
+        "'>"+esc(left)+(winner===1?" 💚":"")+"</td>"+
+        "<td style='"+(winner===2?
+        "color:#27dc8a;font-weight:bold;":"")+
+        "'>"+esc(right)+(winner===2?" 💚":"")+"</td></tr>";
+    }).join("")+
     "</table></div>";
 }
-
-function chooseSamples(a,h){
   const split=
     (a.away?.games??0)>=3 &&
     (h.home?.games??0)>=3;
