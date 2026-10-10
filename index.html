@@ -3,10 +3,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Doc's 2026 FCS War Room</title>
 <style>
-:root {
+:root{
   --bg:#08121e;
   --panel:#142438;
   --line:#344a62;
@@ -14,141 +14,145 @@
   --green:#27dc8a;
   --muted:#aec0d3;
 }
-* {box-sizing:border-box}
-body {
+*{box-sizing:border-box}
+body{
   margin:0;
   background:var(--bg);
   color:#eef5ff;
   font:15px Arial,sans-serif;
   line-height:1.5;
 }
-header {
+header{
   text-align:center;
-  padding:20px 12px;
+  padding:22px 12px;
   background:linear-gradient(110deg,#153451,#0a3029);
   border-bottom:2px solid var(--gold);
 }
-h1 {margin:0;color:var(--gold)}
-h2 {margin:0 0 12px}
-h3 {margin:10px 0}
-main {max-width:1280px;margin:auto;padding:16px}
-.card {
+h1{color:var(--gold);margin:0;font-size:27px}
+h2{margin:0 0 12px;font-size:21px}
+h3{margin:12px 0}
+main{max-width:1250px;margin:auto;padding:16px}
+.card{
   background:var(--panel);
   border:1px solid var(--line);
   border-radius:12px;
-  padding:15px;
-  margin-bottom:15px;
+  padding:16px;
+  margin-bottom:16px;
 }
-.grid {
+.grid{
   display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
+  grid-template-columns:1fr 1fr;
+  gap:13px;
+}
+.grid3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
   gap:12px;
 }
-.grid3 {
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:12px;
+@media(max-width:750px){
+  .grid,.grid3{grid-template-columns:1fr}
 }
-@media(max-width:720px) {
-  .grid,.grid3 {grid-template-columns:1fr}
-}
-label {
+label{
   display:block;
   color:var(--muted);
   margin:8px 0 4px;
 }
-input,select,button,textarea {
+input,select,button{
   width:100%;
-  padding:10px;
+  padding:11px;
   border-radius:8px;
   font:inherit;
 }
-input,select,textarea {
+input,select{
   background:#091724;
   color:white;
   border:1px solid #57718d;
 }
-button {
+button{
   background:#244766;
   color:white;
   border:1px solid #6083a3;
   cursor:pointer;
   font-weight:bold;
 }
-button:hover {filter:brightness(1.13)}
-button:disabled {opacity:.5;cursor:not-allowed}
-.tabs {
+button:hover{filter:brightness(1.13)}
+button:disabled{opacity:.5;cursor:not-allowed}
+.tabs{
   display:flex;
-  gap:7px;
+  gap:8px;
   flex-wrap:wrap;
-  margin-bottom:14px;
+  margin-bottom:16px;
 }
-.tabs button {flex:1;min-width:130px}
-.tabs .active {
+.tabs button{flex:1;min-width:130px}
+.tabs button.active{
   background:#14613f;
   border-color:var(--green);
 }
-.tab {display:none}
-.tab.active {display:block}
-.muted {color:var(--muted)}
-.gold {color:var(--gold)}
-.green {color:var(--green)}
-.notice {
+.tab{display:none}
+.tab.active{display:block}
+.muted{color:var(--muted)}
+.gold{color:var(--gold)}
+.green{color:var(--green)}
+.notice{
   padding:12px;
-  background:#302a1e;
+  background:#322b1c;
   border-left:3px solid var(--gold);
+  border-radius:6px;
   margin:12px 0;
 }
-.metric,.market {
-  background:#0a1a2b;
+.metric{
+  padding:13px;
   border:1px solid var(--line);
   border-radius:9px;
-  padding:12px;
+  background:#0a1a2b;
   margin:8px 0;
 }
-.big {font-size:25px;font-weight:bold}
-.good {
-  background:rgba(39,220,138,.13)!important;
-  color:var(--green)!important;
-  font-weight:bold;
-  box-shadow:inset 0 0 0 1px rgba(39,220,138,.5);
-}
-.greenbox {
-  border:2px solid var(--green)!important;
-  background:rgba(39,220,138,.1)!important;
-}
-.tag {
+.big{font-size:27px;font-weight:bold}
+.tag{
   display:inline-block;
-  padding:4px 9px;
   border:1px solid var(--line);
-  border-radius:15px;
+  border-radius:20px;
+  padding:4px 9px;
   margin:3px;
+  font-size:12px;
 }
-.scroll {overflow:auto}
-table {width:100%;border-collapse:collapse}
-th,td {
+table{width:100%;border-collapse:collapse}
+th,td{
   padding:9px;
   text-align:left;
   border-bottom:1px solid var(--line);
 }
-th {color:var(--gold)}
-.row {
-  display:flex;
-  gap:9px;
-  align-items:center;
-  flex-wrap:wrap;
+th{color:var(--gold)}
+.scroll{overflow-x:auto}
+.market{
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:14px;
+  margin:10px 0;
 }
-.row button {width:auto}
-.small {font-size:12px}
-.player {
-  padding:10px;
+.markethead{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+}
+.rank{color:var(--gold);font-weight:bold}
+.stop{
+  border:2px solid var(--gold);
+  border-radius:12px;
+  padding:16px;
+  background:#27271c;
+  margin:15px 0;
+}
+.player{
+  padding:12px;
   border:1px solid var(--line);
   border-radius:8px;
   margin:7px 0;
   cursor:pointer;
 }
-.player:hover {border-color:var(--green)}
-.modal {
+.player:hover{border-color:var(--gold)}
+.modal{
   display:none;
   position:fixed;
   inset:0;
@@ -156,913 +160,748 @@ th {color:var(--gold)}
   align-items:center;
   justify-content:center;
   padding:12px;
-  z-index:20;
+  z-index:99;
 }
-.modal.open {display:flex}
-.modalbox {
+.modal.open{display:flex}
+.modalbox{
   background:var(--panel);
   border:1px solid var(--gold);
   border-radius:12px;
   padding:18px;
   width:100%;
-  max-width:750px;
-  max-height:90vh;
+  max-width:740px;
+  max-height:92vh;
   overflow:auto;
 }
-.pill {
-  display:inline-block;
-  border:1px solid var(--line);
-  border-radius:20px;
-  padding:3px 10px;
-}
-.error {color:#ffb6b6}
+.close{width:auto;float:right}
+.lean{color:var(--gold);font-weight:bold}
+.pass{color:#cbd8e7;font-weight:bold}
 </style>
 </head>
 <body>
 
 <header>
-  <h1>🏈 DOC'S 2026 FCS WAR ROOM</h1>
-  <div>
-    UPCOMING GAMES • GREEN INTELLIGENCE • TOP SIX
-    • RECORDS BOOK • RECEIPT
-  </div>
-  <div class="muted">
-    PROVE IT — Quality over quantity — Doc makes the final call
-  </div>
-  <div id="status">Loading FCS data…</div>
+<h1>🏈 DOC'S 2026 FCS WAR ROOM</h1>
+<div>
+SCORING • WALK-FORWARD TESTING • SIX MARKETS • DECISION ROOM
+</div>
+<div class="muted">
+PROVE IT — Quality Over Quantity — No Edge = No Bet
+</div>
+<div id="status">Connecting to FCS data...</div>
 </header>
 
 <main>
 
 <div class="tabs">
-  <button class="active" onclick="tab('match',this)">
-    Matchup & Engine
-  </button>
-  <button onclick="tab('markets',this)">
-    Top Six Markets
-  </button>
-  <button onclick="tab('players',this)">
-    Player Intelligence
-  </button>
-  <button onclick="tab('records',this)">
-    Records & Receipt
-  </button>
+<button class="active" onclick="tab('matchup',this)">
+Matchup & Engine
+</button>
+<button onclick="tab('marketsTab',this)">
+Six Markets & Decisions
+</button>
+<button onclick="tab('players',this)">
+Player Intelligence
+</button>
+<button onclick="tab('memory',this)">
+Green Memory Bank
+</button>
 </div>
 
-<section id="match" class="tab active">
+<section id="matchup" class="tab active">
 
-  <div class="card">
-    <h2>Upcoming FCS Games</h2>
-    <label>Scheduled matchup</label>
-    <select id="schedule" onchange="chooseScheduled()"></select>
-    <div id="scheduleInfo" class="muted"></div>
-    <p class="muted small">
-      Upcoming games come from the 2026 games data.
-      Games missing from that feed cannot appear here.
-    </p>
-  </div>
+<div class="card">
+<h2>Choose Matchup</h2>
+<div class="grid">
 
-  <div class="card">
-    <h2>Manual Matchup Comparison</h2>
-    <div class="grid">
-      <div>
-        <label>Find away team</label>
-        <input id="awaySearch"
-          placeholder="Type team name"
-          oninput="filterTeams('away')">
-        <label>Away</label>
-        <select id="away" onchange="analyze()"></select>
-      </div>
-      <div>
-        <label>Find home team</label>
-        <input id="homeSearch"
-          placeholder="Type team name"
-          oninput="filterTeams('home')">
-        <label>Home</label>
-        <select id="home" onchange="analyze()"></select>
-      </div>
-    </div>
-  </div>
+<div>
+<label>Search Away Team</label>
+<input
+  id="awaySearch"
+  oninput="filterTeams('away')"
+  placeholder="Search team"
+>
+<label>Away Team</label>
+<select id="away" onchange="analyze()"></select>
+</div>
 
-  <div class="card">
-    <h2 id="matchTitle">Comparison</h2>
-    <div id="comparison"></div>
-  </div>
+<div>
+<label>Search Home Team</label>
+<input
+  id="homeSearch"
+  oninput="filterTeams('home')"
+  placeholder="Search team"
+>
+<label>Home Team</label>
+<select id="home" onchange="analyze()"></select>
+</div>
 
-  <div class="card">
-    <h2>🧠 Scoring Engine</h2>
-    <div id="engine"></div>
-  </div>
+</div>
+</div>
 
-  <div class="card">
-    <h2>💚 Green Intelligence</h2>
-    <div id="advantages"></div>
-  </div>
+<div class="card">
+<h2 id="matchTitle">Team Comparison</h2>
+<div id="comparison"></div>
+</div>
 
-  <div class="card">
-    <h2>Recent Completed Games</h2>
-    <div id="history"></div>
-  </div>
+<div class="card">
+<h2>🧠 Scoring Engine</h2>
+<div id="engine"></div>
+</div>
+
+<div class="card">
+<h2>Recent Game Evidence</h2>
+<div id="history"></div>
+</div>
 
 </section>
 
-<section id="markets" class="tab">
+<section id="marketsTab" class="tab">
 
-  <div class="card">
-    <h2>🏆 Top Six Decision Board</h2>
-    <div id="decision"></div>
-    <div class="grid">
-      <button onclick="saveAnalysis(false)">
-        💾 Save Analysis to Records Book
-      </button>
-      <button onclick="saveAnalysis(true)">
-        💚 Save Selection to Receipt
-      </button>
-    </div>
-    <div id="saveStatus" class="muted"></div>
-  </div>
+<div class="card">
+<h2>🏆 DOC'S FINAL DECISION ROOM</h2>
+<p class="muted" id="decisionMatch"></p>
 
-  <div class="card">
-    <h2>Market Lines & Your Decision</h2>
-    <p class="notice">
-      Market lines are entered manually.
-      Green means a meaningful statistical difference,
-      not a verified winning bet.
-      Moneyline requires a calibrated win probability.
-    </p>
+<p>
+All preliminary LEANs are displayed until the evidence
+fails, then STOP. There is no artificial limit of five.
+LEAN is research, not a certified bet.
+</p>
 
-    <div class="grid">
-      <div>
-        <label>Market source</label>
-        <input id="source"
-          placeholder="Kambi / Kalshi / other"
-          oninput="rankMarkets()">
-      </div>
-      <div>
-        <label>Observed (local time)</label>
-        <input id="observed"
-          type="datetime-local"
-          oninput="rankMarkets()">
-      </div>
-      <div>
-        <label>QB / team news</label>
-        <select id="qb" onchange="rankMarkets()">
-          <option value="unknown">Not verified</option>
-          <option value="checked">Checked</option>
-          <option value="concern">Major concern</option>
-        </select>
-      </div>
-      <div>
-        <label>Your decision</label>
-        <select id="pick" onchange="updatePick()">
-          <option value="PASS">PASS</option>
-        </select>
-      </div>
-      <div>
-        <label>Home spread</label>
-        <input id="spread" type="number"
-          step=".5" oninput="rankMarkets()">
-      </div>
-      <div>
-        <label>Game total</label>
-        <input id="total" type="number"
-          step=".5" oninput="rankMarkets()">
-      </div>
-      <div>
-        <label>Away moneyline</label>
-        <input id="mlAway" type="number"
-          oninput="rankMarkets()">
-      </div>
-      <div>
-        <label>Home moneyline</label>
-        <input id="mlHome" type="number"
-          oninput="rankMarkets()">
-      </div>
-      <div>
-        <label>Team total side</label>
-        <select id="ttSide" onchange="rankMarkets()">
-          <option value="away">Away</option>
-          <option value="home">Home</option>
-        </select>
-      </div>
-      <div>
-        <label>Team total</label>
-        <input id="teamTotal" type="number"
-          step=".5" oninput="rankMarkets()">
-      </div>
-      <div>
-        <label>1H combined total</label>
-        <input id="halfTotal" type="number"
-          step=".5" oninput="rankMarkets()">
-      </div>
-      <div>
-        <label>1Q combined total</label>
-        <input id="quarterTotal" type="number"
-          step=".5" oninput="rankMarkets()">
-      </div>
-    </div>
+<div id="decisionBoard"></div>
+</div>
 
-    <label>Notes / reasoning</label>
-    <textarea id="notes" rows="3"
-      placeholder="Why I like it, injury concerns, line movement..."></textarea>
-  </div>
+<div class="card">
+<h2>📊 Six-Market Analysis</h2>
+<p class="muted" id="marketMatch"></p>
 
-  <div class="card">
-    <h2>Historical Model Error</h2>
-    <div id="backtest"></div>
-  </div>
+<p class="notice">
+Enter actual market lines and their observation time.
+These are not live feeds. No market is GREEN without
+verified pricing, team news, and market-level validation.
+</p>
+
+<div class="grid">
+
+<div>
+<label>Market source</label>
+<input
+  id="source"
+  placeholder="Kalshi, Kambi, DraftKings"
+  oninput="rankMarkets()"
+>
+</div>
+
+<div>
+<label>Line observed at (local time)</label>
+<input
+  id="observed"
+  type="datetime-local"
+  oninput="rankMarkets()"
+>
+</div>
+
+<div>
+<label>Quarterback/team-news status</label>
+<select id="qbStatus" onchange="rankMarkets()">
+<option value="unknown">Not verified</option>
+<option value="verified">
+I checked current QB and team news
+</option>
+<option value="concern">
+Uncertain QB / major concern
+</option>
+</select>
+</div>
+
+</div>
+
+<h3>Full Game</h3>
+<div class="grid">
+
+<div>
+<label>Home spread (e.g. -14.5)</label>
+<input
+  id="spread"
+  type="number"
+  step=".5"
+  oninput="rankMarkets()"
+>
+</div>
+
+<div>
+<label>Full game total</label>
+<input
+  id="total"
+  type="number"
+  step=".5"
+  oninput="rankMarkets()"
+>
+</div>
+
+<div>
+<label>Away moneyline (American odds)</label>
+<input
+  id="mlAway"
+  type="number"
+  oninput="rankMarkets()"
+>
+</div>
+
+<div>
+<label>Home moneyline (American odds)</label>
+<input
+  id="mlHome"
+  type="number"
+  oninput="rankMarkets()"
+>
+</div>
+
+</div>
+
+<h3>Team Total</h3>
+<div class="grid">
+
+<div>
+<label>Team</label>
+<select id="teamTotalSide" onchange="rankMarkets()">
+<option value="away">Away</option>
+<option value="home">Home</option>
+</select>
+</div>
+
+<div>
+<label>Team total line</label>
+<input
+  id="teamTotal"
+  type="number"
+  step=".5"
+  oninput="rankMarkets()"
+>
+</div>
+
+</div>
+
+<h3>First Half / First Quarter</h3>
+<div class="grid">
+
+<div>
+<label>1H combined total</label>
+<input
+  id="halfTotal"
+  type="number"
+  step=".5"
+  oninput="rankMarkets()"
+>
+</div>
+
+<div>
+<label>1Q combined total</label>
+<input
+  id="quarterTotal"
+  type="number"
+  step=".5"
+  oninput="rankMarkets()"
+>
+</div>
+
+</div>
+
+<button onclick="rankMarkets()">
+Evaluate All Six Markets
+</button>
+</div>
+
+<div class="card">
+<h2>📐 Historical Error Check</h2>
+<div id="backtest"></div>
+</div>
+
+<div class="card">
+<h2>All Six Markets — Evidence</h2>
+<div id="ranked"></div>
+</div>
+
+<div class="card">
+<h2>🛑 PROVE IT Check</h2>
+<div id="stop"></div>
+</div>
 
 </section>
 
 <section id="players" class="tab">
-  <div class="card">
-    <h2>Player Intelligence</h2>
-    <label>Search player</label>
-    <input id="playerSearch"
-      placeholder="Name"
-      oninput="renderPlayers()">
-    <div id="coverage" class="muted"></div>
-    <div id="playerList"></div>
-  </div>
+<div class="card">
+<h2>Player Intelligence</h2>
+<p class="muted">
+Click a player for collected game-by-game stats.
+Coverage may be incomplete.
+</p>
+<label>Search Player</label>
+<input
+  id="playerSearch"
+  placeholder="Player name"
+  oninput="renderPlayers()"
+>
+<div id="coverage" class="muted"></div>
+<div id="playerList"></div>
+</div>
 </section>
 
-<section id="records" class="tab">
-
-  <div class="card">
-    <h2>💾 Records Book & 💚 Receipt</h2>
-    <p class="notice">
-      Saved in this browser's local storage.
-      Use Export Backup to keep a portable copy.
-      This is not connected to Google Sheets
-      and will not sync between devices.
-    </p>
-
-    <div class="row">
-      <button onclick="exportBackup()">
-        Export Backup (JSON)
-      </button>
-      <button onclick="document.getElementById('restore').click()">
-        Restore Backup
-      </button>
-      <input id="restore" type="file"
-        accept="application/json"
-        hidden
-        onchange="restoreBackup(event)">
-      <button onclick="gradeAll()">
-        Grade Completed Games
-      </button>
-    </div>
-
-    <div id="storageStatus" class="muted"></div>
-  </div>
-
-  <div class="card">
-    <h2>Records Book — All Saved Analyses</h2>
-    <div id="recordList"></div>
-  </div>
-
-  <div class="card">
-    <h2>Receipt — Your Selections</h2>
-    <div id="receiptList"></div>
-  </div>
-
+<section id="memory" class="tab">
+<div class="card">
+<h2>💚 Green Intelligence Memory Bank</h2>
+<p class="notice">
+No GREEN selections have been certified.
+Google Sheets saving is not connected.
+</p>
+<p>
+When full qualification and Sheets integration are
+available, this section can preserve pregame evidence,
+verified lines, and results.
+</p>
+</div>
 </section>
 
 </main>
 
-<div id="modal" class="modal"
-  onclick="if(event.target===this)closePlayer()">
-  <div class="modalbox">
-    <div class="row">
-      <button onclick="closePlayer()">✕ Close</button>
-    </div>
-    <h2 id="playerName"></h2>
-    <p id="playerInfo"></p>
-    <div id="playerStats"></div>
-  </div>
+<div
+  id="modal"
+  class="modal"
+  onclick="if(event.target===this)closePlayer()"
+>
+<div class="modalbox">
+<button class="close" onclick="closePlayer()">
+✕ Close
+</button>
+<h2 id="playerName"></h2>
+<p id="playerInfo"></p>
+<div id="playerStats"></div>
+<p class="notice">
+No verified GREEN player props.
+</p>
+<button disabled>💚 Save Green to Sheets</button>
+</div>
 </div>
 
 <script>
-'use strict';
+"use strict";
 
-const $ = id => document.getElementById(id);
+const $=id=>document.getElementById(id);
 
-const KEY = 'docs-fcs-war-room-records-v2';
+let teams=[];
+let games=[];
+let playerReports=[];
+let players=new Map();
+let currentAway=null;
+let currentHome=null;
+let projections=null;
+let currentMatchKey="";
+let backtest={};
 
-const ids = [
-  'source','observed','qb','spread','total',
-  'mlAway','mlHome','ttSide','teamTotal',
-  'halfTotal','quarterTotal','pick','notes'
+const inputs=[
+  "source",
+  "observed",
+  "qbStatus",
+  "spread",
+  "total",
+  "mlAway",
+  "mlHome",
+  "teamTotalSide",
+  "teamTotal",
+  "halfTotal",
+  "quarterTotal"
 ];
 
-let teams = [];
-let games = [];
-let reports = [];
-let players = new Map();
-
-let away = null;
-let home = null;
-let projection = null;
-let selectedGame = null;
-let marketRows = [];
-let historical = {};
-let saved = [];
-
-const n = x =>
-  typeof x === 'number' && Number.isFinite(x) ? x : null;
-
-const f = (x,d=1) =>
-  n(x) === null ? 'N/A' : x.toFixed(d);
-
-const e = x =>
-  String(x ?? '').replace(/[&<>"']/g,c=>({
-    '&':'&amp;',
-    '<':'&lt;',
-    '>':'&gt;',
-    '"':'&quot;',
-    "'":'&#39;'
-  }[c]));
-
-const v = id => {
-  const raw = $(id).value.trim();
-  return raw === '' ? null : Number(raw);
-};
-
-const date = x => String(x || '').slice(0,10);
-
-const nowDay = () => {
-  const d = new Date();
-  return [
-    d.getFullYear(),
-    String(d.getMonth()+1).padStart(2,'0'),
-    String(d.getDate()).padStart(2,'0')
-  ].join('-');
-};
-
-function tab(id,b) {
-  document.querySelectorAll('.tab').forEach(
-    x => x.classList.remove('active')
+function esc(x){
+  return String(x??"").replace(
+    /[&<>"']/g,
+    c=>({
+      "&":"&amp;",
+      "<":"&lt;",
+      ">":"&gt;",
+      '"':"&quot;",
+      "'":"&#39;"
+    })[c]
   );
-  document.querySelectorAll('.tabs button').forEach(
-    x => x.classList.remove('active')
-  );
-  $(id).classList.add('active');
-  b.classList.add('active');
-
-  if(id === 'players') renderPlayers();
-  if(id === 'records') renderSaved();
 }
 
-async function get(file) {
-  const r = await fetch(
-    './data/' + file + '?t=' + Date.now(),
-    {cache:'no-store'}
+function numeric(x){
+  return typeof x==="number"&&Number.isFinite(x)
+    ?x:null;
+}
+
+function fmt(x,d=1){
+  return numeric(x)!==null?x.toFixed(d):"N/A";
+}
+
+function val(id){
+  const x=$(id).value.trim();
+  if(x==="")return null;
+  const n=Number(x);
+  return Number.isFinite(n)?n:null;
+}
+
+function tab(id,b){
+  document.querySelectorAll(".tab").forEach(
+    x=>x.classList.remove("active")
   );
-  if(!r.ok) {
-    throw Error(file + ': HTTP ' + r.status);
+  document.querySelectorAll(".tabs button").forEach(
+    x=>x.classList.remove("active")
+  );
+  $(id).classList.add("active");
+  b.classList.add("active");
+  if(id==="players")renderPlayers();
+}
+
+async function getJSON(file){
+  const r=await fetch(
+    "./data/"+file+"?v="+Date.now(),
+    {cache:"no-store"}
+  );
+  if(!r.ok){
+    throw Error(file+" HTTP "+r.status);
   }
   return r.json();
 }
 
-function loadSaved() {
-  try {
-    const x = JSON.parse(localStorage.getItem(KEY) || '[]');
-    saved = Array.isArray(x) ? x : [];
-  } catch {
-    saved = [];
-  }
-}
-
-function persist() {
-  try {
-    localStorage.setItem(KEY,JSON.stringify(saved));
-    $('storageStatus').textContent =
-      'Saved ' + saved.length + ' records in this browser.';
-    return true;
-  } catch(err) {
-    $('storageStatus').textContent =
-      'Storage failed: ' + err.message;
-    return false;
-  }
-}
-
-async function init() {
-  loadSaved();
-
-  try {
-    const [t,g,p] = await Promise.all([
-      get('fcs-teams-2026.json'),
-      get('fcs-games-2026.json'),
-      get('fcs-players-2026.json')
+async function start(){
+  try{
+    const [t,g,p]=await Promise.all([
+      getJSON("fcs-teams-2026.json"),
+      getJSON("fcs-games-2026.json"),
+      getJSON("fcs-players-2026.json")
     ]);
 
     if(
-      !Array.isArray(t) ||
-      !Array.isArray(g) ||
-      !Array.isArray(p.games)
-    ) {
-      throw Error('Unexpected JSON structure');
+      !Array.isArray(t)||
+      !Array.isArray(g)||
+      !Array.isArray(p?.games)
+    ){
+      throw Error("Invalid data structure");
     }
 
-    teams = t.filter(x =>
-      String(x.classification || '').toLowerCase() === 'fcs'
-    ).sort((a,b) => a.name.localeCompare(b.name));
+    teams=t.filter(
+      x=>String(x.classification||"").toLowerCase()==="fcs"
+    ).sort(
+      (a,b)=>a.name.localeCompare(b.name)
+    );
 
-    games = g;
-    reports = p.games;
+    games=g;
+    playerReports=p.games;
 
-    if(!teams.length) {
-      throw Error('No FCS teams found');
+    if(!teams.length){
+      throw Error("No FCS teams found");
     }
 
     buildPlayers();
     fillTeams();
-    fillSchedule();
-    historical = backtest();
+    backtest=runBacktest();
 
-    $('status').innerHTML =
-      '<span class="green">● DATA CONNECTED</span> | ' +
-      teams.length + ' FCS teams | ' +
-      games.length + ' games | ' +
-      reports.length + ' player reports';
+    $("status").innerHTML=
+      "<span class='green'>● DATA CONNECTED</span> | "+
+      teams.length+" FCS teams | "+
+      games.length+" games | "+
+      playerReports.length+" player reports";
 
-    if($('schedule').value) {
-      chooseScheduled();
-    } else {
-      analyze();
-    }
+    analyze();
 
-    renderSaved();
-
-  } catch(err) {
-    $('status').textContent =
-      'DATA ERROR: ' + err.message;
-    console.error(err);
+  }catch(e){
+    $("status").textContent="DATA ERROR: "+e.message;
+    console.error(e);
   }
 }
 
-function fillTeams() {
-  for(const id of ['away','home']) {
-    $(id).innerHTML = teams.map(t =>
-      '<option value="' + e(t.name) + '">' +
-      e(t.name) + '</option>'
-    ).join('');
+function fillTeams(){
+  const names=teams.map(t=>t.name);
+
+  for(const side of ["away","home"]){
+    $(side).innerHTML="";
+    names.forEach(
+      n=>$(side).add(new Option(n,n))
+    );
   }
 
-  if(teams.length > 1) {
-    $('home').selectedIndex = 1;
-  }
+  $("away").value=names.includes("Florida A&M")
+    ?"Florida A&M":names[0];
+
+  $("home").value=names.includes("Alabama State")
+    ?"Alabama State":
+    names.find(n=>n!==$("away").value)||names[0];
 }
 
-function filterTeams(side) {
-  const q = $(side+'Search').value.toLowerCase();
-  const old = $(side).value;
+function filterTeams(side){
+  const q=$(side+"Search").value.toLowerCase().trim();
+  const old=$(side).value;
 
-  $(side).innerHTML = teams.filter(t =>
-    t.name.toLowerCase().includes(q)
-  ).map(t =>
-    '<option value="' + e(t.name) + '">' +
-    e(t.name) + '</option>'
-  ).join('');
-
-  if([...$(side).options].some(x => x.value === old)) {
-    $(side).value = old;
-  }
-
-  analyze();
-}
-
-function eligible(g) {
-  return (
-    g.completed !== true &&
-    n(g.homePoints) === null &&
-    n(g.awayPoints) === null &&
-    !!g.startDate &&
-    date(g.startDate) >= nowDay() &&
-    teams.some(t => t.name === g.homeTeam) &&
-    teams.some(t => t.name === g.awayTeam)
-  );
-}
-
-function fillSchedule() {
-  const upcoming = games.filter(eligible).sort(
-    (a,b) => String(a.startDate).localeCompare(
-      String(b.startDate)
-    )
+  const matching=teams.filter(
+    t=>t.name.toLowerCase().includes(q)
   );
 
-  $('schedule').innerHTML =
-    '<option value="">Manual matchup / no scheduled game</option>' +
-    upcoming.map(g =>
-      '<option value="' + e(g.id) + '">' +
-      e(date(g.startDate)) + ' | ' +
-      e(g.awayTeam) + ' @ ' +
-      e(g.homeTeam) +
-      '</option>'
-    ).join('');
+  $(side).innerHTML="";
 
-  $('scheduleInfo').textContent =
-    upcoming.length +
-    ' future scheduled FCS matchups found in source data.';
-}
+  matching.forEach(
+    t=>$(side).add(new Option(t.name,t.name))
+  );
 
-function chooseScheduled() {
-  const id = $('schedule').value;
-
-  selectedGame = games.find(g =>
-    String(g.id) === id && eligible(g)
-  ) || null;
-
-  if(selectedGame) {
-    $('awaySearch').value = '';
-    $('homeSearch').value = '';
-
-    fillTeams();
-
-    $('away').value = selectedGame.awayTeam;
-    $('home').value = selectedGame.homeTeam;
+  if(matching.some(t=>t.name===old)){
+    $(side).value=old;
   }
 
-  analyze(true);
+  if(matching.length)analyze();
 }
 
-/*
-  PRE-GAME DATA ONLY
-  ------------------
-  Exclude games on or after the prediction cutoff.
-*/
+function table(a,h,sa,sh){
+  const x=a[sa]||{};
+  const y=h[sh]||{};
 
-function recordsBefore(t,cutoff) {
-  return (t.games || []).filter(g =>
-    date(g.date) < cutoff &&
-    date(g.date) !== '' &&
-    n(g.pointsScored) !== null &&
-    n(g.pointsAllowed) !== null
-  );
+  const rows=[
+    ["Games",x.games??0,y.games??0],
+    ["Wins",x.wins??0,y.wins??0],
+    ["Losses",x.losses??0,y.losses??0],
+    ["Points Scored",fmt(x.ppg),fmt(y.ppg)],
+    ["Points Allowed",fmt(x.allowed),fmt(y.allowed)],
+    ["1Q Scored",fmt(x.q1Scored),fmt(y.q1Scored)],
+    ["1Q Allowed",fmt(x.q1Allowed),fmt(y.q1Allowed)],
+    ["1H Scored",fmt(x.h1Scored),fmt(y.h1Scored)],
+    ["1H Allowed",fmt(x.h1Allowed),fmt(y.h1Allowed)]
+  ];
+
+  return "<div class='scroll'><table>"+
+    "<tr><th>Metric</th><th>"+esc(a.name)+
+    "</th><th>"+esc(h.name)+"</th></tr>"+
+    rows.map(
+      r=>"<tr><td>"+esc(r[0])+"</td><td>"+
+      esc(r[1])+"</td><td>"+esc(r[2])+
+      "</td></tr>"
+    ).join("")+
+    "</table></div>";
 }
 
-function avg(rows,key) {
-  const x = rows.map(g => g[key]).filter(
-    z => n(z) !== null
-  );
+function chooseSamples(a,h){
+  const split=
+    (a.away?.games??0)>=3 &&
+    (h.home?.games??0)>=3;
 
-  return x.length
-    ? x.reduce((a,b) => a+b,0) / x.length
-    : null;
-}
-
-function summary(rows) {
   return {
-    games:rows.length,
-    ppg:avg(rows,'pointsScored'),
-    allowed:avg(rows,'pointsAllowed'),
-    q1Scored:avg(rows,'q1Scored'),
-    q1Allowed:avg(rows,'q1Allowed'),
-    h1Scored:avg(rows,'h1Scored'),
-    h1Allowed:avg(rows,'h1Allowed')
+    a:split?a.away:a.overall||{},
+    h:split?h.home:h.overall||{},
+    basis:split?"Home/Away splits":"Overall averages",
+    countA:split
+      ?a.away.games
+      :a.overall?.games??0,
+    countH:split
+      ?h.home.games
+      :h.overall?.games??0
   };
 }
 
-function stats(t,cutoff) {
-  const rows = recordsBefore(t,cutoff);
+function project(x,y){
+  return numeric(x)!==null&&numeric(y)!==null
+    ?(x+y)/2:null;
+}
+
+function period(s,off,def){
+  const away=project(s.a[off],s.h[def]);
+  const home=project(s.h[off],s.a[def]);
 
   return {
-    overall:summary(rows),
-    away:summary(rows.filter(g =>
-      String(g.location).toLowerCase() === 'away'
-    )),
-    home:summary(rows.filter(g =>
-      String(g.location).toLowerCase() === 'home'
-    ))
+    away,
+    home,
+    total:away!==null&&home!==null
+      ?away+home:null,
+    homeMargin:away!==null&&home!==null
+      ?home-away:null
   };
 }
 
-function choose(a,h) {
-  const split =
-    (a.away?.games || 0) >= 3 &&
-    (h.home?.games || 0) >= 3;
-
+function periods(s){
   return {
-    a:split ? a.away : a.overall,
-    h:split ? h.home : h.overall,
-    basis:split ? 'Away/Home splits' : 'Overall averages',
-    countA:split ? a.away.games : a.overall.games,
-    countH:split ? h.home.games : h.overall.games
-  };
-}
-
-function combine(x,y) {
-  return n(x) !== null && n(y) !== null
-    ? (x+y)/2
-    : null;
-}
-
-function period(s,sc,al) {
-  const a = combine(s.a[sc],s.h[al]);
-  const h = combine(s.h[sc],s.a[al]);
-
-  return {
-    away:a,
-    home:h,
-    total:a !== null && h !== null ? a+h : null,
-    margin:a !== null && h !== null ? h-a : null
-  };
-}
-
-function calc(s) {
-  return {
-    q:period(s,'q1Scored','q1Allowed'),
-    half:period(s,'h1Scored','h1Allowed'),
-    full:period(s,'ppg','allowed'),
+    q:period(s,"q1Scored","q1Allowed"),
+    half:period(s,"h1Scored","h1Allowed"),
+    full:period(s,"ppg","allowed"),
     sample:s
   };
 }
 
-/*
-  GREEN INTELLIGENCE
-  ------------------
-  Only meaningful differences light up.
-  Lower points allowed is better.
-  Higher scoring is better.
-*/
-
-function green(x,y,lower,min) {
-  // No automatic green highlights from raw averages.
-  // A verified qualification rule will be added next.
-  return 0;
+function clearInputs(){
+  inputs.forEach(id=>{
+    $(id).value=
+      id==="teamTotalSide"?"away":
+      id==="qbStatus"?"unknown":"";
+  });
 }
 
-  return lower
-    ? (x < y ? -1 : 1)
-    : (x > y ? -1 : 1);
-}
+function analyze(){
+  const a=teams.find(
+    t=>t.name===$("away").value
+  );
+  const h=teams.find(
+    t=>t.name===$("home").value
+  );
 
-function td(value,lit) {
-  return '<td class="' + (lit ? 'good' : '') + '">' +
-    e(value) +
-    (lit ? ' 💚' : '') +
-    '</td>';
-}
+  currentAway=a||null;
+  currentHome=h||null;
 
-function comparison(a,h,sa,sh) {
-  const x = a[sa] || {};
-  const y = h[sh] || {};
-
-  const enough =
-    (x.games || 0) >= 4 &&
-    (y.games || 0) >= 4;
-
-  const rows = [
-    ['Games',x.games,y.games,null,0],
-    ['Wins',x.wins,y.wins,null,0],
-    ['Losses',x.losses,y.losses,null,0],
-    ['Points scored',x.ppg,y.ppg,false,5],
-    ['Points allowed',x.allowed,y.allowed,true,5],
-    ['1Q scored',x.q1Scored,y.q1Scored,false,2],
-    ['1Q allowed',x.q1Allowed,y.q1Allowed,true,2],
-    ['1H scored',x.h1Scored,y.h1Scored,false,3],
-    ['1H allowed',x.h1Allowed,y.h1Allowed,true,3]
-  ];
-
-  return '<div class="scroll"><table>' +
-    '<tr><th>Metric</th><th>' + e(a.name) +
-    '</th><th>' + e(h.name) + '</th></tr>' +
-
-    rows.map(([label,ax,hy,low,min]) => {
-      const side =
-        enough && low !== null
-          ? green(ax,hy,low,min)
-          : 0;
-
-      return '<tr><td>' + e(label) + '</td>' +
-        td(n(ax) === null ? 'N/A' : f(ax),side === -1) +
-        td(n(hy) === null ? 'N/A' : f(hy),side === 1) +
-        '</tr>';
-    }).join('') +
-
-    '</table></div>' +
-
-    (enough ? '' :
-      '<p class="muted small">' +
-      'Four games per side required for green.' +
-      '</p>');
-}
-
-function resetMarkets() {
-  for(const id of ids) {
-    $(id).value =
-      id === 'qb' ? 'unknown' :
-      id === 'ttSide' ? 'away' :
-      id === 'pick' ? 'PASS' : '';
-  }
-}
-
-function analyze(fromSchedule=false) {
-  away = teams.find(t => t.name === $('away').value);
-  home = teams.find(t => t.name === $('home').value);
-
-  if(!away || !home || away.name === home.name) {
-    projection = null;
-    $('comparison').textContent =
-      'Select two different teams.';
+  if(!a||!h||a.name===h.name){
+    projections=null;
+    $("comparison").textContent=
+      "Select two different teams.";
+    $("engine").textContent="";
+    rankMarkets();
     return;
   }
 
-  if(!fromSchedule) {
-    const match = games.filter(g =>
-      eligible(g) &&
-      g.awayTeam === away.name &&
-      g.homeTeam === home.name
-    ).sort((a,b) =>
-      String(a.startDate).localeCompare(
-        String(b.startDate)
-      )
-    )[0];
+  const key=a.name+"|"+h.name;
 
-    selectedGame = match || null;
-
-    $('schedule').value =
-      match ? String(match.id) : '';
+  if(key!==currentMatchKey){
+    clearInputs();
+    currentMatchKey=key;
   }
 
-  const cutoff = selectedGame
-    ? date(selectedGame.startDate)
-    : nowDay();
+  $("matchTitle").textContent=
+    a.name+" @ "+h.name;
 
-  const a = stats(away,cutoff);
-  const h = stats(home,cutoff);
+  $("comparison").innerHTML=
+    "<h3>Overall</h3>"+
+    table(a,h,"overall","overall")+
+    "<h3>Location Splits</h3>"+
+    table(a,h,"away","home");
 
-  projection = calc(choose(a,h));
+  projections=periods(chooseSamples(a,h));
 
-  const p = projection;
-  const s = p.sample;
+  let html=
+    "<p><span class='tag'>"+
+    esc(projections.sample.basis)+
+    "</span><span class='tag'>"+
+    projections.sample.countA+
+    " away-team games</span>"+
+    "<span class='tag'>"+
+    projections.sample.countH+
+    " home-team games</span></p>";
 
-  const key =
-    String(selectedGame?.id || 'manual') + '|' +
-    away.name + '|' + home.name;
-
-  if(analyze.lastKey !== key) {
-    resetMarkets();
-    analyze.lastKey = key;
+  for(const [name,p] of [
+    ["First Quarter",projections.q],
+    ["First Half",projections.half],
+    ["Full Game",projections.full]
+  ]){
+    html+=
+      "<div class='card'><h3>"+name+"</h3>"+
+      "<div class='grid3'>"+
+      "<div class='metric'>"+esc(a.name)+
+      "<div class='big'>"+fmt(p.away)+
+      "</div>Projected points</div>"+
+      "<div class='metric'>"+esc(h.name)+
+      "<div class='big'>"+fmt(p.home)+
+      "</div>Projected points</div>"+
+      "<div class='metric'>Combined"+
+      "<div class='big'>"+fmt(p.total)+
+      "</div>Projected total</div></div>"+
+      "<p class='muted'>Model home margin: "+
+      fmt(p.homeMargin)+"</p></div>";
   }
 
-  $('matchTitle').textContent =
-    away.name + ' @ ' + home.name;
+  html+=
+    "<p class='notice'>"+
+    "Descriptive scoring estimates, not certified "+
+    "probabilities. QB and SOS effects are not modeled."+
+    "</p>";
 
-  $('comparison').innerHTML =
-    '<p class="muted">' +
-    'Pregame data cutoff: ' + e(cutoff) +
-    ' (completed games before this date only)' +
-    '</p>' +
+  $("engine").innerHTML=html;
 
-    '<h3>Overall</h3>' +
-    comparison(
-      {name:away.name,...a},
-      {name:home.name,...h},
-      'overall','overall'
-    ) +
-
-    '<h3>Away / Home</h3>' +
-    comparison(
-      {name:away.name,...a},
-      {name:home.name,...h},
-      'away','home'
-    );
-
-  let html =
-    '<p><span class="tag">' + e(s.basis) +
-    '</span><span class="tag">' +
-    s.countA + ' away-team samples</span>' +
-    '<span class="tag">' +
-    s.countH + ' home-team samples</span></p>';
-
-  for(const [label,z,min] of [
-    ['1Q',p.q,2],
-    ['1H',p.half,3],
-    ['Full Game',p.full,5]
-  ]) {
-    const side =
-      s.countA >= 4 && s.countH >= 4
-        ? green(z.away,z.home,false,min)
-        : 0;
-
-    html +=
-      '<div class="card"><h3>' + label + '</h3>' +
-      '<div class="grid3">' +
-
-      '<div class="metric ' +
-      (side === -1 ? 'greenbox' : '') + '">' +
-      e(away.name) +
-      '<div class="big ' +
-      (side === -1 ? 'green' : '') + '">' +
-      f(z.away) +
-      (side === -1 ? ' 💚' : '') +
-      '</div></div>' +
-
-      '<div class="metric ' +
-      (side === 1 ? 'greenbox' : '') + '">' +
-      e(home.name) +
-      '<div class="big ' +
-      (side === 1 ? 'green' : '') + '">' +
-      f(z.home) +
-      (side === 1 ? ' 💚' : '') +
-      '</div></div>' +
-
-      '<div class="metric">Combined' +
-      '<div class="big">' + f(z.total) +
-      '</div></div>' +
-
-      '</div><p class="muted">Home margin: ' +
-      f(z.margin) + '</p></div>';
-  }
-
-  $('engine').innerHTML =
-    html +
-    '<p class="notice">' +
-    'Projections use prior scoring averages only; ' +
-    'SOS, injuries, and current odds are not modeled.' +
-    '</p>';
-
-  const metrics = [
-    ['Scoring',a.overall.ppg,h.overall.ppg,false,5],
-    ['Defense',a.overall.allowed,h.overall.allowed,true,5],
-    ['1Q scoring',a.overall.q1Scored,h.overall.q1Scored,false,2],
-    ['1Q defense',a.overall.q1Allowed,h.overall.q1Allowed,true,2],
-    ['1H scoring',a.overall.h1Scored,h.overall.h1Scored,false,3],
-    ['1H defense',a.overall.h1Allowed,h.overall.h1Allowed,true,3]
-  ];
-
-  const enough =
-    a.overall.games >= 4 &&
-    h.overall.games >= 4;
-
-  $('advantages').innerHTML =
-    '<div class="grid">' +
-
-    metrics.map(([label,x,y,low,min]) => {
-      const side = enough ? green(x,y,low,min) : 0;
-
-      return '<div class="metric ' +
-        (side ? 'greenbox' : '') + '">' +
-        '<strong>' + label + '</strong>' +
-
-        '<p class="' +
-        (side ? 'green' : 'muted') + '">' +
-
-        (side
-          ? '💚 ' + e(side === -1 ? away.name : home.name)
-          : 'No clear advantage') +
-
-        '</p><span class="muted">' +
-        f(x) + ' vs ' + f(y) +
-        '</span></div>';
-    }).join('') +
-
-    '</div>';
-
-  $('history').innerHTML =
-    '<div class="grid">' +
-
-    [away,home].map(t =>
-      '<div><h3>' + e(t.name) + '</h3>' +
-
-      recordsBefore(t,cutoff)
-        .sort((x,y) =>
-          date(y.date).localeCompare(date(x.date))
+  $("history").innerHTML=
+    "<div class='grid'>"+
+    [a,h].map(t=>
+      "<div><h3>"+esc(t.name)+"</h3>"+
+      [...(t.games||[])]
+        .sort(
+          (x,y)=>String(y.date||"").localeCompare(
+            String(x.date||"")
+          )
         )
         .slice(0,5)
-        .map(g =>
-          '<div class="metric">' +
-          e(date(g.date)) +
-          ' vs ' + e(g.opponent) +
-          ' — ' +
-          f(g.pointsScored,0) +
-          '–' +
-          f(g.pointsAllowed,0) +
-          '</div>'
-        ).join('') +
+        .map(g=>
+          "<div class='metric'>"+
+          esc((g.date||"").slice(0,10))+
+          " vs "+esc(g.opponent)+
+          "<br>"+esc(g.pointsScored)+"–"+
+          esc(g.pointsAllowed)+" | "+
+          (g.won?"W":g.tied?"T":"L")+
+          "</div>"
+        ).join("")+
+      "</div>"
+    ).join("")+
+    "</div>";
 
-      '</div>'
-    ).join('') +
+  $("marketMatch").textContent=
+    a.name+" @ "+h.name;
 
-    '</div>';
+  $("decisionMatch").textContent=
+    a.name+" @ "+h.name;
 
   rankMarkets();
   renderPlayers();
 }
 
 /*
-  WALK-FORWARD BACKTEST
-  ---------------------
-  Each historical prediction uses only games
-  from earlier dates.
-  MAE measures prediction error, not betting profit.
+ WALK-FORWARD HISTORICAL TESTING
+
+ Each historical prediction uses only games played
+ before that target game's date.
+
+ Entire same-day records are excluded because
+ their kickoff order may not be known.
+
+ Historical score error is NOT historical
+ betting profitability.
 */
 
-function backtest() {
-  const by = new Map(teams.map(t => [t.name,t]));
+function pastSummary(t,cutoff){
+  const records=(t.games||[]).filter(g=>
+    String(g.date||"").slice(0,10)<cutoff &&
+    String(g.date||"")!=="" &&
+    numeric(g.pointsScored)!==null &&
+    numeric(g.pointsAllowed)!==null
+  );
 
-  const errors = {
+  function summary(list){
+    const m=k=>{
+      const v=list.map(g=>g[k]).filter(
+        x=>numeric(x)!==null
+      );
+
+      return v.length
+        ?v.reduce((a,b)=>a+b,0)/v.length
+        :null;
+    };
+
+    return {
+      games:list.length,
+      ppg:m("pointsScored"),
+      allowed:m("pointsAllowed"),
+      q1Scored:m("q1Scored"),
+      q1Allowed:m("q1Allowed"),
+      h1Scored:m("h1Scored"),
+      h1Allowed:m("h1Allowed")
+    };
+  }
+
+  return {
+    overall:summary(records),
+    away:summary(records.filter(
+      g=>String(g.location||"").toLowerCase()==="away"
+    )),
+    home:summary(records.filter(
+      g=>String(g.location||"").toLowerCase()==="home"
+    ))
+  };
+}
+
+function runBacktest(){
+  const byName=new Map(
+    teams.map(t=>[t.name,t])
+  );
+
+  const errors={
     spread:[],
     total:[],
     teamTotal:[],
@@ -1070,841 +909,585 @@ function backtest() {
     quarterTotal:[]
   };
 
-  let tested = 0;
+  let tested=0;
 
-  const push = (key,p,a) => {
-    if(n(p) !== null && n(a) !== null) {
-      errors[key].push(Math.abs(p-a));
-    }
-  };
+  const completed=games.filter(g=>
+    g.completed===true &&
+    numeric(g.homePoints)!==null &&
+    numeric(g.awayPoints)!==null &&
+    g.startDate
+  ).sort(
+    (a,b)=>String(a.startDate).localeCompare(
+      String(b.startDate)
+    )
+  );
 
-  for(const g of games) {
+  for(const g of completed){
+    const a=byName.get(g.awayTeam);
+    const h=byName.get(g.homeTeam);
+
+    if(!a||!h)continue;
+
+    const date=String(g.startDate).slice(0,10);
+
+    const ap=pastSummary(a,date);
+    const hp=pastSummary(h,date);
+
     if(
-      g.completed !== true ||
-      n(g.homePoints) === null ||
-      n(g.awayPoints) === null ||
-      !g.startDate
-    ) continue;
+      ap.overall.games<3 ||
+      hp.overall.games<3
+    )continue;
 
-    const a = by.get(g.awayTeam);
-    const h = by.get(g.homeTeam);
-
-    if(!a || !h) continue;
-
-    const ap = stats(a,date(g.startDate));
-    const hp = stats(h,date(g.startDate));
+    const pred=periods(chooseSamples(ap,hp));
 
     if(
-      ap.overall.games < 3 ||
-      hp.overall.games < 3
-    ) continue;
-
-    const p = calc(choose(ap,hp));
-
-    if(p.full.total === null) continue;
+      pred.full.total===null ||
+      pred.full.homeMargin===null
+    )continue;
 
     tested++;
 
+    function push(key,predicted,actual){
+      if(
+        numeric(predicted)!==null &&
+        numeric(actual)!==null
+      ){
+        errors[key].push(
+          Math.abs(predicted-actual)
+        );
+      }
+    }
+
     push(
-      'spread',
-      p.full.margin,
+      "spread",
+      pred.full.homeMargin,
       g.homePoints-g.awayPoints
     );
 
     push(
-      'total',
-      p.full.total,
+      "total",
+      pred.full.total,
       g.homePoints+g.awayPoints
     );
 
     push(
-      'teamTotal',
-      p.full.away,
+      "teamTotal",
+      pred.full.away,
       g.awayPoints
     );
 
     push(
-      'teamTotal',
-      p.full.home,
+      "teamTotal",
+      pred.full.home,
       g.homePoints
     );
 
-    const aq = g.awayLineScores;
-    const hq = g.homeLineScores;
+    const hq=g.homeLineScores;
+    const aq=g.awayLineScores;
 
     if(
-      Array.isArray(aq) &&
       Array.isArray(hq) &&
-      aq.length >= 2 &&
-      hq.length >= 2 &&
-      [aq[0],aq[1],hq[0],hq[1]]
-        .every(z => n(z) !== null)
-    ) {
-      push(
-        'quarterTotal',
-        p.q.total,
-        aq[0]+hq[0]
-      );
+      Array.isArray(aq) &&
+      hq.length>=2 &&
+      aq.length>=2
+    ){
+      const all=[
+        hq[0],hq[1],
+        aq[0],aq[1]
+      ];
 
-      push(
-        'halfTotal',
-        p.half.total,
-        aq[0]+aq[1]+hq[0]+hq[1]
-      );
+      if(all.every(x=>numeric(x)!==null)){
+        push(
+          "quarterTotal",
+          pred.q.total,
+          hq[0]+aq[0]
+        );
+
+        push(
+          "halfTotal",
+          pred.half.total,
+          hq[0]+hq[1]+aq[0]+aq[1]
+        );
+      }
     }
   }
 
-  const out = {tested};
+  const result={tested};
 
-  for(const [key,values] of Object.entries(errors)) {
-    out[key] = {
+  for(const [key,values] of Object.entries(errors)){
+    result[key]={
       n:values.length,
       mae:values.length
-        ? values.reduce((a,b) => a+b,0)/values.length
-        : null
+        ?values.reduce((a,b)=>a+b,0)/values.length
+        :null
     };
   }
 
-  return out;
+  return result;
 }
 
 /*
-  SIX-MARKET RANKING
-  ------------------
-  Ranking compares the model's disagreement
-  with the entered line relative to historical MAE.
+ SIX-MARKET EVIDENCE SCREEN
 
-  GREEN = meaningful statistical signal.
-  GREEN does not certify betting value.
+ This stage measures the model's difference
+ from the entered market line relative to
+ historical scoring error.
+
+ LEAN = preliminary research candidate.
+ PASS = did not meet preliminary screen.
+
+ GREEN remains unavailable until market pricing,
+ fees, independent team news, and profitability
+ validation are implemented.
+
+ Moneyline needs calibrated win probabilities.
 */
 
-function rankMarkets() {
-  if(!projection) return;
+function rankMarkets(){
+  if(
+    !projections ||
+    !currentAway ||
+    !currentHome
+  ){
+    $("decisionBoard").innerHTML=
+      "<p class='notice'>Choose a matchup.</p>";
+    $("ranked").innerHTML="";
+    $("stop").innerHTML="";
+    return;
+  }
 
-  const p = projection;
-  const rows = [];
+  const a=currentAway.name;
+  const h=currentHome.name;
+  const p=projections;
+  const source=$("source").value.trim();
+  const observed=$("observed").value;
+  const qb=$("qbStatus").value;
+  const entries=[];
 
-  const add = (name,key,line,model,diff,selection) => {
-    const t = historical[key] || {
+  const sample=Math.min(
+    p.sample.countA,
+    p.sample.countH
+  );
+
+  const observedTime=observed
+    ?new Date(observed).getTime()
+    :NaN;
+
+  const age=Date.now()-observedTime;
+
+  const fresh=
+    Number.isFinite(observedTime) &&
+    age>=0 &&
+    age<=3*3600000;
+
+  function add(
+    name,key,line,model,edge,selection
+  ){
+    const comparable=
+      line!==null &&
+      numeric(model)!==null &&
+      numeric(edge)!==null;
+
+    const test=backtest[key]||{
       n:0,
       mae:null
     };
 
-    const ratio =
-      n(diff) !== null && t.mae > 0
-        ? Math.abs(diff)/t.mae
-        : null;
+    const ratio=
+      comparable &&
+      test.mae>0
+        ?Math.abs(edge)/test.mae
+        :null;
 
-    const valid =
-      n(line) !== null &&
-      n(model) !== null &&
-      n(diff) !== null;
+    const reasons=[];
 
-    rows.push({
+    if(!comparable){
+      reasons.push(
+        "Market line or projection missing"
+      );
+    }
+
+    if(!source){
+      reasons.push(
+        "Market source missing"
+      );
+    }
+
+    if(!observed){
+      reasons.push(
+        "Observation time missing"
+      );
+    }else if(!fresh){
+      reasons.push(
+        "Line is older than 3 hours or future-dated"
+      );
+    }
+
+    if(sample<4){
+      reasons.push(
+        "Team sample below four games"
+      );
+    }
+
+    if(test.n<20){
+      reasons.push(
+        "Fewer than 20 historical backtest observations"
+      );
+    }
+
+    if(ratio===null){
+      reasons.push(
+        "Historical error unavailable"
+      );
+    }else if(ratio<1.25){
+      reasons.push(
+        "Difference below 1.25 × historical MAE"
+      );
+    }
+
+    if(qb==="concern"){
+      reasons.push(
+        "Quarterback uncertainty flagged"
+      );
+    }
+
+    if(qb==="unknown"){
+      reasons.push(
+        "Quarterback/team news unverified"
+      );
+    }
+
+    reasons.push(
+      "SOS and current market price not modeled"
+    );
+
+    const lean=
+      comparable &&
+      !!source &&
+      fresh &&
+      sample>=4 &&
+      test.n>=20 &&
+      ratio!==null &&
+      ratio>=1.25 &&
+      qb!=="concern";
+
+    entries.push({
       name,
       key,
       line,
       model,
-      diff,
-      selection,
+      edge:comparable?edge:null,
       ratio,
-      n:t.n,
-      mae:t.mae,
-      valid,
-      signal:
-        valid &&
-        ratio !== null &&
-        ratio >= 1.25 &&
-        t.n >= 20 &&
-        p.sample.countA >= 4 &&
-        p.sample.countH >= 4
+      selection:comparable
+        ?selection
+        :"Unavailable",
+      test,
+      comparable,
+      status:lean?"LEAN":"PASS",
+      reasons
     });
-  };
+  }
 
-  const sp = v('spread');
-  const m = p.full.margin;
+  const spread=val("spread");
+  const margin=p.full.homeMargin;
 
-  const se =
-    sp !== null && m !== null
-      ? m+sp
-      : null;
+  const se=
+    spread!==null &&
+    margin!==null
+      ?margin+spread
+      :null;
+
+  const spreadChoice=
+    se===null
+      ?"Unavailable"
+      :se>0
+        ?h+" "+(spread>0?"+":"")+spread
+        :se<0
+          ?a+" "+(-spread>0?"+":"")+(-spread)
+          :"No modeled advantage";
 
   add(
-    'Spread',
-    'spread',
-    sp,
-    m,
+    "Spread",
+    "spread",
+    spread,
+    margin,
     se,
-    se === null
-      ? 'Not available'
-      : se > 0
-        ? home.name + ' ' + (sp > 0 ? '+' : '') + sp
-        : se < 0
-          ? away.name + ' ' +
-            (-sp > 0 ? '+' : '') + (-sp)
-          : 'No model difference'
+    spreadChoice
   );
 
-  const tot = (name,key,id,model) => {
-    const line = v(id);
+  function total(name,key,id,model){
+    const line=val(id);
 
-    const diff =
-      line !== null && model !== null
-        ? model-line
-        : null;
+    const edge=
+      line!==null &&
+      model!==null
+        ?model-line
+        :null;
+
+    const selection=
+      edge===null
+        ?"Unavailable"
+        :edge>0
+          ?"Over "+line
+          :edge<0
+            ?"Under "+line
+            :"No modeled advantage";
 
     add(
-      name,key,line,model,diff,
-      diff === null
-        ? 'Not available'
-        : diff > 0
-          ? 'Over ' + line
-          : diff < 0
-            ? 'Under ' + line
-            : 'No model difference'
+      name,key,line,model,edge,selection
     );
-  };
+  }
 
-  tot(
-    'Game Total',
-    'total',
-    'total',
+  total(
+    "Game Total",
+    "total",
+    "total",
     p.full.total
   );
 
-  const side = $('ttSide').value;
-  const team = side === 'away'
-    ? away.name
-    : home.name;
+  const side=$("teamTotalSide").value;
 
-  const tt = v('teamTotal');
-  const tp = p.full[side];
+  const teamName=
+    side==="away"?a:h;
 
-  const te =
-    tt !== null && tp !== null
-      ? tp-tt
-      : null;
+  const teamModel=p.full[side];
+  const teamLine=val("teamTotal");
+
+  const teamEdge=
+    teamLine!==null &&
+    teamModel!==null
+      ?teamModel-teamLine
+      :null;
+
+  const teamChoice=
+    teamEdge===null
+      ?"Unavailable"
+      :teamName+" "+
+       (
+         teamEdge>0
+           ?"Over "
+           :teamEdge<0
+             ?"Under "
+             :"Equal to "
+       )+teamLine;
 
   add(
-    'Team Total',
-    'teamTotal',
-    tt,
-    tp,
-    te,
-    te === null
-      ? 'Not available'
-      : team +
-        (te > 0
-          ? ' Over '
-          : te < 0
-            ? ' Under '
-            : ' Equal ') + tt
+    "Team Total",
+    "teamTotal",
+    teamLine,
+    teamModel,
+    teamEdge,
+    teamChoice
   );
 
-  tot(
-    'First Half',
-    'halfTotal',
-    'halfTotal',
+  total(
+    "First Half",
+    "halfTotal",
+    "halfTotal",
     p.half.total
   );
 
-  tot(
-    'First Quarter',
-    'quarterTotal',
-    'quarterTotal',
+  total(
+    "First Quarter",
+    "quarterTotal",
+    "quarterTotal",
     p.q.total
   );
 
-  rows.push({
-    name:'Moneyline',
-    key:'moneyline',
+  entries.push({
+    name:"Moneyline",
+    key:"moneyline",
     line:null,
     model:null,
-    diff:null,
-    selection:
-      'Unranked: calibrated win probability unavailable',
+    edge:null,
     ratio:null,
-    n:0,
-    mae:null,
-    valid:false,
-    signal:false
+    selection:"No calibrated win probability",
+    test:{
+      n:0,
+      mae:null
+    },
+    comparable:false,
+    status:"PASS",
+    reasons:[
+      "Moneyline cannot be evaluated from a scoring "+
+      "margin without calibrated win probabilities",
+      "Away odds: "+(val("mlAway")??"N/A")+
+      "; home odds: "+(val("mlHome")??"N/A")
+    ]
   });
 
-  marketRows = rows;
-
-  const ranked = rows
-    .filter(x => x.valid)
-    .sort((a,b) =>
-      (b.ratio ?? -1) - (a.ratio ?? -1)
+  const compared=entries
+    .filter(e=>e.comparable)
+    .sort(
+      (x,y)=>(y.ratio??-1)-(x.ratio??-1)
     );
 
-  $('decision').innerHTML =
-    '<p class="muted">' +
-    e(away.name) + ' @ ' + e(home.name) +
-    ' | ' +
-    e(selectedGame
-      ? date(selectedGame.startDate)
-      : 'Manual comparison') +
-    '</p>' +
+  const ordered=[
+    ...compared,
+    ...entries.filter(e=>!e.comparable)
+  ];
 
-    '<div class="grid3">' +
+  $("ranked").innerHTML=ordered.map((e,i)=>
+    "<div class='market'>"+
+    "<div class='markethead'>"+
+    "<h3>"+esc(e.name)+"</h3>"+
+    "<span class='rank'>"+
+    (e.comparable?"#"+(i+1):"UNRANKED")+
+    "</span></div>"+
+    "<p>"+esc(e.selection)+"</p>"+
+    "<p>Market line: "+esc(e.line??"N/A")+
+    " | Model: "+fmt(e.model)+
+    " | Difference: "+fmt(e.edge)+"</p>"+
+    "<p>Historical MAE: "+fmt(e.test.mae)+
+    " ("+e.test.n+" observations)"+
+    " | Difference / MAE: "+
+    fmt(e.ratio,2)+"×</p>"+
+    "<strong class='"+
+    (e.status==="LEAN"?"lean":"pass")+
+    "'>"+e.status+"</strong>"+
+    "<p class='muted'>"+
+    esc(e.reasons.join(" • "))+
+    "</p></div>"
+  ).join("");
 
-    '<div class="metric">GREEN SIGNALS' +
-    '<div class="big green">' +
-    ranked.filter(x => x.signal).length +
-    '</div></div>' +
+  renderDecisionRoom(entries,compared);
 
-    '<div class="metric">COMPARABLE MARKETS' +
-    '<div class="big">' +
-    ranked.length +
-    '</div></div>' +
-
-    '<div class="metric">MONEYLINE' +
-    '<div class="big">Unranked</div></div>' +
-
-    '</div>' +
-
-    (ranked.length
-      ? ranked.map((x,i) =>
-          '<div class="market ' +
-          (x.signal ? 'greenbox' : '') + '">' +
-
-          '<h3>#' + (i+1) + ' ' + e(x.name) +
-          (x.signal
-            ? ' <span class="green">💚 GREEN SIGNAL</span>'
-            : '') +
-          '</h3>' +
-
-          '<strong>' + e(x.selection) + '</strong>' +
-
-          '<p>Line: ' + f(x.line) +
-          ' | Model: ' + f(x.model) +
-          ' | Difference: ' + f(x.diff) +
-          ' | Historical MAE: ' + f(x.mae) +
-          ' | Signal / MAE: ' + f(x.ratio,2) +
-          '× (' + x.n + ' tests)</p>' +
-
-          '</div>'
-        ).join('')
-      : '<p class="notice">' +
-        'Enter actual market lines to rank comparisons. ' +
-        'Green team intelligence is available ' +
-        'on the Matchup tab.' +
-        '</p>') +
-
-    '<div class="market">' +
-    '<h3>Moneyline — Unranked</h3>' +
-    '<p>Away: ' + e(v('mlAway') ?? 'N/A') +
-    ' | Home: ' + e(v('mlHome') ?? 'N/A') +
-    '. A scoring margin alone is not a ' +
-    'calibrated win probability.</p>' +
-    '</div>' +
-
-    '<p class="notice">' +
-    'Ranking is by model difference relative to ' +
-    'historical prediction error, not proven ' +
-    'betting profit. Correlated totals can rank ' +
-    'together. Check news, price, fees and ' +
-    'schedule before deciding.' +
-    '</p>';
-
-  $('backtest').innerHTML =
-    '<p>Walk-forward games tested: ' +
-    (historical.tested || 0) +
-    '. Predictions use only completed games dated ' +
-    'before each historical game. MAE is prediction ' +
-    'error, not profitability.</p>' +
-
-    '<div class="scroll"><table>' +
-    '<tr><th>Market</th><th>Samples</th>' +
-    '<th>MAE</th></tr>' +
-
+  $("backtest").innerHTML=
+    "<p>Walk-forward completed games tested: "+
+    "<strong>"+backtest.tested+"</strong>. "+
+    "Only earlier-date team records are used "+
+    "for each historical prediction. "+
+    "MAE = mean absolute prediction error in points. "+
+    "These are scoring-error tests, NOT profitable-bet "+
+    "or spread-cover backtests.</p>"+
+    "<div class='scroll'><table>"+
+    "<tr><th>Market</th><th>Observations</th>"+
+    "<th>MAE</th></tr>"+
     [
-      ['Spread','spread'],
-      ['Game Total','total'],
-      ['Team Total','teamTotal'],
-      ['First Half','halfTotal'],
-      ['First Quarter','quarterTotal']
-    ].map(([name,key]) =>
-      '<tr><td>' + name + '</td><td>' +
-      (historical[key]?.n || 0) +
-      '</td><td>' +
-      f(historical[key]?.mae) +
-      '</td></tr>'
-    ).join('') +
+      ["Spread","spread"],
+      ["Game Total","total"],
+      ["Team Total","teamTotal"],
+      ["1H Total","halfTotal"],
+      ["1Q Total","quarterTotal"]
+    ].map(([name,key])=>
+      "<tr><td>"+name+"</td><td>"+
+      backtest[key].n+"</td><td>"+
+      fmt(backtest[key].mae)+
+      "</td></tr>"
+    ).join("")+
+    "</table></div>";
 
-    '</table></div>';
-
-  updatePickOptions();
+  $("stop").innerHTML=
+    "<div class='stop'>"+
+    "<h3>🛑 STOP — 0 certified GREEN plays</h3>"+
+    "<p>Preliminary LEANs: "+
+    entries.filter(e=>e.status==="LEAN").length+
+    " | PASS: "+
+    entries.filter(e=>e.status==="PASS").length+
+    "</p>"+
+    "<p>Historical MAE measures typical "+
+    "score-prediction error; it does not establish "+
+    "an expected betting profit. "+
+    "No price/fee validation, QB verification "+
+    "from an independent feed, or SOS adjustment "+
+    "is available.</p></div>";
 }
 
-function updatePickOptions() {
-  const select = $('pick');
-  const old = select.value;
-
-  select.innerHTML =
-    '<option value="PASS">PASS</option>' +
-
-    marketRows
-      .filter(x => x.valid)
-      .map(x =>
-        '<option value="' + e(x.key) + '">' +
-        e(x.name) + ' — ' +
-        e(x.selection) +
-        '</option>'
-      ).join('');
-
-  if([...select.options].some(x => x.value === old)) {
-    select.value = old;
-  }
-}
-
-function updatePick() {
-  // The selected value is captured by Save Analysis.
-}
-
-/*
-  SAVE SYSTEM
-  -----------
-  Every analysis can be stored in Records Book.
-  A chosen market can also be stored in Receipt.
-
-  This uses localStorage, not Google Sheets.
-*/
-
-function saveAnalysis(receipt) {
-  if(!projection || !away || !home) return;
-
-  const choice = $('pick').value;
-
-  if(receipt && choice === 'PASS') {
-    $('saveStatus').textContent =
-      'Choose a market before saving to Receipt, ' +
-      'or save PASS to Records Book.';
-    return;
-  }
-
-  const fields = {};
-
-  for(const id of ids) {
-    fields[id] = $(id).value;
-  }
-
-  const record = {
-    recordId:
-      'FCS-' + Date.now() + '-' +
-      Math.random().toString(36).slice(2,7),
-
-    savedAt:new Date().toISOString(),
-
-    gameId:selectedGame?.id ?? null,
-    gameDate:selectedGame?.startDate ?? null,
-
-    away:away.name,
-    home:home.name,
-
-    cutoff:selectedGame
-      ? date(selectedGame.startDate)
-      : nowDay(),
-
-    projection:JSON.parse(
-      JSON.stringify(projection)
-    ),
-
-    markets:JSON.parse(
-      JSON.stringify(marketRows)
-    ),
-
-    fields,
-    receipt:!!receipt,
-    grade:null
-  };
-
-  saved.unshift(record);
-
-  if(persist()) {
-    $('saveStatus').textContent =
-      '✓ Saved ' +
-      (receipt
-        ? 'to Receipt and Records Book'
-        : 'to Records Book') +
-      ' at ' + new Date().toLocaleString();
-
-    renderSaved();
-  } else {
-    saved.shift();
-  }
-}
-
-/*
-  POSTGAME GRADING
-  ----------------
-  Compares the saved pregame projections
-  with actual completed-game results.
-*/
-
-function gameFor(r) {
-  if(r.gameId !== null && r.gameId !== undefined) {
-    const match = games.find(g =>
-      String(g.id) === String(r.gameId)
-    );
-
-    if(match) return match;
-  }
-
-  return games.find(g =>
-    g.awayTeam === r.away &&
-    g.homeTeam === r.home &&
-    date(g.startDate) === date(r.gameDate) &&
-    r.gameDate
-  );
-}
-
-function gradeOne(r) {
-  const g = gameFor(r);
-
-  if(
-    !g ||
-    g.completed !== true ||
-    n(g.homePoints) === null ||
-    n(g.awayPoints) === null
-  ) {
-    return {status:'PENDING'};
-  }
-
-  const actual = {
-    away:g.awayPoints,
-    home:g.homePoints,
-    total:g.awayPoints+g.homePoints,
-    margin:g.homePoints-g.awayPoints
-  };
-
-  const qA = g.awayLineScores;
-  const qH = g.homeLineScores;
-
-  if(
-    Array.isArray(qA) &&
-    Array.isArray(qH) &&
-    qA.length >= 2 &&
-    qH.length >= 2 &&
-    [qA[0],qA[1],qH[0],qH[1]]
-      .every(z => n(z) !== null)
-  ) {
-    actual.q = qA[0]+qH[0];
-    actual.half = actual.q+qA[1]+qH[1];
-  }
-
-  const errors = {
-    fullTotal:
-      n(r.projection?.full?.total) !== null
-        ? Math.abs(
-            r.projection.full.total-actual.total
-          )
-        : null,
-
-    homeMargin:
-      n(r.projection?.full?.margin) !== null
-        ? Math.abs(
-            r.projection.full.margin-actual.margin
-          )
-        : null,
-
-    firstHalf:
-      n(actual.half) !== null &&
-      n(r.projection?.half?.total) !== null
-        ? Math.abs(
-            r.projection.half.total-actual.half
-          )
-        : null,
-
-    firstQuarter:
-      n(actual.q) !== null &&
-      n(r.projection?.q?.total) !== null
-        ? Math.abs(
-            r.projection.q.total-actual.q
-          )
-        : null
-  };
-
-  let pickResult = 'NOT GRADED';
-
-  const key = r.fields?.pick;
-
-  const row = (r.markets || []).find(
-    x => x.key === key
+function renderDecisionRoom(entries,compared){
+  const leans=compared.filter(
+    e=>e.status==="LEAN"
   );
 
-  if(row && row.valid) {
-    let outcome = null;
-    let delta = null;
+  const passes=entries.filter(
+    e=>e.status==="PASS"
+  );
 
-    if(key === 'spread') {
-      outcome = actual.margin;
-      delta = outcome+row.line;
+  let html=
+    "<div class='grid3'>"+
+    "<div class='metric'>GREEN"+
+    "<div class='big green'>0</div></div>"+
+    "<div class='metric'>PRELIMINARY LEANS"+
+    "<div class='big gold'>"+
+    leans.length+
+    "</div></div>"+
+    "<div class='metric'>MARKETS CHECKED"+
+    "<div class='big'>"+
+    entries.length+
+    "</div></div>"+
+    "</div>";
 
-      pickResult =
-        delta === 0
-          ? 'PUSH'
-          : (row.diff > 0 ? delta > 0 : delta < 0)
-            ? 'WIN'
-            : 'LOSS';
-
-    } else if([
-      'total',
-      'teamTotal',
-      'halfTotal',
-      'quarterTotal'
-    ].includes(key)) {
-
-      outcome =
-        key === 'total'
-          ? actual.total
-          : key === 'teamTotal'
-            ? actual[r.fields.ttSide]
-            : key === 'halfTotal'
-              ? actual.half
-              : actual.q;
-
-      if(n(outcome) !== null) {
-        delta = outcome-row.line;
-
-        pickResult =
-          delta === 0
-            ? 'PUSH'
-            : (row.diff > 0 ? delta > 0 : delta < 0)
-              ? 'WIN'
-              : 'LOSS';
-      }
-    }
+  if(leans.length){
+    leans.forEach((e,i)=>{
+      html+=
+        "<div class='market'>"+
+        "<div class='markethead'>"+
+        "<h3>RESEARCH "+(i+1)+
+        " — "+esc(e.name)+"</h3>"+
+        "<span class='lean'>LEAN</span>"+
+        "</div>"+
+        "<p><strong>"+
+        esc(e.selection)+
+        "</strong></p>"+
+        "<p>Line: "+esc(e.line)+
+        " | Projection: "+fmt(e.model)+
+        " | Difference: "+fmt(e.edge)+
+        "</p>"+
+        "<p>Historical MAE: "+
+        fmt(e.test.mae)+
+        " | Signal: "+
+        fmt(e.ratio,2)+
+        "× historical error</p>"+
+        "<p class='muted'>Still needs verified "+
+        "price, QB/news, SOS, and market "+
+        "profitability testing.</p>"+
+        "</div>";
+    });
+  }else{
+    html+=
+      "<div class='notice'>"+
+      "<strong>No preliminary LEANs meet "+
+      "today's evidence screen.</strong>"+
+      "<p>Enter recent verified lines below; "+
+      "some games may still correctly produce none."+
+      "</p></div>";
   }
 
-  return {
-    status:'FINAL',
-    actual,
-    errors,
-    pickResult
-  };
+  html+=
+    "<div class='stop'>"+
+    "<h2>🛑 STOP</h2>"+
+    "<p>"+leans.length+
+    " preliminary research opportunities; "+
+    "0 certified GREEN selections.</p>"+
+    "<p>"+passes.length+
+    " markets did not meet the preliminary screen. "+
+    "Do not fill the list to reach five.</p>"+
+    "</div>";
+
+  $("decisionBoard").innerHTML=html;
 }
 
-function gradeAll() {
-  let count = 0;
+function buildPlayers(){
+  players=new Map();
 
-  for(const r of saved) {
-    const grade = gradeOne(r);
+  for(const report of playerReports){
+    for(const stat of report.stats||[]){
+      if(!stat.playerId||!stat.player)continue;
 
-    if(grade.status === 'FINAL') {
-      r.grade = grade;
-      count++;
-    }
-  }
+      const id=String(stat.playerId);
 
-  persist();
-  renderSaved();
-
-  $('storageStatus').textContent =
-    'Graded ' + count +
-    ' saved analyses using completed games ' +
-    'currently in the data feed.';
-}
-
-function removeRecord(id) {
-  if(!confirm('Delete this saved analysis?')) return;
-
-  saved = saved.filter(r => r.recordId !== id);
-
-  persist();
-  renderSaved();
-}
-
-function renderSaved() {
-  const cards = items =>
-    items.length
-      ? items.map(r => {
-          const grade = r.grade || {
-            status:'NOT GRADED'
-          };
-
-          return '<div class="market">' +
-
-            '<div class="row">' +
-            '<strong>' +
-            e(r.away) + ' @ ' + e(r.home) +
-            '</strong>' +
-
-            '<span class="pill">' +
-            e(grade.status) +
-            '</span>' +
-
-            (r.receipt
-              ? '<span class="green">💚 RECEIPT</span>'
-              : '') +
-            '</div>' +
-
-            '<p class="muted">Saved: ' +
-            e(new Date(r.savedAt).toLocaleString()) +
-            ' | Game: ' +
-            e(date(r.gameDate) || 'Manual') +
-            '</p>' +
-
-            '<p>Decision: ' +
-            e(r.fields?.pick || 'PASS') +
-
-            ' | Source: ' +
-            e(r.fields?.source || 'Not entered') +
-
-            ' | 1Q: ' +
-            f(r.projection?.q?.total) +
-
-            ' | 1H: ' +
-            f(r.projection?.half?.total) +
-
-            ' | Full: ' +
-            f(r.projection?.full?.total) +
-            '</p>' +
-
-            '<p>Notes: ' +
-            e(r.fields?.notes || '—') +
-            '</p>' +
-
-            (grade.status === 'FINAL'
-              ? '<p class="green">Final: ' +
-                grade.actual.away + '–' +
-                grade.actual.home +
-
-                ' | Selection: ' +
-                e(grade.pickResult) +
-
-                ' | Total prediction error: ' +
-                f(grade.errors.fullTotal) +
-
-                ' | Margin error: ' +
-                f(grade.errors.homeMargin) +
-                '</p>'
-              : '') +
-
-            '<div class="row">' +
-            '<button onclick="removeRecord(\'' +
-            e(r.recordId) +
-            '\')">Delete Record</button>' +
-            '</div>' +
-
-            '</div>';
-        }).join('')
-
-      : '<p class="muted">No saved analyses yet.</p>';
-
-  $('recordList').innerHTML = cards(saved);
-
-  $('receiptList').innerHTML =
-    cards(saved.filter(r => r.receipt));
-
-  $('storageStatus').textContent =
-    saved.length +
-    ' analyses stored in this browser.';
-}
-
-/*
-  BACKUP / RESTORE
-*/
-
-function exportBackup() {
-  const blob = new Blob([
-    JSON.stringify({
-      app:'Docs FCS War Room',
-      version:2,
-      exportedAt:new Date().toISOString(),
-      records:saved
-    },null,2)
-  ],{
-    type:'application/json'
-  });
-
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-
-  a.href = url;
-  a.download =
-    'docs-fcs-war-room-backup-' +
-    nowDay() + '.json';
-
-  a.click();
-
-  setTimeout(() => URL.revokeObjectURL(url),1000);
-}
-
-async function restoreBackup(event) {
-  const file = event.target.files?.[0];
-
-  if(!file) return;
-
-  try {
-    const x = JSON.parse(await file.text());
-
-    if(
-      !Array.isArray(x.records) ||
-      x.app !== 'Docs FCS War Room'
-    ) {
-      throw Error('Not a valid FCS War Room backup');
-    }
-
-    if(!confirm(
-      'Merge ' + x.records.length +
-      ' records from backup?'
-    )) return;
-
-    const existing = new Set(
-      saved.map(r => r.recordId)
-    );
-
-    for(const r of x.records) {
-      if(
-        r.recordId &&
-        r.away &&
-        r.home &&
-        !existing.has(r.recordId)
-      ) {
-        saved.push(r);
-        existing.add(r.recordId);
-      }
-    }
-
-    persist();
-    renderSaved();
-
-  } catch(err) {
-    $('storageStatus').textContent =
-      'Restore failed: ' + err.message;
-
-  } finally {
-    event.target.value = '';
-  }
-}
-
-/*
-  PLAYER INTELLIGENCE
-*/
-
-function buildPlayers() {
-  players = new Map();
-
-  for(const report of reports) {
-    for(const s of report.stats || []) {
-      if(!s.playerId || !s.player) continue;
-
-      const id = String(s.playerId);
-
-      if(!players.has(id)) {
+      if(!players.has(id)){
         players.set(id,{
-          name:s.player,
-          team:s.team,
+          id,
+          name:stat.player,
+          team:stat.team,
           games:new Map()
         });
       }
 
-      const p = players.get(id);
-      const gid = String(report.gameId);
+      const p=players.get(id);
+      const gid=String(report.gameId);
 
-      if(!p.games.has(gid)) {
+      if(!p.games.has(gid)){
         p.games.set(gid,{
           date:report.date,
           homeTeam:report.homeTeam,
@@ -1913,98 +1496,108 @@ function buildPlayers() {
         });
       }
 
-      p.games.get(gid).stats.push(s);
+      p.games.get(gid).stats.push({
+        category:stat.category,
+        name:stat.stat,
+        value:stat.value
+      });
     }
   }
 }
 
-function renderPlayers() {
-  const q = $('playerSearch').value.toLowerCase();
+function renderPlayers(){
+  const a=$("away").value;
+  const h=$("home").value;
+  const q=$("playerSearch").value.toLowerCase().trim();
 
-  const list = [...players.entries()]
-    .filter(([id,p]) =>
-      (p.team === away?.name ||
-       p.team === home?.name) &&
+  const list=[...players.values()]
+    .filter(p=>
+      (p.team===a||p.team===h) &&
       p.name.toLowerCase().includes(q)
     )
-    .sort((a,b) =>
-      a[1].team.localeCompare(b[1].team) ||
-      a[1].name.localeCompare(b[1].name)
+    .sort(
+      (x,y)=>x.team.localeCompare(y.team)||
+      x.name.localeCompare(y.name)
     );
 
-  $('coverage').textContent =
-    list.length +
-    ' players with collected reports; ' +
-    'missing reports are not zero performance.';
+  $("coverage").textContent=
+    list.length+
+    " players in collected reports. "+
+    "Coverage may be incomplete.";
 
-  $('playerList').innerHTML = '';
+  $("playerList").innerHTML="";
 
-  for(const [id,p] of list) {
-    const d = document.createElement('div');
+  for(const p of list){
+    const div=document.createElement("div");
+    div.className="player";
 
-    d.className = 'player';
+    div.textContent=
+      p.name+" — "+p.team+
+      " | "+p.games.size+" games →";
 
-    d.textContent =
-      p.name + ' — ' + p.team +
-      ' | ' + p.games.size + ' games →';
+    div.onclick=()=>openPlayer(p.id);
 
-    d.onclick = () => openPlayer(id);
-
-    $('playerList').appendChild(d);
+    $("playerList").appendChild(div);
   }
 }
 
-function openPlayer(id) {
-  const p = players.get(id);
+function openPlayer(id){
+  const p=players.get(String(id));
+  if(!p)return;
 
-  if(!p) return;
+  $("playerName").textContent=p.name;
 
-  $('playerName').textContent = p.name;
+  $("playerInfo").textContent=
+    p.team+" | Player ID: "+p.id;
 
-  $('playerInfo').textContent =
-    p.team + ' | ' +
-    p.games.size + ' recorded games';
-
-  $('playerStats').innerHTML =
-    [...p.games.values()]
-      .sort((a,b) =>
-        date(b.date).localeCompare(date(a.date))
+  const history=[...p.games.values()]
+    .sort(
+      (x,y)=>String(y.date||"").localeCompare(
+        String(x.date||"")
       )
-      .map(g =>
-        '<div class="card">' +
+    );
 
-        '<h3>' +
-        e(date(g.date)) +
-        ' vs ' +
-        e(g.homeTeam === p.team
-          ? g.awayTeam
-          : g.homeTeam) +
-        '</h3>' +
+  $("playerStats").innerHTML=
+    history.map(g=>{
+      const opponent=
+        g.homeTeam===p.team
+          ?g.awayTeam
+          :g.homeTeam;
 
-        '<div class="scroll"><table>' +
+      const categories={};
 
-        g.stats.map(s =>
-          '<tr><td>' +
-          e(s.category) +
-          '</td><td>' +
-          e(s.stat) +
-          '</td><td>' +
-          e(s.value) +
-          '</td></tr>'
-        ).join('') +
+      for(const s of g.stats){
+        (
+          categories[s.category||"Other"]??=[]
+        ).push(s);
+      }
 
-        '</table></div></div>'
-      ).join('');
+      return "<div class='card'>"+
+        "<h3>"+esc((g.date||"").slice(0,10))+
+        " vs "+esc(opponent)+"</h3>"+
+        Object.entries(categories)
+          .map(([category,stats])=>
+            "<h4>"+esc(category)+"</h4>"+
+            "<div class='scroll'><table>"+
+            stats.map(s=>
+              "<tr><td>"+esc(s.name)+
+              "</td><td>"+esc(s.value)+
+              "</td></tr>"
+            ).join("")+
+            "</table></div>"
+          ).join("")+
+        "</div>";
+    }).join("")||
+    "<p>No collected game statistics.</p>";
 
-  $('modal').classList.add('open');
+  $("modal").classList.add("open");
 }
 
-function closePlayer() {
-  $('modal').classList.remove('open');
+function closePlayer(){
+  $("modal").classList.remove("open");
 }
 
-init();
-
+start();
 </script>
 </body>
 </html>
