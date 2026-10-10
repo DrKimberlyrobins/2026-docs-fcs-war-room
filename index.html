@@ -1404,8 +1404,10 @@ function renderDecisionRoom(entries,compared){
 
   let html=
     "<div class='grid3'>"+
-    "<div class='metric'>GREEN"+
-    "<div class='big green'>0</div></div>"+
+    "<div class='metric'>QUALIFIED GREEN SIGNALS"+
+    "<div class='big green'>"+
+    leans.length+
+    "</div></div>"+
     "<div class='metric'>PRELIMINARY LEANS"+
     "<div class='big gold'>"+
     leans.length+
@@ -1419,11 +1421,11 @@ function renderDecisionRoom(entries,compared){
   if(leans.length){
     leans.forEach((e,i)=>{
       html+=
-        "<div class='market'>"+
+        "<div class='market' style='border-color:var(--green)'>"+
         "<div class='markethead'>"+
         "<h3>RESEARCH "+(i+1)+
         " — "+esc(e.name)+"</h3>"+
-        "<span class='lean'>LEAN</span>"+
+        "<span class='green'><strong>💚 SIGNAL</strong></span>"+
         "</div>"+
         "<p><strong>"+
         esc(e.selection)+
@@ -1437,7 +1439,8 @@ function renderDecisionRoom(entries,compared){
         " | Signal: "+
         fmt(e.ratio,2)+
         "× historical error</p>"+
-        "<p class='muted'>Still needs verified "+
+        "<p class='muted'>Preliminary statistical signal only. "+
+        "Not a certified bet. Still needs verified "+
         "price, QB/news, SOS, and market "+
         "profitability testing.</p>"+
         "</div>";
@@ -1447,17 +1450,17 @@ function renderDecisionRoom(entries,compared){
       "<div class='notice'>"+
       "<strong>No preliminary LEANs meet "+
       "today's evidence screen.</strong>"+
-      "<p>Enter recent verified lines below; "+
-      "some games may still correctly produce none."+
+      "<p>Enter recent market lines; "+
+      "some games may correctly produce none."+
       "</p></div>";
   }
 
   html+=
     "<div class='stop'>"+
-    "<h2>🛑 STOP</h2>"+
+    "<h2>🛑 STOP — CERTIFICATION PENDING</h2>"+
     "<p>"+leans.length+
-    " preliminary research opportunities; "+
-    "0 certified GREEN selections.</p>"+
+    " preliminary statistical signals; "+
+    "0 certified GREEN bets.</p>"+
     "<p>"+passes.length+
     " markets did not meet the preliminary screen. "+
     "Do not fill the list to reach five.</p>"+
