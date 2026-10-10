@@ -2,7183 +2,2297 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Doc's 2026 CFB War Room</title>
-
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Doc's 2026 FCS War Room</title>
 <style>
-* {
-  box-sizing: border-box;
+:root{
+ --bg:#08121e;--panel:#142438;--line:#344a62;
+ --gold:#f2c66d;--green:#27dc8a;--muted:#aec0d3
+  --bg:#08121e;
+  --panel:#142438;
+  --line:#344a62;
+  --gold:#f2c66d;
+  --green:#27dc8a;
+  --muted:#aec0d3;
 }
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #07111f;
-  color: white;
+*{box-sizing:border-box}
+body{
+ margin:0;background:var(--bg);color:#eef5ff;
+ font:15px Arial,sans-serif;line-height:1.5
+  margin:0;
+  background:var(--bg);
+  color:#eef5ff;
+  font:15px Arial,sans-serif;
+  line-height:1.5;
 }
-
-.war-room {
-  width: 100%;
-  max-width: 1400px;
-  margin: auto;
-  padding: 24px;
+header{
+ text-align:center;padding:22px 12px;
+ background:linear-gradient(110deg,#153451,#0a3029);
+ border-bottom:2px solid var(--gold)
+  text-align:center;
+  padding:22px 12px;
+  background:linear-gradient(110deg,#153451,#0a3029);
+  border-bottom:2px solid var(--gold);
 }
-
-/* HEADER */
-
-.header {
-  text-align: center;
-  margin-bottom: 28px;
+h1{color:var(--gold);margin:0;font-size:27px}
+h2{margin:0 0 12px;font-size:21px}
+h3{margin:12px 0}
+main{max-width:1250px;margin:auto;padding:16px}
+.card{
+ background:var(--panel);border:1px solid var(--line);
+ border-radius:12px;padding:16px;margin-bottom:16px
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:16px;
+  margin-bottom:16px;
 }
-
-.header h1 {
-  margin: 0;
-  font-size: 38px;
-  color: #f5c542;
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:13px;
 }
-
-.header p {
-  margin-top: 8px;
-  color: #aab6c5;
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.grid3{
+ display:grid;grid-template-columns:repeat(3,1fr);gap:12px
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
 }
-
-/* MATCHUP */
-
-.matchup-panel {
-  background: #0d1b2a;
-  border: 1px solid #23364d;
-  border-radius: 16px;
-  padding: 22px;
-  margin-bottom: 24px;
+@media(max-width:750px){
+ .grid,.grid3{grid-template-columns:1fr}
+  .grid,.grid3{grid-template-columns:1fr}
 }
-
-.matchup-title {
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 20px;
+label{
+  display:block;
+  color:var(--muted);
+  margin:8px 0 4px;
 }
-
-.team-selectors {
-  display: grid;
-  grid-template-columns: 1fr 90px 1fr;
-  gap: 18px;
-  align-items: center;
+label{display:block;color:var(--muted);margin:8px 0 4px}
+input,select,button{
+ width:100%;padding:11px;border-radius:8px;font:inherit
+  width:100%;
+  padding:11px;
+  border-radius:8px;
+  font:inherit;
 }
-
-.team-box label {
-  display: block;
-  margin-bottom: 8px;
-  color: #9fb0c3;
-  font-size: 14px;
+input,select{
+ background:#091724;color:white;border:1px solid #57718d
+  background:#091724;
+  color:white;
+  border:1px solid #57718d;
 }
-
-select {
-  width: 100%;
-  padding: 14px;
-  border-radius: 10px;
-  border: 1px solid #34495e;
-  background: #07111f;
-  color: white;
-  font-size: 16px;
+button{
+ background:#244766;color:white;border:1px solid #6083a3;
+ cursor:pointer;font-weight:bold
+  background:#244766;
+  color:white;
+  border:1px solid #6083a3;
+  cursor:pointer;
+  font-weight:bold;
 }
-
-.vs {
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-  color: #f5c542;
+button:hover{filter:brightness(1.13)}
+button:disabled{opacity:.5;cursor:not-allowed}
+.tabs{
+ display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:16px;
 }
-
-/* SECTION TITLES */
-
-.section-title {
-  margin: 30px 0 14px;
-  font-size: 22px;
-  color: #f5c542;
+.tabs button{flex:1;min-width:130px}
+.tabs button.active{
+ background:#14613f;border-color:var(--green)
+  background:#14613f;
+  border-color:var(--green);
 }
-
-/* TEAM COMPARISON */
-
-.comparison-table {
-  display: grid;
-  grid-template-columns: 1fr 1.25fr 1fr;
-  gap: 8px;
+.tab{display:none}
+.tab.active{display:block}
+.muted{color:var(--muted)}
+.gold{color:var(--gold)}
+.green{color:var(--green)}
+.notice{
+ padding:12px;background:#322b1c;
+ border-left:3px solid var(--gold);
+ border-radius:6px;margin:12px 0
+  padding:12px;
+  background:#322b1c;
+  border-left:3px solid var(--gold);
+  border-radius:6px;
+  margin:12px 0;
 }
-
-.comparison-header,
-.comparison-cell {
-  background: #0d1b2a;
-  border: 1px solid #23364d;
-  border-radius: 9px;
-  padding: 13px;
-  text-align: center;
+.metric{
+ padding:13px;border:1px solid var(--line);
+ border-radius:9px;background:#0a1a2b;margin:8px 0
+  padding:13px;
+  border:1px solid var(--line);
+  border-radius:9px;
+  background:#0a1a2b;
+  margin:8px 0;
 }
-
-.comparison-header {
-  color: #f5c542;
-  font-weight: bold;
-  font-size: 17px;
+.big{font-size:27px;font-weight:bold}
+.tag{
+ display:inline-block;border:1px solid var(--line);
+ border-radius:20px;padding:4px 9px;margin:3px;
+ font-size:12px
+  display:inline-block;
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:4px 9px;
+  margin:3px;
+  font-size:12px;
 }
-
-.metric-name {
-  color: #9fb0c3;
-  font-weight: bold;
-  font-size: 13px;
+table{width:100%;border-collapse:collapse}
+th,td{
+ padding:9px;text-align:left;
+ border-bottom:1px solid var(--line)
+  padding:9px;
+  text-align:left;
+  border-bottom:1px solid var(--line);
 }
-
-.metric-value {
-  font-size: 20px;
-  font-weight: bold;
+th{color:var(--gold)}
+.scroll{overflow-x:auto}
+.market{
+ border:1px solid var(--line);border-radius:10px;
+ padding:14px;margin:10px 0
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:14px;
+  margin:10px 0;
 }
-
-.green {
-  color: #35e36f !important;
-  font-weight: 800;
+.markethead{
+ display:flex;justify-content:space-between;
+ align-items:center;gap:10px
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
 }
-
-/* PREDICTION ENGINE */
-
-.prediction-engine {
-  margin-top: 30px;
-  background: #101d2c;
-  border: 2px solid #f5c542;
-  border-radius: 18px;
-  padding: 24px;
+.pass{color:#cbd8e7;font-weight:bold}
+.rank{color:var(--gold);font-weight:bold}
+.stop{
+ border:2px solid var(--gold);border-radius:12px;
+ padding:16px;background:#27271c;margin:15px 0
+  border:2px solid var(--gold);
+  border-radius:12px;
+  padding:16px;
+  background:#27271c;
+  margin:15px 0;
 }
-
-.prediction-engine h2 {
-  text-align: center;
-  margin-top: 0;
-  color: #f5c542;
+.player{
+ padding:12px;border:1px solid var(--line);
+ border-radius:8px;margin:7px 0;cursor:pointer
+  padding:12px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  margin:7px 0;
+  cursor:pointer;
 }
-
-.engine-subtitle {
-  text-align: center;
-  color: #9fb0c3;
-  margin-bottom: 22px;
-  font-size: 14px;
+.player:hover{border-color:var(--gold)}
+.modal{
+ display:none;position:fixed;inset:0;
+ background:#000c;align-items:center;
+ justify-content:center;padding:12px;z-index:99
+  display:none;
+  position:fixed;
+  inset:0;
+  background:#000c;
+  align-items:center;
+  justify-content:center;
+  padding:12px;
+  z-index:99;
 }
-
-.prediction-table {
-  display: grid;
-  grid-template-columns: .7fr 1fr 1fr 1fr 1fr;
-  gap: 8px;
+.modal.open{display:flex}
+.modalbox{
+ background:var(--panel);border:1px solid var(--gold);
+ border-radius:12px;padding:18px;width:100%;
+ max-width:740px;max-height:92vh;overflow:auto
+  background:var(--panel);
+  border:1px solid var(--gold);
+  border-radius:12px;
+  padding:18px;
+  width:100%;
+  max-width:740px;
+  max-height:92vh;
+  overflow:auto;
 }
-
-.prediction-header {
-  background: #182536;
-  color: #f5c542;
-  border-radius: 9px;
-  padding: 13px 8px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.prediction-cell {
-  background: #07111f;
-  border: 1px solid #23364d;
-  border-radius: 9px;
-  padding: 17px 8px;
-  text-align: center;
-}
-
-.period {
-  color: #f5c542;
-  font-weight: bold;
-  font-size: 17px;
-}
-
-.projected-number {
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.team-label-small {
-  display: block;
-  color: #7f91a6;
-  font-size: 10px;
-  margin-bottom: 5px;
-}
-
-.pass-rule {
-  margin-top: 20px;
-  background: #07111f;
-  border: 1px solid #23364d;
-  border-radius: 10px;
-  padding: 14px;
-  text-align: center;
-  color: #aab6c5;
-  font-size: 14px;
-}
-
-.status {
-  text-align: center;
-  margin-top: 14px;
-  padding: 13px;
-  border-radius: 10px;
-  background: #182536;
-  color: #aab6c5;
-}
-
-.error {
-  color: white;
-  font-weight: bold;
-}
-
-/* PROVE IT MARKET BOARD */
-
-.market-board {
-  margin-top: 30px;
-  background: #101d2c;
-  border: 2px solid #f5c542;
-  border-radius: 18px;
-  padding: 24px;
-}
-
-.market-board h2 {
-  text-align: center;
-  margin-top: 0;
-  color: #f5c542;
-}
-
-.market-board-table {
-  display: grid;
-  grid-template-columns: .55fr 1.15fr 1fr 1fr 1fr 1fr;
-  gap: 8px;
-}
-
-.market-board-header {
-  background: #182536;
-  color: #f5c542;
-  border-radius: 9px;
-  padding: 13px 8px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 13px;
-}
-
-.market-board-cell {
-  background: #07111f;
-  border: 1px solid #23364d;
-  border-radius: 9px;
-  padding: 15px 8px;
-  text-align: center;
-  font-weight: bold;
-}
-
-.market-name {
-  color: #f5c542;
-}
-
-.market-rank {
-  color: #aab6c5;
-  font-size: 18px;
-}
-
-.market-verdict {
-  color: #aab6c5;
-}
-
-@media (max-width: 850px) {
-  .market-board {
-    padding: 14px 8px;
-    overflow-x: auto;
-  }
-
-  .market-board-table {
-    min-width: 760px;
-  }
-
-  .team-selectors {
-    grid-template-columns: 1fr;
-  }
-
-  .vs {
-    padding: 4px;
-  }
-
-  .prediction-table {
-    grid-template-columns: .65fr 1fr 1fr 1fr 1fr;
-    gap: 4px;
-  }
-
-  .prediction-header,
-  .prediction-cell {
-    padding: 10px 4px;
-    font-size: 11px;
-  }
-
-  .projected-number {
-    font-size: 19px;
-  }
-}
-
-@media (max-width: 600px) {
-  .war-room {
-    padding: 12px;
-  }
-
-  .header h1 {
-    font-size: 27px;
-  }
-
-  .comparison-table {
-    grid-template-columns: 1fr 1.15fr 1fr;
-    gap: 4px;
-  }
-
-  .comparison-header,
-  .comparison-cell {
-    padding: 9px 4px;
-  }
-
-  .metric-value {
-    font-size: 16px;
-  }
-
-  .metric-name {
-    font-size: 10px;
-  }
-
-  .prediction-engine {
-    padding: 13px 8px;
-  }
-
-  .prediction-table {
-    gap: 3px;
-  }
-
-  .prediction-header {
-    font-size: 9px;
-    padding: 8px 2px;
-  }
-
-  .prediction-cell {
-    padding: 12px 2px;
-  }
-
-  .period {
-    font-size: 13px;
-  }
-
-  .projected-number {
-    font-size: 16px;
-  }
-}
+.close{width:auto;float:right}
+.lean{color:var(--gold);font-weight:bold}
+.pass{color:#cbd8e7;font-weight:bold}
 </style>
 </head>
-
 <body>
 
-<div class="war-room">
+<header>
+<h1>🏈 DOC'S 2026 FCS WAR ROOM</h1>
+<div>SCORING • SIX MARKETS • FINAL DECISION ROOM</div>
+<div>
+SCORING • WALK-FORWARD TESTING • SIX MARKETS • DECISION ROOM
+</div>
+<div class="muted">
+PROVE IT — Quality Over Quantity — No Edge = No Bet
+</div>
+<div id="status">Connecting to FCS data...</div>
+</header>
 
-  <div class="header">
-    <h1>DOC'S 2026 CFB WAR ROOM</h1>
-    <p>College Football Matchup & Scoring Prediction Engine</p>
-  </div>
+<main>
 
-  <div class="matchup-panel">
-
-    <div class="matchup-title">SELECT MATCHUP</div>
-
-    <div class="team-selectors">
-
-      <div class="team-box">
-        <label for="awayTeam">Away Team</label>
-        <select id="awayTeam">
-          <option value="">Select Away Team</option>
-        </select>
-      </div>
-
-      <div class="vs">VS</div>
-
-      <div class="team-box">
-        <label for="homeTeam">Home Team</label>
-        <select id="homeTeam">
-          <option value="">Select Home Team</option>
-        </select>
-      </div>
-
-    </div>
-  </div>
-
-  <h2 class="section-title">TEAM COMPARISON</h2>
-
-  <div class="comparison-table">
-
-    <div class="comparison-header" id="awayHeader">AWAY</div>
-    <div class="comparison-header">METRIC</div>
-    <div class="comparison-header" id="homeHeader">HOME</div>
-
-    <div class="comparison-cell metric-value" id="awayOffPPA">—</div>
-    <div class="comparison-cell metric-name">OFFENSIVE PPA</div>
-    <div class="comparison-cell metric-value" id="homeOffPPA">—</div>
-
-    <div class="comparison-cell metric-value" id="awayDefPPA">—</div>
-    <div class="comparison-cell metric-name">DEFENSIVE PPA</div>
-    <div class="comparison-cell metric-value" id="homeDefPPA">—</div>
-
-    <div class="comparison-cell metric-value" id="awaySuccess">—</div>
-    <div class="comparison-cell metric-name">SUCCESS RATE</div>
-    <div class="comparison-cell metric-value" id="homeSuccess">—</div>
-
-    <div class="comparison-cell metric-value" id="awayExplosive">—</div>
-    <div class="comparison-cell metric-name">EXPLOSIVENESS</div>
-    <div class="comparison-cell metric-value" id="homeExplosive">—</div>
-
-    <div class="comparison-cell metric-value" id="awayPPO">—</div>
-    <div class="comparison-cell metric-name">POINTS PER OPPORTUNITY</div>
-    <div class="comparison-cell metric-value" id="homePPO">—</div>
-
-    <div class="comparison-cell metric-value" id="awayDefSuccess">—</div>
-    <div class="comparison-cell metric-name">DEF SUCCESS RATE</div>
-    <div class="comparison-cell metric-value" id="homeDefSuccess">—</div>
-
-    <div class="comparison-cell metric-value" id="awayDefExplosive">—</div>
-    <div class="comparison-cell metric-name">DEF EXPLOSIVENESS</div>
-    <div class="comparison-cell metric-value" id="homeDefExplosive">—</div>
-
-    <div class="comparison-cell metric-value" id="awaySOS">—</div>
-    <div class="comparison-cell metric-name">STRENGTH OF SCHEDULE</div>
-    <div class="comparison-cell metric-value" id="homeSOS">—</div>
-
-  </div>
-
-  <div class="prediction-engine">
-
-    <h2>SCORING PREDICTION ENGINE</h2>
-
-    <div class="engine-subtitle">
-      Separate team projections first. Combined total second.
-    </div>
-
-    <div class="prediction-table">
-
-      <div class="prediction-header">PERIOD</div>
-      <div class="prediction-header" id="awayPredictionHeader">AWAY SCORE</div>
-      <div class="prediction-header" id="homePredictionHeader">HOME SCORE</div>
-      <div class="prediction-header">COMBINED TOTAL</div>
-      <div class="prediction-header">MARGIN</div>
-
-      <div class="prediction-cell period">1Q</div>
-
-      <div class="prediction-cell">
-        <span class="team-label-small" id="away1QLabel">AWAY</span>
-        <span class="projected-number" id="away1Q">—</span>
-      </div>
-
-      <div class="prediction-cell">
-        <span class="team-label-small" id="home1QLabel">HOME</span>
-        <span class="projected-number" id="home1Q">—</span>
-      </div>
-
-      <div class="prediction-cell">
-        <span class="projected-number" id="total1Q">—</span>
-      </div>
-
-      <div class="prediction-cell">
-        <span class="projected-number" id="margin1Q">—</span>
-      </div>
-
-      <div class="prediction-cell period">1H</div>
-
-      <div class="prediction-cell">
-        <span class="team-label-small" id="away1HLabel">AWAY</span>
-        <span class="projected-number" id="away1H">—</span>
-      </div>
-
-      <div class="prediction-cell">
-        <span class="team-label-small" id="home1HLabel">HOME</span>
-        <span class="projected-number" id="home1H">—</span>
-      </div>
-
-      <div class="prediction-cell">
-        <span class="projected-number" id="total1H">—</span>
-      </div>
-
-      <div class="prediction-cell">
-        <span class="projected-number" id="margin1H">—</span>
-      </div>
-
-      <div class="prediction-cell period">FULL</div>
-
-      <div class="prediction-cell">
-        <span class="team-label-small" id="awayFullLabel">AWAY</span>
-        <span class="projected-number" id="awayFull">—</span>
-      </div>
-
-      <div class="prediction-cell">
-        <span class="team-label-small" id="homeFullLabel">HOME</span>
-        <span class="projected-number" id="homeFull">—</span>
-      </div>
-
-      <div class="prediction-cell">
-        <span class="projected-number" id="totalFull">—</span>
-      </div>
-
-      <div class="prediction-cell">
-        <span class="projected-number" id="marginFull">—</span>
-      </div>
-
-    </div>
-
-    <div class="pass-rule">
-      <strong>WAR ROOM RULE:</strong>
-      A projection is not a bet. Compare the projection to the actual market line.
-      If there is no clear edge, PASS.
-    </div>
-
-    <div class="status" id="engineStatus">
-      Waiting for matchup...
-    </div>
-
-  </div>
-
-  <div class="market-board">
-
-    <h2>PROVE IT MARKET BOARD</h2>
-
-    <div class="engine-subtitle">
-      Projection → Verified Market → Edge → Qualification → Rank → STOP when quality drops
-    </div>
-
-    <div class="market-board-table">
-
-      <div class="market-board-header">RANK</div>
-      <div class="market-board-header">MARKET</div>
-      <div class="market-board-header">WAR ROOM PROJECTION</div>
-      <div class="market-board-header">BOOK / MARKET</div>
-      <div class="market-board-header">EDGE</div>
-      <div class="market-board-header">VERDICT</div>
-
-      <div class="market-board-cell market-rank" id="spreadRank">—</div>
-      <div class="market-board-cell market-name">SPREAD</div>
-      <div class="market-board-cell" id="spreadProjection">—</div>
-      <div class="market-board-cell" id="spreadBook">NO MARKET</div>
-      <div class="market-board-cell" id="spreadEdge">—</div>
-      <div class="market-board-cell market-verdict" id="spreadVerdict">WAITING</div>
-
-      <div class="market-board-cell market-rank" id="moneylineRank">—</div>
-      <div class="market-board-cell market-name">MONEYLINE</div>
-      <div class="market-board-cell" id="moneylineProjection">—</div>
-      <div class="market-board-cell" id="moneylineBook">NO MARKET</div>
-      <div class="market-board-cell" id="moneylineEdge">—</div>
-      <div class="market-board-cell market-verdict" id="moneylineVerdict">WAITING</div>
-
-      <div class="market-board-cell market-rank" id="gameTotalRank">—</div>
-      <div class="market-board-cell market-name">GAME TOTAL</div>
-      <div class="market-board-cell" id="gameTotalProjection">—</div>
-      <div class="market-board-cell" id="gameTotalBook">NO MARKET</div>
-      <div class="market-board-cell" id="gameTotalEdge">—</div>
-      <div class="market-board-cell market-verdict" id="gameTotalVerdict">WAITING</div>
-
-      <div class="market-board-cell market-rank" id="teamTotalRank">—</div>
-      <div class="market-board-cell market-name">TEAM TOTAL</div>
-      <div class="market-board-cell" id="teamTotalProjection">—</div>
-      <div class="market-board-cell" id="teamTotalBook">NO MARKET</div>
-      <div class="market-board-cell" id="teamTotalEdge">—</div>
-      <div class="market-board-cell market-verdict" id="teamTotalVerdict">WAITING</div>
-
-      <div class="market-board-cell market-rank" id="firstHalfRank">—</div>
-      <div class="market-board-cell market-name">1H TOTAL</div>
-      <div class="market-board-cell" id="firstHalfProjection">—</div>
-      <div class="market-board-cell" id="firstHalfBook">NO MARKET</div>
-      <div class="market-board-cell" id="firstHalfEdge">—</div>
-      <div class="market-board-cell market-verdict" id="firstHalfVerdict">WAITING</div>
-
-      <div class="market-board-cell market-rank" id="firstQuarterRank">—</div>
-      <div class="market-board-cell market-name">1Q TOTAL</div>
-      <div class="market-board-cell" id="firstQuarterProjection">—</div>
-      <div class="market-board-cell" id="firstQuarterBook">NO MARKET</div>
-      <div class="market-board-cell" id="firstQuarterEdge">—</div>
-      <div class="market-board-cell market-verdict" id="firstQuarterVerdict">WAITING</div>
-
-    </div>
-
-    <div class="pass-rule">
-      <strong>PROVE IT RULE:</strong>
-      Ranking does not equal qualification. A market can rank #1 and still be a PASS.
-      Only evidence-backed qualified plays may turn green.
-    </div>
-
-    <div class="status" id="marketBoardStatus">
-  Waiting for matchup and verified market data...
+<div class="tabs">
+<button class="active" onclick="tab('matchup',this)">
+Matchup & Engine
+</button>
+<button onclick="tab('marketsTab',this)">
+Six Markets & Decisions
+</button>
+<button onclick="tab('players',this)">
+Player Intelligence
+</button>
+<button onclick="tab('memory',this)">
+Green Memory Bank
+</button>
 </div>
 
-<div style="text-align:center; margin-top:18px;">
+<section id="matchup" class="tab active">
 
-  <button
-    id="saveToRecordsButton"
-    type="button"
-    disabled
-    style="
-      padding:14px 28px;
-      border:none;
-      border-radius:10px;
-      font-size:16px;
-      font-weight:800;
-      cursor:pointer;
-      background:#f5c542;
-      color:#07111f;
-    "
-  >
-    SAVE TO RECORDS
-  </button>
+<div class="card">
+<h2>Choose Matchup</h2>
+<div class="grid">
 
-  <div
-    id="saveToRecordsStatus"
-    style="
-      margin-top:10px;
-      color:#aab6c5;
-      font-size:14px;
-      font-weight:bold;
-    "
-  >
-    Analyze a matchup before saving.
-  </div>
+<div>
+<label>Search Away Team</label>
+<input id="awaySearch" oninput="filterTeams('away')"
+ placeholder="Search team">
+<input
+  id="awaySearch"
+  oninput="filterTeams('away')"
+  placeholder="Search team"
+>
+<label>Away Team</label>
+<select id="away" onchange="analyze()"></select>
+</div>
+
+<div>
+<label>Search Home Team</label>
+<input id="homeSearch" oninput="filterTeams('home')"
+ placeholder="Search team">
+<input
+  id="homeSearch"
+  oninput="filterTeams('home')"
+  placeholder="Search team"
+>
+<label>Home Team</label>
+<select id="home" onchange="analyze()"></select>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<h2 id="matchTitle">Team Comparison</h2>
+<div id="comparison"></div>
+</div>
+
+<div class="card">
+<h2>🧠 Scoring Engine</h2>
+<div id="engine"></div>
+</div>
+
+<div class="card">
+<h2>Recent Game Evidence</h2>
+<div id="history"></div>
+</div>
+
+</section>
+
+<section id="marketsTab" class="tab">
+
+<div class="card">
+<h2>🏆 DOC'S FINAL DECISION ROOM</h2>
+<p class="muted" id="decisionMatch"></p>
+
+<p>
+No fixed number of selections. The engine lists
+every qualified opportunity, then displays STOP
+when no additional market meets the standard.
+All preliminary LEANs are displayed until the evidence
+fails, then STOP. There is no artificial limit of five.
+LEAN is research, not a certified bet.
+</p>
+
+<div id="decisionBoard"></div>
+</div>
+
+<div class="card">
+<h2>📊 Six-Market Analysis</h2>
+<p class="muted" id="marketMatch"></p>
+
+<p class="notice">
+Enter verified market lines. These are manual inputs,
+not a live sportsbook feed. The current scoring model
+has not passed historical validation, so raw differences
+cannot qualify as GREEN.
+Enter actual market lines and their observation time.
+These are not live feeds. No market is GREEN without
+verified pricing, team news, and market-level validation.
+</p>
+
+<div class="grid">
+
+<div>
+<label>Market source</label>
+<input id="source" placeholder="Kalshi, Kambi, DraftKings"
+ oninput="rankMarkets()">
+<input
+  id="source"
+  placeholder="Kalshi, Kambi, DraftKings"
+  oninput="rankMarkets()"
+>
+</div>
+
+<div>
+<label>Line observed at (local time)</label>
+<input id="observed" type="datetime-local"
+ oninput="rankMarkets()">
+<input
+  id="observed"
+  type="datetime-local"
+  oninput="rankMarkets()"
+>
+</div>
+
+<div>
+<label>Quarterback/team-news status</label>
+<select id="qbStatus" onchange="rankMarkets()">
+<option value="unknown">Not verified</option>
+<option value="verified">
+I checked current QB and team news
+</option>
+<option value="concern">
+Uncertain QB / major concern
+</option>
+</select>
+</div>
 
 </div>
 
-  </div>
+<h3>Full Game</h3>
+<div class="grid">
 
+<div>
+<label>Home spread (example: -14.5)</label>
+<input id="spread" type="number" step=".5"
+ placeholder="Home spread" oninput="rankMarkets()">
+<label>Home spread (e.g. -14.5)</label>
+<input
+  id="spread"
+  type="number"
+  step=".5"
+  oninput="rankMarkets()"
+>
+</div>
+
+<div>
+<label>Game total</label>
+<input id="total" type="number" step=".5"
+ placeholder="Total" oninput="rankMarkets()">
+<label>Full game total</label>
+<input
+  id="total"
+  type="number"
+  step=".5"
+  oninput="rankMarkets()"
+>
+</div>
+
+<div>
+<label>Away moneyline (American odds)</label>
+<input id="mlAway" type="number"
+ placeholder="+480" oninput="rankMarkets()">
+<input
+  id="mlAway"
+  type="number"
+  oninput="rankMarkets()"
+>
+</div>
+
+<div>
+<label>Home moneyline (American odds)</label>
+<input id="mlHome" type="number"
+ placeholder="-770" oninput="rankMarkets()">
+<input
+  id="mlHome"
+  type="number"
+  oninput="rankMarkets()"
+>
+</div>
+
+</div>
+
+<h3>Team Total</h3>
+<div class="grid">
+
+<div>
+<label>Team</label>
+<select id="teamTotalSide" onchange="rankMarkets()">
+<option value="away">Away</option>
+<option value="home">Home</option>
+</select>
+</div>
+
+<div>
+<label>Team total line</label>
+<input id="teamTotal" type="number" step=".5"
+ placeholder="Team total" oninput="rankMarkets()">
+<input
+  id="teamTotal"
+  type="number"
+  step=".5"
+  oninput="rankMarkets()"
+>
+</div>
+
+</div>
+
+<h3>First Half / First Quarter</h3>
+<div class="grid">
+
+<div>
+<label>1H combined total</label>
+<input id="halfTotal" type="number" step=".5"
+ placeholder="1H total" oninput="rankMarkets()">
+<input
+  id="halfTotal"
+  type="number"
+  step=".5"
+  oninput="rankMarkets()"
+>
+</div>
+
+<div>
+<label>1Q combined total</label>
+<input id="quarterTotal" type="number" step=".5"
+ placeholder="1Q total" oninput="rankMarkets()">
+<input
+  id="quarterTotal"
+  type="number"
+  step=".5"
+  oninput="rankMarkets()"
+>
+</div>
+
+</div>
+
+<button onclick="rankMarkets()">
+Analyze All Six Markets
+Evaluate All Six Markets
+</button>
+</div>
+
+<div class="card">
+<h2>Research Queue — All Six Markets</h2>
+<h2>📐 Historical Error Check</h2>
+<div id="backtest"></div>
+</div>
+
+<div class="card">
+<h2>All Six Markets — Evidence</h2>
+<div id="ranked"></div>
+</div>
+
+<div class="card">
+<h2>🛑 PROVE IT Evidence Check</h2>
+<h2>🛑 PROVE IT Check</h2>
+<div id="stop"></div>
+</div>
+
+</section>
+
+<section id="players" class="tab">
+<div class="card">
+<h2>Player Intelligence</h2>
+<p class="muted">
+Click a player to view collected game-by-game stats.
+Missing games do not mean a player did not play.
+Click a player for collected game-by-game stats.
+Coverage may be incomplete.
+</p>
+<label>Search Player</label>
+<input id="playerSearch" placeholder="Player name"
+ oninput="renderPlayers()">
+<input
+  id="playerSearch"
+  placeholder="Player name"
+  oninput="renderPlayers()"
+>
+<div id="coverage" class="muted"></div>
+<div id="playerList"></div>
+</div>
+</section>
+
+<section id="memory" class="tab">
+<div class="card">
+<h2>💚 Green Intelligence Memory Bank</h2>
+<p class="notice">
+No verified qualified plays yet.
+No GREEN selections have been certified.
+Google Sheets saving is not connected.
+</p>
+<p>
+Once qualification and Sheets integration are
+validated, the Memory Bank will retain pregame
+evidence, market lines, and final results.
+When full qualification and Sheets integration are
+available, this section can preserve pregame evidence,
+verified lines, and results.
+</p>
+</div>
+</section>
+
+</main>
+
+<div id="modal" class="modal"
+ onclick="if(event.target===this)closePlayer()">
+<div
+  id="modal"
+  class="modal"
+  onclick="if(event.target===this)closePlayer()"
+>
+<div class="modalbox">
+<button class="close" onclick="closePlayer()">
+✕ Close
+</button>
+<h2 id="playerName"></h2>
+<p id="playerInfo"></p>
+<div id="playerStats"></div>
+<p class="notice">
+No verified GREEN player props.
+</p>
+<button disabled>💚 Save Green to Sheets</button>
+</div>
 </div>
 
 <script>
-
-/* =========================================================
-   DATA STORAGE
-========================================================= */
-
-let cfbData = [];
-let sosData = [];
-let scoringData = [];
-
-
-/* =========================================================
-   NAME NORMALIZATION
-========================================================= */
-
-function normalizeTeamName(name) {
-
-  if (!name) return "";
-
-  return String(name)
-    .toLowerCase()
-    .replace(/&/g, "and")
-    .replace(/[^a-z0-9]/g, "");
-}
-
-
-/* =========================================================
-   FIND TEAM
-========================================================= */
-
-function findTeam(teamName) {
-
-  const target =
-    normalizeTeamName(teamName);
-
-  return cfbData.find(team => {
-
-    const candidates = [
-      team.team,
-      team.school,
-      team.name,
-      team.teamName
-    ];
-
-    return candidates.some(
-      candidate =>
-        normalizeTeamName(candidate) === target
-    );
-
-  }) || null;
-}
-
-
-/* =========================================================
-   FIND SOS
-========================================================= */
-
-function findSOS(teamName) {
-
-  const target =
-    normalizeTeamName(teamName);
-
-  return sosData.find(team => {
-
-    const candidates = [
-      team.team,
-      team.school,
-      team.name,
-      team.teamName
-    ];
-
-    return candidates.some(
-      candidate =>
-        normalizeTeamName(candidate) === target
-    );
-
-  }) || null;
-}
-
-
-/* =========================================================
-   FIND SCORING PROFILE
-========================================================= */
-
-function findScoring(teamName) {
-
-  const target =
-    normalizeTeamName(teamName);
-
-  return scoringData.find(team => {
-
-    const candidates = [
-      team.team,
-      team.school,
-      team.name,
-      team.teamName
-    ];
-
-    return candidates.some(
-      candidate =>
-        normalizeTeamName(candidate) === target
-    );
-
-  }) || null;
-}
-
-
-/* =========================================================
-   FORMAT HELPERS
-========================================================= */
-
-function formatNumber(
-  value,
-  digits = 3
-) {
-
-  const number =
-    Number(value);
-
-  if (!Number.isFinite(number)) {
-    return "—";
-  }
-
-  return number.toFixed(digits);
-}
-
-
-function formatPercent(value) {
-
-  const number =
-    Number(value);
-
-  if (!Number.isFinite(number)) {
-    return "—";
-  }
-
-  return (
-    number * 100
-  ).toFixed(1) + "%";
-}
-
-
-function formatScore(value) {
-
-  const number =
-    Number(value);
-
-  if (!Number.isFinite(number)) {
-    return "—";
-  }
-
-  return number.toFixed(1);
-}
-
-
-function formatSOS(team) {
-
-  const rank =
-    team?.resumeRanks?.strengthOfSchedule;
-
-  if (!Number.isFinite(Number(rank))) {
-    return "—";
-  }
-
-  return "#" + rank;
-}
-
-
-/* =========================================================
-   GREEN SIGNAL HELPERS
-========================================================= */
-
-function clearGreen(...ids) {
-
-  ids.forEach(id => {
-
-    const element =
-      document.getElementById(id);
-
-    if (element) {
-      element.classList.remove("green");
-    }
-
-  });
-}
-
-
-function applyGreen(
-  awayId,
-  homeId,
-  awayValue,
-  homeValue,
-  threshold,
-  lowerIsBetter = false
-) {
-
-  clearGreen(
-    awayId,
-    homeId
-  );
-
-  const away =
-    Number(awayValue);
-
-  const home =
-    Number(homeValue);
-
-  if (
-    !Number.isFinite(away) ||
-    !Number.isFinite(home)
-  ) {
-    return;
-  }
-
-  const difference =
-    Math.abs(
-      away - home
-    );
-
-  if (difference < threshold) {
-    return;
-  }
-
-  let winnerId;
-
-  if (lowerIsBetter) {
-
-    winnerId =
-      away < home
-        ? awayId
-        : homeId;
-
-  } else {
-
-    winnerId =
-      away > home
-        ? awayId
-        : homeId;
-
-  }
-
-  document
-    .getElementById(winnerId)
-    ?.classList.add("green");
-}
-
-
-/* =========================================================
-   EVIDENCE THRESHOLDS
-========================================================= */
-
-const thresholds = {
-
-  offPPA: 0.10,
-
-  defPPA: 0.05,
-
-  successRate: 0.05,
-
-  explosiveness: 0.15,
-
-  ppo: 0.75,
-
-  defSuccessRate: 0.05,
-
-  defExplosiveness: 0.15
-
-};
-
-
-/* =========================================================
-   SAMPLE-SIZE PROTECTION
-========================================================= */
-
-function blendedAverage(
-  overallValue,
-  locationValue,
-  locationGames
-) {
-
-  const overall =
-    Number(overallValue);
-
-  if (!Number.isFinite(overall)) {
-    return null;
-  }
-
-  const location =
-    Number(locationValue);
-
-  const games =
-    Number(locationGames) || 0;
-
-  if (
-    !Number.isFinite(location) ||
-    games <= 0
-  ) {
-    return overall;
-  }
-
-  const LOCATION_STABILIZER = 4;
-
-  const locationWeight =
-    games / (games + LOCATION_STABILIZER);
-
-  return (
-    locationWeight * location +
-    (1 - locationWeight) * overall
+"use strict";
+
+const $=id=>document.getElementById(id);
+
+let teams=[];
+let games=[];
+let playerReports=[];
+let players=new Map();
+let currentAway=null;
+let currentHome=null;
+let projections=null;
+let currentMatchKey="";
+
+const marketInputs=[
+ "source","observed","spread","total",
+ "mlAway","mlHome","teamTotalSide",
+ "teamTotal","halfTotal","quarterTotal"
+let backtest={};
+
+const inputs=[
+  "source",
+  "observed",
+  "qbStatus",
+  "spread",
+  "total",
+  "mlAway",
+  "mlHome",
+  "teamTotalSide",
+  "teamTotal",
+  "halfTotal",
+  "quarterTotal"
+];
+
+function esc(x){
+ return String(x??"").replace(/[&<>"']/g,c=>({
+  "&":"&amp;","<":"&lt;",">":"&gt;",
+  '"':"&quot;","'":"&#39;"
+ })[c]);
+  return String(x??"").replace(
+    /[&<>"']/g,
+    c=>({
+      "&":"&amp;",
+      "<":"&lt;",
+      ">":"&gt;",
+      '"':"&quot;",
+      "'":"&#39;"
+    })[c]
   );
 }
 
+function numeric(x){
+ return typeof x==="number"&&Number.isFinite(x)?x:null;
+  return typeof x==="number"&&Number.isFinite(x)
+    ?x:null;
+}
 
-/* =========================================================
-   SCORING PERIODS
-========================================================= */
+function fmt(x,d=1){
+ return numeric(x)!==null?x.toFixed(d):"N/A";
+  return numeric(x)!==null?x.toFixed(d):"N/A";
+}
 
-const periodFields = {
+function val(id){
+ const raw=$(id).value.trim();
+ if(raw==="")return null;
+ const n=Number(raw);
+ return Number.isFinite(n)?n:null;
+  const x=$(id).value.trim();
+  if(x==="")return null;
+  const n=Number(x);
+  return Number.isFinite(n)?n:null;
+}
 
-  q1: {
-    scored: "avg1QScored",
-    allowed: "avg1QAllowed"
-  },
-
-  h1: {
-    scored: "avg1HScored",
-    allowed: "avg1HAllowed"
-  },
-
-  full: {
-    scored: "avgFullScored",
-    allowed: "avgFullAllowed"
-  }
-
-};
-
-
-function getScoringTendency(
-  profile,
-  location,
-  field
-) {
-
-  if (!profile) return null;
-
-  const overallValue =
-    profile[field];
-
-  const locationProfile =
-    profile[location];
-
-  const locationValue =
-    locationProfile?.[field];
-
-  const locationGames =
-    locationProfile?.games || 0;
-
-  return blendedAverage(
-    overallValue,
-    locationValue,
-    locationGames
+function tab(id,button){
+ document.querySelectorAll(".tab").forEach(x=>
+  x.classList.remove("active"));
+ document.querySelectorAll(".tabs button").forEach(x=>
+  x.classList.remove("active"));
+ $(id).classList.add("active");
+ button.classList.add("active");
+ if(id==="players")renderPlayers();
+function tab(id,b){
+  document.querySelectorAll(".tab").forEach(
+    x=>x.classList.remove("active")
   );
-}
-
-
-/* =========================================================
-   BASELINE SCORE
-========================================================= */
-
-function projectBaseline(
-  offenseProfile,
-  defenseProfile,
-  offenseLocation,
-  defenseLocation,
-  period
-) {
-
-  const fields =
-    periodFields[period];
-
-  if (!fields) return null;
-
-  const offenseScoring =
-    getScoringTendency(
-      offenseProfile,
-      offenseLocation,
-      fields.scored
-    );
-
-  const defenseAllowed =
-    getScoringTendency(
-      defenseProfile,
-      defenseLocation,
-      fields.allowed
-    );
-
-  if (
-    !Number.isFinite(offenseScoring) ||
-    !Number.isFinite(defenseAllowed)
-  ) {
-    return null;
-  }
-
-  return (
-    offenseScoring +
-    defenseAllowed
-  ) / 2;
-}
-
-
-/* =========================================================
-   NORMALIZATION
-========================================================= */
-
-function getMetricValues(getter) {
-
-  return cfbData
-    .map(getter)
-    .map(Number)
-    .filter(Number.isFinite);
-}
-
-
-function mean(values) {
-
-  if (!values.length) return 0;
-
-  return (
-    values.reduce(
-      (sum, value) => sum + value,
-      0
-    ) / values.length
+  document.querySelectorAll(".tabs button").forEach(
+    x=>x.classList.remove("active")
   );
+  $(id).classList.add("active");
+  b.classList.add("active");
+  if(id==="players")renderPlayers();
 }
 
-
-function standardDeviation(values) {
-
-  if (values.length < 2) return 1;
-
-  const avg =
-    mean(values);
-
-  const variance =
-    values.reduce(
-      (sum, value) =>
-        sum + Math.pow(value - avg, 2),
-      0
-    ) / values.length;
-
-  const sd =
-    Math.sqrt(variance);
-
-  return sd || 1;
-}
-
-
-function zScore(value, values) {
-
-  const numeric =
-    Number(value);
-
-  if (
-    !Number.isFinite(numeric) ||
-    !values.length
-  ) {
-    return 0;
-  }
-
-  return (
-    numeric - mean(values)
-  ) / standardDeviation(values);
-}
-
-
-/* =========================================================
-   ADVANCED MATCHUP PROFILE
-========================================================= */
-
-function advancedMatchupScore(
-  offenseTeam,
-  defenseTeam,
-  offenseSOS,
-  defenseSOS
-) {
-
-  if (!offenseTeam || !defenseTeam) {
-    return 0;
-  }
-
-  const offPPAValues =
-    getMetricValues(
-      team => team.offense?.ppa
-    );
-
-  const defPPAValues =
-    getMetricValues(
-      team => team.defense?.ppa
-    );
-
-  const offSuccessValues =
-    getMetricValues(
-      team => team.offense?.successRate
-    );
-
-  const defSuccessValues =
-    getMetricValues(
-      team => team.defense?.successRate
-    );
-
-  const offExplosiveValues =
-    getMetricValues(
-      team => team.offense?.explosiveness
-    );
-
-  const defExplosiveValues =
-    getMetricValues(
-      team => team.defense?.explosiveness
-    );
-
-  const ppoValues =
-    getMetricValues(
-      team => team.offense?.pointsPerOpportunity
-    );
-
-  const offPPA =
-    zScore(
-      offenseTeam.offense?.ppa,
-      offPPAValues
-    );
-
-  const offSuccess =
-    zScore(
-      offenseTeam.offense?.successRate,
-      offSuccessValues
-    );
-
-  const offExplosive =
-    zScore(
-      offenseTeam.offense?.explosiveness,
-      offExplosiveValues
-    );
-
-  const offPPO =
-    zScore(
-      offenseTeam.offense?.pointsPerOpportunity,
-      ppoValues
-    );
-
-  const opponentDefPPA =
-    -zScore(
-      defenseTeam.defense?.ppa,
-      defPPAValues
-    );
-
-  const opponentDefSuccess =
-    -zScore(
-      defenseTeam.defense?.successRate,
-      defSuccessValues
-    );
-
-  const opponentDefExplosive =
-    -zScore(
-      defenseTeam.defense?.explosiveness,
-      defExplosiveValues
-    );
-
-  const offenseSOSRank =
-    Number(
-      offenseSOS?.resumeRanks?.strengthOfSchedule
-    );
-
-  const defenseSOSRank =
-    Number(
-      defenseSOS?.resumeRanks?.strengthOfSchedule
-    );
-
-  let sosContext = 0;
-
-  if (
-    Number.isFinite(offenseSOSRank) &&
-    Number.isFinite(defenseSOSRank)
-  ) {
-
-    sosContext =
-      (defenseSOSRank - offenseSOSRank) / 130;
-
-    sosContext =
-      Math.max(
-        -1,
-        Math.min(1, sosContext)
-      );
-  }
-
-  const components = [
-    offPPA,
-    offSuccess,
-    offExplosive,
-    offPPO,
-    opponentDefPPA,
-    opponentDefSuccess,
-    opponentDefExplosive,
-    sosContext
-  ];
-
-  return mean(components);
-}
-
-
-/* =========================================================
-   PERIOD-SPECIFIC ADVANCED ADJUSTMENT
-========================================================= */
-
-function advancedAdjustment(
-  matchupScore,
-  period
-) {
-
-  let maxAdjustment;
-
-  if (period === "q1") {
-    maxAdjustment = 2.5;
-  } else if (period === "h1") {
-    maxAdjustment = 5.0;
-  } else {
-    maxAdjustment = 8.0;
-  }
-
-  return (
-    Math.tanh(matchupScore) *
-    maxAdjustment
+async function getJSON(file){
+ const r=await fetch(
+  "./data/"+file+"?v="+Date.now(),
+  {cache:"no-store"}
+ );
+ if(!r.ok)throw Error(file+" HTTP "+r.status);
+ return r.json();
+  const r=await fetch(
+    "./data/"+file+"?v="+Date.now(),
+    {cache:"no-store"}
   );
+  if(!r.ok){
+    throw Error(file+" HTTP "+r.status);
+  }
+  return r.json();
 }
 
-
-/* =========================================================
-   FINAL EXPERIMENTAL PROJECTION
-========================================================= */
-
-function projectTeamScore(
-  offenseProfile,
-  defenseProfile,
-  offenseLocation,
-  defenseLocation,
-  offenseTeam,
-  defenseTeam,
-  offenseSOS,
-  defenseSOS,
-  period
-) {
-
-  const baseline =
-    projectBaseline(
-      offenseProfile,
-      defenseProfile,
-      offenseLocation,
-      defenseLocation,
-      period
-    );
-
-  if (!Number.isFinite(baseline)) {
-    return null;
-  }
-
-  const matchup =
-    advancedMatchupScore(
-      offenseTeam,
-      defenseTeam,
-      offenseSOS,
-      defenseSOS
-    );
-
-  const adjustment =
-    advancedAdjustment(
-      matchup,
-      period
-    );
-
-  return Math.max(
-    0,
-    baseline + adjustment
-  );
-}
-
-
-/* =========================================================
-   PROVE IT MARKET BOARD STATE
-========================================================= */
-
-const marketBoardProjection = {
-
-  q1: {
-    away: null,
-    home: null,
-    total: null,
-    margin: null
-  },
-
-  h1: {
-    away: null,
-    home: null,
-    total: null,
-    margin: null
-  },
-
-  full: {
-    away: null,
-    home: null,
-    total: null,
-    margin: null
-  }
-
-};
-
-
-function clearMarketBoardProjection() {
-
-  Object.keys(marketBoardProjection)
-    .forEach(period => {
-
-      marketBoardProjection[period].away = null;
-      marketBoardProjection[period].home = null;
-      marketBoardProjection[period].total = null;
-      marketBoardProjection[period].margin = null;
-
-    });
-
-  [
-    "spreadProjection",
-    "moneylineProjection",
-    "gameTotalProjection",
-    "teamTotalProjection",
-    "firstHalfProjection",
-    "firstQuarterProjection"
-  ].forEach(id => {
-
-    const element =
-      document.getElementById(id);
-
-    if (element) {
-      element.textContent = "—";
-    }
-
-  });
-
-}
-
-
-/* =========================================================
-   VERIFIED MARKET STATE
-========================================================= */
-
-const marketBoardLines = {
-
-  spread: {
-    awayLine: null,
-    homeLine: null,
-    awayPrice: null,
-    homePrice: null
-  },
-
-  moneyline: {
-    awayPrice: null,
-    homePrice: null
-  },
-
-  gameTotal: {
-    line: null,
-    overPrice: null,
-    underPrice: null
-  },
-
-  teamTotal: {
-    awayLine: null,
-    homeLine: null,
-    awayOverPrice: null,
-    awayUnderPrice: null,
-    homeOverPrice: null,
-    homeUnderPrice: null
-  },
-
-  firstHalf: {
-    spreadAway: null,
-    spreadHome: null,
-    total: null,
-    overPrice: null,
-    underPrice: null
-  },
-
-  firstQuarter: {
-    spreadAway: null,
-    spreadHome: null,
-    total: null,
-    overPrice: null,
-    underPrice: null
-  }
-
-};
-  /* =========================================================
-   CLEAR VERIFIED MARKET STATE
-========================================================= */
-
-function clearMarketBoardLines() {
-
-  marketBoardLines.spread.awayLine = null;
-  marketBoardLines.spread.homeLine = null;
-  marketBoardLines.spread.awayPrice = null;
-  marketBoardLines.spread.homePrice = null;
-
-  marketBoardLines.moneyline.awayPrice = null;
-  marketBoardLines.moneyline.homePrice = null;
-
-  marketBoardLines.gameTotal.line = null;
-  marketBoardLines.gameTotal.overPrice = null;
-  marketBoardLines.gameTotal.underPrice = null;
-
-  marketBoardLines.teamTotal.awayLine = null;
-  marketBoardLines.teamTotal.homeLine = null;
-  marketBoardLines.teamTotal.awayOverPrice = null;
-  marketBoardLines.teamTotal.awayUnderPrice = null;
-  marketBoardLines.teamTotal.homeOverPrice = null;
-  marketBoardLines.teamTotal.homeUnderPrice = null;
-
-  marketBoardLines.firstHalf.spreadAway = null;
-  marketBoardLines.firstHalf.spreadHome = null;
-  marketBoardLines.firstHalf.total = null;
-  marketBoardLines.firstHalf.overPrice = null;
-  marketBoardLines.firstHalf.underPrice = null;
-
-  marketBoardLines.firstQuarter.spreadAway = null;
-  marketBoardLines.firstQuarter.spreadHome = null;
-  marketBoardLines.firstQuarter.total = null;
-  marketBoardLines.firstQuarter.overPrice = null;
-  marketBoardLines.firstQuarter.underPrice = null;
-
-}
-
-
-/* =========================================================
-   MARKET BOARD ANALYSIS STATE
-========================================================= */
-
-const marketBoardAnalysis = {
-
-  spread: null,
-  moneyline: null,
-  gameTotal: null,
-  teamTotal: null,
-  firstHalf: null,
-  firstQuarter: null
-
-};
-
-
-function clearMarketBoardAnalysis() {
-
-  Object.keys(marketBoardAnalysis)
-    .forEach(key => {
-      marketBoardAnalysis[key] = null;
-    });
-
-}
-
-
-/* =========================================================
-   MARKET BOARD DISPLAY RESET
-========================================================= */
-
-function resetMarketBoardDisplay() {
-
-  const rankIds = [
-    "spreadRank",
-    "moneylineRank",
-    "gameTotalRank",
-    "teamTotalRank",
-    "firstHalfRank",
-    "firstQuarterRank"
-  ];
-
-  const bookIds = [
-    "spreadBook",
-    "moneylineBook",
-    "gameTotalBook",
-    "teamTotalBook",
-    "firstHalfBook",
-    "firstQuarterBook"
-  ];
-
-  const edgeIds = [
-    "spreadEdge",
-    "moneylineEdge",
-    "gameTotalEdge",
-    "teamTotalEdge",
-    "firstHalfEdge",
-    "firstQuarterEdge"
-  ];
-
-  const verdictIds = [
-    "spreadVerdict",
-    "moneylineVerdict",
-    "gameTotalVerdict",
-    "teamTotalVerdict",
-    "firstHalfVerdict",
-    "firstQuarterVerdict"
-  ];
-
-  rankIds.forEach(id => {
-
-    const element =
-      document.getElementById(id);
-
-    if (element) {
-      element.textContent = "—";
-      element.classList.remove("green");
-    }
-
-  });
-
-  bookIds.forEach(id => {
-
-    const element =
-      document.getElementById(id);
-
-    if (element) {
-      element.textContent = "NO MARKET";
-      element.classList.remove("green");
-    }
-
-  });
-
-  edgeIds.forEach(id => {
-
-    const element =
-      document.getElementById(id);
-
-    if (element) {
-      element.textContent = "—";
-      element.classList.remove("green");
-    }
-
-  });
-
-  verdictIds.forEach(id => {
-
-    const element =
-      document.getElementById(id);
-
-    if (element) {
-      element.textContent = "WAITING";
-      element.classList.remove("green");
-    }
-
-  });
-
-  const status =
-    document.getElementById(
-      "marketBoardStatus"
-    );
-
-  if (status) {
-
-    status.textContent =
-      "Waiting for matchup and verified market data...";
-
-    status.classList.remove("green");
-  }
-
-}
-
-
-/* =========================================================
-   PRICE / LINE FORMATTERS
-========================================================= */
-
-function formatAmericanPrice(value) {
-
-  const number =
-    Number(value);
-
-  if (!Number.isFinite(number)) {
-    return "";
-  }
-
-  if (number > 0) {
-    return "+" + Math.round(number);
-  }
-
-  return String(
-    Math.round(number)
-  );
-}
-
-
-function formatMarketLine(value) {
-
-  const number =
-    Number(value);
-
-  if (!Number.isFinite(number)) {
-    return "—";
-  }
-
-  if (number > 0) {
-    return "+" + number;
-  }
-
-  return String(number);
-}
-
-
-/* =========================================================
-   MARKET EDGE
-========================================================= */
-
-function calculateMarketEdge(
-  projection,
-  line
-) {
-
-  const projected =
-    Number(projection);
-
-  const market =
-    Number(line);
-
-  if (
-    !Number.isFinite(projected) ||
-    !Number.isFinite(market)
-  ) {
-    return null;
-  }
-
-  return projected - market;
-}
-
-
-/* =========================================================
-   SPREAD EVIDENCE PROFILE
-========================================================= */
-
-function buildSpreadEvidenceProfile(
-  awayTeam,
-  homeTeam,
-  awaySOS,
-  homeSOS
-) {
-
-  const signals = {
-    away: 0,
-    home: 0,
-    conflicts: 0,
-    totalMeasured: 0
-  };
-
-  function scoreSignal(
-    awayValue,
-    homeValue,
-    threshold,
-    lowerIsBetter = false
-  ) {
-
-    const away =
-      Number(awayValue);
-
-    const home =
-      Number(homeValue);
-
-    if (
-      !Number.isFinite(away) ||
-      !Number.isFinite(home)
-    ) {
-      return;
-    }
-
-    signals.totalMeasured++;
-
-    const difference =
-      Math.abs(
-        away - home
-      );
-
-    if (difference < threshold) {
-      return;
-    }
-
-    let awayWins;
-
-    if (lowerIsBetter) {
-      awayWins = away < home;
-    } else {
-      awayWins = away > home;
-    }
-
-    if (awayWins) {
-      signals.away++;
-    } else {
-      signals.home++;
-    }
-  }
-
-  scoreSignal(
-    awayTeam?.offense?.ppa,
-    homeTeam?.offense?.ppa,
-    thresholds.offPPA
-  );
-
-  scoreSignal(
-    awayTeam?.defense?.ppa,
-    homeTeam?.defense?.ppa,
-    thresholds.defPPA,
-    true
-  );
-
-  scoreSignal(
-    awayTeam?.offense?.successRate,
-    homeTeam?.offense?.successRate,
-    thresholds.successRate
-  );
-
-  scoreSignal(
-    awayTeam?.offense?.explosiveness,
-    homeTeam?.offense?.explosiveness,
-    thresholds.explosiveness
-  );
-
-  scoreSignal(
-    awayTeam?.offense?.pointsPerOpportunity,
-    homeTeam?.offense?.pointsPerOpportunity,
-    thresholds.ppo
-  );
-
-  scoreSignal(
-    awayTeam?.defense?.successRate,
-    homeTeam?.defense?.successRate,
-    thresholds.defSuccessRate,
-    true
-  );
-
-  scoreSignal(
-    awayTeam?.defense?.explosiveness,
-    homeTeam?.defense?.explosiveness,
-    thresholds.defExplosiveness,
-    true
-  );
-
-  if (
-    signals.away > 0 &&
-    signals.home > 0
-  ) {
-    signals.conflicts =
-      Math.min(
-        signals.away,
-        signals.home
-      );
-  }
-
-  const awaySOSRank =
-    Number(
-      awaySOS?.resumeRanks?.strengthOfSchedule
-    );
-
-  const homeSOSRank =
-    Number(
-      homeSOS?.resumeRanks?.strengthOfSchedule
-    );
-
-  signals.awaySOSRank =
-    Number.isFinite(awaySOSRank)
-      ? awaySOSRank
-      : null;
-
-  signals.homeSOSRank =
-    Number.isFinite(homeSOSRank)
-      ? homeSOSRank
-      : null;
-
-  return signals;
-}
-
-
-/* =========================================================
-   ANALYZE SPREAD
-========================================================= */
-
-function analyzeSpreadMarket(
-  awayName,
-  homeName,
-  awayTeam,
-  homeTeam,
-  awaySOS,
-  homeSOS
-) {
-
-  const projection =
-    marketBoardProjection.full;
-
-  const awayProjection =
-    Number(projection.away);
-
-  const homeProjection =
-    Number(projection.home);
-
-  const awayLine =
-    Number(
-      marketBoardLines.spread.awayLine
-    );
-
-  const homeLine =
-    Number(
-      marketBoardLines.spread.homeLine
-    );
-
-  const projectionElement =
-    document.getElementById(
-      "spreadProjection"
-    );
-
-  const bookElement =
-    document.getElementById(
-      "spreadBook"
-    );
-
-  const edgeElement =
-    document.getElementById(
-      "spreadEdge"
-    );
-
-  const verdictElement =
-    document.getElementById(
-      "spreadVerdict"
-    );
-
-  if (
-    Number.isFinite(awayProjection) &&
-    Number.isFinite(homeProjection)
-  ) {
-
-    const difference =
-      awayProjection - homeProjection;
-
-    const projectedWinner =
-      difference > 0
-        ? awayName
-        : homeName;
-
-    projectionElement.textContent =
-      projectedWinner +
-      " by " +
-      Math.abs(difference).toFixed(1);
-
-  } else {
-
-    projectionElement.textContent = "—";
-
-  }
-
-  if (
-    !Number.isFinite(awayLine) ||
-    !Number.isFinite(homeLine)
-  ) {
-
-    bookElement.textContent =
-      "NO MARKET";
-
-    edgeElement.textContent =
-      "—";
-
-    verdictElement.textContent =
-      "PASS — NO VERIFIED LINE";
-
-    marketBoardAnalysis.spread = {
-      measurable: false,
-      qualified: false,
-      lean: false,
-      score: null,
-      verdict: "PASS"
-    };
-
-    return;
-  }
-
-  const awayPrice =
-    formatAmericanPrice(
-      marketBoardLines.spread.awayPrice
-    );
-
-  const homePrice =
-    formatAmericanPrice(
-      marketBoardLines.spread.homePrice
-    );
-
-  bookElement.textContent =
-    awayName +
-    " " +
-    formatMarketLine(awayLine) +
-    (awayPrice ? " (" + awayPrice + ")" : "") +
-    " | " +
-    homeName +
-    " " +
-    formatMarketLine(homeLine) +
-    (homePrice ? " (" + homePrice + ")" : "");
-
-  if (
-    !Number.isFinite(awayProjection) ||
-    !Number.isFinite(homeProjection)
-  ) {
-
-    edgeElement.textContent = "—";
-
-    verdictElement.textContent =
-      "PASS — NO PROJECTION";
-
-    marketBoardAnalysis.spread = {
-      measurable: false,
-      qualified: false,
-      lean: false,
-      score: null,
-      verdict: "PASS"
-    };
-
-    return;
-  }
-
-  const projectedDifference =
-    awayProjection - homeProjection;
-
-  const awayCoverMargin =
-    projectedDifference + awayLine;
-
-  const homeCoverMargin =
-    -projectedDifference + homeLine;
-
-  const preferredAway =
-    awayCoverMargin >
-    homeCoverMargin;
-
-  const preferredTeam =
-    preferredAway
-      ? awayName
-      : homeName;
-
-  const preferredLine =
-    preferredAway
-      ? awayLine
-      : homeLine;
-
-  const edge =
-    Math.max(
-      awayCoverMargin,
-      homeCoverMargin
-    );
-
-  edgeElement.textContent =
-    preferredTeam +
-    " " +
-    formatMarketLine(preferredLine) +
-    " by " +
-    Math.abs(edge).toFixed(1);
-
-  const evidence =
-    buildSpreadEvidenceProfile(
-      awayTeam,
-      homeTeam,
-      awaySOS,
-      homeSOS
-    );
-
-  const preferredSignals =
-    preferredAway
-      ? evidence.away
-      : evidence.home;
-
-  const opposingSignals =
-    preferredAway
-      ? evidence.home
-      : evidence.away;
-
-  /*
-    IMPORTANT:
-    We do NOT auto-qualify spreads yet.
-
-    The evidence profile is visible to the
-    engine, but historical validation has not
-    established a safe automatic threshold.
-  */
-
-  const hasDirectionalSupport =
-    preferredSignals >
-    opposingSignals;
-
-  const hasConflict =
-    preferredSignals > 0 &&
-    opposingSignals > 0;
-
-  let verdict;
-
-  if (
-    edge > 0 &&
-    hasDirectionalSupport &&
-    !hasConflict
-  ) {
-
-    verdict =
-      "LEAN — NOT YET QUALIFIED";
-
-  } else if (
-    edge > 0 &&
-    hasConflict
-  ) {
-
-    verdict =
-      "PASS — CONFLICTING EVIDENCE";
-
-  } else {
-
-    verdict =
-      "PASS — NO PROVEN EDGE";
-
-  }
-
-  verdictElement.textContent =
-    verdict;
-
-  marketBoardAnalysis.spread = {
-
-    measurable: true,
-
-    qualified: false,
-
-    lean:
-      verdict.startsWith("LEAN"),
-
-    score:
-      Math.abs(edge),
-
-    verdict,
-
-    preferredTeam,
-
-    preferredLine,
-
-    evidence
-
-  };
-
-}
-
-
-/* =========================================================
-   ANALYZE MONEYLINE
-========================================================= */
-
-function analyzeMoneylineMarket(
-  awayName,
-  homeName
-) {
-
-  const projection =
-    marketBoardProjection.full;
-
-  const awayProjection =
-    Number(projection.away);
-
-  const homeProjection =
-    Number(projection.home);
-
-  const projectionElement =
-    document.getElementById(
-      "moneylineProjection"
-    );
-
-  const bookElement =
-    document.getElementById(
-      "moneylineBook"
-    );
-
-  const edgeElement =
-    document.getElementById(
-      "moneylineEdge"
-    );
-
-  const verdictElement =
-    document.getElementById(
-      "moneylineVerdict"
-    );
-
-  if (
-    Number.isFinite(awayProjection) &&
-    Number.isFinite(homeProjection)
-  ) {
-
-    projectionElement.textContent =
-      awayProjection > homeProjection
-        ? awayName
-        : homeName;
-
-  } else {
-
-    projectionElement.textContent = "—";
-
-  }
-
-  const awayPrice =
-    Number(
-      marketBoardLines.moneyline.awayPrice
-    );
-
-  const homePrice =
-    Number(
-      marketBoardLines.moneyline.homePrice
-    );
-
-  if (
-    !Number.isFinite(awayPrice) ||
-    !Number.isFinite(homePrice)
-  ) {
-
-    bookElement.textContent =
-      "NO MARKET";
-
-    edgeElement.textContent =
-      "—";
-
-    verdictElement.textContent =
-      "PASS — NO VERIFIED LINE";
-
-    marketBoardAnalysis.moneyline = {
-      measurable: false,
-      qualified: false,
-      lean: false,
-      score: null,
-      verdict: "PASS"
-    };
-
-    return;
-  }
-
-  bookElement.textContent =
-    awayName +
-    " " +
-    formatAmericanPrice(awayPrice) +
-    " | " +
-    homeName +
-    " " +
-    formatAmericanPrice(homePrice);
-
-  /*
-    No fair probability model yet.
-
-    A projected winner alone does NOT prove
-    moneyline value.
-  */
-
-  edgeElement.textContent =
-    "NO FAIR ODDS EDGE";
-
-  verdictElement.textContent =
-    "PASS — NO FAIR ODDS MODEL";
-
-  marketBoardAnalysis.moneyline = {
-
-    measurable: false,
-
-    qualified: false,
-
-    lean: false,
-
-    score: null,
-
-    verdict:
-      "PASS — NO FAIR ODDS MODEL"
-
-  };
-
-}
-
-
-/* =========================================================
-   ANALYZE GAME TOTAL
-========================================================= */
-
-function analyzeGameTotalMarket() {
-
-  const projection =
-    Number(
-      marketBoardProjection.full.total
-    );
-
-  const line =
-    Number(
-      marketBoardLines.gameTotal.line
-    );
-
-  const projectionElement =
-    document.getElementById(
-      "gameTotalProjection"
-    );
-
-  const bookElement =
-    document.getElementById(
-      "gameTotalBook"
-    );
-
-  const edgeElement =
-    document.getElementById(
-      "gameTotalEdge"
-    );
-
-  const verdictElement =
-    document.getElementById(
-      "gameTotalVerdict"
-    );
-
-  projectionElement.textContent =
-    Number.isFinite(projection)
-      ? projection.toFixed(1)
-      : "—";
-
-  if (!Number.isFinite(line)) {
-
-    bookElement.textContent =
-      "NO MARKET";
-
-    edgeElement.textContent =
-      "—";
-
-    verdictElement.textContent =
-      "PASS — NO VERIFIED LINE";
-
-    marketBoardAnalysis.gameTotal = {
-      measurable: false,
-      qualified: false,
-      lean: false,
-      score: null,
-      verdict: "PASS"
-    };
-
-    return;
-  }
-
-  const overPrice =
-    formatAmericanPrice(
-      marketBoardLines.gameTotal.overPrice
-    );
-
-  const underPrice =
-    formatAmericanPrice(
-      marketBoardLines.gameTotal.underPrice
-    );
-
-  bookElement.textContent =
-    "O " +
-    line +
-    (overPrice ? " (" + overPrice + ")" : "") +
-    " | U " +
-    line +
-    (underPrice ? " (" + underPrice + ")" : "");
-
-  const edge =
-    calculateMarketEdge(
-      projection,
-      line
-    );
-
-  if (!Number.isFinite(edge)) {
-
-    edgeElement.textContent = "—";
-
-    verdictElement.textContent =
-      "PASS — NO PROJECTION";
-
-    marketBoardAnalysis.gameTotal = {
-      measurable: false,
-      qualified: false,
-      lean: false,
-      score: null,
-      verdict: "PASS"
-    };
-
-    return;
-  }
-
-  const direction =
-    edge > 0
-      ? "OVER"
-      : edge < 0
-        ? "UNDER"
-        : "EVEN";
-
-  edgeElement.textContent =
-    direction === "EVEN"
-      ? "0.0"
-      : direction +
-        " +" +
-        Math.abs(edge).toFixed(1);
-
-  const lean =
-    Math.abs(edge) > 0;
-
-  verdictElement.textContent =
-    lean
-      ? "LEAN — TOTAL THRESHOLD NOT VALIDATED"
-      : "PASS — NO EDGE";
-
-  marketBoardAnalysis.gameTotal = {
-
-    measurable: true,
-
-    qualified: false,
-
-    lean,
-
-    score:
-      Math.abs(edge),
-
-    verdict:
-      verdictElement.textContent,
-
-    direction,
-
-    edge
-
-  };
-
-}
-
-
-/* =========================================================
-   ANALYZE TEAM TOTAL
-========================================================= */
-
-function analyzeTeamTotalMarket(
-  awayName,
-  homeName
-) {
-
-  const awayProjection =
-    Number(
-      marketBoardProjection.full.away
-    );
-
-  const homeProjection =
-    Number(
-      marketBoardProjection.full.home
-    );
-
-  const awayLine =
-    Number(
-      marketBoardLines.teamTotal.awayLine
-    );
-
-  const homeLine =
-    Number(
-      marketBoardLines.teamTotal.homeLine
-    );
-
-  const projectionElement =
-    document.getElementById(
-      "teamTotalProjection"
-    );
-
-  const bookElement =
-    document.getElementById(
-      "teamTotalBook"
-    );
-
-  const edgeElement =
-    document.getElementById(
-      "teamTotalEdge"
-    );
-
-  const verdictElement =
-    document.getElementById(
-      "teamTotalVerdict"
-    );
-
-  if (
-    Number.isFinite(awayProjection) &&
-    Number.isFinite(homeProjection)
-  ) {
-
-    projectionElement.textContent =
-      awayName +
-      " " +
-      awayProjection.toFixed(1) +
-      " | " +
-      homeName +
-      " " +
-      homeProjection.toFixed(1);
-
-  } else {
-
-    projectionElement.textContent = "—";
-
-  }
-
-  if (
-    !Number.isFinite(awayLine) ||
-    !Number.isFinite(homeLine)
-  ) {
-
-    bookElement.textContent =
-      "NO MARKET";
-
-    edgeElement.textContent =
-      "—";
-
-    verdictElement.textContent =
-      "PASS — NO VERIFIED LINE";
-
-    marketBoardAnalysis.teamTotal = {
-      measurable: false,
-      qualified: false,
-      lean: false,
-      score: null,
-      verdict: "PASS"
-    };
-
-    return;
-  }
-
-  bookElement.textContent =
-    awayName +
-    " " +
-    awayLine +
-    " | " +
-    homeName +
-    " " +
-    homeLine;
-
-  const awayEdge =
-    calculateMarketEdge(
-      awayProjection,
-      awayLine
-    );
-
-  const homeEdge =
-    calculateMarketEdge(
-      homeProjection,
-      homeLine
-    );
-
-  if (
-    !Number.isFinite(awayEdge) ||
-    !Number.isFinite(homeEdge)
-  ) {
-
-    edgeElement.textContent = "—";
-
-    verdictElement.textContent =
-      "PASS — NO PROJECTION";
-
-    marketBoardAnalysis.teamTotal = {
-      measurable: false,
-      qualified: false,
-      lean: false,
-      score: null,
-      verdict: "PASS"
-    };
-
-    return;
-  }
-
-  const awayAbs =
-    Math.abs(awayEdge);
-
-  const homeAbs =
-    Math.abs(homeEdge);
-
-  const useAway =
-    awayAbs >= homeAbs;
-
-  const selectedTeam =
-    useAway
-      ? awayName
-      : homeName;
-
-  const selectedEdge =
-    useAway
-      ? awayEdge
-      : homeEdge;
-
-  const direction =
-    selectedEdge > 0
-      ? "OVER"
-      : selectedEdge < 0
-        ? "UNDER"
-        : "EVEN";
-
-  edgeElement.textContent =
-    direction === "EVEN"
-      ? selectedTeam + " 0.0"
-      : selectedTeam +
-        " " +
-        direction +
-        " +" +
-        Math.abs(selectedEdge).toFixed(1);
-
-  const lean =
-    Math.abs(selectedEdge) > 0;
-
-  verdictElement.textContent =
-    lean
-      ? "LEAN — TEAM TOTAL THRESHOLD NOT VALIDATED"
-      : "PASS — NO EDGE";
-
-  marketBoardAnalysis.teamTotal = {
-
-    measurable: true,
-
-    qualified: false,
-
-    lean,
-
-    score:
-      Math.abs(selectedEdge),
-
-    verdict:
-      verdictElement.textContent,
-
-    selectedTeam,
-
-    direction,
-
-    edge:
-      selectedEdge
-
-  };
-
-}
-
-
-/* =========================================================
-   ANALYZE PERIOD TOTAL
-========================================================= */
-
-function analyzePeriodTotalMarket(
-  periodKey,
-  marketKey,
-  projectionId,
-  bookId,
-  edgeId,
-  verdictId
-) {
-
-  const projection =
-    Number(
-      marketBoardProjection[periodKey]?.total
-    );
-
-  const line =
-    Number(
-      marketBoardLines[marketKey]?.total
-    );
-
-  const projectionElement =
-    document.getElementById(
-      projectionId
-    );
-
-  const bookElement =
-    document.getElementById(
-      bookId
-    );
-
-  const edgeElement =
-    document.getElementById(
-      edgeId
-    );
-
-  const verdictElement =
-    document.getElementById(
-      verdictId
-    );
-
-  projectionElement.textContent =
-    Number.isFinite(projection)
-      ? projection.toFixed(1)
-      : "—";
-
-  if (!Number.isFinite(line)) {
-
-    bookElement.textContent =
-      "NO MARKET";
-
-    edgeElement.textContent =
-      "—";
-
-    verdictElement.textContent =
-      "PASS — NO VERIFIED LINE";
-
-    marketBoardAnalysis[marketKey] = {
-      measurable: false,
-      qualified: false,
-      lean: false,
-      score: null,
-      verdict: "PASS"
-    };
-
-    return;
-  }
-
-  const overPrice =
-    formatAmericanPrice(
-      marketBoardLines[marketKey]
-        ?.overPrice
-    );
-
-  const underPrice =
-    formatAmericanPrice(
-      marketBoardLines[marketKey]
-        ?.underPrice
-    );
-
-  bookElement.textContent =
-    "O " +
-    line +
-    (overPrice ? " (" + overPrice + ")" : "") +
-    " | U " +
-    line +
-    (underPrice ? " (" + underPrice + ")" : "");
-
-  const edge =
-    calculateMarketEdge(
-      projection,
-      line
-    );
-
-  if (!Number.isFinite(edge)) {
-
-    edgeElement.textContent = "—";
-
-    verdictElement.textContent =
-      "PASS — NO PROJECTION";
-
-    marketBoardAnalysis[marketKey] = {
-      measurable: false,
-      qualified: false,
-      lean: false,
-      score: null,
-      verdict: "PASS"
-    };
-
-    return;
-  }
-
-  const direction =
-    edge > 0
-      ? "OVER"
-      : edge < 0
-        ? "UNDER"
-        : "EVEN";
-
-  edgeElement.textContent =
-    direction === "EVEN"
-      ? "0.0"
-      : direction +
-        " +" +
-        Math.abs(edge).toFixed(1);
-
-  const lean =
-    Math.abs(edge) > 0;
-
-  verdictElement.textContent =
-    lean
-      ? "LEAN — TOTAL THRESHOLD NOT VALIDATED"
-      : "PASS — NO EDGE";
-
-  marketBoardAnalysis[marketKey] = {
-
-    measurable: true,
-
-    qualified: false,
-
-    lean,
-
-    score:
-      Math.abs(edge),
-
-    verdict:
-      verdictElement.textContent,
-
-    direction,
-
-    edge
-
-  };
-
-}
-
-
-/* =========================================================
-   RANK MARKETS
-========================================================= */
-
-function rankMarketBoard() {
-
-  const candidates = [
-
-    {
-      key: "spread",
-      rankId: "spreadRank"
-    },
-
-    {
-      key: "gameTotal",
-      rankId: "gameTotalRank"
-    },
-
-    {
-      key: "teamTotal",
-      rankId: "teamTotalRank"
-    },
-
-    {
-      key: "firstHalf",
-      rankId: "firstHalfRank"
-    },
-
-    {
-      key: "firstQuarter",
-      rankId: "firstQuarterRank"
-    }
-
-  ];
-
-  candidates.forEach(item => {
-
-    const element =
-      document.getElementById(
-        item.rankId
-      );
-
-    if (element) {
-      element.textContent = "—";
-    }
-
-  });
-
-  document.getElementById(
-    "moneylineRank"
-  ).textContent = "—";
-
-  const measurable =
-    candidates
-      .map(item => {
-
-        const analysis =
-          marketBoardAnalysis[
-            item.key
-          ];
-
-        return {
-          ...item,
-          analysis
-        };
-
-      })
-      .filter(item => {
-
-        return (
-          item.analysis?.measurable &&
-          Number.isFinite(
-            Number(
-              item.analysis?.score
-            )
-          )
-        );
-
-      })
-      .sort((a, b) => {
-
-        return (
-          Number(b.analysis.score) -
-          Number(a.analysis.score)
-        );
-
-      });
-
-  measurable.forEach(
-    (item, index) => {
-
-      const element =
-        document.getElementById(
-          item.rankId
-        );
-
-      if (element) {
-        element.textContent =
-          "#" + (index + 1);
-      }
-
-    }
-  );
-
-}
-
-
-/* =========================================================
-   MARKET BOARD STATUS
-========================================================= */
-
-function updateMarketBoardStatus() {
-
-  const status =
-    document.getElementById(
-      "marketBoardStatus"
-    );
-
-  if (!status) return;
-
-  const analyses =
-    Object.values(
-      marketBoardAnalysis
-    ).filter(Boolean);
-
-  const measurable =
-    analyses.filter(
-      item => item.measurable
-    );
-
-  const qualified =
-    analyses.filter(
-      item => item.qualified
-    );
-
-  const leans =
-    analyses.filter(
-      item => item.lean
-    );
-
-  status.classList.remove(
-    "green"
-  );
-
-  if (!measurable.length) {
-
-    status.textContent =
-      "NO VERIFIED MARKETS — WAITING";
-
-    return;
-  }
-
-  if (qualified.length) {
-
-    status.textContent =
-      qualified.length +
-      " QUALIFIED MARKET(S) — STOP WHEN QUALITY DROPS";
-
-    status.classList.add(
-      "green"
-    );
-
-    return;
-  }
-
-  if (leans.length) {
-
-    status.textContent =
-      "NO QUALIFIED PLAY — LEANS ARE INFORMATION ONLY";
-
-    return;
-  }
-
-  status.textContent =
-    "PASS THE GAME — NO PROVEN EDGE";
-
-}
-
-
-/* =========================================================
-   RUN MARKET BOARD
-========================================================= */
-
-function runMarketBoardAnalysis(
-  awayName,
-  homeName,
-  awayTeam,
-  homeTeam,
-  awaySOS,
-  homeSOS
-) {
-
-  analyzeSpreadMarket(
-    awayName,
-    homeName,
-    awayTeam,
-    homeTeam,
-    awaySOS,
-    homeSOS
-  );
-
-  analyzeMoneylineMarket(
-    awayName,
-    homeName
-  );
-
-  analyzeGameTotalMarket();
-
-  analyzeTeamTotalMarket(
-    awayName,
-    homeName
-  );
-
-  analyzePeriodTotalMarket(
-    "h1",
-    "firstHalf",
-    "firstHalfProjection",
-    "firstHalfBook",
-    "firstHalfEdge",
-    "firstHalfVerdict"
-  );
-
-  analyzePeriodTotalMarket(
-    "q1",
-    "firstQuarter",
-    "firstQuarterProjection",
-    "firstQuarterBook",
-    "firstQuarterEdge",
-    "firstQuarterVerdict"
-  );
-
-  rankMarketBoard();
-
-  updateMarketBoardStatus();
-
-}
-
-
-/* =========================================================
-   STORE PROJECTION FOR MARKET BOARD
-========================================================= */
-
-function storeMarketProjection(
-  period,
-  awayScore,
-  homeScore
-) {
-
-  const away =
-    Number(awayScore);
-
-  const home =
-    Number(homeScore);
-
-  if (
-    !Number.isFinite(away) ||
-    !Number.isFinite(home)
-  ) {
-    return;
-  }
-
-  marketBoardProjection[period] = {
-
-    away,
-
-    home,
-
-    total:
-      away + home,
-
-    margin:
-      Math.abs(
-        away - home
-      )
-
-  };
-
-}
-
-
-/* =========================================================
-   UPDATE PREDICTION DISPLAY
-========================================================= */
-
-function updatePredictionDisplay(
-  period,
-  awayScore,
-  homeScore
-) {
-
-  const idMap = {
-
-    q1: {
-      away: "away1Q",
-      home: "home1Q",
-      total: "total1Q",
-      margin: "margin1Q"
-    },
-
-    h1: {
-      away: "away1H",
-      home: "home1H",
-      total: "total1H",
-      margin: "margin1H"
-    },
-
-    full: {
-      away: "awayFull",
-      home: "homeFull",
-      total: "totalFull",
-      margin: "marginFull"
-    }
-
-  };
-
-  const ids =
-    idMap[period];
-
-  if (!ids) return;
-
-  const away =
-    Number(awayScore);
-
-  const home =
-    Number(homeScore);
-
-  if (
-    !Number.isFinite(away) ||
-    !Number.isFinite(home)
-  ) {
-
-    document.getElementById(
-      ids.away
-    ).textContent = "—";
-
-    document.getElementById(
-      ids.home
-    ).textContent = "—";
-
-    document.getElementById(
-      ids.total
-    ).textContent = "—";
-
-    document.getElementById(
-      ids.margin
-    ).textContent = "—";
-
-    return;
-  }
-
-  document.getElementById(
-    ids.away
-  ).textContent =
-    away.toFixed(1);
-
-  document.getElementById(
-    ids.home
-  ).textContent =
-    home.toFixed(1);
-
-  document.getElementById(
-    ids.total
-  ).textContent =
-    (away + home).toFixed(1);
-
-  document.getElementById(
-    ids.margin
-  ).textContent =
-    Math.abs(
-      away - home
-    ).toFixed(1);
-
-  storeMarketProjection(
-    period,
-    away,
-    home
-  );
-
-}
-
-
-/* =========================================================
-   RESET PREDICTION DISPLAY
-========================================================= */
-
-function resetPredictionDisplay() {
-
-  [
-    "away1Q",
-    "home1Q",
-    "total1Q",
-    "margin1Q",
-
-    "away1H",
-    "home1H",
-    "total1H",
-    "margin1H",
-
-    "awayFull",
-    "homeFull",
-    "totalFull",
-    "marginFull"
-  ].forEach(id => {
-
-    const element =
-      document.getElementById(id);
-
-    if (element) {
-      element.textContent = "—";
-    }
-
-  });
-
-}
-
-
-/* =========================================================
-   UPDATE TEAM COMPARISON
-========================================================= */
-
-function updateComparison(
-  awayName,
-  homeName,
-  awayTeam,
-  homeTeam,
-  awaySOS,
-  homeSOS
-) {
-
-  document.getElementById(
-    "awayHeader"
-  ).textContent =
-    awayName || "AWAY";
-
-  document.getElementById(
-    "homeHeader"
-  ).textContent =
-    homeName || "HOME";
-
-  document.getElementById(
-    "awayOffPPA"
-  ).textContent =
-    formatNumber(
-      awayTeam?.offense?.ppa
-    );
-
-  document.getElementById(
-    "homeOffPPA"
-  ).textContent =
-    formatNumber(
-      homeTeam?.offense?.ppa
-    );
-
-  document.getElementById(
-    "awayDefPPA"
-  ).textContent =
-    formatNumber(
-      awayTeam?.defense?.ppa
-    );
-
-  document.getElementById(
-    "homeDefPPA"
-  ).textContent =
-    formatNumber(
-      homeTeam?.defense?.ppa
-    );
-
-  document.getElementById(
-    "awaySuccess"
-  ).textContent =
-    formatPercent(
-      awayTeam?.offense?.successRate
-    );
-
-  document.getElementById(
-    "homeSuccess"
-  ).textContent =
-    formatPercent(
-      homeTeam?.offense?.successRate
-    );
-
-  document.getElementById(
-    "awayExplosive"
-  ).textContent =
-    formatNumber(
-      awayTeam?.offense?.explosiveness
-    );
-
-  document.getElementById(
-    "homeExplosive"
-  ).textContent =
-    formatNumber(
-      homeTeam?.offense?.explosiveness
-    );
-
-  document.getElementById(
-    "awayPPO"
-  ).textContent =
-    formatNumber(
-      awayTeam?.offense?.pointsPerOpportunity,
-      2
-    );
-
-  document.getElementById(
-    "homePPO"
-  ).textContent =
-    formatNumber(
-      homeTeam?.offense?.pointsPerOpportunity,
-      2
-    );
-
-  document.getElementById(
-    "awayDefSuccess"
-  ).textContent =
-    formatPercent(
-      awayTeam?.defense?.successRate
-    );
-
-  document.getElementById(
-    "homeDefSuccess"
-  ).textContent =
-    formatPercent(
-      homeTeam?.defense?.successRate
-    );
-
-  document.getElementById(
-    "awayDefExplosive"
-  ).textContent =
-    formatNumber(
-      awayTeam?.defense?.explosiveness
-    );
-
-  document.getElementById(
-    "homeDefExplosive"
-  ).textContent =
-    formatNumber(
-      homeTeam?.defense?.explosiveness
-    );
-
-  document.getElementById(
-    "awaySOS"
-  ).textContent =
-    formatSOS(
-      awaySOS
-    );
-
-  document.getElementById(
-    "homeSOS"
-  ).textContent =
-    formatSOS(
-      homeSOS
-    );
-
-  applyGreen(
-    "awayOffPPA",
-    "homeOffPPA",
-    awayTeam?.offense?.ppa,
-    homeTeam?.offense?.ppa,
-    thresholds.offPPA
-  );
-
-  applyGreen(
-    "awayDefPPA",
-    "homeDefPPA",
-    awayTeam?.defense?.ppa,
-    homeTeam?.defense?.ppa,
-    thresholds.defPPA,
-    true
-  );
-
-  applyGreen(
-    "awaySuccess",
-    "homeSuccess",
-    awayTeam?.offense?.successRate,
-    homeTeam?.offense?.successRate,
-    thresholds.successRate
-  );
-
-  applyGreen(
-    "awayExplosive",
-    "homeExplosive",
-    awayTeam?.offense?.explosiveness,
-    homeTeam?.offense?.explosiveness,
-    thresholds.explosiveness
-  );
-
-  applyGreen(
-    "awayPPO",
-    "homePPO",
-    awayTeam?.offense?.pointsPerOpportunity,
-    homeTeam?.offense?.pointsPerOpportunity,
-    thresholds.ppo
-  );
-
-  applyGreen(
-    "awayDefSuccess",
-    "homeDefSuccess",
-    awayTeam?.defense?.successRate,
-    homeTeam?.defense?.successRate,
-    thresholds.defSuccessRate,
-    true
-  );
-
-  applyGreen(
-    "awayDefExplosive",
-    "homeDefExplosive",
-    awayTeam?.defense?.explosiveness,
-    homeTeam?.defense?.explosiveness,
-    thresholds.defExplosiveness,
-    true
-  );
-
-  /*
-    SOS is context only.
-    Never automatically green.
-  */
-
-  clearGreen(
-    "awaySOS",
-    "homeSOS"
-  );
-
-}
-
-
-/* =========================================================
-   RUN SCORING ENGINE
-========================================================= */
-
-function runScoringEngine(
-  awayName,
-  homeName,
-  awayTeam,
-  homeTeam,
-  awaySOS,
-  homeSOS
-) {
-
-  const awayScoring =
-    findScoring(
-      awayName
-    );
-
-  const homeScoring =
-    findScoring(
-      homeName
-    );
-
-  if (
-    !awayScoring ||
-    !homeScoring
-  ) {
-
-    resetPredictionDisplay();
-
-    document.getElementById(
-      "engineStatus"
-    ).textContent =
-      "Scoring data unavailable for one or both teams.";
-
-    return false;
-  }
-
-  const periods = [
-    "q1",
-    "h1",
-    "full"
-  ];
-
-  periods.forEach(period => {
-
-    const awayProjection =
-      projectTeamScore(
-        awayScoring,
-        homeScoring,
-        "away",
-        "home",
-        awayTeam,
-        homeTeam,
-        awaySOS,
-        homeSOS,
-        period
-      );
-
-    const homeProjection =
-      projectTeamScore(
-        homeScoring,
-        awayScoring,
-        "home",
-        "away",
-        homeTeam,
-        awayTeam,
-        homeSOS,
-        awaySOS,
-        period
-      );
-
-    updatePredictionDisplay(
-      period,
-      awayProjection,
-      homeProjection
-    );
-
-  });
-
-  document.getElementById(
-    "engineStatus"
-  ).textContent =
-    "Projection complete. Now PROVE IT against the verified market.";
-
-  return true;
-}
-
-
-/* =========================================================
-   UPDATE TEAM LABELS
-========================================================= */
-
-function updatePredictionLabels(
-  awayName,
-  homeName
-) {
-
-  document.getElementById(
-    "awayPredictionHeader"
-  ).textContent =
-    awayName
-      ? awayName + " SCORE"
-      : "AWAY SCORE";
-
-  document.getElementById(
-    "homePredictionHeader"
-  ).textContent =
-    homeName
-      ? homeName + " SCORE"
-      : "HOME SCORE";
-
-  [
-    "away1QLabel",
-    "away1HLabel",
-    "awayFullLabel"
-  ].forEach(id => {
-
-    document.getElementById(
-      id
-    ).textContent =
-      awayName || "AWAY";
-
-  });
-
-  [
-    "home1QLabel",
-    "home1HLabel",
-    "homeFullLabel"
-  ].forEach(id => {
-
-    document.getElementById(
-      id
-    ).textContent =
-      homeName || "HOME";
-
-  });
-
-}
-
-
-/* =========================================================
-   KAMBI NCAAF MAIN FEED
-========================================================= */
-
-const KAMBI_NCAAF_URL =
-  "https://eu.offering-api.kambicdn.com/offering/v2018/pivusmsrl-bil/listView/american_football/ncaaf/all/all/matches.json" +
-  "?lang=en_US&market=US-MS&client_id=200&channel_id=7&useCombined=true&useCombinedLive=true";
-
-const KAMBI_EVENT_BASE_URL =
-  "https://eu.offering-api.kambicdn.com/offering/v2018/pivusmsrl-bil/betoffer/event/";
-
-let kambiNCAAFCache = {
-  timestamp: 0,
-  data: null
-};
-
-const KAMBI_CACHE_MS =
-  2 * 60 * 1000;
-
-
-/* =========================================================
-   KAMBI HELPERS
-========================================================= */
-
-function kambiLineToNumber(value) {
-
-  const number =
-    Number(value);
-
-  if (!Number.isFinite(number)) {
-    return null;
-  }
-
-  /*
-    Kambi football lines are normally stored
-    as thousandths:
-      52500 -> 52.5
-      10000 -> 10
-      -10000 -> -10
-  */
-
-  return number / 1000;
-}
-
-
-function kambiAmericanOdds(outcome) {
-
-  if (!outcome) return null;
-
-  const direct =
-    Number(
-      outcome.oddsAmerican
-    );
-
-  if (Number.isFinite(direct)) {
-    return direct;
-  }
-
-  return null;
-}
-
-
-function kambiOfferText(offer) {
-
-  return [
-    offer?.criterion?.label,
-    offer?.criterion?.englishLabel,
-    offer?.betOfferType?.name,
-    offer?.betOfferType?.englishName
-  ]
-    .filter(Boolean)
-    .join(" ")
-    .toLowerCase();
-
-}
-
-
-function kambiOfferIsOpen(offer) {
-
-  const outcomes =
-    Array.isArray(offer?.outcomes)
-      ? offer.outcomes
-      : [];
-
-  return outcomes.some(
-    outcome =>
-      String(
-        outcome?.status || ""
-      ).toUpperCase() === "OPEN"
-  );
-
-}
-
-
-function kambiHasTag(
-  offer,
-  tag
-) {
-
-  const tags =
-    Array.isArray(offer?.tags)
-      ? offer.tags
-      : [];
-
-  return tags.includes(tag);
-}
-
-
-function chooseKambiOffer(
-  offers
-) {
-
-  const open =
-    offers.filter(
-      kambiOfferIsOpen
-    );
-
-  if (!open.length) {
-    return null;
-  }
-
-  const mainLine =
-    open.filter(
-      offer =>
-        kambiHasTag(
-          offer,
-          "MAIN_LINE"
-        )
-    );
-
-  if (mainLine.length === 1) {
-    return mainLine[0];
-  }
-
-  const main =
-    open.filter(
-      offer =>
-        kambiHasTag(
-          offer,
-          "MAIN"
-        )
-    );
-
-  if (main.length === 1) {
-    return main[0];
-  }
-
-  /*
-    If there is only one open candidate,
-    it is safe to use.
-
-    If several alternates remain and none
-    is explicitly MAIN/MAIN_LINE, do NOT guess.
-  */
-
-  if (open.length === 1) {
-    return open[0];
-  }
-
-  return null;
-}
-
-
-/* =========================================================
-   RECURSIVE OBJECT WALK
-========================================================= */
-
-function walkKambiObjects(
-  value,
-  callback,
-  seen = new Set()
-) {
-
-  if (
-    value === null ||
-    typeof value !== "object"
-  ) {
-    return;
-  }
-
-  if (seen.has(value)) {
-    return;
-  }
-
-  seen.add(value);
-
-  callback(value);
-
-  if (Array.isArray(value)) {
-
-    value.forEach(item =>
-      walkKambiObjects(
-        item,
-        callback,
-        seen
-      )
-    );
-
-    return;
-  }
-
-  Object.values(value)
-    .forEach(item =>
-      walkKambiObjects(
-        item,
-        callback,
-        seen
-      )
-    );
-
-}
-
-
-/* =========================================================
-   COLLECT KAMBI EVENTS
-========================================================= */
-
-function collectKambiEvents(data) {
-
-  const events = [];
-
-  walkKambiObjects(
-    data,
-    object => {
-
-      const event =
-        object?.event &&
-        typeof object.event === "object"
-          ? object.event
-          : object;
-
-      const id =
-        event?.id;
-
-      const name =
-        event?.name ||
-        event?.englishName;
-
-      const awayName =
-        event?.awayName;
-
-      const homeName =
-        event?.homeName;
-
-      if (
-        id &&
-        (
-          name ||
-          (
-            awayName &&
-            homeName
-          )
-        )
-      ) {
-
-        events.push(event);
-
-      }
-
-    }
-  );
-
-  const unique =
-    new Map();
-
-  events.forEach(event => {
-
-    const key =
-      String(event.id);
-
-    if (!unique.has(key)) {
-      unique.set(
-        key,
-        event
-      );
-    }
-
-  });
-
-  return [
-    ...unique.values()
-  ];
-
-}
-
-
-/* =========================================================
-   EXACT KAMBI EVENT MATCH
-========================================================= */
-
-function findExactKambiEvent(
-  data,
-  awayName,
-  homeName
-) {
-
-  const awayTarget =
-    normalizeTeamName(
-      awayName
-    );
-
-  const homeTarget =
-    normalizeTeamName(
-      homeName
-    );
-
-  const events =
-    collectKambiEvents(
-      data
-    );
-
-  const exact =
-    events.filter(event => {
-
-      const eventAway =
-        normalizeTeamName(
-          event?.awayName
-        );
-
-      const eventHome =
-        normalizeTeamName(
-          event?.homeName
-        );
-
-      if (
-        eventAway === awayTarget &&
-        eventHome === homeTarget
-      ) {
-        return true;
-      }
-
-      const participants =
-        Array.isArray(
-          event?.participants
-        )
-          ? event.participants
-          : [];
-
-      let participantAway = "";
-      let participantHome = "";
-
-      participants.forEach(
-        participant => {
-
-          const role =
-            String(
-              participant?.type ||
-              participant?.role ||
-              ""
-            ).toLowerCase();
-
-          const participantName =
-            participant?.name ||
-            participant?.participantName ||
-            participant?.label;
-
-          if (
-            role.includes("away")
-          ) {
-            participantAway =
-              normalizeTeamName(
-                participantName
-              );
-          }
-
-          if (
-            role.includes("home")
-          ) {
-            participantHome =
-              normalizeTeamName(
-                participantName
-              );
-          }
-
-        }
-      );
-
-      if (
-        participantAway === awayTarget &&
-        participantHome === homeTarget
-      ) {
-        return true;
-      }
-
-      /*
-        Ordered title fallback.
-        We still require BOTH selected teams.
-      */
-
-      const title =
-        String(
-          event?.name ||
-          event?.englishName ||
-          ""
-        ).toLowerCase();
-
-      const normalizedTitle =
-        normalizeTeamName(
-          title
-        );
-
-      const awayIndex =
-        normalizedTitle.indexOf(
-          awayTarget
-        );
-
-      const homeIndex =
-        normalizedTitle.indexOf(
-          homeTarget
-        );
-
-      return (
-        awayIndex !== -1 &&
-        homeIndex !== -1 &&
-        awayIndex < homeIndex
-      );
-
-    });
-
-  /*
-    PROVE IT:
-    Never fuzzy-select an ambiguous event.
-  */
-
-  if (exact.length !== 1) {
-    return null;
-  }
-
-  return exact[0];
-}
-
-
-/* =========================================================
-   COLLECT KAMBI OFFERS
-========================================================= */
-
-function collectKambiOffers(data) {
-
-  const offers = [];
-
-  walkKambiObjects(
-    data,
-    object => {
-
-      if (
-        object?.criterion &&
-        Array.isArray(
-          object?.outcomes
-        ) &&
-        object?.eventId
-      ) {
-
-        offers.push(object);
-
-      }
-
-    }
-  );
-
-  const unique =
-    new Map();
-
-  offers.forEach(offer => {
-
-    const key =
-      String(
-        offer.id ||
-        (
-          offer.eventId +
-          "|" +
-          kambiOfferText(offer)
-        )
-      );
-
-    if (!unique.has(key)) {
-      unique.set(
-        key,
-        offer
-      );
-    }
-
-  });
-
-  return [
-    ...unique.values()
-  ];
-
-}
-
-
-/* =========================================================
-   OUTCOME HELPERS
-========================================================= */
-
-function findOutcomeByTeam(
-  offer,
-  teamName
-) {
-
-  const target =
-    normalizeTeamName(
-      teamName
-    );
-
-  const outcomes =
-    Array.isArray(
-      offer?.outcomes
-    )
-      ? offer.outcomes
-      : [];
-
-  return outcomes.find(
-    outcome => {
-
-      const candidates = [
-        outcome?.participant,
-        outcome?.label,
-        outcome?.englishLabel
-      ];
-
-      return candidates.some(
-        candidate =>
-          normalizeTeamName(
-            candidate
-          ) === target ||
-          normalizeTeamName(
-            candidate
-          ).startsWith(target) ||
-          target.startsWith(
-            normalizeTeamName(
-              candidate
-            )
-          )
-      );
-
-    }
-  ) || null;
-}
-
-
-function findOverOutcome(offer) {
-
-  return (
-    offer?.outcomes?.find(
-      outcome =>
-        String(
-          outcome?.type || ""
-        ).toUpperCase() ===
-        "OT_OVER"
-    ) ||
-    offer?.outcomes?.find(
-      outcome =>
-        String(
-          outcome?.label || ""
-        ).toLowerCase() ===
-        "over"
-    ) ||
-    null
-  );
-
-}
-
-
-function findUnderOutcome(offer) {
-
-  return (
-    offer?.outcomes?.find(
-      outcome =>
-        String(
-          outcome?.type || ""
-        ).toUpperCase() ===
-        "OT_UNDER"
-    ) ||
-    offer?.outcomes?.find(
-      outcome =>
-        String(
-          outcome?.label || ""
-        ).toLowerCase() ===
-        "under"
-    ) ||
-    null
-  );
-
-}
-
-
-/* =========================================================
-   OFFER PERIOD / TYPE HELPERS
-========================================================= */
-
-function kambiLifetime(offer) {
-
-  return String(
-    offer?.criterion?.lifetime ||
-    ""
-  ).toUpperCase();
-
-}
-
-
-function isFullGameSpreadOffer(offer) {
-
-  const text =
-    kambiOfferText(
-      offer
-    );
-
-  const lifetime =
-    kambiLifetime(
-      offer
-    );
-
-  return (
-    text.includes(
-      "point spread"
-    ) &&
-    (
-      lifetime ===
-      "FULL_TIME_OVERTIME" ||
-      text.includes(
-        "including overtime"
-      )
-    )
-  );
-
-}
-
-
-function isFullGameMoneylineOffer(offer) {
-
-  const text =
-    kambiOfferText(
-      offer
-    );
-
-  const lifetime =
-    kambiLifetime(
-      offer
-    );
-
-  return (
-    text.includes(
-      "moneyline"
-    ) &&
-    (
-      lifetime ===
-      "FULL_TIME_OVERTIME" ||
-      text.includes(
-        "including overtime"
-      )
-    )
-  );
-
-}
-
-
-function isFullGameTotalOffer(offer) {
-
-  const text =
-    kambiOfferText(
-      offer
-    );
-
-  const lifetime =
-    kambiLifetime(
-      offer
-    );
-
-  return (
-    text.includes(
-      "total points"
-    ) &&
-    !text.includes(
-      "total points by"
-    ) &&
-    (
-      lifetime ===
-      "FULL_TIME_OVERTIME" ||
-      text.includes(
-        "including overtime"
-      )
-    )
-  );
-
-}
-
-
-/* =========================================================
-   LOAD KAMBI MAIN FEED
-========================================================= */
-
-async function loadKambiNCAAF() {
-
-  const now =
-    Date.now();
-
-  if (
-    kambiNCAAFCache.data &&
-    (
-      now -
-      kambiNCAAFCache.timestamp
-    ) < KAMBI_CACHE_MS
-  ) {
-
-    return kambiNCAAFCache.data;
-
-  }
-
-  const separator =
-    KAMBI_NCAAF_URL.includes("?")
-      ? "&"
-      : "?";
-
-  const response =
-    await fetch(
-      KAMBI_NCAAF_URL +
-      separator +
-      "warroom=" +
-      Date.now(),
-      {
-        cache: "no-store"
-      }
-    );
-
-  if (!response.ok) {
-
-    throw new Error(
-      "Kambi NCAAF feed returned " +
-      response.status
-    );
-
-  }
-
-  const data =
-    await response.json();
-
-  kambiNCAAFCache = {
-    timestamp: Date.now(),
-    data
-  };
-
-  return data;
-}
-
-
-/* =========================================================
-   LOAD EVENT-SPECIFIC KAMBI MARKETS
-========================================================= */
-
-async function loadKambiEventMarkets(
-  eventId
-) {
-
-  if (!eventId) {
-    return null;
-  }
-
-  const url =
-    KAMBI_EVENT_BASE_URL +
-    encodeURIComponent(
-      eventId
-    ) +
-    ".json" +
-    "?lang=en_US" +
-    "&market=US-MS" +
-    "&client_id=200" +
-    "&channel_id=7" +
-    "&includeParticipants=true" +
-    "&useCombined=true" +
-    "&useCombinedLive=true" +
-    "&warroom=" +
-    Date.now();
-
-  const response =
-    await fetch(
-      url,
-      {
-        cache: "no-store"
-      }
-    );
-
-  if (!response.ok) {
-
-    throw new Error(
-      "Kambi event feed returned " +
-      response.status
-    );
-
-  }
-
-  return await response.json();
-}
-
-
-/* =========================================================
-   MAIN FULL-GAME MARKET PARSER
-========================================================= */
-
-function populateMainKambiMarkets(
-  data,
-  eventId,
-  awayName,
-  homeName
-) {
-
-  const offers =
-    collectKambiOffers(
-      data
-    ).filter(
-      offer =>
-        String(
-          offer.eventId
-        ) === String(
-          eventId
-        )
-    );
-
-  const spreadOffer =
-    chooseKambiOffer(
-      offers.filter(
-        isFullGameSpreadOffer
-      )
-    );
-
-  if (spreadOffer) {
-
-    const awayOutcome =
-      findOutcomeByTeam(
-        spreadOffer,
-        awayName
-      );
-
-    const homeOutcome =
-      findOutcomeByTeam(
-        spreadOffer,
-        homeName
-      );
-
-    if (
-      awayOutcome &&
-      homeOutcome
-    ) {
-
-      marketBoardLines.spread.awayLine =
-        kambiLineToNumber(
-          awayOutcome.line
-        );
-
-      marketBoardLines.spread.homeLine =
-        kambiLineToNumber(
-          homeOutcome.line
-        );
-
-      marketBoardLines.spread.awayPrice =
-        kambiAmericanOdds(
-          awayOutcome
-        );
-
-      marketBoardLines.spread.homePrice =
-        kambiAmericanOdds(
-          homeOutcome
-        );
-
-    }
-
-  }
-
-  const moneylineOffer =
-    chooseKambiOffer(
-      offers.filter(
-        isFullGameMoneylineOffer
-      )
-    );
-
-  if (moneylineOffer) {
-
-    const awayOutcome =
-      findOutcomeByTeam(
-        moneylineOffer,
-        awayName
-      );
-
-    const homeOutcome =
-      findOutcomeByTeam(
-        moneylineOffer,
-        homeName
-      );
-
-    if (
-      awayOutcome &&
-      homeOutcome
-    ) {
-
-      marketBoardLines.moneyline.awayPrice =
-        kambiAmericanOdds(
-          awayOutcome
-        );
-
-      marketBoardLines.moneyline.homePrice =
-        kambiAmericanOdds(
-          homeOutcome
-        );
-
-    }
-
-  }
-
-  const totalOffer =
-    chooseKambiOffer(
-      offers.filter(
-        isFullGameTotalOffer
-      )
-    );
-
-  if (totalOffer) {
-
-    const over =
-      findOverOutcome(
-        totalOffer
-      );
-
-    const under =
-      findUnderOutcome(
-        totalOffer
-      );
-
-    const line =
-      kambiLineToNumber(
-        over?.line ??
-        under?.line
-      );
-
-    if (
-      Number.isFinite(line)
-    ) {
-
-      marketBoardLines.gameTotal.line =
-        line;
-
-      marketBoardLines.gameTotal.overPrice =
-        kambiAmericanOdds(
-          over
-        );
-
-      marketBoardLines.gameTotal.underPrice =
-        kambiAmericanOdds(
-          under
-        );
-
-    }
-
-  }
-
-}
-
-
-/* =========================================================
-   EVENT MARKET LABEL HELPERS
-========================================================= */
-
-function eventCriterionText(offer) {
-
-  return String(
-    offer?.criterion?.englishLabel ||
-    offer?.criterion?.label ||
-    ""
-  ).toLowerCase();
-
-}
-
-
-function eventOfferTypeText(offer) {
-
-  return String(
-    offer?.betOfferType?.englishName ||
-    offer?.betOfferType?.name ||
-    ""
-  ).toLowerCase();
-
-}
-
-
-function hasOverUnderOutcomes(
-  offer
-) {
-
-  return Boolean(
-    findOverOutcome(offer) &&
-    findUnderOutcome(offer)
-  );
-}
-
-
-/* =========================================================
-   TEAM TOTAL IDENTIFICATION
-========================================================= */
-
-function isTeamTotalOfferFor(
-  offer,
-  teamName
-) {
-
-  const criterion =
-    eventCriterionText(
-      offer
-    );
-
-  const normalizedCriterion =
-    normalizeTeamName(
-      criterion
-    );
-
-  const normalizedTeam =
-    normalizeTeamName(
-      teamName
-    );
-
-  const lifetime =
-    kambiLifetime(
-      offer
-    );
-
-  if (
-    !hasOverUnderOutcomes(
-      offer
-    )
-  ) {
-    return false;
-  }
-
-  if (
-    !criterion.includes(
-      "total points by"
-    )
-  ) {
-    return false;
-  }
-
-  if (
-    !normalizedCriterion.includes(
-      normalizedTeam
-    )
-  ) {
-    return false;
-  }
-
-  /*
-    Full-game team total only.
-    Exclude quarter/half variants.
-  */
-
-  const periodWords = [
-    "quarter",
-    "1st half",
-    "first half",
-    "2nd half",
-    "second half"
-  ];
-
-  if (
-    periodWords.some(
-      word =>
-        criterion.includes(word)
-    )
-  ) {
-    return false;
-  }
-
-  if (
-    lifetime &&
-    lifetime !==
-      "FULL_TIME_OVERTIME"
-  ) {
-    return false;
-  }
-
-  return true;
-}
-
-
-/* =========================================================
-   PERIOD TOTAL IDENTIFICATION
-========================================================= */
-
-function isFirstHalfTotalOffer(
-  offer
-) {
-
-  const criterion =
-    eventCriterionText(
-      offer
-    );
-
-  if (
-    !hasOverUnderOutcomes(
-      offer
-    )
-  ) {
-    return false;
-  }
-
-  if (
-    criterion.includes(
-      "total points by"
-    )
-  ) {
-    return false;
-  }
-
-  const firstHalfText =
-    criterion.includes(
-      "1st half"
-    ) ||
-    criterion.includes(
-      "first half"
-    );
-
-  const lifetime =
-    kambiLifetime(
-      offer
-    );
-
-  const firstHalfLifetime =
-    lifetime.includes(
-      "FIRST_HALF"
-    ) ||
-    lifetime.includes(
-      "1ST_HALF"
-    );
-
-  return (
-    criterion.includes(
-      "total points"
-    ) &&
-    (
-      firstHalfText ||
-      firstHalfLifetime
-    )
-  );
-}
-
-
-function isFirstQuarterTotalOffer(
-  offer
-) {
-
-  const criterion =
-    eventCriterionText(
-      offer
-    );
-
-  if (
-    !hasOverUnderOutcomes(
-      offer
-    )
-  ) {
-    return false;
-  }
-
-  if (
-    criterion.includes(
-      "total points by"
-    )
-  ) {
-    return false;
-  }
-
-  const firstQuarterText =
-    criterion.includes(
-      "quarter 1"
-    ) ||
-    criterion.includes(
-      "1st quarter"
-    ) ||
-    criterion.includes(
-      "first quarter"
-    );
-
-  const lifetime =
-    kambiLifetime(
-      offer
-    );
-
-  const firstQuarterLifetime =
-    lifetime.includes(
-      "FIRST_QUARTER"
-    ) ||
-    lifetime.includes(
-      "QUARTER_1"
-    ) ||
-    lifetime.includes(
-      "1ST_QUARTER"
-    );
-
-  return (
-    criterion.includes(
-      "total points"
-    ) &&
-    (
-      firstQuarterText ||
-      firstQuarterLifetime
-    )
-  );
-}
-
-
-/* =========================================================
-   STRICT EVENT-OFFER CHOICE
-========================================================= */
-
-function chooseStrictEventOffer(
-  candidates
-) {
-
-  const open =
-    candidates.filter(
-      kambiOfferIsOpen
-    );
-
-  if (!open.length) {
-    return null;
-  }
-
-  const mainLine =
-    open.filter(
-      offer =>
-        kambiHasTag(
-          offer,
-          "MAIN_LINE"
-        )
-    );
-
-  if (mainLine.length === 1) {
-    return mainLine[0];
-  }
-
-  const main =
-    open.filter(
-      offer =>
-        kambiHasTag(
-          offer,
-          "MAIN"
-        )
-    );
-
-  if (main.length === 1) {
-    return main[0];
-  }
-
-  /*
-    Kambi sometimes has only one open offer
-    for a period/team total and does not tag it
-    MAIN_LINE. One unique candidate is safe.
-
-    Multiple untagged alternatives = PASS.
-  */
-
-  if (open.length === 1) {
-    return open[0];
-  }
-
-  return null;
-}
-
-
-/* =========================================================
-   STORE OVER/UNDER OFFER
-========================================================= */
-
-function parseOverUnderOffer(
-  offer
-) {
-
-  if (!offer) {
-    return null;
-  }
-
-  const over =
-    findOverOutcome(
-      offer
-    );
-
-  const under =
-    findUnderOutcome(
-      offer
-    );
-
-  if (
-    !over ||
-    !under
-  ) {
-    return null;
-  }
-
-  const line =
-    kambiLineToNumber(
-      over.line ??
-      under.line
-    );
-
-  if (
-    !Number.isFinite(line)
-  ) {
-    return null;
-  }
-
-  return {
-
-    line,
-
-    overPrice:
-      kambiAmericanOdds(
-        over
-      ),
-
-    underPrice:
-      kambiAmericanOdds(
-        under
-      )
-
-  };
-}
-
-
-/* =========================================================
-   POPULATE EVENT-SPECIFIC MARKETS
-========================================================= */
-
-function populateEventKambiMarkets(
-  eventData,
-  eventId,
-  awayName,
-  homeName
-) {
-
-  const offers =
-    collectKambiOffers(
-      eventData
-    ).filter(
-      offer =>
-        String(
-          offer.eventId
-        ) === String(
-          eventId
-        )
-    );
-
-  /*
-    TEAM TOTAL — AWAY
-  */
-
-  const awayTeamTotalOffer =
-    chooseStrictEventOffer(
-      offers.filter(
-        offer =>
-          isTeamTotalOfferFor(
-            offer,
-            awayName
-          )
-      )
-    );
-
-  const awayTeamTotal =
-    parseOverUnderOffer(
-      awayTeamTotalOffer
-    );
-
-  if (awayTeamTotal) {
-
-    marketBoardLines.teamTotal.awayLine =
-      awayTeamTotal.line;
-
-    marketBoardLines.teamTotal.awayOverPrice =
-      awayTeamTotal.overPrice;
-
-    marketBoardLines.teamTotal.awayUnderPrice =
-      awayTeamTotal.underPrice;
-
-  }
-
-  /*
-    TEAM TOTAL — HOME
-  */
-
-  const homeTeamTotalOffer =
-    chooseStrictEventOffer(
-      offers.filter(
-        offer =>
-          isTeamTotalOfferFor(
-            offer,
-            homeName
-          )
-      )
-    );
-
-  const homeTeamTotal =
-    parseOverUnderOffer(
-      homeTeamTotalOffer
-    );
-
-  if (homeTeamTotal) {
-
-    marketBoardLines.teamTotal.homeLine =
-      homeTeamTotal.line;
-
-    marketBoardLines.teamTotal.homeOverPrice =
-      homeTeamTotal.overPrice;
-
-    marketBoardLines.teamTotal.homeUnderPrice =
-      homeTeamTotal.underPrice;
-
-  }
-
-  /*
-    FIRST HALF TOTAL
-  */
-
-  const firstHalfOffer =
-    chooseStrictEventOffer(
-      offers.filter(
-        isFirstHalfTotalOffer
-      )
-    );
-
-  const firstHalf =
-    parseOverUnderOffer(
-      firstHalfOffer
-    );
-
-  if (firstHalf) {
-
-    marketBoardLines.firstHalf.total =
-      firstHalf.line;
-
-    marketBoardLines.firstHalf.overPrice =
-      firstHalf.overPrice;
-
-    marketBoardLines.firstHalf.underPrice =
-      firstHalf.underPrice;
-
-  }
-
-  /*
-    FIRST QUARTER TOTAL
-  */
-
-  const firstQuarterOffer =
-    chooseStrictEventOffer(
-      offers.filter(
-        isFirstQuarterTotalOffer
-      )
-    );
-
-  const firstQuarter =
-    parseOverUnderOffer(
-      firstQuarterOffer
-    );
-
-  if (firstQuarter) {
-
-    marketBoardLines.firstQuarter.total =
-      firstQuarter.line;
-
-    marketBoardLines.firstQuarter.overPrice =
-      firstQuarter.overPrice;
-
-    marketBoardLines.firstQuarter.underPrice =
-      firstQuarter.underPrice;
-
-  }
-
-}
-
-
-/* =========================================================
-   COUNT VERIFIED KAMBI MARKETS
-========================================================= */
-
-function countLoadedKambiMarkets() {
-
-  let count = 0;
-
-  if (
-    Number.isFinite(
-      Number(
-        marketBoardLines.spread.awayLine
-      )
-    ) &&
-    Number.isFinite(
-      Number(
-        marketBoardLines.spread.homeLine
-      )
-    )
-  ) {
-    count++;
-  }
-
-  if (
-    Number.isFinite(
-      Number(
-        marketBoardLines.moneyline.awayPrice
-      )
-    ) &&
-    Number.isFinite(
-      Number(
-        marketBoardLines.moneyline.homePrice
-      )
-    )
-  ) {
-    count++;
-  }
-
-  if (
-    Number.isFinite(
-      Number(
-        marketBoardLines.gameTotal.line
-      )
-    )
-  ) {
-    count++;
-  }
-
-  if (
-    Number.isFinite(
-      Number(
-        marketBoardLines.teamTotal.awayLine
-      )
-    ) &&
-    Number.isFinite(
-      Number(
-        marketBoardLines.teamTotal.homeLine
-      )
-    )
-  ) {
-    count++;
-  }
-
-  if (
-    Number.isFinite(
-      Number(
-        marketBoardLines.firstHalf.total
-      )
-    )
-  ) {
-    count++;
-  }
-
-  if (
-    Number.isFinite(
-      Number(
-        marketBoardLines.firstQuarter.total
-      )
-    )
-  ) {
-    count++;
-  }
-
-  return count;
-}
-
-
-/* =========================================================
-   CONNECT KAMBI TO MARKET BOARD
-========================================================= */
-
-async function connectKambiToMarketBoard(
-  awayName,
-  homeName
-) {
-
-  const mainData =
-    await loadKambiNCAAF();
-
-  const event =
-    findExactKambiEvent(
-      mainData,
-      awayName,
-      homeName
-    );
-
-  if (!event?.id) {
-
-    return {
-      connected: false,
-      eventId: null,
-      eventMarketsLoaded: false
-    };
-
-  }
-
-  const eventId =
-    event.id;
-
-  /*
-    First populate the three proven markets
-    from the listView response.
-  */
-
-  populateMainKambiMarkets(
-    mainData,
-    eventId,
-    awayName,
-    homeName
-  );
-
-  let eventMarketsLoaded =
-    false;
-
-  /*
-    Then request the full event response.
-    If that request fails, KEEP the three
-    markets we already verified instead of
-    destroying them.
-  */
-
-  try {
-
-    const eventData =
-      await loadKambiEventMarkets(
-        eventId
-      );
-
-    if (eventData) {
-
-      populateEventKambiMarkets(
-        eventData,
-        eventId,
-        awayName,
-        homeName
-      );
-
-      eventMarketsLoaded =
-        true;
-    }
-
-  } catch (error) {
-
-    console.warn(
-      "Kambi event-market request failed:",
-      error
-    );
-
-  }
-
-  return {
-
-    connected: true,
-
-    eventId,
-
-    eventMarketsLoaded
-
-  };
-
-}
-
-
-/* =========================================================
-   TEAM DROPDOWNS
-========================================================= */
-
-function getTeamDisplayName(team) {
-
-  return (
-    team?.team ||
-    team?.school ||
-    team?.name ||
-    team?.teamName ||
-    ""
-  );
-
-}
-
-
-function populateTeamDropdowns() {
-
-  const awaySelect =
-    document.getElementById(
-      "awayTeam"
-    );
-
-  const homeSelect =
-    document.getElementById(
-      "homeTeam"
-    );
-
-  const teamNames =
-    cfbData
-      .map(
-        getTeamDisplayName
-      )
-      .filter(Boolean)
-      .sort(
-        (a, b) =>
-          a.localeCompare(b)
-      );
-
-  const uniqueNames =
-    [
-      ...new Set(
-        teamNames
-      )
-    ];
-
-  uniqueNames.forEach(
-    teamName => {
-
-      const awayOption =
-        document.createElement(
-          "option"
-        );
-
-      awayOption.value =
-        teamName;
-
-      awayOption.textContent =
-        teamName;
-
-      awaySelect.appendChild(
-        awayOption
-      );
-
-      const homeOption =
-        document.createElement(
-          "option"
-        );
-
-      homeOption.value =
-        teamName;
-
-      homeOption.textContent =
-        teamName;
-
-      homeSelect.appendChild(
-        homeOption
-      );
-
-    }
-  );
-
-}
-
-
-/* =========================================================
-   CLEAR COMPARISON
-========================================================= */
-
-function clearComparison() {
-
-  [
-    "awayOffPPA",
-    "homeOffPPA",
-    "awayDefPPA",
-    "homeDefPPA",
-    "awaySuccess",
-    "homeSuccess",
-    "awayExplosive",
-    "homeExplosive",
-    "awayPPO",
-    "homePPO",
-    "awayDefSuccess",
-    "homeDefSuccess",
-    "awayDefExplosive",
-    "homeDefExplosive",
-    "awaySOS",
-    "homeSOS"
-  ].forEach(id => {
-
-    const element =
-      document.getElementById(id);
-
-    if (element) {
-
-      element.textContent = "—";
-
-      element.classList.remove(
-        "green"
-      );
-
-    }
-
-  });
-
-}
-
-
-/* =========================================================
-   UPDATE MATCHUP
-========================================================= */
-
-async function updateMatchup() {
-
-  const awayName =
-    document.getElementById(
-      "awayTeam"
-    ).value;
-
-  const homeName =
-    document.getElementById(
-      "homeTeam"
-    ).value;
-
-  updatePredictionLabels(
-    awayName,
-    homeName
-  );
-
-  clearMarketBoardProjection();
-
-  clearMarketBoardLines();
-
-  clearMarketBoardAnalysis();
-
-  resetMarketBoardDisplay();
-
-  resetPredictionDisplay();
-
-  if (
-    !awayName ||
-    !homeName
-  ) {
-
-    clearComparison();
-
-    document.getElementById(
-      "engineStatus"
-    ).textContent =
-      "Waiting for matchup...";
-
-    return;
-  }
-
-  if (
-    normalizeTeamName(
-      awayName
-    ) ===
-    normalizeTeamName(
-      homeName
-    )
-  ) {
-
-    clearComparison();
-
-    document.getElementById(
-      "engineStatus"
-    ).textContent =
-      "Choose two different teams.";
-
-    document.getElementById(
-      "marketBoardStatus"
-    ).textContent =
-      "Choose two different teams.";
-
-    return;
-  }
-
-  const awayTeam =
-    findTeam(
-      awayName
-    );
-
-  const homeTeam =
-    findTeam(
-      homeName
-    );
-
-  const awaySOS =
-    findSOS(
-      awayName
-    );
-
-  const homeSOS =
-    findSOS(
-      homeName
-    );
-
-  if (
-    !awayTeam ||
-    !homeTeam
-  ) {
-
-    clearComparison();
-
-    document.getElementById(
-      "engineStatus"
-    ).textContent =
-      "Advanced team data unavailable for one or both teams.";
-
-    return;
-  }
-
-  updateComparison(
-    awayName,
-    homeName,
-    awayTeam,
-    homeTeam,
-    awaySOS,
-    homeSOS
-  );
-
-  const scoringWorked =
-    runScoringEngine(
-      awayName,
-      homeName,
-      awayTeam,
-      homeTeam,
-      awaySOS,
-      homeSOS
-    );
-
-  if (!scoringWorked) {
-    return;
-  }
-
-  document.getElementById(
-    "marketBoardStatus"
-  ).textContent =
-    "Checking verified Kambi markets...";
-
-  let kambiResult = null;
-
-  try {
-
-    kambiResult =
-      await connectKambiToMarketBoard(
-        awayName,
-        homeName
-      );
-
-  } catch (error) {
-
-    console.error(
-      "Kambi connection failed:",
-      error
-    );
-
-    kambiResult = {
-      connected: false,
-      eventId: null,
-      eventMarketsLoaded: false
-    };
-
-  }
-
-  runMarketBoardAnalysis(
-    awayName,
-    homeName,
-    awayTeam,
-    homeTeam,
-    awaySOS,
-    homeSOS
-  );
-
-  const loadedMarkets =
-    countLoadedKambiMarkets();
-
-  const engineStatus =
-    document.getElementById(
-      "engineStatus"
-    );
-
-  if (
-    kambiResult?.connected
-  ) {
-
-    const eventMessage =
-      kambiResult.eventMarketsLoaded
-        ? " Full event markets checked."
-        : " Main markets checked; deeper event markets unavailable.";
-
-    engineStatus.textContent =
-      "Projection complete. Kambi verified markets loaded: " +
-      loadedMarkets +
-      "/6." +
-      eventMessage;
-
-  } else {
-
-    engineStatus.textContent =
-      "Projection complete. No exact Kambi event match — sportsbook markets remain NO MARKET.";
-
-  }
-
-}
-
-
-/* =========================================================
-   LOAD LOCAL WAR ROOM DATA
-========================================================= */
-
-async function loadJSON(
-  path
-) {
-
-  const response =
-    await fetch(
-      path,
-      {
-        cache: "no-store"
-      }
-    );
-
-  if (!response.ok) {
-
-    throw new Error(
-      path +
-      " returned " +
-      response.status
-    );
-
-  }
-
-  return await response.json();
-}
-
-
-async function loadCFBData() {
-
-  const engineStatus =
-    document.getElementById(
-      "engineStatus"
-    );
-
-  const marketStatus =
-    document.getElementById(
-      "marketBoardStatus"
-    );
-
-  engineStatus.textContent =
-    "Loading 2026 CFB data...";
-
-  marketStatus.textContent =
-    "Loading War Room...";
-
-  try {
-
-    const [
-      advanced,
-      sos,
-      scoring
-    ] = await Promise.all([
-
-      loadJSON(
-        "data/advanced-2026.json"
-      ),
-
-      loadJSON(
-        "data/sos-2026.json"
-      ),
-
-      loadJSON(
-        "data/scoring-2026.json"
-      )
-
+async function start(){
+ try{
+  const [t,g,p]=await Promise.all([
+   getJSON("fcs-teams-2026.json"),
+   getJSON("fcs-games-2026.json"),
+   getJSON("fcs-players-2026.json")
+  ]);
+
+  if(!Array.isArray(t)||!Array.isArray(g)||
+     !Array.isArray(p?.games)){
+   throw Error("Invalid data structure");
+  try{
+    const [t,g,p]=await Promise.all([
+      getJSON("fcs-teams-2026.json"),
+      getJSON("fcs-games-2026.json"),
+      getJSON("fcs-players-2026.json")
     ]);
 
-    cfbData =
-      Array.isArray(advanced)
-        ? advanced
-        : (
-          advanced?.data ||
-          advanced?.teams ||
-          []
-        );
+    if(
+      !Array.isArray(t)||
+      !Array.isArray(g)||
+      !Array.isArray(p?.games)
+    ){
+      throw Error("Invalid data structure");
+    }
 
-    sosData =
-      Array.isArray(sos)
-        ? sos
-        : (
-          sos?.data ||
-          sos?.teams ||
-          []
-        );
-
-    scoringData =
-      Array.isArray(scoring)
-        ? scoring
-        : (
-          scoring?.data ||
-          scoring?.teams ||
-          []
-        );
-
-    populateTeamDropdowns();
-
-    engineStatus.textContent =
-      "Ready. Select an away team and home team.";
-
-    marketStatus.textContent =
-      "Waiting for matchup and verified market data...";
-
-  } catch (error) {
-
-    console.error(
-      error
+    teams=t.filter(
+      x=>String(x.classification||"").toLowerCase()==="fcs"
+    ).sort(
+      (a,b)=>a.name.localeCompare(b.name)
     );
 
-    engineStatus.textContent =
-      "ERROR LOADING WAR ROOM DATA";
+    games=g;
+    playerReports=p.games;
 
-    engineStatus.classList.add(
-      "error"
-    );
+    if(!teams.length){
+      throw Error("No FCS teams found");
+    }
 
-    marketStatus.textContent =
-      "Market Board unavailable until team data loads.";
+    buildPlayers();
+    fillTeams();
+    backtest=runBacktest();
 
+    $("status").innerHTML=
+      "<span class='green'>● DATA CONNECTED</span> | "+
+      teams.length+" FCS teams | "+
+      games.length+" games | "+
+      playerReports.length+" player reports";
+
+    analyze();
+
+  }catch(e){
+    $("status").textContent="DATA ERROR: "+e.message;
+    console.error(e);
   }
 
+  teams=t.filter(x=>
+   String(x.classification||"").toLowerCase()==="fcs"
+  ).sort((a,b)=>a.name.localeCompare(b.name));
+
+  games=g;
+  playerReports=p.games;
+
+  if(!teams.length)throw Error("No FCS teams found");
+
+  buildPlayers();
+  fillTeams();
+
+  $("status").innerHTML=
+   "<span class='green'>● DATA CONNECTED</span> | "+
+   teams.length+" FCS teams | "+
+   games.length+" games | "+
+   playerReports.length+" player reports";
+
+  analyze();
+
+ }catch(e){
+  $("status").textContent="DATA ERROR: "+e.message;
+  $("comparison").textContent=
+   "Unable to load verified data.";
+  console.error(e);
+ }
 }
 
+function fillTeams(){
+ const names=teams.map(t=>t.name);
+  const names=teams.map(t=>t.name);
 
-/* =========================================================
-   EVENT LISTENERS
-========================================================= */
+ for(const side of ["away","home"]){
+  $(side).innerHTML="";
+  names.forEach(n=>$(side).add(new Option(n,n)));
+ }
+  for(const side of ["away","home"]){
+    $(side).innerHTML="";
+    names.forEach(
+      n=>$(side).add(new Option(n,n))
+    );
+  }
 
-document
-  .getElementById(
-    "awayTeam"
-  )
-  .addEventListener(
-    "change",
-    updateMatchup
+ $("away").value=names.includes("Florida A&M")
+  ?"Florida A&M":names[0];
+  $("away").value=names.includes("Florida A&M")
+    ?"Florida A&M":names[0];
+
+ $("home").value=names.includes("Alabama State")
+  ?"Alabama State":
+  names.find(n=>n!==$("away").value)||names[0];
+  $("home").value=names.includes("Alabama State")
+    ?"Alabama State":
+    names.find(n=>n!==$("away").value)||names[0];
+}
+
+function filterTeams(side){
+ const q=$(side+"Search").value.toLowerCase().trim();
+ const old=$(side).value;
+  const q=$(side+"Search").value.toLowerCase().trim();
+  const old=$(side).value;
+
+ const matches=teams.filter(t=>
+  t.name.toLowerCase().includes(q)
+ );
+  const matching=teams.filter(
+    t=>t.name.toLowerCase().includes(q)
   );
 
+ $(side).innerHTML="";
+ matches.forEach(t=>
+  $(side).add(new Option(t.name,t.name))
+ );
+  $(side).innerHTML="";
 
-document
-  .getElementById(
-    "homeTeam"
-  )
-  .addEventListener(
-    "change",
-    updateMatchup
+ if(matches.some(t=>t.name===old)){
+  $(side).value=old;
+ }
+  matching.forEach(
+    t=>$(side).add(new Option(t.name,t.name))
   );
 
+  if(matching.some(t=>t.name===old)){
+    $(side).value=old;
+  }
 
-/* =========================================================
-   START
-========================================================= */
-
-/* =========================================================
-   PROVE IT — SAVE TO RECORDS
-   HOUSEKEEPING VERSION
-========================================================= */
-
-const COLLEGE_RECORDS_URL =
-  "https://script.google.com/macros/s/AKfycbzGMA77vD-Cs1bGNv5sbgKmvK1aM6heQqgqPwGpmz9SZ1DUE52xnjXxTNNehAqnk7pN/exec";
-
-let currentRecordsEventId = null;
-let currentRecordsMatchupKey = null;
-let currentRecordsSavedKey = null;
-
-
-/* =========================================================
-   RECORD HELPERS
-========================================================= */
-
-function recordsText(id) {
-
-  const element =
-    document.getElementById(id);
-
-  return element
-    ? element.textContent.trim()
-    : "";
-
+ if(matches.length)analyze();
+  if(matching.length)analyze();
 }
 
+function table(a,h,sa,sh){
+ const x=a[sa]||{};
+ const y=h[sh]||{};
 
-function recordsNumber(value) {
+ const rows=[
+  ["Games",x.games??0,y.games??0],
+  ["Wins",x.wins??0,y.wins??0],
+  ["Losses",x.losses??0,y.losses??0],
+  ["Points Scored",fmt(x.ppg),fmt(y.ppg)],
+  ["Points Allowed",fmt(x.allowed),fmt(y.allowed)],
+  ["1Q Scored",fmt(x.q1Scored),fmt(y.q1Scored)],
+  ["1Q Allowed",fmt(x.q1Allowed),fmt(y.q1Allowed)],
+  ["1H Scored",fmt(x.h1Scored),fmt(y.h1Scored)],
+  ["1H Allowed",fmt(x.h1Allowed),fmt(y.h1Allowed)]
+ ];
 
-  if (
-    value === null ||
-    value === undefined ||
-    value === ""
-  ) {
-    return "";
-  }
+ return "<div class='scroll'><table>"+
+  "<tr><th>Metric</th><th>"+esc(a.name)+
+  "</th><th>"+esc(h.name)+"</th></tr>"+
+  rows.map(r=>
+   "<tr><td>"+esc(r[0])+"</td><td>"+
+   esc(r[1])+"</td><td>"+esc(r[2])+
+   "</td></tr>"
+  ).join("")+"</table></div>";
+  const x=a[sa]||{};
+  const y=h[sh]||{};
 
-  const number =
-    Number(value);
+  const rows=[
+    ["Games",x.games??0,y.games??0],
+    ["Wins",x.wins??0,y.wins??0],
+    ["Losses",x.losses??0,y.losses??0],
+    ["Points Scored",fmt(x.ppg),fmt(y.ppg)],
+    ["Points Allowed",fmt(x.allowed),fmt(y.allowed)],
+    ["1Q Scored",fmt(x.q1Scored),fmt(y.q1Scored)],
+    ["1Q Allowed",fmt(x.q1Allowed),fmt(y.q1Allowed)],
+    ["1H Scored",fmt(x.h1Scored),fmt(y.h1Scored)],
+    ["1H Allowed",fmt(x.h1Allowed),fmt(y.h1Allowed)]
+  ];
 
-  return Number.isFinite(number)
-    ? number
-    : "";
-
+  return "<div class='scroll'><table>"+
+    "<tr><th>Metric</th><th>"+esc(a.name)+
+    "</th><th>"+esc(h.name)+"</th></tr>"+
+    rows.map(
+      r=>"<tr><td>"+esc(r[0])+"</td><td>"+
+      esc(r[1])+"</td><td>"+esc(r[2])+
+      "</td></tr>"
+    ).join("")+
+    "</table></div>";
 }
 
-
-/*
-  Records Book uses one decimal place for projections.
-  Example:
-  19.92560536 -> 19.9
-*/
-
-function recordsProjection(value) {
-
-  const number =
-    Number(value);
-
-  return Number.isFinite(number)
-    ? Number(number.toFixed(1))
-    : "";
-
-}
-
-
-function recordsReason(verdict) {
-
-  const text =
-    String(verdict || "");
-
-  const pieces =
-    text.split("—");
-
-  return pieces.length > 1
-    ? pieces.slice(1).join("—").trim()
-    : text.trim();
-
-}
-
-
-function recordsPrice(value) {
-
-  const number =
-    Number(value);
-
-  if (!Number.isFinite(number)) {
-    return "";
-  }
-
-  return number > 0
-    ? "+" + number
-    : String(number);
-
-}
-
-
-function recordsLine(value) {
-
-  const number =
-    Number(value);
-
-  if (!Number.isFinite(number)) {
-    return "";
-  }
-
-  return Number.isInteger(number)
-    ? String(number)
-    : String(
-        Number(
-          number.toFixed(1)
-        )
-      );
-
-}
-
-
-function recordsSignedLine(value) {
-
-  const number =
-    Number(value);
-
-  if (!Number.isFinite(number)) {
-    return "";
-  }
-
-  return number > 0
-    ? "+" + recordsLine(number)
-    : recordsLine(number);
-
-}
-
-
-/* =========================================================
-   MARKET SIDE
-========================================================= */
-
-function recordsMarketSide(
-  marketKey,
-  awayName,
-  homeName
-) {
-
-  const analysis =
-    marketBoardAnalysis[marketKey];
-
-  if (!analysis) {
-    return "";
-  }
-
-
-  /* SPREAD */
-
-  if (marketKey === "spread") {
-
-    if (
-      analysis.preferredTeam &&
-      Number.isFinite(
-        Number(
-          analysis.preferredLine
-        )
-      )
-    ) {
-
-      return (
-        analysis.preferredTeam +
-        " " +
-        recordsSignedLine(
-          analysis.preferredLine
-        )
-      );
-
-    }
-
-    return "";
-
-  }
-
-
-  /* MONEYLINE */
-
-  if (marketKey === "moneyline") {
-
-    const awayProjection =
-      Number(
-        marketBoardProjection.full.away
-      );
-
-    const homeProjection =
-      Number(
-        marketBoardProjection.full.home
-      );
-
-    if (
-      !Number.isFinite(awayProjection) ||
-      !Number.isFinite(homeProjection)
-    ) {
-      return "";
-    }
-
-    return awayProjection > homeProjection
-      ? awayName + " ML"
-      : homeName + " ML";
-
-  }
-
-
-  /* GAME TOTAL */
-
-  if (marketKey === "gameTotal") {
-
-    const line =
-      Number(
-        marketBoardLines.gameTotal.line
-      );
-
-    if (!Number.isFinite(line)) {
-      return "";
-    }
-
-    return (
-      String(
-        analysis.direction || ""
-      ) +
-      " " +
-      recordsLine(line)
-    ).trim();
-
-  }
-
-
-  /* TEAM TOTAL */
-
-  if (marketKey === "teamTotal") {
-
-    const selectedTeam =
-      analysis.selectedTeam;
-
-    const direction =
-      analysis.direction;
-
-    let line = "";
-
-    if (
-      normalizeTeamName(selectedTeam) ===
-      normalizeTeamName(awayName)
-    ) {
-
-      line =
-        recordsLine(
-          marketBoardLines.teamTotal.awayLine
-        );
-
-    } else if (
-      normalizeTeamName(selectedTeam) ===
-      normalizeTeamName(homeName)
-    ) {
-
-      line =
-        recordsLine(
-          marketBoardLines.teamTotal.homeLine
-        );
-
-    }
-
-    return (
-      selectedTeam +
-      " " +
-      direction +
-      " " +
-      line
-    ).trim();
-
-  }
-
-
-  /* 1H TOTAL */
-
-  if (marketKey === "firstHalf") {
-
-    const line =
-      Number(
-        marketBoardLines.firstHalf.total
-      );
-
-    if (!Number.isFinite(line)) {
-      return "";
-    }
-
-    return (
-      String(
-        analysis.direction || ""
-      ) +
-      " " +
-      recordsLine(line)
-    ).trim();
-
-  }
-
-
-  /* 1Q TOTAL */
-
-  if (marketKey === "firstQuarter") {
-
-    const line =
-      Number(
-        marketBoardLines.firstQuarter.total
-      );
-
-    if (!Number.isFinite(line)) {
-      return "";
-    }
-
-    return (
-      String(
-        analysis.direction || ""
-      ) +
-      " " +
-      recordsLine(line)
-    ).trim();
-
-  }
-
-
-  return "";
-
-}
-
-
-/* =========================================================
-   CLEAN BOOK LINE
-========================================================= */
-
-function recordsBookLine(
-  marketKey,
-  awayName,
-  homeName
-) {
-
-  if (marketKey === "spread") {
-
-    return (
-      awayName +
-      " " +
-      recordsSignedLine(
-        marketBoardLines.spread.awayLine
-      ) +
-      " | " +
-      homeName +
-      " " +
-      recordsSignedLine(
-        marketBoardLines.spread.homeLine
-      )
-    );
-
-  }
-
-
-  if (marketKey === "moneyline") {
-
-    return (
-      awayName +
-      " ML | " +
-      homeName +
-      " ML"
-    );
-
-  }
-
-
-  if (marketKey === "gameTotal") {
-
-    return (
-      "O " +
-      recordsLine(
-        marketBoardLines.gameTotal.line
-      ) +
-      " | U " +
-      recordsLine(
-        marketBoardLines.gameTotal.line
-      )
-    );
-
-  }
-
-
-  if (marketKey === "teamTotal") {
-
-    return (
-      awayName +
-      " " +
-      recordsLine(
-        marketBoardLines.teamTotal.awayLine
-      ) +
-      " | " +
-      homeName +
-      " " +
-      recordsLine(
-        marketBoardLines.teamTotal.homeLine
-      )
-    );
-
-  }
-
-
-  if (marketKey === "firstHalf") {
-
-    return (
-      "O " +
-      recordsLine(
-        marketBoardLines.firstHalf.total
-      ) +
-      " | U " +
-      recordsLine(
-        marketBoardLines.firstHalf.total
-      )
-    );
-
-  }
-
-
-  if (marketKey === "firstQuarter") {
-
-    return (
-      "O " +
-      recordsLine(
-        marketBoardLines.firstQuarter.total
-      ) +
-      " | U " +
-      recordsLine(
-        marketBoardLines.firstQuarter.total
-      )
-    );
-
-  }
-
-
-  return "";
-
-}
-
-
-/* =========================================================
-   CLEAN BOOK PRICE
-========================================================= */
-
-function recordsBookPrice(
-  marketKey,
-  awayName,
-  homeName
-) {
-
-  if (marketKey === "spread") {
-
-    return (
-      awayName +
-      " " +
-      recordsPrice(
-        marketBoardLines.spread.awayPrice
-      ) +
-      " | " +
-      homeName +
-      " " +
-      recordsPrice(
-        marketBoardLines.spread.homePrice
-      )
-    );
-
-  }
-
-
-  if (marketKey === "moneyline") {
-
-    return (
-      awayName +
-      " " +
-      recordsPrice(
-        marketBoardLines.moneyline.awayPrice
-      ) +
-      " | " +
-      homeName +
-      " " +
-      recordsPrice(
-        marketBoardLines.moneyline.homePrice
-      )
-    );
-
-  }
-
-
-  if (marketKey === "gameTotal") {
-
-    return (
-      "O " +
-      recordsPrice(
-        marketBoardLines.gameTotal.overPrice
-      ) +
-      " | U " +
-      recordsPrice(
-        marketBoardLines.gameTotal.underPrice
-      )
-    );
-
-  }
-
-
-  if (marketKey === "teamTotal") {
-
-    return (
-      awayName +
-      " O " +
-      recordsPrice(
-        marketBoardLines.teamTotal.awayOverPrice
-      ) +
-      " / U " +
-      recordsPrice(
-        marketBoardLines.teamTotal.awayUnderPrice
-      ) +
-      " | " +
-      homeName +
-      " O " +
-      recordsPrice(
-        marketBoardLines.teamTotal.homeOverPrice
-      ) +
-      " / U " +
-      recordsPrice(
-        marketBoardLines.teamTotal.homeUnderPrice
-      )
-    );
-
-  }
-
-
-  if (marketKey === "firstHalf") {
-
-    return (
-      "O " +
-      recordsPrice(
-        marketBoardLines.firstHalf.overPrice
-      ) +
-      " | U " +
-      recordsPrice(
-        marketBoardLines.firstHalf.underPrice
-      )
-    );
-
-  }
-
-
-  if (marketKey === "firstQuarter") {
-
-    return (
-      "O " +
-      recordsPrice(
-        marketBoardLines.firstQuarter.overPrice
-      ) +
-      " | U " +
-      recordsPrice(
-        marketBoardLines.firstQuarter.underPrice
-      )
-    );
-
-  }
-
-
-  return "";
-
-}
-
-
-/* =========================================================
-   SEND ONE RECORD
-========================================================= */
-
-async function sendCollegeRecord(
-  record
-) {
-
-  await fetch(
-    COLLEGE_RECORDS_URL,
-    {
-      method: "POST",
-
-      mode: "no-cors",
-
-      headers: {
-        "Content-Type":
-          "text/plain;charset=utf-8"
-      },
-
-      body:
-        JSON.stringify(record)
-    }
-  );
-
-}
-
-
-/* =========================================================
-   GET EXACT KAMBI EVENT
-========================================================= */
-
-async function getCurrentRecordsEvent(
-  awayName,
-  homeName
-) {
-
-  const mainData =
-    await loadKambiNCAAF();
-
-  return (
-    findExactKambiEvent(
-      mainData,
-      awayName,
-      homeName
-    ) || null
-  );
-
-}
-
-
-/* =========================================================
-   EVENT INFORMATION
-========================================================= */
-
-function recordsEventDate(event) {
-
-  const raw =
-    event?.start ||
-    event?.startTime ||
-    event?.event?.start ||
-    event?.event?.startTime ||
-    "";
-
-  if (!raw) {
-    return "";
-  }
-
-  const date =
-    new Date(raw);
-
-  if (
-    Number.isNaN(
-      date.getTime()
-    )
-  ) {
-    return "";
-  }
-
-  return [
-    date.getFullYear(),
-    String(
-      date.getMonth() + 1
-    ).padStart(2, "0"),
-    String(
-      date.getDate()
-    ).padStart(2, "0")
-  ].join("-");
-
-}
-
-
-function recordsKickoff(event) {
-
-  const raw =
-    event?.start ||
-    event?.startTime ||
-    event?.event?.start ||
-    event?.event?.startTime ||
-    "";
-
-  if (!raw) {
-    return "";
-  }
-
-  const date =
-    new Date(raw);
-
-  if (
-    Number.isNaN(
-      date.getTime()
-    )
-  ) {
-    return "";
-  }
-
-  return date.toLocaleTimeString(
-    [],
-    {
-      hour: "numeric",
-      minute: "2-digit"
-    }
-  );
-
-}
-
-
-function recordsVenue(event) {
-
-  return (
-    event?.venue?.name ||
-    event?.venueName ||
-    event?.event?.venue?.name ||
-    event?.event?.venueName ||
-    ""
-  );
-
-}
-
-
-/* =========================================================
-   BUILD MARKET RECORD
-========================================================= */
-
-function buildMarketRecord(
-  gameId,
-  date,
-  awayName,
-  homeName,
-  config
-) {
-
-  const analysis =
-    marketBoardAnalysis[
-      config.key
-    ] || {};
-
-  const verdict =
-    recordsText(
-      config.verdictId
-    );
+function chooseSamples(a,h){
+ const splits=
+  (a.away?.games??0)>=3 &&
+  (h.home?.games??0)>=3;
+
+ return {
+  a:splits?a.away:a.overall||{},
+  h:splits?h.home:h.overall||{},
+  basis:splits?"Home/Away splits":"Overall averages",
+  countA:splits?a.away.games:a.overall?.games??0,
+  countH:splits?h.home.games:h.overall?.games??0
+ };
+  const split=
+    (a.away?.games??0)>=3 &&
+    (h.home?.games??0)>=3;
 
   return {
-
-    type: "market",
-
-    gameId,
-
-    date,
-
-    awayTeam:
-      awayName,
-
-    homeTeam:
-      homeName,
-
-    market:
-      config.name,
-
-    marketSide:
-      recordsMarketSide(
-        config.key,
-        awayName,
-        homeName
-      ),
-
-    warRoomProjection:
-      recordsText(
-        config.projectionId
-      ),
-
-    bookLine:
-      recordsBookLine(
-        config.key,
-        awayName,
-        homeName
-      ),
-
-    bookPrice:
-      recordsBookPrice(
-        config.key,
-        awayName,
-        homeName
-      ),
-
-    edge:
-      recordsText(
-        config.edgeId
-      ),
-
-    edgeSize:
-      Number.isFinite(
-        Number(
-          analysis.score
-        )
-      )
-        ? recordsProjection(
-            analysis.score
-          )
-        : "",
-
-    rank:
-      recordsText(
-        config.rankId
-      ),
-
-    verdict,
-
-    qualificationReason:
-      recordsReason(
-        verdict
-      ),
-
-    marketSource:
-      "Kambi"
-
+    a:split?a.away:a.overall||{},
+    h:split?h.home:h.overall||{},
+    basis:split?"Home/Away splits":"Overall averages",
+    countA:split
+      ?a.away.games
+      :a.overall?.games??0,
+    countH:split
+      ?h.home.games
+      :h.overall?.games??0
   };
-
 }
 
-
-/* =========================================================
-   SAVE CURRENT MATCHUP
-========================================================= */
-
-async function saveCurrentMatchupToRecords() {
-
-  const button =
-    document.getElementById(
-      "saveToRecordsButton"
-    );
-
-  const status =
-    document.getElementById(
-      "saveToRecordsStatus"
-    );
-
-  const awayName =
-    document.getElementById(
-      "awayTeam"
-    ).value;
-
-  const homeName =
-    document.getElementById(
-      "homeTeam"
-    ).value;
-
-
-  if (
-    !awayName ||
-    !homeName
-  ) {
-
-    status.textContent =
-      "Select and analyze a matchup first.";
-
-    return;
-  }
-
-
-  const loadedMarkets =
-    countLoadedKambiMarkets();
-
-
-  /*
-    We designed the receipt for all six markets.
-    Do not freeze an incomplete receipt.
-  */
-
-  if (loadedMarkets !== 6) {
-
-    status.textContent =
-      "Waiting for all 6 verified markets. " +
-      loadedMarkets +
-      "/6 loaded.";
-
-    return;
-  }
-
-
-  button.disabled = true;
-
-  button.textContent =
-    "SAVING...";
-
-  status.textContent =
-    "Saving PROVE IT records...";
-
-
-  try {
-
-    const event =
-      await getCurrentRecordsEvent(
-        awayName,
-        homeName
-      );
-
-
-    if (!event?.id) {
-
-      throw new Error(
-        "Exact Kambi event could not be verified."
-      );
-
-    }
-
-
-    currentRecordsEventId =
-      String(event.id);
-
-
-    const gameId =
-      "CFB-" +
-      currentRecordsEventId;
-
-
-    const date =
-      recordsEventDate(event) ||
-      [
-        new Date().getFullYear(),
-        String(
-          new Date().getMonth() + 1
-        ).padStart(2, "0"),
-        String(
-          new Date().getDate()
-        ).padStart(2, "0")
-      ].join("-");
-
-
-    const kickoff =
-      recordsKickoff(event);
-
-
-    const venue =
-      recordsVenue(event);
-
-
-    const awayTeam =
-      findTeam(
-        awayName
-      );
-
-    const homeTeam =
-      findTeam(
-        homeName
-      );
-
-    const awaySOS =
-      findSOS(
-        awayName
-      );
-
-    const homeSOS =
-      findSOS(
-        homeName
-      );
-
-
-    const fullAway =
-      Number(
-        marketBoardProjection.full.away
-      );
-
-    const fullHome =
-      Number(
-        marketBoardProjection.full.home
-      );
-
-
-    const projectedWinner =
-      fullAway > fullHome
-        ? awayName
-        : homeName;
-
-
-    const projectedMargin =
-      Number.isFinite(fullAway) &&
-      Number.isFinite(fullHome)
-        ? Math.abs(
-            fullAway -
-            fullHome
-          )
-        : "";
-
-
-    /* =====================================================
-       GAME RECORD
-    ===================================================== */
-
-    const gameRecord = {
-
-      type: "game",
-
-      gameId,
-
-      date,
-
-      kickoffTime:
-        kickoff,
-
-      awayTeam:
-        awayName,
-
-      homeTeam:
-        homeName,
-
-      venue,
-
-      projectedWinner,
-
-      projectedFinalAway:
-        recordsProjection(
-          marketBoardProjection.full.away
-        ),
-
-      projectedFinalHome:
-        recordsProjection(
-          marketBoardProjection.full.home
-        ),
-
-      projectedMargin:
-        recordsProjection(
-          projectedMargin
-        ),
-
-      gameStatus:
-        "PREGAME"
-
-    };
-
-
-    /* =====================================================
-       TEAM EVIDENCE
-    ===================================================== */
-
-    const evidenceRecord = {
-
-      type: "evidence",
-
-      gameId,
-
-      date,
-
-      awayTeam:
-        awayName,
-
-      homeTeam:
-        homeName,
-
-      awayOffPPA:
-        recordsNumber(
-          awayTeam?.offense?.ppa
-        ),
-
-      homeOffPPA:
-        recordsNumber(
-          homeTeam?.offense?.ppa
-        ),
-
-      awayDefPPA:
-        recordsNumber(
-          awayTeam?.defense?.ppa
-        ),
-
-      homeDefPPA:
-        recordsNumber(
-          homeTeam?.defense?.ppa
-        ),
-
-      awaySuccessRate:
-        recordsNumber(
-          awayTeam?.offense?.successRate
-        ),
-
-      homeSuccessRate:
-        recordsNumber(
-          homeTeam?.offense?.successRate
-        ),
-
-      awayExplosiveness:
-        recordsNumber(
-          awayTeam?.offense?.explosiveness
-        ),
-
-      homeExplosiveness:
-        recordsNumber(
-          homeTeam?.offense?.explosiveness
-        ),
-
-      awayPPO:
-        recordsNumber(
-          awayTeam?.offense?.pointsPerOpportunity
-        ),
-
-      homePPO:
-        recordsNumber(
-          homeTeam?.offense?.pointsPerOpportunity
-        ),
-
-      awayDefSuccessRate:
-        recordsNumber(
-          awayTeam?.defense?.successRate
-        ),
-
-      homeDefSuccessRate:
-        recordsNumber(
-          homeTeam?.defense?.successRate
-        ),
-
-      awayDefExplosiveness:
-        recordsNumber(
-          awayTeam?.defense?.explosiveness
-        ),
-
-      homeDefExplosiveness:
-        recordsNumber(
-          homeTeam?.defense?.explosiveness
-        ),
-
-      awaySOSRank:
-        recordsNumber(
-          awaySOS
-            ?.resumeRanks
-            ?.strengthOfSchedule
-        ),
-
-      homeSOSRank:
-        recordsNumber(
-          homeSOS
-            ?.resumeRanks
-            ?.strengthOfSchedule
-        ),
-
-      q1AwayProjection:
-        recordsProjection(
-          marketBoardProjection.q1.away
-        ),
-
-      q1HomeProjection:
-        recordsProjection(
-          marketBoardProjection.q1.home
-        ),
-
-      q1TotalProjection:
-        recordsProjection(
-          marketBoardProjection.q1.total
-        ),
-
-      q1Margin:
-        recordsProjection(
-          marketBoardProjection.q1.margin
-        ),
-
-      h1AwayProjection:
-        recordsProjection(
-          marketBoardProjection.h1.away
-        ),
-
-      h1HomeProjection:
-        recordsProjection(
-          marketBoardProjection.h1.home
-        ),
-
-      h1TotalProjection:
-        recordsProjection(
-          marketBoardProjection.h1.total
-        ),
-
-      h1Margin:
-        recordsProjection(
-          marketBoardProjection.h1.margin
-        ),
-
-      fullAwayProjection:
-        recordsProjection(
-          marketBoardProjection.full.away
-        ),
-
-      fullHomeProjection:
-        recordsProjection(
-          marketBoardProjection.full.home
-        ),
-
-      fullTotalProjection:
-        recordsProjection(
-          marketBoardProjection.full.total
-        ),
-
-      fullMargin:
-        recordsProjection(
-          marketBoardProjection.full.margin
-        )
-
-    };
-
-
-    /* =====================================================
-       SIX MARKETS
-    ===================================================== */
-
-    const marketConfigs = [
-
-      {
-        key: "spread",
-        name: "Spread",
-        rankId: "spreadRank",
-        projectionId:
-          "spreadProjection",
-        edgeId: "spreadEdge",
-        verdictId:
-          "spreadVerdict"
-      },
-
-      {
-        key: "moneyline",
-        name: "Moneyline",
-        rankId: "moneylineRank",
-        projectionId:
-          "moneylineProjection",
-        edgeId: "moneylineEdge",
-        verdictId:
-          "moneylineVerdict"
-      },
-
-      {
-        key: "gameTotal",
-        name: "Game Total",
-        rankId: "gameTotalRank",
-        projectionId:
-          "gameTotalProjection",
-        edgeId: "gameTotalEdge",
-        verdictId:
-          "gameTotalVerdict"
-      },
-
-      {
-        key: "teamTotal",
-        name: "Team Total",
-        rankId: "teamTotalRank",
-        projectionId:
-          "teamTotalProjection",
-        edgeId: "teamTotalEdge",
-        verdictId:
-          "teamTotalVerdict"
-      },
-
-      {
-        key: "firstHalf",
-        name: "1H Total",
-        rankId: "firstHalfRank",
-        projectionId:
-          "firstHalfProjection",
-        edgeId: "firstHalfEdge",
-        verdictId:
-          "firstHalfVerdict"
-      },
-
-      {
-        key: "firstQuarter",
-        name: "1Q Total",
-        rankId:
-          "firstQuarterRank",
-        projectionId:
-          "firstQuarterProjection",
-        edgeId:
-          "firstQuarterEdge",
-        verdictId:
-          "firstQuarterVerdict"
-      }
-
-    ];
-
-
-    const marketRecords =
-      marketConfigs.map(
-        config =>
-          buildMarketRecord(
-            gameId,
-            date,
-            awayName,
-            homeName,
-            config
-          )
-      );
-
-
-    /* =====================================================
-       SIX RECEIPT RECORDS
-    ===================================================== */
-
-    const receiptRecords =
-      marketRecords.map(
-        market => ({
-
-          type: "receipt",
-
-          gameId,
-
-          date,
-
-          matchup:
-            awayName +
-            " @ " +
-            homeName,
-
-          kickoff,
-
-          market:
-            market.market,
-
-          warRoomProjection:
-            market.warRoomProjection,
-
-          verifiedBookMarket:
-            (
-              market.bookLine +
-              (
-                market.bookPrice
-                  ? " | " +
-                    market.bookPrice
-                  : ""
-              )
-            ),
-
-          edge:
-            market.edge,
-
-          rank:
-            market.rank,
-
-          verdict:
-            market.verdict,
-
-          reason:
-            market.qualificationReason
-
-        })
-      );
-
-
-    /* =====================================================
-       SEND 14 RECORDS
-    ===================================================== */
-
-    await sendCollegeRecord(
-      gameRecord
-    );
-
-    await sendCollegeRecord(
-      evidenceRecord
-    );
-
-
-    for (
-      const marketRecord
-      of marketRecords
-    ) {
-
-      await sendCollegeRecord(
-        marketRecord
-      );
-
-    }
-
-
-    for (
-      const receiptRecord
-      of receiptRecords
-    ) {
-
-      await sendCollegeRecord(
-        receiptRecord
-      );
-
-    }
-
-
-    currentRecordsSavedKey =
-      gameId;
-
-
-    button.textContent =
-      "SAVED ✓";
-
-    button.disabled = true;
-
-
-    status.textContent =
-      "✓ SAVED — PREGAME RECEIPT RECORDED";
-
-
-  } catch (error) {
-
-    console.error(
-      "SAVE TO RECORDS failed:",
-      error
-    );
-
-
-    button.textContent =
-      "SAVE TO RECORDS";
-
-    button.disabled = false;
-
-
-    status.textContent =
-      "SAVE FAILED — records were not completed.";
-
-  }
-
+function project(x,y){
+ return numeric(x)!==null&&numeric(y)!==null
+  ?(x+y)/2:null;
+  return numeric(x)!==null&&numeric(y)!==null
+    ?(x+y)/2:null;
 }
 
+function period(s,off,def){
+ const a=project(s.a[off],s.h[def]);
+ const h=project(s.h[off],s.a[def]);
 
-/* =========================================================
-   ACTIVATE SAVE BUTTON AFTER ANALYSIS
-========================================================= */
+ return {
+  away:a,
+  home:h,
+  total:a!==null&&h!==null?a+h:null,
+  homeMargin:a!==null&&h!==null?h-a:null
+ };
+  const away=project(s.a[off],s.h[def]);
+  const home=project(s.h[off],s.a[def]);
 
-function prepareSaveToRecordsButton() {
-
-  const button =
-    document.getElementById(
-      "saveToRecordsButton"
-    );
-
-  const status =
-    document.getElementById(
-      "saveToRecordsStatus"
-    );
-
-
-  if (
-    !button ||
-    !status
-  ) {
-    return;
-  }
-
-
-  const awayName =
-    document.getElementById(
-      "awayTeam"
-    ).value;
-
-  const homeName =
-    document.getElementById(
-      "homeTeam"
-    ).value;
-
-
-  const loadedMarkets =
-    countLoadedKambiMarkets();
-
-
-  if (
-    !awayName ||
-    !homeName ||
-    loadedMarkets !== 6
-  ) {
-
-    button.disabled = true;
-
-    button.textContent =
-      "SAVE TO RECORDS";
-
-
-    if (
-      awayName &&
-      homeName
-    ) {
-
-      status.textContent =
-        "Waiting for all 6 verified markets. " +
-        loadedMarkets +
-        "/6 loaded.";
-
-    } else {
-
-      status.textContent =
-        "Analyze a matchup before saving.";
-
-    }
-
-    return;
-
-  }
-
-
-  currentRecordsMatchupKey =
-    normalizeTeamName(
-      awayName
-    ) +
-    "|" +
-    normalizeTeamName(
-      homeName
-    );
-
-
-  button.disabled = false;
-
-  button.textContent =
-    "SAVE TO RECORDS";
-
-  status.textContent =
-    "6/6 verified markets ready to save.";
-
-}
-
-
-/* =========================================================
-   WATCH COMPLETED MARKET ANALYSIS
-========================================================= */
-
-const originalRunMarketBoardAnalysis =
-  runMarketBoardAnalysis;
-
-
-runMarketBoardAnalysis =
-  function(...args) {
-
-    const result =
-      originalRunMarketBoardAnalysis(
-        ...args
-      );
-
-    prepareSaveToRecordsButton();
-
-    return result;
-
+  return {
+    away,
+    home,
+    total:away!==null&&home!==null
+      ?away+home:null,
+    homeMargin:away!==null&&home!==null
+      ?home-away:null
   };
+}
 
+function clearMarketInputs(){
+ for(const id of marketInputs){
+  if(id==="teamTotalSide"){
+   $(id).value="away";
+  }else{
+   $(id).value="";
+  }
+ }
+function periods(s){
+  return {
+    q:period(s,"q1Scored","q1Allowed"),
+    half:period(s,"h1Scored","h1Allowed"),
+    full:period(s,"ppg","allowed"),
+    sample:s
+  };
+}
 
-document
-  .getElementById(
-    "saveToRecordsButton"
-  )
-  .addEventListener(
-    "click",
-    saveCurrentMatchupToRecords
+function clearInputs(){
+  inputs.forEach(id=>{
+    $(id).value=
+      id==="teamTotalSide"?"away":
+      id==="qbStatus"?"unknown":"";
+  });
+}
+
+function analyze(){
+ const a=teams.find(t=>t.name===$("away").value);
+ const h=teams.find(t=>t.name===$("home").value);
+  const a=teams.find(
+    t=>t.name===$("away").value
+  );
+  const h=teams.find(
+    t=>t.name===$("home").value
   );
 
+  currentAway=a||null;
+  currentHome=h||null;
 
-/* =========================================================
-   END PROVE IT RECORDS
-========================================================= */
-loadCFBData();
+ currentAway=a||null;
+ currentHome=h||null;
+  if(!a||!h||a.name===h.name){
+    projections=null;
+    $("comparison").textContent=
+      "Select two different teams.";
+    $("engine").textContent="";
+    rankMarkets();
+    return;
+  }
 
+  const key=a.name+"|"+h.name;
+
+  if(key!==currentMatchKey){
+    clearInputs();
+    currentMatchKey=key;
+  }
+
+  $("matchTitle").textContent=
+    a.name+" @ "+h.name;
+
+  $("comparison").innerHTML=
+    "<h3>Overall</h3>"+
+    table(a,h,"overall","overall")+
+    "<h3>Location Splits</h3>"+
+    table(a,h,"away","home");
+
+  projections=periods(chooseSamples(a,h));
+
+  let html=
+    "<p><span class='tag'>"+
+    esc(projections.sample.basis)+
+    "</span><span class='tag'>"+
+    projections.sample.countA+
+    " away-team games</span>"+
+    "<span class='tag'>"+
+    projections.sample.countH+
+    " home-team games</span></p>";
+
+  for(const [name,p] of [
+    ["First Quarter",projections.q],
+    ["First Half",projections.half],
+    ["Full Game",projections.full]
+  ]){
+    html+=
+      "<div class='card'><h3>"+name+"</h3>"+
+      "<div class='grid3'>"+
+      "<div class='metric'>"+esc(a.name)+
+      "<div class='big'>"+fmt(p.away)+
+      "</div>Projected points</div>"+
+      "<div class='metric'>"+esc(h.name)+
+      "<div class='big'>"+fmt(p.home)+
+      "</div>Projected points</div>"+
+      "<div class='metric'>Combined"+
+      "<div class='big'>"+fmt(p.total)+
+      "</div>Projected total</div></div>"+
+      "<p class='muted'>Model home margin: "+
+      fmt(p.homeMargin)+"</p></div>";
+  }
+
+  html+=
+    "<p class='notice'>"+
+    "Descriptive scoring estimates, not certified "+
+    "probabilities. QB and SOS effects are not modeled."+
+    "</p>";
+
+  $("engine").innerHTML=html;
+
+  $("history").innerHTML=
+    "<div class='grid'>"+
+    [a,h].map(t=>
+      "<div><h3>"+esc(t.name)+"</h3>"+
+      [...(t.games||[])]
+        .sort(
+          (x,y)=>String(y.date||"").localeCompare(
+            String(x.date||"")
+          )
+        )
+        .slice(0,5)
+        .map(g=>
+          "<div class='metric'>"+
+          esc((g.date||"").slice(0,10))+
+          " vs "+esc(g.opponent)+
+          "<br>"+esc(g.pointsScored)+"–"+
+          esc(g.pointsAllowed)+" | "+
+          (g.won?"W":g.tied?"T":"L")+
+          "</div>"
+        ).join("")+
+      "</div>"
+    ).join("")+
+    "</div>";
+
+  $("marketMatch").textContent=
+    a.name+" @ "+h.name;
+
+  $("decisionMatch").textContent=
+    a.name+" @ "+h.name;
+
+ if(!a||!h||a.name===h.name){
+  projections=null;
+  $("comparison").textContent="Select two different teams.";
+  $("engine").textContent="";
+  rankMarkets();
+  return;
+ }
+
+ const matchKey=a.name+"|"+h.name;
+
+ if(matchKey!==currentMatchKey){
+  clearMarketInputs();
+  currentMatchKey=matchKey;
+ }
+
+ $("matchTitle").textContent=a.name+" @ "+h.name;
+
+ $("comparison").innerHTML=
+  "<h3>Overall</h3>"+
+  table(a,h,"overall","overall")+
+  "<h3>Location Splits</h3>"+
+  table(a,h,"away","home");
+
+ const s=chooseSamples(a,h);
+
+ const q=period(s,"q1Scored","q1Allowed");
+ const half=period(s,"h1Scored","h1Allowed");
+ const full=period(s,"ppg","allowed");
+
+ projections={q,half,full,sample:s};
+
+ let html=
+  "<p><span class='tag'>"+esc(s.basis)+"</span>"+
+  "<span class='tag'>"+s.countA+
+  " away-team games</span>"+
+  "<span class='tag'>"+s.countH+
+  " home-team games</span></p>";
+
+ for(const [name,p] of [
+  ["First Quarter",q],
+  ["First Half",half],
+  ["Full Game",full]
+ ]){
+  html+="<div class='card'><h3>"+name+"</h3>"+
+   "<div class='grid3'>"+
+   "<div class='metric'>"+esc(a.name)+
+   "<div class='big'>"+fmt(p.away)+"</div>"+
+   "Projected points</div>"+
+   "<div class='metric'>"+esc(h.name)+
+   "<div class='big'>"+fmt(p.home)+"</div>"+
+   "Projected points</div>"+
+   "<div class='metric'>Combined"+
+   "<div class='big'>"+fmt(p.total)+"</div>"+
+   "Projected total</div></div>"+
+   "<p class='muted'>Model home margin: "+
+   fmt(p.homeMargin)+"</p></div>";
+ }
+
+ html+="<p class='notice'>"+
+  "These are unvalidated offense/defense estimates. "+
+  "They do not yet account for quarterback changes, "+
+  "strength of schedule, or historical model error."+
+  "</p>";
+
+ $("engine").innerHTML=html;
+
+ $("history").innerHTML="<div class='grid'>"+
+  [a,h].map(t=>{
+   const recent=[...(t.games||[])]
+    .sort((x,y)=>
+     String(y.date||"").localeCompare(
+      String(x.date||"")
+     )
+    ).slice(0,5);
+
+   return "<div><h3>"+esc(t.name)+"</h3>"+
+    recent.map(g=>
+     "<div class='metric'>"+
+     esc((g.date||"").slice(0,10))+
+     " vs "+esc(g.opponent)+
+     "<br>"+esc(g.pointsScored)+"–"+
+     esc(g.pointsAllowed)+" | "+
+     (g.won?"W":g.tied?"T":"L")+
+     "</div>"
+    ).join("")+"</div>";
+  }).join("")+"</div>";
+
+ $("marketMatch").textContent=a.name+" @ "+h.name;
+ $("decisionMatch").textContent=a.name+" @ "+h.name;
+
+ rankMarkets();
+ renderPlayers();
+  renderPlayers();
+}
+
+/*
+ FINAL DECISION RULES
+ WALK-FORWARD HISTORICAL TESTING
+
+ Qualified selections are never created merely
+ because a model projection differs from a line.
+ Each historical prediction uses only games played
+ before that target game's date.
+
+ This model has not been historically validated.
+ Therefore every current market remains PASS.
+ Entire same-day records are excluded because
+ their kickoff order may not be known.
+
+ The board has no fixed maximum number of picks.
+ Once qualification is implemented, it will show
+ all qualified options, followed by STOP.
+ Historical score error is NOT historical
+ betting profitability.
+*/
+
+function rankMarkets(){
+ if(!projections||!currentAway||!currentHome){
+  $("decisionBoard").innerHTML=
+   "<p class='notice'>Choose a matchup.</p>";
+  $("ranked").innerHTML="";
+  $("stop").innerHTML="";
+  return;
+ }
+
+ const a=currentAway.name;
+ const h=currentHome.name;
+ const p=projections;
+ const source=$("source").value.trim();
+ const observed=$("observed").value;
+
+ const entries=[];
+
+ function add(name,line,model,edge,selection,reason){
+  const comparable=
+   line!==null &&
+   numeric(model)!==null &&
+   numeric(edge)!==null;
+function pastSummary(t,cutoff){
+  const records=(t.games||[]).filter(g=>
+    String(g.date||"").slice(0,10)<cutoff &&
+    String(g.date||"")!=="" &&
+    numeric(g.pointsScored)!==null &&
+    numeric(g.pointsAllowed)!==null
+  );
+
+  entries.push({
+   name,
+   line,
+   model,
+   edge:comparable?edge:null,
+   absEdge:comparable?Math.abs(edge):null,
+   selection:comparable?selection:"Unavailable",
+   reason:comparable
+    ?reason
+    :"Missing line or model data",
+   comparable,
+   status:"PASS",
+   qualified:false
+  });
+ }
+
+ const spread=val("spread");
+ const margin=p.full.homeMargin;
+
+ const spreadEdge=
+  spread!==null&&margin!==null
+   ?margin+spread:null;
+
+ const spreadChoice=spreadEdge===null?"Unavailable":
+  spreadEdge>0
+   ?h+" "+(spread>0?"+":"")+spread
+   :spreadEdge<0
+    ?a+" "+(-spread>0?"+":"")+(-spread)
+    :"No modeled side advantage";
+
+ add(
+  "Spread",
+  spread,
+  margin,
+  spreadEdge,
+  spreadChoice,
+  "Projected home margin plus home spread"
+ );
+
+ function addTotal(name,id,model){
+  const line=val(id);
+  const edge=line!==null&&model!==null
+   ?model-line:null;
+
+  const choice=edge===null?"Unavailable":
+   edge>0?"Over "+line:
+   edge<0?"Under "+line:
+   "No modeled total advantage";
+  function summary(list){
+    const m=k=>{
+      const v=list.map(g=>g[k]).filter(
+        x=>numeric(x)!==null
+      );
+
+      return v.length
+        ?v.reduce((a,b)=>a+b,0)/v.length
+        :null;
+    };
+
+    return {
+      games:list.length,
+      ppg:m("pointsScored"),
+      allowed:m("pointsAllowed"),
+      q1Scored:m("q1Scored"),
+      q1Allowed:m("q1Allowed"),
+      h1Scored:m("h1Scored"),
+      h1Allowed:m("h1Allowed")
+    };
+  }
+
+  add(
+   name,line,model,edge,choice,
+   "Projected total minus market total"
+  return {
+    overall:summary(records),
+    away:summary(records.filter(
+      g=>String(g.location||"").toLowerCase()==="away"
+    )),
+    home:summary(records.filter(
+      g=>String(g.location||"").toLowerCase()==="home"
+    ))
+  };
+}
+
+function runBacktest(){
+  const byName=new Map(
+    teams.map(t=>[t.name,t])
+  );
+ }
+
+ addTotal("Game Total","total",p.full.total);
+
+ const side=$("teamTotalSide").value;
+ const teamName=side==="away"?a:h;
+ const teamModel=p.full[side];
+ const teamLine=val("teamTotal");
+
+ const teamEdge=
+  teamLine!==null&&teamModel!==null
+   ?teamModel-teamLine:null;
+
+ const teamChoice=teamEdge===null?"Unavailable":
+  teamEdge>0?teamName+" Over "+teamLine:
+  teamEdge<0?teamName+" Under "+teamLine:
+  "No modeled team-total advantage";
+
+ add(
+  "Team Total",
+  teamLine,
+  teamModel,
+  teamEdge,
+  teamChoice,
+  "Team scoring projection minus team total"
+ );
+
+ addTotal(
+  "First Half",
+  "halfTotal",
+  p.half.total
+ );
+
+ addTotal(
+  "First Quarter",
+  "quarterTotal",
+  p.q.total
+ );
+
+ const mlAway=val("mlAway");
+ const mlHome=val("mlHome");
+
+ entries.push({
+  name:"Moneyline",
+  line:null,
+  model:null,
+  edge:null,
+  absEdge:null,
+  selection:"Unavailable",
+  reason:
+   "Win probability is not calibrated. "+
+   "Away odds: "+(mlAway??"N/A")+
+   "; Home odds: "+(mlHome??"N/A"),
+  comparable:false,
+  status:"PASS",
+  qualified:false
+ });
+
+ const comparable=entries
+  .filter(e=>e.comparable)
+  .sort((x,y)=>y.absEdge-x.absEdge);
+
+ const unavailable=entries.filter(e=>!e.comparable);
+ const ordered=[...comparable,...unavailable];
+
+ $("ranked").innerHTML=ordered.map((e,i)=>{
+  const rank=e.comparable?"#"+(i+1):"UNRANKED";
+
+  return "<div class='market'>"+
+   "<div class='markethead'>"+
+   "<h3>"+esc(e.name)+"</h3>"+
+   "<span class='rank'>"+rank+"</span></div>"+
+   "<p><strong>Model direction:</strong> "+
+   esc(e.selection)+"</p>"+
+   "<p>Market line: "+esc(e.line??"N/A")+
+   " | Model: "+fmt(e.model)+
+   " | Raw difference: "+fmt(e.edge)+"</p>"+
+   "<p class='muted'>"+esc(e.reason)+"</p>"+
+   "<strong class='pass'>PASS — NOT QUALIFIED</strong>"+
+   "</div>";
+ }).join("");
+
+ renderDecisionRoom(entries,comparable);
+
+ const reasons=[
+  "No out-of-sample historical validation",
+  "No market-specific error calibration",
+  "No verified transaction-cost or price edge",
+  "No quarterback availability adjustment",
+  "No strength-of-schedule adjustment",
+  "No correlated-play screening"
+ ];
+
+ if(!source){
+  reasons.unshift("Market source missing");
+ }
+
+ if(!observed){
+  reasons.unshift("Observation time missing");
+ }
+
+ const sample=Math.min(
+  p.sample.countA,p.sample.countH
+ );
+
+ if(sample<5){
+  reasons.unshift(
+   "Fewer than five games in at least one sample"
+
+  const errors={
+    spread:[],
+    total:[],
+    teamTotal:[],
+    halfTotal:[],
+    quarterTotal:[]
+  };
+
+  let tested=0;
+
+  const completed=games.filter(g=>
+    g.completed===true &&
+    numeric(g.homePoints)!==null &&
+    numeric(g.awayPoints)!==null &&
+    g.startDate
+  ).sort(
+    (a,b)=>String(a.startDate).localeCompare(
+      String(b.startDate)
+    )
+  );
+ }
+
+ $("stop").innerHTML=
+  "<p class='notice'><strong>STOP — "+
+  "0 VERIFIED QUALIFICATIONS</strong></p>"+
+  "<p>Comparable markets: "+
+  comparable.length+" of 6</p>"+
+  "<p>Source: "+esc(source||"Not entered")+
+  " | Observed: "+
+  esc(observed||"Not entered")+"</p>"+
+  "<p class='muted'>"+
+  reasons.map(esc).join(" • ")+"</p>"+
+  "<p>Raw point differences are not comparable "+
+  "betting-strength scores. We need calibrated "+
+  "prediction errors and actual prices before "+
+  "ranking qualified opportunities.</p>";
+}
+
+function renderDecisionRoom(entries,comparable){
+
+ const qualified=entries
+  .filter(e=>e.qualified===true);
+
+ const research=comparable
+  .filter(e=>!e.qualified);
+
+ let html=
+  "<div class='grid3'>"+
+  "<div class='metric'>"+
+  "QUALIFIED<div class='big green'>"+
+  qualified.length+"</div></div>"+
+  "<div class='metric'>"+
+  "RESEARCH COMPARISONS<div class='big'>"+
+  research.length+"</div></div>"+
+  "<div class='metric'>"+
+  "MARKETS CHECKED<div class='big'>"+
+  entries.length+"</div></div>"+
+  "</div>";
+
+ if(qualified.length){
+  qualified.forEach((e,i)=>{
+   html+="<div class='market' "+
+    "style='border-color:#27dc8a'>"+
+    "<div class='markethead'>"+
+    "<h3>BEST "+(i+1)+
+    " — "+esc(e.name)+"</h3>"+
+    "<span class='green'>GREEN</span></div>"+
+    "<p>"+esc(e.selection)+"</p>"+
+    "<p>Model: "+fmt(e.model)+
+    " | Line: "+esc(e.line)+
+    " | Edge: "+fmt(e.edge)+"</p>"+
+    "</div>";
+  });
+ }else{
+  html+="<div class='notice'>"+
+   "<strong>No qualified selections yet.</strong>"+
+   "<p>The six-market comparisons can identify "+
+   "numbers worth investigating, but the model "+
+   "has not met the PROVE IT requirements.</p>"+
+   "</div>";
+ }
+
+ html+="<div class='stop'>"+
+  "<h2>🛑 STOP</h2>"+
+  "<p><strong>"+qualified.length+
+  " qualified opportunities.</strong></p>"+
+  "<p>No additional market currently meets "+
+  "the required standards.</p>"+
+  "</div>";
+
+ html+="<h3>Research Queue — Not Picks</h3>";
+
+ if(research.length){
+  research.forEach((e,i)=>{
+   html+="<div class='metric'>"+
+    "<span class='rank'>Research #"+
+    (i+1)+"</span>"+
+    "<h3>"+esc(e.name)+"</h3>"+
+    "<p>"+esc(e.selection)+"</p>"+
+    "<p>Raw difference: "+
+    fmt(e.absEdge)+" points</p>"+
+    "<strong class='pass'>PASS</strong>"+
+    "</div>";
+  });
+ }else{
+  html+="<p class='muted'>"+
+   "No comparable markets entered.</p>";
+ }
+  for(const g of completed){
+    const a=byName.get(g.awayTeam);
+    const h=byName.get(g.homeTeam);
+
+    if(!a||!h)continue;
+
+    const date=String(g.startDate).slice(0,10);
+
+    const ap=pastSummary(a,date);
+    const hp=pastSummary(h,date);
+
+    if(
+      ap.overall.games<3 ||
+      hp.overall.games<3
+    )continue;
+
+    const pred=periods(chooseSamples(ap,hp));
+
+    if(
+      pred.full.total===null ||
+      pred.full.homeMargin===null
+    )continue;
+
+    tested++;
+
+    function push(key,predicted,actual){
+      if(
+        numeric(predicted)!==null &&
+        numeric(actual)!==null
+      ){
+        errors[key].push(
+          Math.abs(predicted-actual)
+        );
+      }
+    }
+
+    push(
+      "spread",
+      pred.full.homeMargin,
+      g.homePoints-g.awayPoints
+    );
+
+    push(
+      "total",
+      pred.full.total,
+      g.homePoints+g.awayPoints
+    );
+
+    push(
+      "teamTotal",
+      pred.full.away,
+      g.awayPoints
+    );
+
+    push(
+      "teamTotal",
+      pred.full.home,
+      g.homePoints
+    );
+
+    const hq=g.homeLineScores;
+    const aq=g.awayLineScores;
+
+    if(
+      Array.isArray(hq) &&
+      Array.isArray(aq) &&
+      hq.length>=2 &&
+      aq.length>=2
+    ){
+      const all=[
+        hq[0],hq[1],
+        aq[0],aq[1]
+      ];
+
+      if(all.every(x=>numeric(x)!==null)){
+        push(
+          "quarterTotal",
+          pred.q.total,
+          hq[0]+aq[0]
+        );
+
+        push(
+          "halfTotal",
+          pred.half.total,
+          hq[0]+hq[1]+aq[0]+aq[1]
+        );
+      }
+    }
+  }
+
+  const result={tested};
+
+  for(const [key,values] of Object.entries(errors)){
+    result[key]={
+      n:values.length,
+      mae:values.length
+        ?values.reduce((a,b)=>a+b,0)/values.length
+        :null
+    };
+  }
+
+ $("decisionBoard").innerHTML=html;
+  return result;
+}
+
+function buildPlayers(){
+ players=new Map();
+/*
+ SIX-MARKET EVIDENCE SCREEN
+
+ for(const report of playerReports){
+  for(const stat of report.stats||[]){
+   if(!stat.playerId||!stat.player)continue;
+ This stage measures the model's difference
+ from the entered market line relative to
+ historical scoring error.
+
+   const id=String(stat.playerId);
+ LEAN = preliminary research candidate.
+ PASS = did not meet preliminary screen.
+
+   if(!players.has(id)){
+    players.set(id,{
+     id,
+     name:stat.player,
+     team:stat.team,
+     games:new Map()
+    });
+   }
+ GREEN remains unavailable until market pricing,
+ fees, independent team news, and profitability
+ validation are implemented.
+
+ Moneyline needs calibrated win probabilities.
+*/
+
+   const player=players.get(id);
+   const gid=String(report.gameId);
+function rankMarkets(){
+  if(
+    !projections ||
+    !currentAway ||
+    !currentHome
+  ){
+    $("decisionBoard").innerHTML=
+      "<p class='notice'>Choose a matchup.</p>";
+    $("ranked").innerHTML="";
+    $("stop").innerHTML="";
+    return;
+  }
+
+  const a=currentAway.name;
+  const h=currentHome.name;
+  const p=projections;
+  const source=$("source").value.trim();
+  const observed=$("observed").value;
+  const qb=$("qbStatus").value;
+  const entries=[];
+
+  const sample=Math.min(
+    p.sample.countA,
+    p.sample.countH
+  );
+
+   if(!player.games.has(gid)){
+    player.games.set(gid,{
+     date:report.date,
+     homeTeam:report.homeTeam,
+     awayTeam:report.awayTeam,
+     stats:[]
+  const observedTime=observed
+    ?new Date(observed).getTime()
+    :NaN;
+
+  const age=Date.now()-observedTime;
+
+  const fresh=
+    Number.isFinite(observedTime) &&
+    age>=0 &&
+    age<=3*3600000;
+
+  function add(
+    name,key,line,model,edge,selection
+  ){
+    const comparable=
+      line!==null &&
+      numeric(model)!==null &&
+      numeric(edge)!==null;
+
+    const test=backtest[key]||{
+      n:0,
+      mae:null
+    };
+
+    const ratio=
+      comparable &&
+      test.mae>0
+        ?Math.abs(edge)/test.mae
+        :null;
+
+    const reasons=[];
+
+    if(!comparable){
+      reasons.push(
+        "Market line or projection missing"
+      );
+    }
+
+    if(!source){
+      reasons.push(
+        "Market source missing"
+      );
+    }
+
+    if(!observed){
+      reasons.push(
+        "Observation time missing"
+      );
+    }else if(!fresh){
+      reasons.push(
+        "Line is older than 3 hours or future-dated"
+      );
+    }
+
+    if(sample<4){
+      reasons.push(
+        "Team sample below four games"
+      );
+    }
+
+    if(test.n<20){
+      reasons.push(
+        "Fewer than 20 historical backtest observations"
+      );
+    }
+
+    if(ratio===null){
+      reasons.push(
+        "Historical error unavailable"
+      );
+    }else if(ratio<1.25){
+      reasons.push(
+        "Difference below 1.25 × historical MAE"
+      );
+    }
+
+    if(qb==="concern"){
+      reasons.push(
+        "Quarterback uncertainty flagged"
+      );
+    }
+
+    if(qb==="unknown"){
+      reasons.push(
+        "Quarterback/team news unverified"
+      );
+    }
+
+    reasons.push(
+      "SOS and current market price not modeled"
+    );
+
+    const lean=
+      comparable &&
+      !!source &&
+      fresh &&
+      sample>=4 &&
+      test.n>=20 &&
+      ratio!==null &&
+      ratio>=1.25 &&
+      qb!=="concern";
+
+    entries.push({
+      name,
+      key,
+      line,
+      model,
+      edge:comparable?edge:null,
+      ratio,
+      selection:comparable
+        ?selection
+        :"Unavailable",
+      test,
+      comparable,
+      status:lean?"LEAN":"PASS",
+      reasons
+    });
+   }
+  }
+
+  const spread=val("spread");
+  const margin=p.full.homeMargin;
+
+  const se=
+    spread!==null &&
+    margin!==null
+      ?margin+spread
+      :null;
+
+   player.games.get(gid).stats.push({
+    category:stat.category,
+    name:stat.stat,
+    value:stat.value
+   });
+  const spreadChoice=
+    se===null
+      ?"Unavailable"
+      :se>0
+        ?h+" "+(spread>0?"+":"")+spread
+        :se<0
+          ?a+" "+(-spread>0?"+":"")+(-spread)
+          :"No modeled advantage";
+
+  add(
+    "Spread",
+    "spread",
+    spread,
+    margin,
+    se,
+    spreadChoice
+  );
+
+  function total(name,key,id,model){
+    const line=val(id);
+
+    const edge=
+      line!==null &&
+      model!==null
+        ?model-line
+        :null;
+
+    const selection=
+      edge===null
+        ?"Unavailable"
+        :edge>0
+          ?"Over "+line
+          :edge<0
+            ?"Under "+line
+            :"No modeled advantage";
+
+    add(
+      name,key,line,model,edge,selection
+    );
+  }
+ }
+}
+
+function renderPlayers(){
+ const a=$("away").value;
+ const h=$("home").value;
+ const q=$("playerSearch").value.toLowerCase().trim();
+
+ const list=[...players.values()]
+  .filter(p=>
+   (p.team===a||p.team===h)&&
+   p.name.toLowerCase().includes(q)
+  )
+  .sort((x,y)=>
+   x.team.localeCompare(y.team)||
+   x.name.localeCompare(y.name)
+  total(
+    "Game Total",
+    "total",
+    "total",
+    p.full.total
+  );
+
+ $("coverage").textContent=
+  list.length+" players in collected reports. "+
+  "Coverage may be incomplete.";
+  const side=$("teamTotalSide").value;
+
+ $("playerList").innerHTML="";
+  const teamName=
+    side==="away"?a:h;
+
+ for(const p of list){
+  const div=document.createElement("div");
+  div.className="player";
+  div.textContent=
+   p.name+" — "+p.team+
+   " | "+p.games.size+" games →";
+  const teamModel=p.full[side];
+  const teamLine=val("teamTotal");
+
+  div.onclick=()=>openPlayer(p.id);
+  $("playerList").appendChild(div);
+ }
+}
+  const teamEdge=
+    teamLine!==null &&
+    teamModel!==null
+      ?teamModel-teamLine
+      :null;
+
+function openPlayer(id){
+ const p=players.get(String(id));
+ if(!p)return;
+
+ $("playerName").textContent=p.name;
+ $("playerInfo").textContent=
+  p.team+" | Player ID: "+p.id;
+
+ const history=[...p.games.values()]
+  .sort((x,y)=>
+   String(y.date||"").localeCompare(
+    String(x.date||"")
+   )
+  const teamChoice=
+    teamEdge===null
+      ?"Unavailable"
+      :teamName+" "+
+       (
+         teamEdge>0
+           ?"Over "
+           :teamEdge<0
+             ?"Under "
+             :"Equal to "
+       )+teamLine;
+
+  add(
+    "Team Total",
+    "teamTotal",
+    teamLine,
+    teamModel,
+    teamEdge,
+    teamChoice
+  );
+
+  total(
+    "First Half",
+    "halfTotal",
+    "halfTotal",
+    p.half.total
+  );
+
+ $("playerStats").innerHTML=history.map(g=>{
+  const opponent=g.homeTeam===p.team
+   ?g.awayTeam:g.homeTeam;
+  total(
+    "First Quarter",
+    "quarterTotal",
+    "quarterTotal",
+    p.q.total
+  );
+
+  const categories={};
+  entries.push({
+    name:"Moneyline",
+    key:"moneyline",
+    line:null,
+    model:null,
+    edge:null,
+    ratio:null,
+    selection:"No calibrated win probability",
+    test:{
+      n:0,
+      mae:null
+    },
+    comparable:false,
+    status:"PASS",
+    reasons:[
+      "Moneyline cannot be evaluated from a scoring "+
+      "margin without calibrated win probabilities",
+      "Away odds: "+(val("mlAway")??"N/A")+
+      "; home odds: "+(val("mlHome")??"N/A")
+    ]
+  });
+
+  for(const stat of g.stats){
+   const key=stat.category||"Other";
+   (categories[key]??=[]).push(stat);
+  }
+  const compared=entries
+    .filter(e=>e.comparable)
+    .sort(
+      (x,y)=>(y.ratio??-1)-(x.ratio??-1)
+    );
+
+  return "<div class='card'><h3>"+
+   esc((g.date||"").slice(0,10))+
+   " vs "+esc(opponent)+"</h3>"+
+   Object.entries(categories).map(([category,stats])=>
+    "<h4>"+esc(category)+"</h4>"+
+  const ordered=[
+    ...compared,
+    ...entries.filter(e=>!e.comparable)
+  ];
+
+  $("ranked").innerHTML=ordered.map((e,i)=>
+    "<div class='market'>"+
+    "<div class='markethead'>"+
+    "<h3>"+esc(e.name)+"</h3>"+
+    "<span class='rank'>"+
+    (e.comparable?"#"+(i+1):"UNRANKED")+
+    "</span></div>"+
+    "<p>"+esc(e.selection)+"</p>"+
+    "<p>Market line: "+esc(e.line??"N/A")+
+    " | Model: "+fmt(e.model)+
+    " | Difference: "+fmt(e.edge)+"</p>"+
+    "<p>Historical MAE: "+fmt(e.test.mae)+
+    " ("+e.test.n+" observations)"+
+    " | Difference / MAE: "+
+    fmt(e.ratio,2)+"×</p>"+
+    "<strong class='"+
+    (e.status==="LEAN"?"lean":"pass")+
+    "'>"+e.status+"</strong>"+
+    "<p class='muted'>"+
+    esc(e.reasons.join(" • "))+
+    "</p></div>"
+  ).join("");
+
+  renderDecisionRoom(entries,compared);
+
+  $("backtest").innerHTML=
+    "<p>Walk-forward completed games tested: "+
+    "<strong>"+backtest.tested+"</strong>. "+
+    "Only earlier-date team records are used "+
+    "for each historical prediction. "+
+    "MAE = mean absolute prediction error in points. "+
+    "These are scoring-error tests, NOT profitable-bet "+
+    "or spread-cover backtests.</p>"+
+    "<div class='scroll'><table>"+
+    stats.map(s=>
+     "<tr><td>"+esc(s.name)+
+     "</td><td>"+esc(s.value)+
+     "</td></tr>"
+    "<tr><th>Market</th><th>Observations</th>"+
+    "<th>MAE</th></tr>"+
+    [
+      ["Spread","spread"],
+      ["Game Total","total"],
+      ["Team Total","teamTotal"],
+      ["1H Total","halfTotal"],
+      ["1Q Total","quarterTotal"]
+    ].map(([name,key])=>
+      "<tr><td>"+name+"</td><td>"+
+      backtest[key].n+"</td><td>"+
+      fmt(backtest[key].mae)+
+      "</td></tr>"
+    ).join("")+
+    "</table></div>"
+   ).join("")+"</div>";
+ }).join("")||
+ "<p>No collected game statistics.</p>";
+    "</table></div>";
+
+  $("stop").innerHTML=
+    "<div class='stop'>"+
+    "<h3>🛑 STOP — 0 certified GREEN plays</h3>"+
+    "<p>Preliminary LEANs: "+
+    entries.filter(e=>e.status==="LEAN").length+
+    " | PASS: "+
+    entries.filter(e=>e.status==="PASS").length+
+    "</p>"+
+    "<p>Historical MAE measures typical "+
+    "score-prediction error; it does not establish "+
+    "an expected betting profit. "+
+    "No price/fee validation, QB verification "+
+    "from an independent feed, or SOS adjustment "+
+    "is available.</p></div>";
+}
+
+function renderDecisionRoom(entries,compared){
+  const leans=compared.filter(
+    e=>e.status==="LEAN"
+  );
+
+  const passes=entries.filter(
+    e=>e.status==="PASS"
+  );
+
+ $("modal").classList.add("open");
+  let html=
+    "<div class='grid3'>"+
+    "<div class='metric'>GREEN"+
+    "<div class='big green'>0</div></div>"+
+    "<div class='metric'>PRELIMINARY LEANS"+
+    "<div class='big gold'>"+
+    leans.length+
+    "</div></div>"+
+    "<div class='metric'>MARKETS CHECKED"+
+    "<div class='big'>"+
+    entries.length+
+    "</div></div>"+
+    "</div>";
+
+  if(leans.length){
+    leans.forEach((e,i)=>{
+      html+=
+        "<div class='market'>"+
+        "<div class='markethead'>"+
+        "<h3>RESEARCH "+(i+1)+
+        " — "+esc(e.name)+"</h3>"+
+        "<span class='lean'>LEAN</span>"+
+        "</div>"+
+        "<p><strong>"+
+        esc(e.selection)+
+        "</strong></p>"+
+        "<p>Line: "+esc(e.line)+
+        " | Projection: "+fmt(e.model)+
+        " | Difference: "+fmt(e.edge)+
+        "</p>"+
+        "<p>Historical MAE: "+
+        fmt(e.test.mae)+
+        " | Signal: "+
+        fmt(e.ratio,2)+
+        "× historical error</p>"+
+        "<p class='muted'>Still needs verified "+
+        "price, QB/news, SOS, and market "+
+        "profitability testing.</p>"+
+        "</div>";
+    });
+  }else{
+    html+=
+      "<div class='notice'>"+
+      "<strong>No preliminary LEANs meet "+
+      "today's evidence screen.</strong>"+
+      "<p>Enter recent verified lines below; "+
+      "some games may still correctly produce none."+
+      "</p></div>";
+  }
+
+  html+=
+    "<div class='stop'>"+
+    "<h2>🛑 STOP</h2>"+
+    "<p>"+leans.length+
+    " preliminary research opportunities; "+
+    "0 certified GREEN selections.</p>"+
+    "<p>"+passes.length+
+    " markets did not meet the preliminary screen. "+
+    "Do not fill the list to reach five.</p>"+
+    "</div>";
+
+  $("decisionBoard").innerHTML=html;
+}
+
+function buildPlayers(){
+  players=new Map();
+
+  for(const report of playerReports){
+    for(const stat of report.stats||[]){
+      if(!stat.playerId||!stat.player)continue;
+
+      const id=String(stat.playerId);
+
+      if(!players.has(id)){
+        players.set(id,{
+          id,
+          name:stat.player,
+          team:stat.team,
+          games:new Map()
+        });
+      }
+
+      const p=players.get(id);
+      const gid=String(report.gameId);
+
+      if(!p.games.has(gid)){
+        p.games.set(gid,{
+          date:report.date,
+          homeTeam:report.homeTeam,
+          awayTeam:report.awayTeam,
+          stats:[]
+        });
+      }
+
+      p.games.get(gid).stats.push({
+        category:stat.category,
+        name:stat.stat,
+        value:stat.value
+      });
+    }
+  }
+}
+
+function renderPlayers(){
+  const a=$("away").value;
+  const h=$("home").value;
+  const q=$("playerSearch").value.toLowerCase().trim();
+
+  const list=[...players.values()]
+    .filter(p=>
+      (p.team===a||p.team===h) &&
+      p.name.toLowerCase().includes(q)
+    )
+    .sort(
+      (x,y)=>x.team.localeCompare(y.team)||
+      x.name.localeCompare(y.name)
+    );
+
+  $("coverage").textContent=
+    list.length+
+    " players in collected reports. "+
+    "Coverage may be incomplete.";
+
+  $("playerList").innerHTML="";
+
+  for(const p of list){
+    const div=document.createElement("div");
+    div.className="player";
+
+    div.textContent=
+      p.name+" — "+p.team+
+      " | "+p.games.size+" games →";
+
+    div.onclick=()=>openPlayer(p.id);
+
+    $("playerList").appendChild(div);
+  }
+}
+
+function openPlayer(id){
+  const p=players.get(String(id));
+  if(!p)return;
+
+  $("playerName").textContent=p.name;
+
+  $("playerInfo").textContent=
+    p.team+" | Player ID: "+p.id;
+
+  const history=[...p.games.values()]
+    .sort(
+      (x,y)=>String(y.date||"").localeCompare(
+        String(x.date||"")
+      )
+    );
+
+  $("playerStats").innerHTML=
+    history.map(g=>{
+      const opponent=
+        g.homeTeam===p.team
+          ?g.awayTeam
+          :g.homeTeam;
+
+      const categories={};
+
+      for(const s of g.stats){
+        (
+          categories[s.category||"Other"]??=[]
+        ).push(s);
+      }
+
+      return "<div class='card'>"+
+        "<h3>"+esc((g.date||"").slice(0,10))+
+        " vs "+esc(opponent)+"</h3>"+
+        Object.entries(categories)
+          .map(([category,stats])=>
+            "<h4>"+esc(category)+"</h4>"+
+            "<div class='scroll'><table>"+
+            stats.map(s=>
+              "<tr><td>"+esc(s.name)+
+              "</td><td>"+esc(s.value)+
+              "</td></tr>"
+            ).join("")+
+            "</table></div>"
+          ).join("")+
+        "</div>";
+    }).join("")||
+    "<p>No collected game statistics.</p>";
+
+  $("modal").classList.add("open");
+}
+
+function closePlayer(){
+ $("modal").classList.remove("open");
+  $("modal").classList.remove("open");
+}
+
+start();
 </script>
 </body>
-</html>  
+</html>
