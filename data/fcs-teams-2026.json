@@ -4448,16 +4448,16 @@
     "classification": "fcs",
     "conference": "Ivy",
     "overall": {
-      "games": 4,
-      "wins": 3,
+      "games": 5,
+      "wins": 4,
       "losses": 1,
       "ties": 0,
-      "ppg": 27.0,
-      "allowed": 28.5,
-      "q1Scored": 5.25,
-      "q1Allowed": 2.5,
-      "h1Scored": 13.75,
-      "h1Allowed": 13.0
+      "ppg": 27.2,
+      "allowed": 28.2,
+      "q1Scored": 5.6,
+      "q1Allowed": 5.4,
+      "h1Scored": 15.2,
+      "h1Allowed": 15.2
     },
     "home": {
       "games": 2,
@@ -4472,16 +4472,16 @@
       "h1Allowed": 15.5
     },
     "away": {
-      "games": 2,
-      "wins": 2,
+      "games": 3,
+      "wins": 3,
       "losses": 0,
       "ties": 0,
-      "ppg": 30.5,
-      "allowed": 22.5,
+      "ppg": 29.67,
+      "allowed": 24.0,
       "q1Scored": 7.0,
-      "q1Allowed": 0.0,
-      "h1Scored": 15.5,
-      "h1Allowed": 10.5
+      "q1Allowed": 5.67,
+      "h1Scored": 17.33,
+      "h1Allowed": 15.0
     },
     "games": [
       {
@@ -4539,6 +4539,20 @@
         "q1Allowed": 0,
         "h1Scored": 21,
         "h1Allowed": 14
+      },
+      {
+        "gameId": 401867821,
+        "date": "2026-10-16T23:00:00.000Z",
+        "opponent": "Pennsylvania",
+        "location": "away",
+        "pointsScored": 28,
+        "pointsAllowed": 27,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 17,
+        "h1Scored": 21,
+        "h1Allowed": 24
       }
     ]
   },
@@ -17120,28 +17134,28 @@
     "classification": "fcs",
     "conference": "Ivy",
     "overall": {
-      "games": 4,
+      "games": 5,
       "wins": 2,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "ppg": 15.25,
-      "allowed": 15.25,
-      "q1Scored": 4.25,
-      "q1Allowed": 4.25,
-      "h1Scored": 6.75,
-      "h1Allowed": 8.5
+      "ppg": 17.6,
+      "allowed": 17.8,
+      "q1Scored": 6.8,
+      "q1Allowed": 4.8,
+      "h1Scored": 10.2,
+      "h1Allowed": 11.0
     },
     "home": {
-      "games": 2,
+      "games": 3,
       "wins": 1,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "ppg": 15.5,
-      "allowed": 20.0,
-      "q1Scored": 1.5,
-      "q1Allowed": 5.0,
-      "h1Scored": 5.0,
-      "h1Allowed": 10.0
+      "ppg": 19.33,
+      "allowed": 22.67,
+      "q1Scored": 6.67,
+      "q1Allowed": 5.67,
+      "h1Scored": 11.33,
+      "h1Allowed": 13.67
     },
     "away": {
       "games": 2,
@@ -17211,6 +17225,20 @@
         "q1Allowed": 7,
         "h1Scored": 10,
         "h1Allowed": 17
+      },
+      {
+        "gameId": 401867821,
+        "date": "2026-10-16T23:00:00.000Z",
+        "opponent": "Columbia",
+        "location": "home",
+        "pointsScored": 27,
+        "pointsAllowed": 28,
+        "won": false,
+        "tied": false,
+        "q1Scored": 17,
+        "q1Allowed": 7,
+        "h1Scored": 24,
+        "h1Allowed": 21
       }
     ]
   },
