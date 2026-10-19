@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-10-18T15:49:16.067012+00:00",
+  "updated": "2026-10-19T18:42:23.233856+00:00",
   "games": [
     {
       "gameId": 401866532,
@@ -3514,6 +3514,20 @@
       "date": "2026-10-17T17:00:00.000Z",
       "homeTeam": "Davidson",
       "awayTeam": "Morehead State",
+      "stats": []
+    },
+    {
+      "gameId": 401869132,
+      "date": "2026-10-17T17:00:00.000Z",
+      "homeTeam": "Northwestern State",
+      "awayTeam": "McNeese",
+      "stats": []
+    },
+    {
+      "gameId": 401868398,
+      "date": "2026-10-17T17:30:00.000Z",
+      "homeTeam": "Wofford",
+      "awayTeam": "VMI",
       "stats": []
     },
     {
