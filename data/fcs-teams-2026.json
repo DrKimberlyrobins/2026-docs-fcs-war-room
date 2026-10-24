@@ -5457,28 +5457,28 @@
     "classification": "fcs",
     "conference": "MEAC",
     "overall": {
-      "games": 7,
+      "games": 8,
       "wins": 4,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "ppg": 23.43,
-      "allowed": 25.29,
-      "q1Scored": 6.29,
-      "q1Allowed": 7.14,
-      "h1Scored": 13.0,
-      "h1Allowed": 12.14
+      "ppg": 22.0,
+      "allowed": 26.0,
+      "q1Scored": 6.25,
+      "q1Allowed": 7.12,
+      "h1Scored": 12.12,
+      "h1Allowed": 11.88
     },
     "home": {
-      "games": 4,
+      "games": 5,
       "wins": 4,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "ppg": 32.25,
-      "allowed": 17.0,
-      "q1Scored": 8.5,
-      "q1Allowed": 3.25,
-      "h1Scored": 17.75,
-      "h1Allowed": 6.75
+      "ppg": 28.2,
+      "allowed": 19.8,
+      "q1Scored": 8.0,
+      "q1Allowed": 4.0,
+      "h1Scored": 15.4,
+      "h1Allowed": 7.4
     },
     "away": {
       "games": 3,
@@ -5590,6 +5590,20 @@
         "q1Allowed": 0,
         "h1Scored": 13,
         "h1Allowed": 0
+      },
+      {
+        "gameId": 401867955,
+        "date": "2026-10-23T21:00:00.000Z",
+        "opponent": "North Carolina Central",
+        "location": "home",
+        "pointsScored": 12,
+        "pointsAllowed": 31,
+        "won": false,
+        "tied": false,
+        "q1Scored": 6,
+        "q1Allowed": 7,
+        "h1Scored": 6,
+        "h1Allowed": 10
       }
     ]
   },
@@ -16408,16 +16422,16 @@
     "classification": "fcs",
     "conference": "MEAC",
     "overall": {
-      "games": 7,
-      "wins": 2,
+      "games": 8,
+      "wins": 3,
       "losses": 5,
       "ties": 0,
-      "ppg": 23.0,
-      "allowed": 30.14,
-      "q1Scored": 7.86,
-      "q1Allowed": 6.86,
-      "h1Scored": 16.57,
-      "h1Allowed": 18.86
+      "ppg": 24.0,
+      "allowed": 27.88,
+      "q1Scored": 7.75,
+      "q1Allowed": 6.75,
+      "h1Scored": 15.75,
+      "h1Allowed": 17.25
     },
     "home": {
       "games": 4,
@@ -16432,16 +16446,16 @@
       "h1Allowed": 13.0
     },
     "away": {
-      "games": 3,
-      "wins": 0,
+      "games": 4,
+      "wins": 1,
       "losses": 3,
       "ties": 0,
-      "ppg": 19.67,
-      "allowed": 42.67,
-      "q1Scored": 5.67,
-      "q1Allowed": 5.67,
-      "h1Scored": 14.67,
-      "h1Allowed": 26.67
+      "ppg": 22.5,
+      "allowed": 35.0,
+      "q1Scored": 6.0,
+      "q1Allowed": 5.75,
+      "h1Scored": 13.5,
+      "h1Allowed": 21.5
     },
     "games": [
       {
@@ -16541,6 +16555,20 @@
         "q1Allowed": 7,
         "h1Scored": 7,
         "h1Allowed": 7
+      },
+      {
+        "gameId": 401867955,
+        "date": "2026-10-23T21:00:00.000Z",
+        "opponent": "Delaware State",
+        "location": "away",
+        "pointsScored": 31,
+        "pointsAllowed": 12,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 6,
+        "h1Scored": 10,
+        "h1Allowed": 6
       }
     ]
   },
@@ -18157,28 +18185,28 @@
     "classification": "fcs",
     "conference": "Ivy",
     "overall": {
-      "games": 5,
-      "wins": 2,
+      "games": 6,
+      "wins": 3,
       "losses": 3,
       "ties": 0,
-      "ppg": 17.6,
-      "allowed": 17.8,
-      "q1Scored": 6.8,
-      "q1Allowed": 4.8,
-      "h1Scored": 10.2,
-      "h1Allowed": 11.0
+      "ppg": 18.67,
+      "allowed": 18.33,
+      "q1Scored": 8.0,
+      "q1Allowed": 5.17,
+      "h1Scored": 10.83,
+      "h1Allowed": 12.67
     },
     "home": {
-      "games": 3,
-      "wins": 1,
+      "games": 4,
+      "wins": 2,
       "losses": 2,
       "ties": 0,
-      "ppg": 19.33,
-      "allowed": 22.67,
-      "q1Scored": 6.67,
-      "q1Allowed": 5.67,
-      "h1Scored": 11.33,
-      "h1Allowed": 13.67
+      "ppg": 20.5,
+      "allowed": 22.25,
+      "q1Scored": 8.5,
+      "q1Allowed": 6.0,
+      "h1Scored": 12.0,
+      "h1Allowed": 15.5
     },
     "away": {
       "games": 2,
@@ -18261,6 +18289,20 @@
         "q1Scored": 17,
         "q1Allowed": 7,
         "h1Scored": 24,
+        "h1Allowed": 21
+      },
+      {
+        "gameId": 401870841,
+        "date": "2026-10-23T23:00:00.000Z",
+        "opponent": "Yale",
+        "location": "home",
+        "pointsScored": 24,
+        "pointsAllowed": 21,
+        "won": true,
+        "tied": false,
+        "q1Scored": 14,
+        "q1Allowed": 7,
+        "h1Scored": 14,
         "h1Allowed": 21
       }
     ]
@@ -28413,16 +28455,16 @@
     "classification": "fcs",
     "conference": "Ivy",
     "overall": {
-      "games": 5,
+      "games": 6,
       "wins": 3,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "ppg": 31.0,
-      "allowed": 27.6,
-      "q1Scored": 5.6,
-      "q1Allowed": 9.8,
-      "h1Scored": 9.6,
-      "h1Allowed": 13.8
+      "ppg": 29.33,
+      "allowed": 27.0,
+      "q1Scored": 5.83,
+      "q1Allowed": 10.5,
+      "h1Scored": 11.5,
+      "h1Allowed": 13.83
     },
     "home": {
       "games": 3,
@@ -28437,16 +28479,16 @@
       "h1Allowed": 16.0
     },
     "away": {
-      "games": 2,
+      "games": 3,
       "wins": 1,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "ppg": 31.5,
-      "allowed": 33.0,
-      "q1Scored": 3.5,
-      "q1Allowed": 7.0,
-      "h1Scored": 5.0,
-      "h1Allowed": 10.5
+      "ppg": 28.0,
+      "allowed": 30.0,
+      "q1Scored": 4.67,
+      "q1Allowed": 9.33,
+      "h1Scored": 10.33,
+      "h1Allowed": 11.67
     },
     "games": [
       {
@@ -28518,6 +28560,20 @@
         "q1Allowed": 14,
         "h1Scored": 7,
         "h1Allowed": 20
+      },
+      {
+        "gameId": 401870841,
+        "date": "2026-10-23T23:00:00.000Z",
+        "opponent": "Pennsylvania",
+        "location": "away",
+        "pointsScored": 21,
+        "pointsAllowed": 24,
+        "won": false,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 14,
+        "h1Scored": 21,
+        "h1Allowed": 14
       }
     ]
   },
