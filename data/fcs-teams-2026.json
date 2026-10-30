@@ -15594,28 +15594,28 @@
     "classification": "fcs",
     "conference": "MEAC",
     "overall": {
-      "games": 8,
+      "games": 9,
       "wins": 5,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "ppg": 27.75,
-      "allowed": 27.0,
-      "q1Scored": 6.0,
-      "q1Allowed": 7.62,
-      "h1Scored": 13.12,
-      "h1Allowed": 13.88
+      "ppg": 25.78,
+      "allowed": 29.67,
+      "q1Scored": 5.33,
+      "q1Allowed": 8.33,
+      "h1Scored": 12.78,
+      "h1Allowed": 14.67
     },
     "home": {
-      "games": 3,
+      "games": 4,
       "wins": 2,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "ppg": 34.33,
-      "allowed": 17.67,
-      "q1Scored": 6.67,
-      "q1Allowed": 2.33,
-      "h1Scored": 12.33,
-      "h1Allowed": 6.67
+      "ppg": 28.25,
+      "allowed": 26.0,
+      "q1Scored": 5.0,
+      "q1Allowed": 5.25,
+      "h1Scored": 11.75,
+      "h1Allowed": 10.25
     },
     "away": {
       "games": 5,
@@ -15741,6 +15741,20 @@
         "q1Allowed": 0,
         "h1Scored": 6,
         "h1Allowed": 6
+      },
+      {
+        "gameId": 401867969,
+        "date": "2026-10-29T23:00:00.000Z",
+        "opponent": "South Carolina State",
+        "location": "home",
+        "pointsScored": 10,
+        "pointsAllowed": 51,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 14,
+        "h1Scored": 10,
+        "h1Allowed": 21
       }
     ]
   },
@@ -21709,16 +21723,16 @@
     "classification": "fcs",
     "conference": "MEAC",
     "overall": {
-      "games": 8,
-      "wins": 6,
+      "games": 9,
+      "wins": 7,
       "losses": 2,
       "ties": 0,
-      "ppg": 40.88,
-      "allowed": 17.62,
-      "q1Scored": 12.88,
-      "q1Allowed": 3.88,
-      "h1Scored": 23.75,
-      "h1Allowed": 8.5
+      "ppg": 42.0,
+      "allowed": 16.78,
+      "q1Scored": 13.0,
+      "q1Allowed": 3.44,
+      "h1Scored": 23.44,
+      "h1Allowed": 8.67
     },
     "home": {
       "games": 4,
@@ -21733,16 +21747,16 @@
       "h1Allowed": 4.25
     },
     "away": {
-      "games": 4,
-      "wins": 3,
+      "games": 5,
+      "wins": 4,
       "losses": 1,
       "ties": 0,
-      "ppg": 30.25,
-      "allowed": 25.0,
-      "q1Scored": 12.0,
-      "q1Allowed": 6.0,
-      "h1Scored": 19.5,
-      "h1Allowed": 12.75
+      "ppg": 34.4,
+      "allowed": 22.0,
+      "q1Scored": 12.4,
+      "q1Allowed": 4.8,
+      "h1Scored": 19.8,
+      "h1Allowed": 12.2
     },
     "games": [
       {
@@ -21856,6 +21870,20 @@
         "q1Allowed": 0,
         "h1Scored": 19,
         "h1Allowed": 0
+      },
+      {
+        "gameId": 401867969,
+        "date": "2026-10-29T23:00:00.000Z",
+        "opponent": "Morgan State",
+        "location": "away",
+        "pointsScored": 51,
+        "pointsAllowed": 10,
+        "won": true,
+        "tied": false,
+        "q1Scored": 14,
+        "q1Allowed": 0,
+        "h1Scored": 21,
+        "h1Allowed": 10
       }
     ]
   },

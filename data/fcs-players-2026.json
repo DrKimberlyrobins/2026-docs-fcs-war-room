@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-10-29T18:26:20.241195+00:00",
+  "updated": "2026-10-30T17:58:44.259776+00:00",
   "games": [
     {
       "gameId": 401866532,
@@ -4186,6 +4186,13 @@
       "date": "2026-10-24T23:00:00.000Z",
       "homeTeam": "North Alabama",
       "awayTeam": "Austin Peay",
+      "stats": []
+    },
+    {
+      "gameId": 401867969,
+      "date": "2026-10-29T23:00:00.000Z",
+      "homeTeam": "Morgan State",
+      "awayTeam": "South Carolina State",
       "stats": []
     }
   ]
