@@ -5239,28 +5239,28 @@
     "classification": "fcs",
     "conference": "Ivy",
     "overall": {
-      "games": 6,
-      "wins": 3,
+      "games": 7,
+      "wins": 4,
       "losses": 3,
       "ties": 0,
-      "ppg": 22.33,
-      "allowed": 22.0,
-      "q1Scored": 6.33,
-      "q1Allowed": 6.5,
-      "h1Scored": 12.67,
-      "h1Allowed": 12.67
+      "ppg": 22.57,
+      "allowed": 20.86,
+      "q1Scored": 6.43,
+      "q1Allowed": 5.57,
+      "h1Scored": 13.86,
+      "h1Allowed": 12.86
     },
     "home": {
-      "games": 3,
-      "wins": 2,
+      "games": 4,
+      "wins": 3,
       "losses": 1,
       "ties": 0,
-      "ppg": 23.0,
-      "allowed": 20.67,
+      "ppg": 23.25,
+      "allowed": 19.0,
       "q1Scored": 7.0,
-      "q1Allowed": 5.0,
-      "h1Scored": 11.67,
-      "h1Allowed": 12.67
+      "q1Allowed": 3.75,
+      "h1Scored": 14.0,
+      "h1Allowed": 13.0
     },
     "away": {
       "games": 3,
@@ -5358,6 +5358,20 @@
         "q1Allowed": 3,
         "h1Scored": 21,
         "h1Allowed": 10
+      },
+      {
+        "gameId": 401867838,
+        "date": "2026-10-30T23:00:00.000Z",
+        "opponent": "Harvard",
+        "location": "home",
+        "pointsScored": 24,
+        "pointsAllowed": 14,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 0,
+        "h1Scored": 21,
+        "h1Allowed": 14
       }
     ]
   },
@@ -9437,16 +9451,16 @@
     "classification": "fcs",
     "conference": "Ivy",
     "overall": {
-      "games": 6,
+      "games": 7,
       "wins": 6,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "ppg": 28.5,
-      "allowed": 12.83,
-      "q1Scored": 4.0,
-      "q1Allowed": 1.67,
-      "h1Scored": 14.83,
-      "h1Allowed": 5.17
+      "ppg": 26.43,
+      "allowed": 14.43,
+      "q1Scored": 3.43,
+      "q1Allowed": 2.43,
+      "h1Scored": 14.71,
+      "h1Allowed": 7.43
     },
     "home": {
       "games": 3,
@@ -9461,16 +9475,16 @@
       "h1Allowed": 4.67
     },
     "away": {
-      "games": 3,
+      "games": 4,
       "wins": 3,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "ppg": 28.67,
-      "allowed": 15.33,
-      "q1Scored": 2.33,
-      "q1Allowed": 3.33,
-      "h1Scored": 18.67,
-      "h1Allowed": 5.67
+      "ppg": 25.0,
+      "allowed": 17.5,
+      "q1Scored": 1.75,
+      "q1Allowed": 4.25,
+      "h1Scored": 17.5,
+      "h1Allowed": 9.5
     },
     "games": [
       {
@@ -9556,6 +9570,20 @@
         "q1Allowed": 0,
         "h1Scored": 13,
         "h1Allowed": 0
+      },
+      {
+        "gameId": 401867838,
+        "date": "2026-10-30T23:00:00.000Z",
+        "opponent": "Dartmouth",
+        "location": "away",
+        "pointsScored": 14,
+        "pointsAllowed": 24,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 7,
+        "h1Scored": 14,
+        "h1Allowed": 21
       }
     ]
   },
