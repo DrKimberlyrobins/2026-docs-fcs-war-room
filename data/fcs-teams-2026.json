@@ -10495,28 +10495,28 @@
     "classification": "fcs",
     "conference": "MEAC",
     "overall": {
-      "games": 9,
+      "games": 10,
       "wins": 4,
-      "losses": 5,
+      "losses": 6,
       "ties": 0,
-      "ppg": 18.11,
-      "allowed": 30.33,
-      "q1Scored": 3.78,
-      "q1Allowed": 7.33,
-      "h1Scored": 8.56,
-      "h1Allowed": 18.33
+      "ppg": 19.1,
+      "allowed": 30.8,
+      "q1Scored": 4.1,
+      "q1Allowed": 6.9,
+      "h1Scored": 8.4,
+      "h1Allowed": 18.6
     },
     "home": {
-      "games": 3,
+      "games": 4,
       "wins": 2,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "ppg": 27.67,
-      "allowed": 23.0,
-      "q1Scored": 4.33,
-      "q1Allowed": 4.33,
-      "h1Scored": 10.0,
-      "h1Allowed": 14.67
+      "ppg": 27.75,
+      "allowed": 26.0,
+      "q1Scored": 5.0,
+      "q1Allowed": 4.0,
+      "h1Scored": 9.25,
+      "h1Allowed": 16.25
     },
     "away": {
       "games": 6,
@@ -10656,6 +10656,20 @@
         "q1Allowed": 0,
         "h1Scored": 0,
         "h1Allowed": 13
+      },
+      {
+        "gameId": 401867964,
+        "date": "2026-11-06T00:30:00.000Z",
+        "opponent": "South Carolina State",
+        "location": "home",
+        "pointsScored": 28,
+        "pointsAllowed": 35,
+        "won": false,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 3,
+        "h1Scored": 7,
+        "h1Allowed": 21
       }
     ]
   },
@@ -22885,16 +22899,16 @@
     "classification": "fcs",
     "conference": "MEAC",
     "overall": {
-      "games": 9,
-      "wins": 7,
+      "games": 10,
+      "wins": 8,
       "losses": 2,
       "ties": 0,
-      "ppg": 42.0,
-      "allowed": 16.78,
-      "q1Scored": 13.0,
-      "q1Allowed": 3.44,
-      "h1Scored": 23.44,
-      "h1Allowed": 8.67
+      "ppg": 41.3,
+      "allowed": 17.9,
+      "q1Scored": 12.0,
+      "q1Allowed": 3.8,
+      "h1Scored": 23.2,
+      "h1Allowed": 8.5
     },
     "home": {
       "games": 4,
@@ -22909,16 +22923,16 @@
       "h1Allowed": 4.25
     },
     "away": {
-      "games": 5,
-      "wins": 4,
+      "games": 6,
+      "wins": 5,
       "losses": 1,
       "ties": 0,
-      "ppg": 34.4,
-      "allowed": 22.0,
-      "q1Scored": 12.4,
-      "q1Allowed": 4.8,
-      "h1Scored": 19.8,
-      "h1Allowed": 12.2
+      "ppg": 34.5,
+      "allowed": 23.0,
+      "q1Scored": 10.83,
+      "q1Allowed": 5.17,
+      "h1Scored": 20.0,
+      "h1Allowed": 11.33
     },
     "games": [
       {
@@ -23046,6 +23060,20 @@
         "q1Allowed": 0,
         "h1Scored": 21,
         "h1Allowed": 10
+      },
+      {
+        "gameId": 401867964,
+        "date": "2026-11-06T00:30:00.000Z",
+        "opponent": "Howard",
+        "location": "away",
+        "pointsScored": 35,
+        "pointsAllowed": 28,
+        "won": true,
+        "tied": false,
+        "q1Scored": 3,
+        "q1Allowed": 7,
+        "h1Scored": 21,
+        "h1Allowed": 7
       }
     ]
   },
