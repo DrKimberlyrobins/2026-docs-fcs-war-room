@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-11-08T17:54:46.948420+00:00",
+  "updated": "2026-11-09T22:16:47.565037+00:00",
   "games": [
     {
       "gameId": 401866532,
@@ -4795,6 +4795,13 @@
       "date": "2026-11-07T18:00:00.000Z",
       "homeTeam": "Campbell",
       "awayTeam": "Stony Brook",
+      "stats": []
+    },
+    {
+      "gameId": 401867957,
+      "date": "2026-11-07T18:00:00.000Z",
+      "homeTeam": "Delaware State",
+      "awayTeam": "Morgan State",
       "stats": []
     },
     {
