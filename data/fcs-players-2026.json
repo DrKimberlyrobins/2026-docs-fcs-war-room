@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-11-13T19:36:49.257237+00:00",
+  "updated": "2026-11-14T17:57:34.792210+00:00",
   "games": [
     {
       "gameId": 401866532,
@@ -5033,6 +5033,13 @@
       "date": "2026-11-08T00:00:00.000Z",
       "homeTeam": "SE Louisiana",
       "awayTeam": "Incarnate Word",
+      "stats": []
+    },
+    {
+      "gameId": 401868157,
+      "date": "2026-11-14T03:00:00.000Z",
+      "homeTeam": "Portland State",
+      "awayTeam": "Southern Utah",
       "stats": []
     }
   ]

@@ -21467,28 +21467,28 @@
     "classification": "fcs",
     "conference": "Big Sky",
     "overall": {
-      "games": 10,
+      "games": 11,
       "wins": 2,
-      "losses": 8,
+      "losses": 9,
       "ties": 0,
-      "ppg": 21.2,
-      "allowed": 44.1,
-      "q1Scored": 6.5,
-      "q1Allowed": 9.5,
-      "h1Scored": 12.4,
-      "h1Allowed": 21.9
+      "ppg": 21.18,
+      "allowed": 42.18,
+      "q1Scored": 6.55,
+      "q1Allowed": 9.27,
+      "h1Scored": 11.91,
+      "h1Allowed": 21.09
     },
     "home": {
-      "games": 4,
+      "games": 5,
       "wins": 1,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "ppg": 22.75,
-      "allowed": 32.5,
+      "ppg": 22.4,
+      "allowed": 30.6,
       "q1Scored": 7.0,
       "q1Allowed": 7.0,
-      "h1Scored": 16.5,
-      "h1Allowed": 14.25
+      "h1Scored": 14.6,
+      "h1Allowed": 14.0
     },
     "away": {
       "games": 6,
@@ -21642,6 +21642,20 @@
         "q1Allowed": 15,
         "h1Scored": 10,
         "h1Allowed": 29
+      },
+      {
+        "gameId": 401868157,
+        "date": "2026-11-14T03:00:00.000Z",
+        "opponent": "Southern Utah",
+        "location": "home",
+        "pointsScored": 21,
+        "pointsAllowed": 23,
+        "won": false,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 7,
+        "h1Scored": 7,
+        "h1Allowed": 13
       }
     ]
   },
@@ -25467,16 +25481,16 @@
     "classification": "fcs",
     "conference": "Big Sky",
     "overall": {
-      "games": 10,
-      "wins": 4,
+      "games": 11,
+      "wins": 5,
       "losses": 6,
       "ties": 0,
-      "ppg": 31.2,
-      "allowed": 32.3,
-      "q1Scored": 6.9,
-      "q1Allowed": 5.1,
-      "h1Scored": 15.3,
-      "h1Allowed": 18.7
+      "ppg": 30.45,
+      "allowed": 31.27,
+      "q1Scored": 6.91,
+      "q1Allowed": 5.27,
+      "h1Scored": 15.09,
+      "h1Allowed": 17.64
     },
     "home": {
       "games": 5,
@@ -25491,16 +25505,16 @@
       "h1Allowed": 13.2
     },
     "away": {
-      "games": 5,
-      "wins": 1,
+      "games": 6,
+      "wins": 2,
       "losses": 4,
       "ties": 0,
-      "ppg": 29.0,
-      "allowed": 35.6,
-      "q1Scored": 6.4,
-      "q1Allowed": 8.8,
-      "h1Scored": 16.0,
-      "h1Allowed": 24.2
+      "ppg": 28.0,
+      "allowed": 33.17,
+      "q1Scored": 6.5,
+      "q1Allowed": 8.5,
+      "h1Scored": 15.5,
+      "h1Allowed": 21.33
     },
     "games": [
       {
@@ -25641,6 +25655,20 @@
         "q1Scored": 7,
         "q1Allowed": 0,
         "h1Scored": 24,
+        "h1Allowed": 7
+      },
+      {
+        "gameId": 401868157,
+        "date": "2026-11-14T03:00:00.000Z",
+        "opponent": "Portland State",
+        "location": "away",
+        "pointsScored": 23,
+        "pointsAllowed": 21,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 7,
+        "h1Scored": 13,
         "h1Allowed": 7
       }
     ]
