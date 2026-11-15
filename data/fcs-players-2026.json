@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-11-14T17:57:34.792210+00:00",
+  "updated": "2026-11-15T18:47:21.679383+00:00",
   "games": [
     {
       "gameId": 401866532,
@@ -5040,6 +5040,440 @@
       "date": "2026-11-14T03:00:00.000Z",
       "homeTeam": "Portland State",
       "awayTeam": "Southern Utah",
+      "stats": []
+    },
+    {
+      "gameId": 401868272,
+      "date": "2026-11-14T17:00:00.000Z",
+      "homeTeam": "Morehead State",
+      "awayTeam": "Presbyterian",
+      "stats": []
+    },
+    {
+      "gameId": 401868225,
+      "date": "2026-11-14T17:00:00.000Z",
+      "homeTeam": "Dayton",
+      "awayTeam": "Davidson",
+      "stats": []
+    },
+    {
+      "gameId": 401868217,
+      "date": "2026-11-14T17:00:00.000Z",
+      "homeTeam": "Marist",
+      "awayTeam": "Butler",
+      "stats": []
+    },
+    {
+      "gameId": 401867934,
+      "date": "2026-11-14T17:00:00.000Z",
+      "homeTeam": "Wagner",
+      "awayTeam": "New Haven",
+      "stats": []
+    },
+    {
+      "gameId": 401870842,
+      "date": "2026-11-14T17:00:00.000Z",
+      "homeTeam": "Yale",
+      "awayTeam": "Princeton",
+      "stats": []
+    },
+    {
+      "gameId": 401866689,
+      "date": "2026-11-14T17:00:00.000Z",
+      "homeTeam": "Rhode Island",
+      "awayTeam": "Towson",
+      "stats": []
+    },
+    {
+      "gameId": 401867970,
+      "date": "2026-11-14T17:00:00.000Z",
+      "homeTeam": "Morgan State",
+      "awayTeam": "Norfolk State",
+      "stats": []
+    },
+    {
+      "gameId": 401867811,
+      "date": "2026-11-14T17:00:00.000Z",
+      "homeTeam": "Brown",
+      "awayTeam": "Columbia",
+      "stats": []
+    },
+    {
+      "gameId": 401869155,
+      "date": "2026-11-14T17:00:00.000Z",
+      "homeTeam": "Duquesne",
+      "awayTeam": "Mercyhurst",
+      "stats": []
+    },
+    {
+      "gameId": 401867923,
+      "date": "2026-11-14T17:00:00.000Z",
+      "homeTeam": "Robert Morris",
+      "awayTeam": "Stonehill",
+      "stats": []
+    },
+    {
+      "gameId": 401868014,
+      "date": "2026-11-14T17:00:00.000Z",
+      "homeTeam": "Fordham",
+      "awayTeam": "Georgetown",
+      "stats": []
+    },
+    {
+      "gameId": 401868027,
+      "date": "2026-11-14T17:00:00.000Z",
+      "homeTeam": "Holy Cross",
+      "awayTeam": "Villanova",
+      "stats": []
+    },
+    {
+      "gameId": 401866687,
+      "date": "2026-11-14T17:00:00.000Z",
+      "homeTeam": "UAlbany",
+      "awayTeam": "Maine",
+      "stats": []
+    },
+    {
+      "gameId": 401866688,
+      "date": "2026-11-14T17:00:00.000Z",
+      "homeTeam": "Sacred Heart",
+      "awayTeam": "Bryant",
+      "stats": []
+    },
+    {
+      "gameId": 401866693,
+      "date": "2026-11-14T17:00:00.000Z",
+      "homeTeam": "Monmouth",
+      "awayTeam": "Merrimack",
+      "stats": []
+    },
+    {
+      "gameId": 401867905,
+      "date": "2026-11-14T17:00:00.000Z",
+      "homeTeam": "Long Island University",
+      "awayTeam": "Central Connecticut",
+      "stats": []
+    },
+    {
+      "gameId": 401868395,
+      "date": "2026-11-14T17:30:00.000Z",
+      "homeTeam": "VMI",
+      "awayTeam": "The Citadel",
+      "stats": []
+    },
+    {
+      "gameId": 401867997,
+      "date": "2026-11-14T18:00:00.000Z",
+      "homeTeam": "William & Mary",
+      "awayTeam": "Bucknell",
+      "stats": []
+    },
+    {
+      "gameId": 401866691,
+      "date": "2026-11-14T18:00:00.000Z",
+      "homeTeam": "New Hampshire",
+      "awayTeam": "Stony Brook",
+      "stats": []
+    },
+    {
+      "gameId": 401867843,
+      "date": "2026-11-14T18:00:00.000Z",
+      "homeTeam": "Pennsylvania",
+      "awayTeam": "Harvard",
+      "stats": []
+    },
+    {
+      "gameId": 401915931,
+      "date": "2026-11-14T18:00:00.000Z",
+      "homeTeam": "Chicago State",
+      "awayTeam": "Virginia Lynchburg",
+      "stats": []
+    },
+    {
+      "gameId": 401868946,
+      "date": "2026-11-14T18:00:00.000Z",
+      "homeTeam": "Bethune-Cookman",
+      "awayTeam": "Grambling",
+      "stats": []
+    },
+    {
+      "gameId": 401867833,
+      "date": "2026-11-14T18:00:00.000Z",
+      "homeTeam": "Cornell",
+      "awayTeam": "Dartmouth",
+      "stats": []
+    },
+    {
+      "gameId": 401867958,
+      "date": "2026-11-14T18:00:00.000Z",
+      "homeTeam": "Howard",
+      "awayTeam": "Delaware State",
+      "stats": []
+    },
+    {
+      "gameId": 401866690,
+      "date": "2026-11-14T18:00:00.000Z",
+      "homeTeam": "Hampton",
+      "awayTeam": "North Carolina A&T",
+      "stats": []
+    },
+    {
+      "gameId": 401867863,
+      "date": "2026-11-14T18:00:00.000Z",
+      "homeTeam": "Indiana State",
+      "awayTeam": "Murray State",
+      "stats": []
+    },
+    {
+      "gameId": 401868344,
+      "date": "2026-11-14T18:00:00.000Z",
+      "homeTeam": "Furman",
+      "awayTeam": "Chattanooga",
+      "stats": []
+    },
+    {
+      "gameId": 401868006,
+      "date": "2026-11-14T18:00:00.000Z",
+      "homeTeam": "Colgate",
+      "awayTeam": "Lafayette",
+      "stats": []
+    },
+    {
+      "gameId": 401867981,
+      "date": "2026-11-14T18:30:00.000Z",
+      "homeTeam": "South Carolina State",
+      "awayTeam": "North Carolina Central",
+      "stats": []
+    },
+    {
+      "gameId": 401868351,
+      "date": "2026-11-14T18:30:00.000Z",
+      "homeTeam": "Wofford",
+      "awayTeam": "East Tennessee State",
+      "stats": []
+    },
+    {
+      "gameId": 401869135,
+      "date": "2026-11-14T19:00:00.000Z",
+      "homeTeam": "Northwestern State",
+      "awayTeam": "Houston Christian",
+      "stats": []
+    },
+    {
+      "gameId": 401868233,
+      "date": "2026-11-14T19:00:00.000Z",
+      "homeTeam": "West Georgia",
+      "awayTeam": "North Alabama",
+      "stats": []
+    },
+    {
+      "gameId": 401868192,
+      "date": "2026-11-14T19:00:00.000Z",
+      "homeTeam": "Western Illinois",
+      "awayTeam": "Gardner-Webb",
+      "stats": []
+    },
+    {
+      "gameId": 401868058,
+      "date": "2026-11-14T19:00:00.000Z",
+      "homeTeam": "Austin Peay",
+      "awayTeam": "Abilene Christian",
+      "stats": []
+    },
+    {
+      "gameId": 401867888,
+      "date": "2026-11-14T19:00:00.000Z",
+      "homeTeam": "South Dakota",
+      "awayTeam": "Northern Iowa",
+      "stats": []
+    },
+    {
+      "gameId": 401868036,
+      "date": "2026-11-14T19:00:00.000Z",
+      "homeTeam": "Richmond",
+      "awayTeam": "Lehigh",
+      "stats": []
+    },
+    {
+      "gameId": 401866692,
+      "date": "2026-11-14T19:00:00.000Z",
+      "homeTeam": "Elon",
+      "awayTeam": "Campbell",
+      "stats": []
+    },
+    {
+      "gameId": 401868260,
+      "date": "2026-11-14T19:00:00.000Z",
+      "homeTeam": "St. Thomas (MN)",
+      "awayTeam": "Drake",
+      "stats": []
+    },
+    {
+      "gameId": 401868138,
+      "date": "2026-11-14T19:00:00.000Z",
+      "homeTeam": "Eastern Kentucky",
+      "awayTeam": "Central Arkansas",
+      "stats": []
+    },
+    {
+      "gameId": 401867893,
+      "date": "2026-11-14T19:00:00.000Z",
+      "homeTeam": "Southern Illinois",
+      "awayTeam": "South Dakota State",
+      "stats": []
+    },
+    {
+      "gameId": 401868177,
+      "date": "2026-11-14T19:00:00.000Z",
+      "homeTeam": "Charleston Southern",
+      "awayTeam": "Southeast Missouri State",
+      "stats": []
+    },
+    {
+      "gameId": 401868385,
+      "date": "2026-11-14T19:30:00.000Z",
+      "homeTeam": "Tennessee Tech",
+      "awayTeam": "Mercer",
+      "stats": []
+    },
+    {
+      "gameId": 401868364,
+      "date": "2026-11-14T20:00:00.000Z",
+      "homeTeam": "Southern",
+      "awayTeam": "Alcorn State",
+      "stats": []
+    },
+    {
+      "gameId": 401868951,
+      "date": "2026-11-14T20:00:00.000Z",
+      "homeTeam": "Florida A&M",
+      "awayTeam": "Mississippi Valley State",
+      "stats": []
+    },
+    {
+      "gameId": 401869148,
+      "date": "2026-11-14T20:00:00.000Z",
+      "homeTeam": "Incarnate Word",
+      "awayTeam": "Nicholls",
+      "stats": []
+    },
+    {
+      "gameId": 401868239,
+      "date": "2026-11-14T20:00:00.000Z",
+      "homeTeam": "West Florida",
+      "awayTeam": "Tarleton State",
+      "stats": []
+    },
+    {
+      "gameId": 401868332,
+      "date": "2026-11-14T20:00:00.000Z",
+      "homeTeam": "Alabama State",
+      "awayTeam": "Jackson State",
+      "stats": []
+    },
+    {
+      "gameId": 401868303,
+      "date": "2026-11-14T20:00:00.000Z",
+      "homeTeam": "Alabama A&M",
+      "awayTeam": "Texas Southern",
+      "stats": []
+    },
+    {
+      "gameId": 401868202,
+      "date": "2026-11-14T20:00:00.000Z",
+      "homeTeam": "UT Martin",
+      "awayTeam": "Lindenwood",
+      "stats": []
+    },
+    {
+      "gameId": 401868940,
+      "date": "2026-11-14T20:00:00.000Z",
+      "homeTeam": "Arkansas-Pine Bluff",
+      "awayTeam": "Prairie View A&M",
+      "stats": []
+    },
+    {
+      "gameId": 401868389,
+      "date": "2026-11-14T20:30:00.000Z",
+      "homeTeam": "Samford",
+      "awayTeam": "Western Carolina",
+      "stats": []
+    },
+    {
+      "gameId": 401868185,
+      "date": "2026-11-14T20:30:00.000Z",
+      "homeTeam": "Tennessee State",
+      "awayTeam": "Eastern Illinois",
+      "stats": []
+    },
+    {
+      "gameId": 401868286,
+      "date": "2026-11-14T20:30:00.000Z",
+      "homeTeam": "Stetson",
+      "awayTeam": "Valparaiso",
+      "stats": []
+    },
+    {
+      "gameId": 401869146,
+      "date": "2026-11-14T21:00:00.000Z",
+      "homeTeam": "Lamar",
+      "awayTeam": "East Texas A&M",
+      "stats": []
+    },
+    {
+      "gameId": 401867853,
+      "date": "2026-11-14T21:30:00.000Z",
+      "homeTeam": "Youngstown State",
+      "awayTeam": "Illinois State",
+      "stats": []
+    },
+    {
+      "gameId": 401868293,
+      "date": "2026-11-14T23:00:00.000Z",
+      "homeTeam": "UT Rio Grande Valley",
+      "awayTeam": "Stephen F. Austin",
+      "stats": []
+    },
+    {
+      "gameId": 401868127,
+      "date": "2026-11-14T23:00:00.000Z",
+      "homeTeam": "Northern Arizona",
+      "awayTeam": "Weber State",
+      "stats": []
+    },
+    {
+      "gameId": 401868322,
+      "date": "2026-11-15T00:00:00.000Z",
+      "homeTeam": "SE Louisiana",
+      "awayTeam": "McNeese",
+      "stats": []
+    },
+    {
+      "gameId": 401868122,
+      "date": "2026-11-15T00:05:00.000Z",
+      "homeTeam": "Northern Colorado",
+      "awayTeam": "Montana State",
+      "stats": []
+    },
+    {
+      "gameId": 401868099,
+      "date": "2026-11-15T01:00:00.000Z",
+      "homeTeam": "Idaho",
+      "awayTeam": "UC Davis",
+      "stats": []
+    },
+    {
+      "gameId": 401868091,
+      "date": "2026-11-15T02:00:00.000Z",
+      "homeTeam": "Utah Tech",
+      "awayTeam": "Eastern Washington",
+      "stats": []
+    },
+    {
+      "gameId": 401868109,
+      "date": "2026-11-15T03:30:00.000Z",
+      "homeTeam": "Montana",
+      "awayTeam": "Idaho State",
       "stats": []
     }
   ]
