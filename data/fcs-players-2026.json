@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-11-19T20:29:31.570591+00:00",
+  "updated": "2026-11-20T20:06:20.561935+00:00",
   "games": [
     {
       "gameId": 401866532,
@@ -5474,6 +5474,20 @@
       "date": "2026-11-15T03:30:00.000Z",
       "homeTeam": "Montana",
       "awayTeam": "Idaho State",
+      "stats": []
+    },
+    {
+      "gameId": 401868314,
+      "date": "2026-11-20T00:00:00.000Z",
+      "homeTeam": "Stephen F. Austin",
+      "awayTeam": "Northwestern State",
+      "stats": []
+    },
+    {
+      "gameId": 401868323,
+      "date": "2026-11-20T00:00:00.000Z",
+      "homeTeam": "Nicholls",
+      "awayTeam": "SE Louisiana",
       "stats": []
     }
   ]
