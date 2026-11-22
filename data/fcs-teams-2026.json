@@ -5,28 +5,28 @@
     "classification": "fcs",
     "conference": "UAC",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 6,
-      "losses": 5,
+      "losses": 6,
       "ties": 0,
-      "ppg": 26.82,
-      "allowed": 24.82,
-      "q1Scored": 7.82,
-      "q1Allowed": 7.64,
-      "h1Scored": 14.64,
-      "h1Allowed": 13.45
+      "ppg": 26.67,
+      "allowed": 26.42,
+      "q1Scored": 7.42,
+      "q1Allowed": 8.17,
+      "h1Scored": 14.25,
+      "h1Allowed": 14.83
     },
     "home": {
-      "games": 5,
+      "games": 6,
       "wins": 3,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "ppg": 27.6,
-      "allowed": 16.2,
-      "q1Scored": 10.4,
-      "q1Allowed": 1.4,
-      "h1Scored": 19.4,
-      "h1Allowed": 7.4
+      "ppg": 27.17,
+      "allowed": 20.83,
+      "q1Scored": 9.17,
+      "q1Allowed": 3.5,
+      "h1Scored": 17.83,
+      "h1Allowed": 11.17
     },
     "away": {
       "games": 6,
@@ -194,6 +194,20 @@
         "q1Allowed": 14,
         "h1Scored": 10,
         "h1Allowed": 21
+      },
+      {
+        "gameId": 401868059,
+        "date": "2026-11-21T19:00:00.000Z",
+        "opponent": "Eastern Kentucky",
+        "location": "home",
+        "pointsScored": 25,
+        "pointsAllowed": 44,
+        "won": false,
+        "tied": false,
+        "q1Scored": 3,
+        "q1Allowed": 14,
+        "h1Scored": 10,
+        "h1Allowed": 30
       }
     ]
   },
@@ -319,28 +333,28 @@
     "classification": "fbs",
     "conference": "SEC",
     "overall": {
-      "games": 0,
-      "wins": 0,
+      "games": 1,
+      "wins": 1,
       "losses": 0,
       "ties": 0,
-      "ppg": null,
-      "allowed": null,
-      "q1Scored": null,
-      "q1Allowed": null,
-      "h1Scored": null,
-      "h1Allowed": null
+      "ppg": 47.0,
+      "allowed": 0.0,
+      "q1Scored": 9.0,
+      "q1Allowed": 0.0,
+      "h1Scored": 33.0,
+      "h1Allowed": 0.0
     },
     "home": {
-      "games": 0,
-      "wins": 0,
+      "games": 1,
+      "wins": 1,
       "losses": 0,
       "ties": 0,
-      "ppg": null,
-      "allowed": null,
-      "q1Scored": null,
-      "q1Allowed": null,
-      "h1Scored": null,
-      "h1Allowed": null
+      "ppg": 47.0,
+      "allowed": 0.0,
+      "q1Scored": 9.0,
+      "q1Allowed": 0.0,
+      "h1Scored": 33.0,
+      "h1Allowed": 0.0
     },
     "away": {
       "games": 0,
@@ -354,7 +368,22 @@
       "h1Scored": null,
       "h1Allowed": null
     },
-    "games": []
+    "games": [
+      {
+        "gameId": 401856746,
+        "date": "2026-11-21T19:00:00.000Z",
+        "opponent": "Chattanooga",
+        "location": "home",
+        "pointsScored": 47,
+        "pointsAllowed": 0,
+        "won": true,
+        "tied": false,
+        "q1Scored": 9,
+        "q1Allowed": 0,
+        "h1Scored": 33,
+        "h1Allowed": 0
+      }
+    ]
   },
   {
     "name": "Alabama A&M",
@@ -362,16 +391,16 @@
     "classification": "fcs",
     "conference": "SWAC",
     "overall": {
-      "games": 11,
-      "wins": 8,
+      "games": 12,
+      "wins": 9,
       "losses": 3,
       "ties": 0,
-      "ppg": 36.09,
-      "allowed": 20.45,
-      "q1Scored": 9.09,
-      "q1Allowed": 4.36,
-      "h1Scored": 18.82,
-      "h1Allowed": 9.45
+      "ppg": 37.33,
+      "allowed": 20.33,
+      "q1Scored": 8.92,
+      "q1Allowed": 4.58,
+      "h1Scored": 19.17,
+      "h1Allowed": 9.75
     },
     "home": {
       "games": 7,
@@ -386,16 +415,16 @@
       "h1Allowed": 6.71
     },
     "away": {
-      "games": 4,
-      "wins": 1,
+      "games": 5,
+      "wins": 2,
       "losses": 3,
       "ties": 0,
-      "ppg": 25.5,
-      "allowed": 28.5,
-      "q1Scored": 6.0,
-      "q1Allowed": 7.75,
-      "h1Scored": 13.5,
-      "h1Allowed": 14.25
+      "ppg": 30.6,
+      "allowed": 26.6,
+      "q1Scored": 6.2,
+      "q1Allowed": 7.6,
+      "h1Scored": 15.4,
+      "h1Allowed": 14.0
     },
     "games": [
       {
@@ -551,6 +580,20 @@
         "q1Allowed": 0,
         "h1Scored": 28,
         "h1Allowed": 0
+      },
+      {
+        "gameId": 401868304,
+        "date": "2026-11-21T18:00:00.000Z",
+        "opponent": "Mississippi Valley State",
+        "location": "away",
+        "pointsScored": 51,
+        "pointsAllowed": 19,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 7,
+        "h1Scored": 23,
+        "h1Allowed": 13
       }
     ]
   },
@@ -560,28 +603,28 @@
     "classification": "fcs",
     "conference": "SWAC",
     "overall": {
-      "games": 10,
+      "games": 11,
       "wins": 6,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "ppg": 26.2,
-      "allowed": 20.0,
-      "q1Scored": 6.2,
-      "q1Allowed": 5.4,
-      "h1Scored": 11.5,
-      "h1Allowed": 12.4
+      "ppg": 24.73,
+      "allowed": 22.27,
+      "q1Scored": 6.27,
+      "q1Allowed": 5.55,
+      "h1Scored": 11.36,
+      "h1Allowed": 13.18
     },
     "home": {
-      "games": 5,
+      "games": 6,
       "wins": 4,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "ppg": 30.4,
-      "allowed": 14.6,
-      "q1Scored": 9.6,
-      "q1Allowed": 2.8,
-      "h1Scored": 15.4,
-      "h1Allowed": 9.4
+      "ppg": 27.0,
+      "allowed": 19.67,
+      "q1Scored": 9.17,
+      "q1Allowed": 3.5,
+      "h1Scored": 14.5,
+      "h1Allowed": 11.33
     },
     "away": {
       "games": 5,
@@ -735,6 +778,20 @@
         "q1Allowed": 0,
         "h1Scored": 14,
         "h1Allowed": 10
+      },
+      {
+        "gameId": 401868353,
+        "date": "2026-11-21T20:00:00.000Z",
+        "opponent": "Prairie View A&M",
+        "location": "home",
+        "pointsScored": 10,
+        "pointsAllowed": 45,
+        "won": false,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 7,
+        "h1Scored": 10,
+        "h1Allowed": 21
       }
     ]
   },
@@ -802,28 +859,28 @@
     "classification": "fcs",
     "conference": "SWAC",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 6,
-      "losses": 5,
+      "losses": 6,
       "ties": 0,
-      "ppg": 41.18,
-      "allowed": 34.0,
-      "q1Scored": 8.27,
-      "q1Allowed": 9.64,
-      "h1Scored": 22.18,
-      "h1Allowed": 17.73
+      "ppg": 41.08,
+      "allowed": 35.67,
+      "q1Scored": 7.58,
+      "q1Allowed": 10.58,
+      "h1Scored": 20.92,
+      "h1Allowed": 18.83
     },
     "home": {
-      "games": 5,
+      "games": 6,
       "wins": 5,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "ppg": 50.6,
-      "allowed": 25.0,
-      "q1Scored": 10.6,
-      "q1Allowed": 5.4,
-      "h1Scored": 24.4,
-      "h1Allowed": 11.4
+      "ppg": 48.83,
+      "allowed": 29.83,
+      "q1Scored": 8.83,
+      "q1Allowed": 8.0,
+      "h1Scored": 21.5,
+      "h1Allowed": 14.67
     },
     "away": {
       "games": 6,
@@ -991,6 +1048,20 @@
         "q1Allowed": 13,
         "h1Scored": 21,
         "h1Allowed": 27
+      },
+      {
+        "gameId": 401868365,
+        "date": "2026-11-21T20:00:00.000Z",
+        "opponent": "Jackson State",
+        "location": "home",
+        "pointsScored": 40,
+        "pointsAllowed": 54,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 21,
+        "h1Scored": 7,
+        "h1Allowed": 31
       }
     ]
   },
@@ -1478,16 +1549,16 @@
     "classification": "fcs",
     "conference": "SWAC",
     "overall": {
-      "games": 10,
-      "wins": 6,
+      "games": 11,
+      "wins": 7,
       "losses": 4,
       "ties": 0,
-      "ppg": 33.6,
-      "allowed": 28.2,
-      "q1Scored": 7.5,
-      "q1Allowed": 4.2,
-      "h1Scored": 17.8,
-      "h1Allowed": 14.3
+      "ppg": 34.36,
+      "allowed": 27.18,
+      "q1Scored": 8.73,
+      "q1Allowed": 3.82,
+      "h1Scored": 18.73,
+      "h1Allowed": 13.27
     },
     "home": {
       "games": 5,
@@ -1502,16 +1573,16 @@
       "h1Allowed": 8.6
     },
     "away": {
-      "games": 5,
-      "wins": 3,
+      "games": 6,
+      "wins": 4,
       "losses": 2,
       "ties": 0,
-      "ppg": 34.4,
-      "allowed": 35.4,
-      "q1Scored": 4.8,
-      "q1Allowed": 8.4,
-      "h1Scored": 13.8,
-      "h1Allowed": 20.0
+      "ppg": 35.67,
+      "allowed": 32.33,
+      "q1Scored": 7.5,
+      "q1Allowed": 7.0,
+      "h1Scored": 16.17,
+      "h1Allowed": 17.17
     },
     "games": [
       {
@@ -1653,6 +1724,20 @@
         "q1Allowed": 0,
         "h1Scored": 7,
         "h1Allowed": 7
+      },
+      {
+        "gameId": 401868941,
+        "date": "2026-11-21T20:00:00.000Z",
+        "opponent": "Texas Southern",
+        "location": "away",
+        "pointsScored": 42,
+        "pointsAllowed": 17,
+        "won": true,
+        "tied": false,
+        "q1Scored": 21,
+        "q1Allowed": 0,
+        "h1Scored": 28,
+        "h1Allowed": 3
       }
     ]
   },
@@ -1720,28 +1805,28 @@
     "classification": "fbs",
     "conference": "SEC",
     "overall": {
-      "games": 0,
-      "wins": 0,
+      "games": 1,
+      "wins": 1,
       "losses": 0,
       "ties": 0,
-      "ppg": null,
-      "allowed": null,
-      "q1Scored": null,
-      "q1Allowed": null,
-      "h1Scored": null,
-      "h1Allowed": null
+      "ppg": 59.0,
+      "allowed": 17.0,
+      "q1Scored": 14.0,
+      "q1Allowed": 3.0,
+      "h1Scored": 52.0,
+      "h1Allowed": 3.0
     },
     "home": {
-      "games": 0,
-      "wins": 0,
+      "games": 1,
+      "wins": 1,
       "losses": 0,
       "ties": 0,
-      "ppg": null,
-      "allowed": null,
-      "q1Scored": null,
-      "q1Allowed": null,
-      "h1Scored": null,
-      "h1Allowed": null
+      "ppg": 59.0,
+      "allowed": 17.0,
+      "q1Scored": 14.0,
+      "q1Allowed": 3.0,
+      "h1Scored": 52.0,
+      "h1Allowed": 3.0
     },
     "away": {
       "games": 0,
@@ -1755,7 +1840,22 @@
       "h1Scored": null,
       "h1Allowed": null
     },
-    "games": []
+    "games": [
+      {
+        "gameId": 401856747,
+        "date": "2026-11-21T20:30:00.000Z",
+        "opponent": "Samford",
+        "location": "home",
+        "pointsScored": 59,
+        "pointsAllowed": 17,
+        "won": true,
+        "tied": false,
+        "q1Scored": 14,
+        "q1Allowed": 3,
+        "h1Scored": 52,
+        "h1Allowed": 3
+      }
+    ]
   },
   {
     "name": "Austin Peay",
@@ -1763,16 +1863,16 @@
     "classification": "fcs",
     "conference": "UAC",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 8,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "ppg": 35.55,
-      "allowed": 21.18,
-      "q1Scored": 9.36,
-      "q1Allowed": 5.82,
-      "h1Scored": 20.73,
-      "h1Allowed": 11.91
+      "ppg": 34.0,
+      "allowed": 21.42,
+      "q1Scored": 9.17,
+      "q1Allowed": 5.92,
+      "h1Scored": 20.17,
+      "h1Allowed": 12.0
     },
     "home": {
       "games": 7,
@@ -1787,16 +1887,16 @@
       "h1Allowed": 12.71
     },
     "away": {
-      "games": 4,
+      "games": 5,
       "wins": 3,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "ppg": 24.5,
-      "allowed": 18.75,
-      "q1Scored": 6.75,
-      "q1Allowed": 3.75,
-      "h1Scored": 12.75,
-      "h1Allowed": 10.5
+      "ppg": 23.0,
+      "allowed": 19.8,
+      "q1Scored": 6.8,
+      "q1Allowed": 4.4,
+      "h1Scored": 13.0,
+      "h1Allowed": 11.0
     },
     "games": [
       {
@@ -1952,6 +2052,20 @@
         "q1Allowed": 10,
         "h1Scored": 21,
         "h1Allowed": 10
+      },
+      {
+        "gameId": 401868069,
+        "date": "2026-11-21T22:00:00.000Z",
+        "opponent": "Central Arkansas",
+        "location": "away",
+        "pointsScored": 17,
+        "pointsAllowed": 24,
+        "won": false,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 7,
+        "h1Scored": 14,
+        "h1Allowed": 13
       }
     ]
   },
@@ -2135,28 +2249,28 @@
     "classification": "fcs",
     "conference": "SWAC",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 5,
-      "losses": 6,
+      "losses": 7,
       "ties": 0,
-      "ppg": 25.64,
-      "allowed": 33.18,
-      "q1Scored": 4.64,
-      "q1Allowed": 8.73,
-      "h1Scored": 9.64,
-      "h1Allowed": 18.09
+      "ppg": 24.67,
+      "allowed": 32.67,
+      "q1Scored": 4.25,
+      "q1Allowed": 8.83,
+      "h1Scored": 8.83,
+      "h1Allowed": 17.67
     },
     "home": {
-      "games": 6,
+      "games": 7,
       "wins": 4,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "ppg": 31.17,
-      "allowed": 19.17,
-      "q1Scored": 8.0,
-      "q1Allowed": 3.83,
-      "h1Scored": 13.17,
-      "h1Allowed": 9.5
+      "ppg": 28.71,
+      "allowed": 20.29,
+      "q1Scored": 6.86,
+      "q1Allowed": 4.71,
+      "h1Scored": 11.29,
+      "h1Allowed": 10.0
     },
     "away": {
       "games": 5,
@@ -2324,6 +2438,20 @@
         "q1Allowed": 3,
         "h1Scored": 0,
         "h1Allowed": 10
+      },
+      {
+        "gameId": 401868947,
+        "date": "2026-11-21T20:30:00.000Z",
+        "opponent": "Florida A&M",
+        "location": "home",
+        "pointsScored": 14,
+        "pointsAllowed": 27,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 10,
+        "h1Scored": 0,
+        "h1Allowed": 13
       }
     ]
   },
@@ -2579,16 +2707,16 @@
     "classification": "fcs",
     "conference": "Ivy",
     "overall": {
-      "games": 9,
+      "games": 10,
       "wins": 6,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "ppg": 22.33,
-      "allowed": 17.11,
-      "q1Scored": 4.22,
-      "q1Allowed": 3.44,
-      "h1Scored": 11.44,
-      "h1Allowed": 9.78
+      "ppg": 20.8,
+      "allowed": 17.1,
+      "q1Scored": 3.8,
+      "q1Allowed": 3.8,
+      "h1Scored": 11.0,
+      "h1Allowed": 10.2
     },
     "home": {
       "games": 5,
@@ -2603,16 +2731,16 @@
       "h1Allowed": 11.0
     },
     "away": {
-      "games": 4,
+      "games": 5,
       "wins": 2,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "ppg": 15.25,
-      "allowed": 14.75,
-      "q1Scored": 3.5,
-      "q1Allowed": 4.25,
-      "h1Scored": 8.5,
-      "h1Allowed": 8.25
+      "ppg": 13.6,
+      "allowed": 15.2,
+      "q1Scored": 2.8,
+      "q1Allowed": 4.8,
+      "h1Scored": 8.2,
+      "h1Allowed": 9.4
     },
     "games": [
       {
@@ -2740,6 +2868,20 @@
         "q1Allowed": 7,
         "h1Scored": 21,
         "h1Allowed": 10
+      },
+      {
+        "gameId": 401867812,
+        "date": "2026-11-21T18:00:00.000Z",
+        "opponent": "Dartmouth",
+        "location": "away",
+        "pointsScored": 7,
+        "pointsAllowed": 17,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 7,
+        "h1Scored": 7,
+        "h1Allowed": 14
       }
     ]
   },
@@ -2749,28 +2891,28 @@
     "classification": "fcs",
     "conference": "Coastal Athletic",
     "overall": {
-      "games": 11,
-      "wins": 7,
+      "games": 12,
+      "wins": 8,
       "losses": 4,
       "ties": 0,
-      "ppg": 21.82,
-      "allowed": 22.27,
-      "q1Scored": 2.82,
-      "q1Allowed": 7.45,
-      "h1Scored": 10.36,
-      "h1Allowed": 12.36
+      "ppg": 22.33,
+      "allowed": 21.0,
+      "q1Scored": 3.17,
+      "q1Allowed": 7.42,
+      "h1Scored": 10.08,
+      "h1Allowed": 11.92
     },
     "home": {
-      "games": 4,
-      "wins": 3,
+      "games": 5,
+      "wins": 4,
       "losses": 1,
       "ties": 0,
-      "ppg": 25.0,
-      "allowed": 19.5,
-      "q1Scored": 1.75,
-      "q1Allowed": 7.75,
-      "h1Scored": 12.25,
-      "h1Allowed": 10.25
+      "ppg": 25.6,
+      "allowed": 17.0,
+      "q1Scored": 2.8,
+      "q1Allowed": 7.6,
+      "h1Scored": 11.2,
+      "h1Allowed": 9.6
     },
     "away": {
       "games": 7,
@@ -2938,6 +3080,20 @@
         "q1Allowed": 7,
         "h1Scored": 10,
         "h1Allowed": 10
+      },
+      {
+        "gameId": 401866696,
+        "date": "2026-11-21T18:20:00.000Z",
+        "opponent": "Rhode Island",
+        "location": "home",
+        "pointsScored": 28,
+        "pointsAllowed": 7,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 7,
+        "h1Scored": 7,
+        "h1Allowed": 7
       }
     ]
   },
@@ -2947,28 +3103,28 @@
     "classification": "fcs",
     "conference": "Patriot",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 1,
-      "losses": 10,
+      "losses": 11,
       "ties": 0,
-      "ppg": 12.91,
-      "allowed": 29.0,
-      "q1Scored": 2.09,
-      "q1Allowed": 9.09,
-      "h1Scored": 4.91,
-      "h1Allowed": 17.0
+      "ppg": 13.5,
+      "allowed": 28.33,
+      "q1Scored": 2.75,
+      "q1Allowed": 8.92,
+      "h1Scored": 6.17,
+      "h1Allowed": 16.17
     },
     "home": {
-      "games": 4,
+      "games": 5,
       "wins": 0,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "ppg": 10.75,
-      "allowed": 23.75,
-      "q1Scored": 0.75,
-      "q1Allowed": 7.75,
-      "h1Scored": 5.0,
-      "h1Allowed": 16.5
+      "ppg": 12.6,
+      "allowed": 23.2,
+      "q1Scored": 2.6,
+      "q1Allowed": 7.6,
+      "h1Scored": 8.0,
+      "h1Allowed": 14.6
     },
     "away": {
       "games": 7,
@@ -3136,6 +3292,20 @@
         "q1Allowed": 14,
         "h1Scored": 3,
         "h1Allowed": 14
+      },
+      {
+        "gameId": 401867998,
+        "date": "2026-11-21T18:00:00.000Z",
+        "opponent": "Colgate",
+        "location": "home",
+        "pointsScored": 20,
+        "pointsAllowed": 21,
+        "won": false,
+        "tied": false,
+        "q1Scored": 10,
+        "q1Allowed": 7,
+        "h1Scored": 20,
+        "h1Allowed": 7
       }
     ]
   },
@@ -3217,28 +3387,28 @@
     "classification": "fcs",
     "conference": "Pioneer",
     "overall": {
-      "games": 11,
-      "wins": 9,
+      "games": 12,
+      "wins": 10,
       "losses": 2,
       "ties": 0,
-      "ppg": 32.91,
-      "allowed": 17.82,
-      "q1Scored": 6.91,
-      "q1Allowed": 5.18,
-      "h1Scored": 15.27,
-      "h1Allowed": 11.45
+      "ppg": 32.17,
+      "allowed": 16.92,
+      "q1Scored": 6.92,
+      "q1Allowed": 4.75,
+      "h1Scored": 14.58,
+      "h1Allowed": 10.5
     },
     "home": {
-      "games": 6,
-      "wins": 5,
+      "games": 7,
+      "wins": 6,
       "losses": 1,
       "ties": 0,
-      "ppg": 36.17,
-      "allowed": 14.33,
-      "q1Scored": 7.67,
-      "q1Allowed": 4.33,
-      "h1Scored": 19.0,
-      "h1Allowed": 9.67
+      "ppg": 34.43,
+      "allowed": 13.29,
+      "q1Scored": 7.57,
+      "q1Allowed": 3.71,
+      "h1Scored": 17.29,
+      "h1Allowed": 8.29
     },
     "away": {
       "games": 5,
@@ -3406,6 +3576,20 @@
         "q1Allowed": 0,
         "h1Scored": 7,
         "h1Allowed": 0
+      },
+      {
+        "gameId": 401868218,
+        "date": "2026-11-21T18:00:00.000Z",
+        "opponent": "Morehead State",
+        "location": "home",
+        "pointsScored": 24,
+        "pointsAllowed": 7,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 0,
+        "h1Scored": 7,
+        "h1Allowed": 0
       }
     ]
   },
@@ -3415,16 +3599,16 @@
     "classification": "fcs",
     "conference": "Big Sky",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 4,
-      "losses": 7,
+      "losses": 8,
       "ties": 0,
-      "ppg": 24.36,
-      "allowed": 34.73,
-      "q1Scored": 4.18,
-      "q1Allowed": 8.0,
-      "h1Scored": 12.09,
-      "h1Allowed": 18.82
+      "ppg": 25.92,
+      "allowed": 35.5,
+      "q1Scored": 5.08,
+      "q1Allowed": 7.92,
+      "h1Scored": 13.5,
+      "h1Allowed": 19.0
     },
     "home": {
       "games": 6,
@@ -3439,16 +3623,16 @@
       "h1Allowed": 17.67
     },
     "away": {
-      "games": 5,
+      "games": 6,
       "wins": 2,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "ppg": 20.2,
-      "allowed": 34.0,
-      "q1Scored": 4.2,
-      "q1Allowed": 7.2,
-      "h1Scored": 9.4,
-      "h1Allowed": 20.2
+      "ppg": 24.0,
+      "allowed": 35.67,
+      "q1Scored": 6.0,
+      "q1Allowed": 7.17,
+      "h1Scored": 12.67,
+      "h1Allowed": 20.33
     },
     "games": [
       {
@@ -3604,6 +3788,20 @@
         "q1Allowed": 7,
         "h1Scored": 7,
         "h1Allowed": 24
+      },
+      {
+        "gameId": 401868083,
+        "date": "2026-11-21T21:00:00.000Z",
+        "opponent": "UC Davis",
+        "location": "away",
+        "pointsScored": 43,
+        "pointsAllowed": 44,
+        "won": false,
+        "tied": false,
+        "q1Scored": 15,
+        "q1Allowed": 7,
+        "h1Scored": 29,
+        "h1Allowed": 21
       }
     ]
   },
@@ -3671,28 +3869,28 @@
     "classification": "fcs",
     "conference": "Coastal Athletic",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 8,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "ppg": 33.64,
-      "allowed": 27.91,
-      "q1Scored": 10.27,
-      "q1Allowed": 6.91,
-      "h1Scored": 19.45,
-      "h1Allowed": 18.0
+      "ppg": 34.92,
+      "allowed": 30.17,
+      "q1Scored": 10.0,
+      "q1Allowed": 6.92,
+      "h1Scored": 20.17,
+      "h1Allowed": 18.83
     },
     "home": {
-      "games": 4,
+      "games": 5,
       "wins": 4,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "ppg": 35.5,
-      "allowed": 22.0,
-      "q1Scored": 11.25,
-      "q1Allowed": 5.25,
-      "h1Scored": 21.75,
-      "h1Allowed": 14.5
+      "ppg": 38.2,
+      "allowed": 28.6,
+      "q1Scored": 10.4,
+      "q1Allowed": 5.6,
+      "h1Scored": 23.0,
+      "h1Allowed": 17.2
     },
     "away": {
       "games": 7,
@@ -3860,6 +4058,20 @@
         "q1Allowed": 0,
         "h1Scored": 17,
         "h1Allowed": 0
+      },
+      {
+        "gameId": 401866697,
+        "date": "2026-11-21T17:00:00.000Z",
+        "opponent": "Monmouth",
+        "location": "home",
+        "pointsScored": 49,
+        "pointsAllowed": 55,
+        "won": false,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 7,
+        "h1Scored": 28,
+        "h1Allowed": 28
       }
     ]
   },
@@ -3869,28 +4081,28 @@
     "classification": "fcs",
     "conference": "UAC",
     "overall": {
-      "games": 11,
-      "wins": 4,
+      "games": 12,
+      "wins": 5,
       "losses": 7,
       "ties": 0,
-      "ppg": 25.73,
-      "allowed": 28.09,
-      "q1Scored": 3.27,
-      "q1Allowed": 7.18,
-      "h1Scored": 11.45,
-      "h1Allowed": 18.27
+      "ppg": 25.58,
+      "allowed": 27.17,
+      "q1Scored": 3.58,
+      "q1Allowed": 7.17,
+      "h1Scored": 11.58,
+      "h1Allowed": 17.92
     },
     "home": {
-      "games": 5,
-      "wins": 2,
+      "games": 6,
+      "wins": 3,
       "losses": 3,
       "ties": 0,
-      "ppg": 28.8,
-      "allowed": 24.0,
-      "q1Scored": 5.4,
-      "q1Allowed": 5.6,
-      "h1Scored": 13.2,
-      "h1Allowed": 16.0
+      "ppg": 28.0,
+      "allowed": 22.83,
+      "q1Scored": 5.67,
+      "q1Allowed": 5.83,
+      "h1Scored": 13.17,
+      "h1Allowed": 15.67
     },
     "away": {
       "games": 6,
@@ -4058,6 +4270,20 @@
         "q1Allowed": 13,
         "h1Scored": 14,
         "h1Allowed": 28
+      },
+      {
+        "gameId": 401868069,
+        "date": "2026-11-21T22:00:00.000Z",
+        "opponent": "Austin Peay",
+        "location": "home",
+        "pointsScored": 24,
+        "pointsAllowed": 17,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 7,
+        "h1Scored": 13,
+        "h1Allowed": 14
       }
     ]
   },
@@ -4067,28 +4293,28 @@
     "classification": "fcs",
     "conference": "NEC",
     "overall": {
-      "games": 10,
+      "games": 11,
       "wins": 6,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "ppg": 33.5,
-      "allowed": 28.6,
-      "q1Scored": 8.7,
-      "q1Allowed": 6.6,
-      "h1Scored": 18.8,
-      "h1Allowed": 15.0
+      "ppg": 32.0,
+      "allowed": 28.18,
+      "q1Scored": 7.91,
+      "q1Allowed": 6.64,
+      "h1Scored": 17.09,
+      "h1Allowed": 14.55
     },
     "home": {
-      "games": 4,
+      "games": 5,
       "wins": 4,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "ppg": 46.75,
-      "allowed": 15.5,
-      "q1Scored": 15.75,
-      "q1Allowed": 5.0,
-      "h1Scored": 33.25,
-      "h1Allowed": 8.5
+      "ppg": 40.8,
+      "allowed": 17.2,
+      "q1Scored": 12.6,
+      "q1Allowed": 5.4,
+      "h1Scored": 26.6,
+      "h1Allowed": 8.8
     },
     "away": {
       "games": 6,
@@ -4242,6 +4468,20 @@
         "q1Allowed": 0,
         "h1Scored": 7,
         "h1Allowed": 7
+      },
+      {
+        "gameId": 401867906,
+        "date": "2026-11-21T17:00:00.000Z",
+        "opponent": "Duquesne",
+        "location": "home",
+        "pointsScored": 17,
+        "pointsAllowed": 24,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 7,
+        "h1Scored": 0,
+        "h1Allowed": 10
       }
     ]
   },
@@ -4497,16 +4737,16 @@
     "classification": "fcs",
     "conference": "OVC",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 4,
-      "losses": 7,
+      "losses": 8,
       "ties": 0,
-      "ppg": 22.64,
-      "allowed": 24.64,
-      "q1Scored": 5.36,
-      "q1Allowed": 6.82,
-      "h1Scored": 11.82,
-      "h1Allowed": 12.82
+      "ppg": 22.17,
+      "allowed": 24.25,
+      "q1Scored": 5.5,
+      "q1Allowed": 6.25,
+      "h1Scored": 11.67,
+      "h1Allowed": 11.75
     },
     "home": {
       "games": 6,
@@ -4521,16 +4761,16 @@
       "h1Allowed": 11.0
     },
     "away": {
-      "games": 5,
+      "games": 6,
       "wins": 2,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "ppg": 12.6,
-      "allowed": 23.0,
-      "q1Scored": 1.4,
-      "q1Allowed": 7.6,
-      "h1Scored": 6.0,
-      "h1Allowed": 15.0
+      "ppg": 13.33,
+      "allowed": 22.5,
+      "q1Scored": 2.33,
+      "q1Allowed": 6.33,
+      "h1Scored": 6.67,
+      "h1Allowed": 12.5
     },
     "games": [
       {
@@ -4686,6 +4926,20 @@
         "q1Allowed": 10,
         "h1Scored": 10,
         "h1Allowed": 19
+      },
+      {
+        "gameId": 401868178,
+        "date": "2026-11-21T18:00:00.000Z",
+        "opponent": "Eastern Illinois",
+        "location": "away",
+        "pointsScored": 17,
+        "pointsAllowed": 20,
+        "won": false,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 0,
+        "h1Scored": 10,
+        "h1Allowed": 0
       }
     ]
   },
@@ -4753,16 +5007,16 @@
     "classification": "fcs",
     "conference": "Southern",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 7,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "ppg": 20.82,
-      "allowed": 12.73,
-      "q1Scored": 3.27,
-      "q1Allowed": 1.73,
-      "h1Scored": 9.64,
-      "h1Allowed": 6.09
+      "ppg": 19.08,
+      "allowed": 15.58,
+      "q1Scored": 3.0,
+      "q1Allowed": 2.33,
+      "h1Scored": 8.83,
+      "h1Allowed": 8.33
     },
     "home": {
       "games": 5,
@@ -4777,16 +5031,16 @@
       "h1Allowed": 5.4
     },
     "away": {
-      "games": 6,
+      "games": 7,
       "wins": 4,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "ppg": 21.5,
-      "allowed": 13.67,
-      "q1Scored": 3.17,
-      "q1Allowed": 2.67,
-      "h1Scored": 5.83,
-      "h1Allowed": 6.67
+      "ppg": 18.43,
+      "allowed": 18.43,
+      "q1Scored": 2.71,
+      "q1Allowed": 3.57,
+      "h1Scored": 5.0,
+      "h1Allowed": 10.43
     },
     "games": [
       {
@@ -4942,6 +5196,20 @@
         "q1Allowed": 0,
         "h1Scored": 10,
         "h1Allowed": 0
+      },
+      {
+        "gameId": 401856746,
+        "date": "2026-11-21T19:00:00.000Z",
+        "opponent": "Alabama",
+        "location": "away",
+        "pointsScored": 0,
+        "pointsAllowed": 47,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 9,
+        "h1Scored": 0,
+        "h1Allowed": 33
       }
     ]
   },
@@ -4951,16 +5219,16 @@
     "classification": "fcs",
     "conference": "FCS Independents",
     "overall": {
-      "games": 10,
+      "games": 11,
       "wins": 3,
-      "losses": 7,
+      "losses": 8,
       "ties": 0,
-      "ppg": 32.0,
-      "allowed": 32.7,
-      "q1Scored": 7.6,
-      "q1Allowed": 7.2,
-      "h1Scored": 17.0,
-      "h1Allowed": 20.7
+      "ppg": 29.36,
+      "allowed": 35.64,
+      "q1Scored": 6.91,
+      "q1Allowed": 9.09,
+      "h1Scored": 15.45,
+      "h1Allowed": 23.27
     },
     "home": {
       "games": 5,
@@ -4975,16 +5243,16 @@
       "h1Allowed": 16.0
     },
     "away": {
-      "games": 5,
+      "games": 6,
       "wins": 0,
-      "losses": 5,
+      "losses": 6,
       "ties": 0,
-      "ppg": 13.8,
-      "allowed": 43.2,
-      "q1Scored": 4.0,
-      "q1Allowed": 8.0,
-      "h1Scored": 6.2,
-      "h1Allowed": 25.4
+      "ppg": 12.0,
+      "allowed": 46.83,
+      "q1Scored": 3.33,
+      "q1Allowed": 11.33,
+      "h1Scored": 5.17,
+      "h1Allowed": 29.33
     },
     "games": [
       {
@@ -5126,6 +5394,20 @@
         "q1Allowed": 0,
         "h1Scored": 28,
         "h1Allowed": 0
+      },
+      {
+        "gameId": 401891330,
+        "date": "2026-11-21T19:00:00.000Z",
+        "opponent": "Southern Utah",
+        "location": "away",
+        "pointsScored": 3,
+        "pointsAllowed": 65,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 28,
+        "h1Scored": 0,
+        "h1Allowed": 49
       }
     ]
   },
@@ -5367,16 +5649,16 @@
     "classification": "fcs",
     "conference": "Patriot",
     "overall": {
-      "games": 11,
-      "wins": 6,
+      "games": 12,
+      "wins": 7,
       "losses": 5,
       "ties": 0,
-      "ppg": 20.0,
-      "allowed": 15.0,
-      "q1Scored": 5.27,
-      "q1Allowed": 2.73,
-      "h1Scored": 13.55,
-      "h1Allowed": 7.36
+      "ppg": 20.08,
+      "allowed": 15.42,
+      "q1Scored": 5.42,
+      "q1Allowed": 3.33,
+      "h1Scored": 13.0,
+      "h1Allowed": 8.42
     },
     "home": {
       "games": 5,
@@ -5391,16 +5673,16 @@
       "h1Allowed": 4.8
     },
     "away": {
-      "games": 6,
-      "wins": 2,
+      "games": 7,
+      "wins": 3,
       "losses": 4,
       "ties": 0,
-      "ppg": 15.33,
-      "allowed": 19.0,
-      "q1Scored": 2.83,
-      "q1Allowed": 4.5,
-      "h1Scored": 8.5,
-      "h1Allowed": 9.5
+      "ppg": 16.14,
+      "allowed": 19.14,
+      "q1Scored": 3.43,
+      "q1Allowed": 5.29,
+      "h1Scored": 8.29,
+      "h1Allowed": 11.0
     },
     "games": [
       {
@@ -5556,6 +5838,20 @@
         "q1Allowed": 0,
         "h1Scored": 13,
         "h1Allowed": 7
+      },
+      {
+        "gameId": 401867998,
+        "date": "2026-11-21T18:00:00.000Z",
+        "opponent": "Bucknell",
+        "location": "away",
+        "pointsScored": 21,
+        "pointsAllowed": 20,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 10,
+        "h1Scored": 7,
+        "h1Allowed": 20
       }
     ]
   },
@@ -5681,28 +5977,28 @@
     "classification": "fcs",
     "conference": "Ivy",
     "overall": {
-      "games": 9,
-      "wins": 4,
+      "games": 10,
+      "wins": 5,
       "losses": 5,
       "ties": 0,
-      "ppg": 20.22,
-      "allowed": 30.0,
-      "q1Scored": 4.22,
-      "q1Allowed": 5.56,
-      "h1Scored": 10.67,
-      "h1Allowed": 19.0
+      "ppg": 22.8,
+      "allowed": 31.5,
+      "q1Scored": 3.8,
+      "q1Allowed": 6.4,
+      "h1Scored": 11.0,
+      "h1Allowed": 19.2
     },
     "home": {
-      "games": 4,
-      "wins": 1,
+      "games": 5,
+      "wins": 2,
       "losses": 3,
       "ties": 0,
-      "ppg": 18.25,
-      "allowed": 33.25,
-      "q1Scored": 2.5,
-      "q1Allowed": 4.25,
-      "h1Scored": 8.5,
-      "h1Allowed": 17.0
+      "ppg": 23.8,
+      "allowed": 35.6,
+      "q1Scored": 2.0,
+      "q1Allowed": 6.2,
+      "h1Scored": 9.6,
+      "h1Allowed": 17.8
     },
     "away": {
       "games": 5,
@@ -5842,6 +6138,20 @@
         "q1Allowed": 0,
         "h1Scored": 10,
         "h1Allowed": 21
+      },
+      {
+        "gameId": 401867825,
+        "date": "2026-11-21T17:00:00.000Z",
+        "opponent": "Cornell",
+        "location": "home",
+        "pointsScored": 46,
+        "pointsAllowed": 45,
+        "won": true,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 14,
+        "h1Scored": 14,
+        "h1Allowed": 21
       }
     ]
   },
@@ -5909,16 +6219,16 @@
     "classification": "fcs",
     "conference": "Ivy",
     "overall": {
-      "games": 9,
+      "games": 10,
       "wins": 4,
-      "losses": 5,
+      "losses": 6,
       "ties": 0,
-      "ppg": 26.78,
-      "allowed": 25.0,
-      "q1Scored": 6.11,
-      "q1Allowed": 3.89,
-      "h1Scored": 12.89,
-      "h1Allowed": 11.0
+      "ppg": 28.6,
+      "allowed": 27.1,
+      "q1Scored": 6.9,
+      "q1Allowed": 3.5,
+      "h1Scored": 13.7,
+      "h1Allowed": 11.3
     },
     "home": {
       "games": 5,
@@ -5933,16 +6243,16 @@
       "h1Allowed": 11.0
     },
     "away": {
-      "games": 4,
+      "games": 5,
       "wins": 1,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "ppg": 23.25,
-      "allowed": 23.25,
-      "q1Scored": 4.25,
-      "q1Allowed": 5.25,
-      "h1Scored": 12.0,
-      "h1Allowed": 11.0
+      "ppg": 27.6,
+      "allowed": 27.8,
+      "q1Scored": 6.2,
+      "q1Allowed": 4.2,
+      "h1Scored": 13.8,
+      "h1Allowed": 11.6
     },
     "games": [
       {
@@ -6070,6 +6380,20 @@
         "q1Allowed": 7,
         "h1Scored": 3,
         "h1Allowed": 7
+      },
+      {
+        "gameId": 401867825,
+        "date": "2026-11-21T17:00:00.000Z",
+        "opponent": "Columbia",
+        "location": "away",
+        "pointsScored": 45,
+        "pointsAllowed": 46,
+        "won": false,
+        "tied": false,
+        "q1Scored": 14,
+        "q1Allowed": 0,
+        "h1Scored": 21,
+        "h1Allowed": 14
       }
     ]
   },
@@ -6079,28 +6403,28 @@
     "classification": "fcs",
     "conference": "Ivy",
     "overall": {
-      "games": 9,
-      "wins": 4,
+      "games": 10,
+      "wins": 5,
       "losses": 5,
       "ties": 0,
-      "ppg": 20.67,
-      "allowed": 20.78,
-      "q1Scored": 5.78,
-      "q1Allowed": 5.89,
-      "h1Scored": 12.33,
-      "h1Allowed": 12.67
+      "ppg": 20.3,
+      "allowed": 19.4,
+      "q1Scored": 5.9,
+      "q1Allowed": 5.3,
+      "h1Scored": 12.5,
+      "h1Allowed": 12.1
     },
     "home": {
-      "games": 4,
-      "wins": 3,
+      "games": 5,
+      "wins": 4,
       "losses": 1,
       "ties": 0,
-      "ppg": 23.25,
-      "allowed": 19.0,
+      "ppg": 22.0,
+      "allowed": 16.6,
       "q1Scored": 7.0,
-      "q1Allowed": 3.75,
+      "q1Allowed": 3.0,
       "h1Scored": 14.0,
-      "h1Allowed": 13.0
+      "h1Allowed": 11.8
     },
     "away": {
       "games": 5,
@@ -6240,6 +6564,20 @@
         "q1Allowed": 0,
         "h1Scored": 7,
         "h1Allowed": 3
+      },
+      {
+        "gameId": 401867812,
+        "date": "2026-11-21T18:00:00.000Z",
+        "opponent": "Brown",
+        "location": "home",
+        "pointsScored": 17,
+        "pointsAllowed": 7,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 0,
+        "h1Scored": 14,
+        "h1Allowed": 7
       }
     ]
   },
@@ -6249,28 +6587,28 @@
     "classification": "fcs",
     "conference": "Pioneer",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 4,
-      "losses": 7,
+      "losses": 8,
       "ties": 0,
-      "ppg": 21.27,
-      "allowed": 34.82,
-      "q1Scored": 5.64,
-      "q1Allowed": 9.91,
-      "h1Scored": 11.91,
-      "h1Allowed": 22.73
+      "ppg": 20.08,
+      "allowed": 34.83,
+      "q1Scored": 5.17,
+      "q1Allowed": 10.83,
+      "h1Scored": 10.92,
+      "h1Allowed": 23.75
     },
     "home": {
-      "games": 7,
+      "games": 8,
       "wins": 4,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "ppg": 27.0,
-      "allowed": 30.43,
-      "q1Scored": 5.43,
-      "q1Allowed": 8.43,
-      "h1Scored": 14.29,
-      "h1Allowed": 18.71
+      "ppg": 24.5,
+      "allowed": 31.0,
+      "q1Scored": 4.75,
+      "q1Allowed": 10.0,
+      "h1Scored": 12.5,
+      "h1Allowed": 20.75
     },
     "away": {
       "games": 4,
@@ -6438,6 +6776,20 @@
         "q1Allowed": 7,
         "h1Scored": 3,
         "h1Allowed": 17
+      },
+      {
+        "gameId": 401868226,
+        "date": "2026-11-21T18:00:00.000Z",
+        "opponent": "Marist",
+        "location": "home",
+        "pointsScored": 7,
+        "pointsAllowed": 35,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 21,
+        "h1Scored": 0,
+        "h1Allowed": 35
       }
     ]
   },
@@ -6447,16 +6799,16 @@
     "classification": "fcs",
     "conference": "Pioneer",
     "overall": {
-      "games": 10,
-      "wins": 9,
+      "games": 11,
+      "wins": 10,
       "losses": 1,
       "ties": 0,
-      "ppg": 33.3,
-      "allowed": 19.7,
-      "q1Scored": 5.4,
-      "q1Allowed": 4.0,
-      "h1Scored": 16.4,
-      "h1Allowed": 8.6
+      "ppg": 32.73,
+      "allowed": 18.91,
+      "q1Scored": 5.55,
+      "q1Allowed": 3.64,
+      "h1Scored": 17.09,
+      "h1Allowed": 8.55
     },
     "home": {
       "games": 6,
@@ -6471,16 +6823,16 @@
       "h1Allowed": 8.5
     },
     "away": {
-      "games": 4,
-      "wins": 3,
+      "games": 5,
+      "wins": 4,
       "losses": 1,
       "ties": 0,
-      "ppg": 25.5,
-      "allowed": 21.75,
-      "q1Scored": 0.75,
-      "q1Allowed": 3.25,
-      "h1Scored": 9.25,
-      "h1Allowed": 8.75
+      "ppg": 25.8,
+      "allowed": 19.6,
+      "q1Scored": 2.0,
+      "q1Allowed": 2.6,
+      "h1Scored": 12.2,
+      "h1Allowed": 8.6
     },
     "games": [
       {
@@ -6622,6 +6974,20 @@
         "q1Allowed": 3,
         "h1Scored": 17,
         "h1Allowed": 3
+      },
+      {
+        "gameId": 401868253,
+        "date": "2026-11-21T18:00:00.000Z",
+        "opponent": "Presbyterian",
+        "location": "away",
+        "pointsScored": 27,
+        "pointsAllowed": 11,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 0,
+        "h1Scored": 24,
+        "h1Allowed": 8
       }
     ]
   },
@@ -6689,16 +7055,16 @@
     "classification": "fcs",
     "conference": "MEAC",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 6,
-      "losses": 5,
+      "losses": 6,
       "ties": 0,
-      "ppg": 23.64,
-      "allowed": 25.91,
-      "q1Scored": 5.82,
-      "q1Allowed": 6.73,
-      "h1Scored": 12.27,
-      "h1Allowed": 12.09
+      "ppg": 23.0,
+      "allowed": 25.92,
+      "q1Scored": 5.5,
+      "q1Allowed": 6.67,
+      "h1Scored": 12.0,
+      "h1Allowed": 11.83
     },
     "home": {
       "games": 6,
@@ -6713,16 +7079,16 @@
       "h1Allowed": 7.33
     },
     "away": {
-      "games": 5,
+      "games": 6,
       "wins": 1,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "ppg": 19.0,
-      "allowed": 34.4,
-      "q1Scored": 4.8,
-      "q1Allowed": 10.8,
-      "h1Scored": 10.2,
-      "h1Allowed": 17.8
+      "ppg": 18.5,
+      "allowed": 33.0,
+      "q1Scored": 4.33,
+      "q1Allowed": 10.0,
+      "h1Scored": 10.0,
+      "h1Allowed": 16.33
     },
     "games": [
       {
@@ -6878,6 +7244,20 @@
         "q1Allowed": 7,
         "h1Scored": 21,
         "h1Allowed": 14
+      },
+      {
+        "gameId": 401867959,
+        "date": "2026-11-21T18:30:00.000Z",
+        "opponent": "South Carolina State",
+        "location": "away",
+        "pointsScored": 16,
+        "pointsAllowed": 26,
+        "won": false,
+        "tied": false,
+        "q1Scored": 2,
+        "q1Allowed": 6,
+        "h1Scored": 9,
+        "h1Allowed": 9
       }
     ]
   },
@@ -7259,16 +7639,16 @@
     "classification": "fcs",
     "conference": "NEC",
     "overall": {
-      "games": 10,
-      "wins": 5,
+      "games": 11,
+      "wins": 6,
       "losses": 5,
       "ties": 0,
-      "ppg": 22.4,
-      "allowed": 23.4,
-      "q1Scored": 6.5,
-      "q1Allowed": 6.1,
-      "h1Scored": 12.3,
-      "h1Allowed": 14.0
+      "ppg": 22.55,
+      "allowed": 22.82,
+      "q1Scored": 6.55,
+      "q1Allowed": 5.55,
+      "h1Scored": 12.09,
+      "h1Allowed": 12.73
     },
     "home": {
       "games": 5,
@@ -7283,16 +7663,16 @@
       "h1Allowed": 8.8
     },
     "away": {
-      "games": 5,
-      "wins": 2,
+      "games": 6,
+      "wins": 3,
       "losses": 3,
       "ties": 0,
-      "ppg": 15.0,
-      "allowed": 34.6,
-      "q1Scored": 6.2,
-      "q1Allowed": 8.2,
-      "h1Scored": 9.0,
-      "h1Allowed": 19.2
+      "ppg": 16.5,
+      "allowed": 31.67,
+      "q1Scored": 6.33,
+      "q1Allowed": 6.83,
+      "h1Scored": 9.17,
+      "h1Allowed": 16.0
     },
     "games": [
       {
@@ -7434,6 +7814,20 @@
         "q1Allowed": 0,
         "h1Scored": 10,
         "h1Allowed": 0
+      },
+      {
+        "gameId": 401867906,
+        "date": "2026-11-21T17:00:00.000Z",
+        "opponent": "Central Connecticut",
+        "location": "away",
+        "pointsScored": 24,
+        "pointsAllowed": 17,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 0,
+        "h1Scored": 10,
+        "h1Allowed": 0
       }
     ]
   },
@@ -7501,16 +7895,16 @@
     "classification": "fcs",
     "conference": "Southern",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 7,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "ppg": 30.82,
-      "allowed": 23.0,
-      "q1Scored": 6.27,
-      "q1Allowed": 4.64,
-      "h1Scored": 16.18,
-      "h1Allowed": 11.18
+      "ppg": 30.33,
+      "allowed": 23.42,
+      "q1Scored": 6.33,
+      "q1Allowed": 5.0,
+      "h1Scored": 15.42,
+      "h1Allowed": 11.0
     },
     "home": {
       "games": 7,
@@ -7525,16 +7919,16 @@
       "h1Allowed": 11.71
     },
     "away": {
-      "games": 4,
+      "games": 5,
       "wins": 3,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "ppg": 23.75,
-      "allowed": 17.0,
-      "q1Scored": 1.75,
-      "q1Allowed": 4.25,
-      "h1Scored": 8.5,
-      "h1Allowed": 10.25
+      "ppg": 24.0,
+      "allowed": 19.2,
+      "q1Scored": 2.8,
+      "q1Allowed": 5.2,
+      "h1Scored": 8.2,
+      "h1Allowed": 10.0
     },
     "games": [
       {
@@ -7690,6 +8084,20 @@
         "q1Allowed": 0,
         "h1Scored": 7,
         "h1Allowed": 10
+      },
+      {
+        "gameId": 401868352,
+        "date": "2026-11-21T20:00:00.000Z",
+        "opponent": "Mercer",
+        "location": "away",
+        "pointsScored": 25,
+        "pointsAllowed": 28,
+        "won": false,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 9,
+        "h1Scored": 7,
+        "h1Allowed": 9
       }
     ]
   },
@@ -7699,28 +8107,28 @@
     "classification": "fcs",
     "conference": "Southland",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 3,
-      "losses": 8,
+      "losses": 9,
       "ties": 0,
-      "ppg": 19.45,
-      "allowed": 29.45,
-      "q1Scored": 4.0,
-      "q1Allowed": 5.27,
-      "h1Scored": 9.27,
-      "h1Allowed": 14.91
+      "ppg": 18.08,
+      "allowed": 32.5,
+      "q1Scored": 3.67,
+      "q1Allowed": 6.25,
+      "h1Scored": 8.75,
+      "h1Allowed": 16.25
     },
     "home": {
-      "games": 4,
+      "games": 5,
       "wins": 3,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "ppg": 21.75,
-      "allowed": 17.0,
-      "q1Scored": 5.0,
-      "q1Allowed": 3.5,
-      "h1Scored": 12.75,
-      "h1Allowed": 10.5
+      "ppg": 18.0,
+      "allowed": 26.8,
+      "q1Scored": 4.0,
+      "q1Allowed": 6.2,
+      "h1Scored": 10.8,
+      "h1Allowed": 14.6
     },
     "away": {
       "games": 7,
@@ -7888,6 +8296,20 @@
         "q1Allowed": 14,
         "h1Scored": 7,
         "h1Allowed": 31
+      },
+      {
+        "gameId": 401869149,
+        "date": "2026-11-21T21:00:00.000Z",
+        "opponent": "Incarnate Word",
+        "location": "home",
+        "pointsScored": 3,
+        "pointsAllowed": 66,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 17,
+        "h1Scored": 3,
+        "h1Allowed": 31
       }
     ]
   },
@@ -7897,28 +8319,28 @@
     "classification": "fcs",
     "conference": "OVC",
     "overall": {
-      "games": 11,
-      "wins": 3,
+      "games": 12,
+      "wins": 4,
       "losses": 8,
       "ties": 0,
-      "ppg": 19.45,
-      "allowed": 29.64,
-      "q1Scored": 3.09,
-      "q1Allowed": 5.64,
-      "h1Scored": 8.73,
-      "h1Allowed": 16.0
+      "ppg": 19.5,
+      "allowed": 28.58,
+      "q1Scored": 2.83,
+      "q1Allowed": 5.75,
+      "h1Scored": 8.0,
+      "h1Allowed": 15.5
     },
     "home": {
-      "games": 4,
-      "wins": 0,
+      "games": 5,
+      "wins": 1,
       "losses": 4,
       "ties": 0,
-      "ppg": 20.25,
-      "allowed": 31.5,
-      "q1Scored": 4.25,
-      "q1Allowed": 6.75,
-      "h1Scored": 7.75,
-      "h1Allowed": 18.0
+      "ppg": 20.2,
+      "allowed": 28.6,
+      "q1Scored": 3.4,
+      "q1Allowed": 6.8,
+      "h1Scored": 6.2,
+      "h1Allowed": 16.4
     },
     "away": {
       "games": 7,
@@ -8086,6 +8508,20 @@
         "q1Allowed": 0,
         "h1Scored": 7,
         "h1Allowed": 0
+      },
+      {
+        "gameId": 401868178,
+        "date": "2026-11-21T18:00:00.000Z",
+        "opponent": "Charleston Southern",
+        "location": "home",
+        "pointsScored": 20,
+        "pointsAllowed": 17,
+        "won": true,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 7,
+        "h1Scored": 0,
+        "h1Allowed": 10
       }
     ]
   },
@@ -8095,16 +8531,16 @@
     "classification": "fcs",
     "conference": "UAC",
     "overall": {
-      "games": 11,
-      "wins": 3,
+      "games": 12,
+      "wins": 4,
       "losses": 8,
       "ties": 0,
-      "ppg": 21.45,
-      "allowed": 31.91,
-      "q1Scored": 4.27,
-      "q1Allowed": 5.64,
-      "h1Scored": 13.36,
-      "h1Allowed": 15.0
+      "ppg": 23.33,
+      "allowed": 31.33,
+      "q1Scored": 5.08,
+      "q1Allowed": 5.42,
+      "h1Scored": 14.75,
+      "h1Allowed": 14.58
     },
     "home": {
       "games": 6,
@@ -8119,16 +8555,16 @@
       "h1Allowed": 7.33
     },
     "away": {
-      "games": 5,
-      "wins": 0,
+      "games": 6,
+      "wins": 1,
       "losses": 5,
       "ties": 0,
-      "ppg": 20.6,
-      "allowed": 45.2,
-      "q1Scored": 2.8,
-      "q1Allowed": 10.4,
-      "h1Scored": 11.8,
-      "h1Allowed": 24.2
+      "ppg": 24.5,
+      "allowed": 41.83,
+      "q1Scored": 4.67,
+      "q1Allowed": 9.17,
+      "h1Scored": 14.83,
+      "h1Allowed": 21.83
     },
     "games": [
       {
@@ -8284,6 +8720,20 @@
         "q1Allowed": 0,
         "h1Scored": 28,
         "h1Allowed": 14
+      },
+      {
+        "gameId": 401868059,
+        "date": "2026-11-21T19:00:00.000Z",
+        "opponent": "Abilene Christian",
+        "location": "away",
+        "pointsScored": 44,
+        "pointsAllowed": 25,
+        "won": true,
+        "tied": false,
+        "q1Scored": 14,
+        "q1Allowed": 3,
+        "h1Scored": 30,
+        "h1Allowed": 10
       }
     ]
   },
@@ -8351,28 +8801,28 @@
     "classification": "fcs",
     "conference": "Big Sky",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 3,
-      "losses": 8,
+      "losses": 9,
       "ties": 0,
-      "ppg": 28.27,
-      "allowed": 39.73,
-      "q1Scored": 7.09,
-      "q1Allowed": 6.91,
-      "h1Scored": 14.45,
-      "h1Allowed": 20.09
+      "ppg": 29.08,
+      "allowed": 39.75,
+      "q1Scored": 7.67,
+      "q1Allowed": 6.33,
+      "h1Scored": 14.42,
+      "h1Allowed": 19.58
     },
     "home": {
-      "games": 5,
+      "games": 6,
       "wins": 2,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "ppg": 29.0,
-      "allowed": 35.0,
-      "q1Scored": 7.8,
-      "q1Allowed": 4.8,
-      "h1Scored": 16.0,
-      "h1Allowed": 18.6
+      "ppg": 30.5,
+      "allowed": 35.83,
+      "q1Scored": 8.83,
+      "q1Allowed": 4.0,
+      "h1Scored": 15.67,
+      "h1Allowed": 17.83
     },
     "away": {
       "games": 6,
@@ -8540,6 +8990,20 @@
         "q1Allowed": 0,
         "h1Scored": 17,
         "h1Allowed": 7
+      },
+      {
+        "gameId": 401868092,
+        "date": "2026-11-21T21:00:00.000Z",
+        "opponent": "Portland State",
+        "location": "home",
+        "pointsScored": 38,
+        "pointsAllowed": 40,
+        "won": false,
+        "tied": false,
+        "q1Scored": 14,
+        "q1Allowed": 0,
+        "h1Scored": 14,
+        "h1Allowed": 14
       }
     ]
   },
@@ -8665,16 +9129,16 @@
     "classification": "fcs",
     "conference": "Coastal Athletic",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 6,
-      "losses": 5,
+      "losses": 6,
       "ties": 0,
-      "ppg": 22.64,
-      "allowed": 18.09,
-      "q1Scored": 2.27,
-      "q1Allowed": 3.0,
-      "h1Scored": 9.18,
-      "h1Allowed": 7.45
+      "ppg": 22.75,
+      "allowed": 18.92,
+      "q1Scored": 2.67,
+      "q1Allowed": 2.75,
+      "h1Scored": 9.58,
+      "h1Allowed": 7.42
     },
     "home": {
       "games": 6,
@@ -8689,16 +9153,16 @@
       "h1Allowed": 8.17
     },
     "away": {
-      "games": 5,
+      "games": 6,
       "wins": 1,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "ppg": 17.6,
-      "allowed": 21.6,
-      "q1Scored": 1.2,
-      "q1Allowed": 2.6,
-      "h1Scored": 7.4,
-      "h1Allowed": 6.6
+      "ppg": 18.67,
+      "allowed": 22.67,
+      "q1Scored": 2.17,
+      "q1Allowed": 2.17,
+      "h1Scored": 8.5,
+      "h1Allowed": 6.67
     },
     "games": [
       {
@@ -8854,6 +9318,20 @@
         "q1Allowed": 7,
         "h1Scored": 0,
         "h1Allowed": 17
+      },
+      {
+        "gameId": 401866698,
+        "date": "2026-11-21T18:00:00.000Z",
+        "opponent": "Towson",
+        "location": "away",
+        "pointsScored": 24,
+        "pointsAllowed": 28,
+        "won": false,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 0,
+        "h1Scored": 14,
+        "h1Allowed": 7
       }
     ]
   },
@@ -8979,16 +9457,16 @@
     "classification": "fcs",
     "conference": "SWAC",
     "overall": {
-      "games": 11,
-      "wins": 3,
+      "games": 12,
+      "wins": 4,
       "losses": 8,
       "ties": 0,
-      "ppg": 19.09,
-      "allowed": 32.91,
-      "q1Scored": 5.27,
-      "q1Allowed": 9.55,
-      "h1Scored": 10.0,
-      "h1Allowed": 18.0
+      "ppg": 19.75,
+      "allowed": 31.33,
+      "q1Scored": 5.67,
+      "q1Allowed": 8.75,
+      "h1Scored": 10.25,
+      "h1Allowed": 16.5
     },
     "home": {
       "games": 7,
@@ -9003,16 +9481,16 @@
       "h1Allowed": 16.14
     },
     "away": {
-      "games": 4,
-      "wins": 1,
+      "games": 5,
+      "wins": 2,
       "losses": 3,
       "ties": 0,
-      "ppg": 18.0,
-      "allowed": 42.25,
-      "q1Scored": 7.0,
-      "q1Allowed": 10.5,
-      "h1Scored": 9.5,
-      "h1Allowed": 21.25
+      "ppg": 19.8,
+      "allowed": 36.6,
+      "q1Scored": 7.6,
+      "q1Allowed": 8.4,
+      "h1Scored": 10.2,
+      "h1Allowed": 17.0
     },
     "games": [
       {
@@ -9168,6 +9646,20 @@
         "q1Allowed": 7,
         "h1Scored": 6,
         "h1Allowed": 7
+      },
+      {
+        "gameId": 401868947,
+        "date": "2026-11-21T20:30:00.000Z",
+        "opponent": "Bethune-Cookman",
+        "location": "away",
+        "pointsScored": 27,
+        "pointsAllowed": 14,
+        "won": true,
+        "tied": false,
+        "q1Scored": 10,
+        "q1Allowed": 0,
+        "h1Scored": 13,
+        "h1Allowed": 0
       }
     ]
   },
@@ -9351,16 +9843,16 @@
     "classification": "fcs",
     "conference": "Patriot",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 4,
-      "losses": 7,
+      "losses": 8,
       "ties": 0,
-      "ppg": 19.82,
-      "allowed": 28.18,
-      "q1Scored": 5.0,
-      "q1Allowed": 5.0,
-      "h1Scored": 11.18,
-      "h1Allowed": 16.36
+      "ppg": 19.0,
+      "allowed": 27.5,
+      "q1Scored": 4.58,
+      "q1Allowed": 5.17,
+      "h1Scored": 10.5,
+      "h1Allowed": 15.83
     },
     "home": {
       "games": 6,
@@ -9375,16 +9867,16 @@
       "h1Allowed": 15.17
     },
     "away": {
-      "games": 5,
+      "games": 6,
       "wins": 2,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "ppg": 19.4,
-      "allowed": 31.4,
-      "q1Scored": 4.2,
-      "q1Allowed": 2.6,
-      "h1Scored": 12.6,
-      "h1Allowed": 17.8
+      "ppg": 17.83,
+      "allowed": 29.5,
+      "q1Scored": 3.5,
+      "q1Allowed": 3.33,
+      "h1Scored": 11.0,
+      "h1Allowed": 16.5
     },
     "games": [
       {
@@ -9540,6 +10032,20 @@
         "q1Allowed": 7,
         "h1Scored": 13,
         "h1Allowed": 7
+      },
+      {
+        "gameId": 401868015,
+        "date": "2026-11-21T17:00:00.000Z",
+        "opponent": "Holy Cross",
+        "location": "away",
+        "pointsScored": 10,
+        "pointsAllowed": 20,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 7,
+        "h1Scored": 3,
+        "h1Allowed": 10
       }
     ]
   },
@@ -9737,16 +10243,16 @@
     "classification": "fcs",
     "conference": "Southern",
     "overall": {
-      "games": 11,
-      "wins": 3,
+      "games": 12,
+      "wins": 4,
       "losses": 8,
       "ties": 0,
-      "ppg": 16.45,
-      "allowed": 20.73,
-      "q1Scored": 3.45,
-      "q1Allowed": 8.45,
-      "h1Scored": 7.36,
-      "h1Allowed": 13.73
+      "ppg": 18.0,
+      "allowed": 19.25,
+      "q1Scored": 4.33,
+      "q1Allowed": 7.75,
+      "h1Scored": 9.08,
+      "h1Allowed": 12.83
     },
     "home": {
       "games": 6,
@@ -9761,16 +10267,16 @@
       "h1Allowed": 14.83
     },
     "away": {
-      "games": 5,
-      "wins": 2,
+      "games": 6,
+      "wins": 3,
       "losses": 3,
       "ties": 0,
-      "ppg": 15.4,
-      "allowed": 23.2,
-      "q1Scored": 4.0,
-      "q1Allowed": 5.4,
-      "h1Scored": 5.8,
-      "h1Allowed": 12.4
+      "ppg": 18.67,
+      "allowed": 19.83,
+      "q1Scored": 5.67,
+      "q1Allowed": 4.5,
+      "h1Scored": 9.5,
+      "h1Allowed": 10.83
     },
     "games": [
       {
@@ -9926,6 +10432,20 @@
         "q1Allowed": 10,
         "h1Scored": 0,
         "h1Allowed": 10
+      },
+      {
+        "gameId": 401868380,
+        "date": "2026-11-21T17:00:00.000Z",
+        "opponent": "VMI",
+        "location": "away",
+        "pointsScored": 35,
+        "pointsAllowed": 3,
+        "won": true,
+        "tied": false,
+        "q1Scored": 14,
+        "q1Allowed": 0,
+        "h1Scored": 28,
+        "h1Allowed": 3
       }
     ]
   },
@@ -9935,28 +10455,28 @@
     "classification": "fcs",
     "conference": "OVC",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 3,
-      "losses": 8,
+      "losses": 9,
       "ties": 0,
-      "ppg": 19.91,
-      "allowed": 24.45,
-      "q1Scored": 4.73,
-      "q1Allowed": 6.64,
-      "h1Scored": 10.36,
-      "h1Allowed": 14.27
+      "ppg": 19.25,
+      "allowed": 23.75,
+      "q1Scored": 4.83,
+      "q1Allowed": 6.33,
+      "h1Scored": 10.25,
+      "h1Allowed": 13.83
     },
     "home": {
-      "games": 3,
+      "games": 4,
       "wins": 1,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "ppg": 24.0,
-      "allowed": 25.0,
-      "q1Scored": 5.33,
-      "q1Allowed": 2.33,
-      "h1Scored": 11.0,
-      "h1Allowed": 11.33
+      "ppg": 21.0,
+      "allowed": 22.75,
+      "q1Scored": 5.5,
+      "q1Allowed": 2.5,
+      "h1Scored": 10.5,
+      "h1Allowed": 10.75
     },
     "away": {
       "games": 8,
@@ -10124,6 +10644,20 @@
         "q1Allowed": 21,
         "h1Scored": 0,
         "h1Allowed": 24
+      },
+      {
+        "gameId": 401868193,
+        "date": "2026-11-21T18:30:00.000Z",
+        "opponent": "Tennessee State",
+        "location": "home",
+        "pointsScored": 12,
+        "pointsAllowed": 16,
+        "won": false,
+        "tied": false,
+        "q1Scored": 6,
+        "q1Allowed": 3,
+        "h1Scored": 9,
+        "h1Allowed": 9
       }
     ]
   },
@@ -10133,16 +10667,16 @@
     "classification": "fcs",
     "conference": "Patriot",
     "overall": {
-      "games": 9,
+      "games": 10,
       "wins": 3,
-      "losses": 6,
+      "losses": 7,
       "ties": 0,
-      "ppg": 20.11,
-      "allowed": 27.33,
-      "q1Scored": 4.22,
-      "q1Allowed": 7.22,
-      "h1Scored": 10.44,
-      "h1Allowed": 15.67
+      "ppg": 19.4,
+      "allowed": 28.0,
+      "q1Scored": 3.8,
+      "q1Allowed": 7.2,
+      "h1Scored": 10.7,
+      "h1Allowed": 15.8
     },
     "home": {
       "games": 5,
@@ -10157,16 +10691,16 @@
       "h1Allowed": 15.2
     },
     "away": {
-      "games": 4,
+      "games": 5,
       "wins": 2,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "ppg": 22.75,
-      "allowed": 26.25,
-      "q1Scored": 5.25,
-      "q1Allowed": 7.5,
-      "h1Scored": 8.75,
-      "h1Allowed": 16.25
+      "ppg": 20.8,
+      "allowed": 27.8,
+      "q1Scored": 4.2,
+      "q1Allowed": 7.4,
+      "h1Scored": 9.6,
+      "h1Allowed": 16.4
     },
     "games": [
       {
@@ -10294,6 +10828,20 @@
         "q1Allowed": 6,
         "h1Scored": 7,
         "h1Allowed": 13
+      },
+      {
+        "gameId": 401868021,
+        "date": "2026-11-21T18:00:00.000Z",
+        "opponent": "Villanova",
+        "location": "away",
+        "pointsScored": 13,
+        "pointsAllowed": 34,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 7,
+        "h1Scored": 13,
+        "h1Allowed": 17
       }
     ]
   },
@@ -10849,16 +11397,16 @@
     "classification": "fcs",
     "conference": "Coastal Athletic",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 1,
-      "losses": 10,
+      "losses": 11,
       "ties": 0,
-      "ppg": 15.36,
-      "allowed": 36.27,
-      "q1Scored": 3.27,
-      "q1Allowed": 7.73,
-      "h1Scored": 7.55,
-      "h1Allowed": 18.0
+      "ppg": 14.92,
+      "allowed": 34.92,
+      "q1Scored": 3.0,
+      "q1Allowed": 7.67,
+      "h1Scored": 7.17,
+      "h1Allowed": 17.92
     },
     "home": {
       "games": 6,
@@ -10873,16 +11421,16 @@
       "h1Allowed": 14.67
     },
     "away": {
-      "games": 5,
+      "games": 6,
       "wins": 0,
-      "losses": 5,
+      "losses": 6,
       "ties": 0,
-      "ppg": 12.2,
-      "allowed": 41.4,
-      "q1Scored": 4.0,
-      "q1Allowed": 8.8,
-      "h1Scored": 6.6,
-      "h1Allowed": 22.0
+      "ppg": 11.83,
+      "allowed": 37.83,
+      "q1Scored": 3.33,
+      "q1Allowed": 8.5,
+      "h1Scored": 6.0,
+      "h1Allowed": 21.17
     },
     "games": [
       {
@@ -11038,6 +11586,20 @@
         "q1Allowed": 21,
         "h1Scored": 0,
         "h1Allowed": 27
+      },
+      {
+        "gameId": 401866695,
+        "date": "2026-11-21T17:00:00.000Z",
+        "opponent": "Stony Brook",
+        "location": "away",
+        "pointsScored": 10,
+        "pointsAllowed": 20,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 7,
+        "h1Scored": 3,
+        "h1Allowed": 17
       }
     ]
   },
@@ -11047,28 +11609,28 @@
     "classification": "fcs",
     "conference": "Ivy",
     "overall": {
-      "games": 9,
+      "games": 10,
       "wins": 8,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "ppg": 28.89,
-      "allowed": 13.89,
-      "q1Scored": 5.56,
-      "q1Allowed": 1.89,
-      "h1Scored": 17.44,
-      "h1Allowed": 8.44
+      "ppg": 27.7,
+      "allowed": 14.5,
+      "q1Scored": 5.7,
+      "q1Allowed": 2.0,
+      "h1Scored": 16.7,
+      "h1Allowed": 8.9
     },
     "home": {
-      "games": 4,
+      "games": 5,
       "wins": 4,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "ppg": 30.5,
-      "allowed": 7.75,
-      "q1Scored": 8.25,
-      "q1Allowed": 0.0,
-      "h1Scored": 17.5,
-      "h1Allowed": 3.5
+      "ppg": 27.8,
+      "allowed": 10.2,
+      "q1Scored": 8.0,
+      "q1Allowed": 0.6,
+      "h1Scored": 16.0,
+      "h1Allowed": 5.4
     },
     "away": {
       "games": 5,
@@ -11208,6 +11770,20 @@
         "q1Allowed": 0,
         "h1Scored": 17,
         "h1Allowed": 24
+      },
+      {
+        "gameId": 401867844,
+        "date": "2026-11-21T20:30:00.000Z",
+        "opponent": "Yale",
+        "location": "home",
+        "pointsScored": 17,
+        "pointsAllowed": 20,
+        "won": false,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 3,
+        "h1Scored": 10,
+        "h1Allowed": 13
       }
     ]
   },
@@ -11217,28 +11793,28 @@
     "classification": "fcs",
     "conference": "Patriot",
     "overall": {
-      "games": 11,
-      "wins": 6,
+      "games": 12,
+      "wins": 7,
       "losses": 5,
       "ties": 0,
-      "ppg": 24.09,
-      "allowed": 26.82,
-      "q1Scored": 6.73,
-      "q1Allowed": 9.45,
-      "h1Scored": 13.55,
-      "h1Allowed": 16.64
+      "ppg": 23.75,
+      "allowed": 25.42,
+      "q1Scored": 6.75,
+      "q1Allowed": 8.67,
+      "h1Scored": 13.25,
+      "h1Allowed": 15.5
     },
     "home": {
-      "games": 5,
-      "wins": 3,
+      "games": 6,
+      "wins": 4,
       "losses": 2,
       "ties": 0,
-      "ppg": 27.0,
-      "allowed": 23.4,
-      "q1Scored": 8.2,
-      "q1Allowed": 9.0,
-      "h1Scored": 12.8,
-      "h1Allowed": 10.4
+      "ppg": 25.83,
+      "allowed": 21.17,
+      "q1Scored": 8.0,
+      "q1Allowed": 7.5,
+      "h1Scored": 12.33,
+      "h1Allowed": 9.17
     },
     "away": {
       "games": 6,
@@ -11406,6 +11982,20 @@
         "q1Allowed": 0,
         "h1Scored": 21,
         "h1Allowed": 7
+      },
+      {
+        "gameId": 401868015,
+        "date": "2026-11-21T17:00:00.000Z",
+        "opponent": "Fordham",
+        "location": "home",
+        "pointsScored": 20,
+        "pointsAllowed": 10,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 0,
+        "h1Scored": 10,
+        "h1Allowed": 3
       }
     ]
   },
@@ -11473,28 +12063,28 @@
     "classification": "fcs",
     "conference": "Southland",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 5,
-      "losses": 6,
+      "losses": 7,
       "ties": 0,
-      "ppg": 24.09,
-      "allowed": 25.55,
-      "q1Scored": 5.27,
-      "q1Allowed": 4.73,
-      "h1Scored": 14.45,
-      "h1Allowed": 10.91
+      "ppg": 23.25,
+      "allowed": 25.58,
+      "q1Scored": 5.42,
+      "q1Allowed": 4.58,
+      "h1Scored": 14.42,
+      "h1Allowed": 11.42
     },
     "home": {
-      "games": 4,
+      "games": 5,
       "wins": 3,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "ppg": 36.75,
-      "allowed": 9.0,
-      "q1Scored": 7.75,
-      "q1Allowed": 0.75,
-      "h1Scored": 20.25,
-      "h1Allowed": 0.75
+      "ppg": 32.2,
+      "allowed": 12.4,
+      "q1Scored": 7.6,
+      "q1Allowed": 1.2,
+      "h1Scored": 19.0,
+      "h1Allowed": 4.0
     },
     "away": {
       "games": 7,
@@ -11662,6 +12252,20 @@
         "q1Allowed": 7,
         "h1Scored": 21,
         "h1Allowed": 7
+      },
+      {
+        "gameId": 401868294,
+        "date": "2026-11-21T22:00:00.000Z",
+        "opponent": "UT Rio Grande Valley",
+        "location": "home",
+        "pointsScored": 14,
+        "pointsAllowed": 26,
+        "won": false,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 3,
+        "h1Scored": 14,
+        "h1Allowed": 17
       }
     ]
   },
@@ -11671,16 +12275,16 @@
     "classification": "fcs",
     "conference": "MEAC",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 5,
-      "losses": 6,
+      "losses": 7,
       "ties": 0,
-      "ppg": 20.09,
-      "allowed": 30.18,
-      "q1Scored": 4.36,
-      "q1Allowed": 7.55,
-      "h1Scored": 8.91,
-      "h1Allowed": 18.82
+      "ppg": 19.0,
+      "allowed": 30.58,
+      "q1Scored": 4.58,
+      "q1Allowed": 7.5,
+      "h1Scored": 8.75,
+      "h1Allowed": 18.42
     },
     "home": {
       "games": 5,
@@ -11695,16 +12299,16 @@
       "h1Allowed": 17.2
     },
     "away": {
-      "games": 6,
+      "games": 7,
       "wins": 2,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "ppg": 13.33,
-      "allowed": 34.0,
-      "q1Scored": 3.5,
-      "q1Allowed": 8.83,
-      "h1Scored": 7.83,
-      "h1Allowed": 20.17
+      "ppg": 12.43,
+      "allowed": 34.14,
+      "q1Scored": 4.0,
+      "q1Allowed": 8.57,
+      "h1Scored": 7.71,
+      "h1Allowed": 19.29
     },
     "games": [
       {
@@ -11860,6 +12464,20 @@
         "q1Allowed": 14,
         "h1Scored": 14,
         "h1Allowed": 21
+      },
+      {
+        "gameId": 401867965,
+        "date": "2026-11-21T17:00:00.000Z",
+        "opponent": "Norfolk State",
+        "location": "away",
+        "pointsScored": 7,
+        "pointsAllowed": 35,
+        "won": false,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 7,
+        "h1Scored": 7,
+        "h1Allowed": 14
       }
     ]
   },
@@ -11869,16 +12487,16 @@
     "classification": "fcs",
     "conference": "Big Sky",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 5,
-      "losses": 6,
+      "losses": 7,
       "ties": 0,
-      "ppg": 33.0,
-      "allowed": 34.18,
-      "q1Scored": 6.55,
-      "q1Allowed": 5.91,
-      "h1Scored": 16.0,
-      "h1Allowed": 16.27
+      "ppg": 30.67,
+      "allowed": 32.92,
+      "q1Scored": 6.0,
+      "q1Allowed": 5.42,
+      "h1Scored": 14.67,
+      "h1Allowed": 14.92
     },
     "home": {
       "games": 6,
@@ -11893,16 +12511,16 @@
       "h1Allowed": 15.33
     },
     "away": {
-      "games": 5,
+      "games": 6,
       "wins": 2,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "ppg": 31.0,
-      "allowed": 38.2,
-      "q1Scored": 6.2,
-      "q1Allowed": 9.0,
-      "h1Scored": 13.8,
-      "h1Allowed": 17.4
+      "ppg": 26.67,
+      "allowed": 35.0,
+      "q1Scored": 5.17,
+      "q1Allowed": 7.5,
+      "h1Scored": 11.5,
+      "h1Allowed": 14.5
     },
     "games": [
       {
@@ -12058,6 +12676,20 @@
         "q1Allowed": 0,
         "h1Scored": 14,
         "h1Allowed": 7
+      },
+      {
+        "gameId": 401868100,
+        "date": "2026-11-21T23:00:00.000Z",
+        "opponent": "Idaho State",
+        "location": "away",
+        "pointsScored": 5,
+        "pointsAllowed": 19,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 0,
+        "h1Scored": 0,
+        "h1Allowed": 0
       }
     ]
   },
@@ -12067,28 +12699,28 @@
     "classification": "fcs",
     "conference": "Big Sky",
     "overall": {
-      "games": 11,
-      "wins": 6,
+      "games": 12,
+      "wins": 7,
       "losses": 5,
       "ties": 0,
-      "ppg": 32.45,
-      "allowed": 23.55,
-      "q1Scored": 5.45,
-      "q1Allowed": 5.0,
-      "h1Scored": 13.45,
-      "h1Allowed": 10.45
+      "ppg": 31.33,
+      "allowed": 22.0,
+      "q1Scored": 5.0,
+      "q1Allowed": 4.58,
+      "h1Scored": 12.33,
+      "h1Allowed": 9.58
     },
     "home": {
-      "games": 6,
-      "wins": 3,
+      "games": 7,
+      "wins": 4,
       "losses": 3,
       "ties": 0,
-      "ppg": 36.0,
-      "allowed": 21.0,
-      "q1Scored": 6.67,
-      "q1Allowed": 2.33,
-      "h1Scored": 14.67,
-      "h1Allowed": 8.0
+      "ppg": 33.57,
+      "allowed": 18.71,
+      "q1Scored": 5.71,
+      "q1Allowed": 2.0,
+      "h1Scored": 12.57,
+      "h1Allowed": 6.86
     },
     "away": {
       "games": 5,
@@ -12256,6 +12888,20 @@
         "q1Allowed": 7,
         "h1Scored": 10,
         "h1Allowed": 24
+      },
+      {
+        "gameId": 401868100,
+        "date": "2026-11-21T23:00:00.000Z",
+        "opponent": "Idaho",
+        "location": "home",
+        "pointsScored": 19,
+        "pointsAllowed": 5,
+        "won": true,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 0,
+        "h1Scored": 0,
+        "h1Allowed": 0
       }
     ]
   },
@@ -12323,28 +12969,28 @@
     "classification": "fcs",
     "conference": "MVFC",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 8,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "ppg": 33.73,
-      "allowed": 20.55,
-      "q1Scored": 8.73,
-      "q1Allowed": 4.09,
-      "h1Scored": 20.45,
-      "h1Allowed": 10.55
+      "ppg": 31.17,
+      "allowed": 19.67,
+      "q1Scored": 8.0,
+      "q1Allowed": 3.75,
+      "h1Scored": 19.0,
+      "h1Allowed": 9.67
     },
     "home": {
-      "games": 5,
+      "games": 6,
       "wins": 4,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "ppg": 38.2,
-      "allowed": 13.6,
-      "q1Scored": 8.8,
-      "q1Allowed": 3.4,
-      "h1Scored": 22.8,
-      "h1Allowed": 6.0
+      "ppg": 32.33,
+      "allowed": 13.0,
+      "q1Scored": 7.33,
+      "q1Allowed": 2.83,
+      "h1Scored": 19.5,
+      "h1Allowed": 5.0
     },
     "away": {
       "games": 6,
@@ -12512,6 +13158,20 @@
         "q1Allowed": 7,
         "h1Scored": 14,
         "h1Allowed": 10
+      },
+      {
+        "gameId": 401867854,
+        "date": "2026-11-21T18:00:00.000Z",
+        "opponent": "South Dakota",
+        "location": "home",
+        "pointsScored": 3,
+        "pointsAllowed": 10,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 0,
+        "h1Scored": 3,
+        "h1Allowed": 0
       }
     ]
   },
@@ -12521,16 +13181,16 @@
     "classification": "fcs",
     "conference": "Southland",
     "overall": {
-      "games": 11,
-      "wins": 7,
+      "games": 12,
+      "wins": 8,
       "losses": 4,
       "ties": 0,
-      "ppg": 38.82,
-      "allowed": 25.45,
-      "q1Scored": 12.55,
-      "q1Allowed": 7.45,
-      "h1Scored": 24.73,
-      "h1Allowed": 14.27
+      "ppg": 41.08,
+      "allowed": 23.58,
+      "q1Scored": 12.92,
+      "q1Allowed": 6.83,
+      "h1Scored": 25.25,
+      "h1Allowed": 13.33
     },
     "home": {
       "games": 6,
@@ -12545,16 +13205,16 @@
       "h1Allowed": 8.33
     },
     "away": {
-      "games": 5,
-      "wins": 1,
+      "games": 6,
+      "wins": 2,
       "losses": 4,
       "ties": 0,
-      "ppg": 26.8,
-      "allowed": 36.6,
-      "q1Scored": 6.2,
-      "q1Allowed": 13.0,
-      "h1Scored": 13.0,
-      "h1Allowed": 21.4
+      "ppg": 33.33,
+      "allowed": 31.0,
+      "q1Scored": 8.0,
+      "q1Allowed": 10.83,
+      "h1Scored": 16.0,
+      "h1Allowed": 18.33
     },
     "games": [
       {
@@ -12710,6 +13370,20 @@
         "q1Allowed": 7,
         "h1Scored": 21,
         "h1Allowed": 17
+      },
+      {
+        "gameId": 401869149,
+        "date": "2026-11-21T21:00:00.000Z",
+        "opponent": "East Texas A&M",
+        "location": "away",
+        "pointsScored": 66,
+        "pointsAllowed": 3,
+        "won": true,
+        "tied": false,
+        "q1Scored": 17,
+        "q1Allowed": 0,
+        "h1Scored": 31,
+        "h1Allowed": 3
       }
     ]
   },
@@ -12777,16 +13451,16 @@
     "classification": "fcs",
     "conference": "MVFC",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 2,
-      "losses": 9,
+      "losses": 10,
       "ties": 0,
-      "ppg": 23.73,
-      "allowed": 36.73,
-      "q1Scored": 5.36,
-      "q1Allowed": 7.55,
-      "h1Scored": 11.82,
-      "h1Allowed": 18.36
+      "ppg": 22.83,
+      "allowed": 38.0,
+      "q1Scored": 4.92,
+      "q1Allowed": 8.67,
+      "h1Scored": 11.42,
+      "h1Allowed": 19.17
     },
     "home": {
       "games": 6,
@@ -12801,16 +13475,16 @@
       "h1Allowed": 19.17
     },
     "away": {
-      "games": 5,
+      "games": 6,
       "wins": 1,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "ppg": 21.6,
-      "allowed": 37.0,
-      "q1Scored": 5.4,
-      "q1Allowed": 7.4,
-      "h1Scored": 10.0,
-      "h1Allowed": 17.4
+      "ppg": 20.17,
+      "allowed": 39.5,
+      "q1Scored": 4.5,
+      "q1Allowed": 9.67,
+      "h1Scored": 9.5,
+      "h1Allowed": 19.17
     },
     "games": [
       {
@@ -12966,6 +13640,20 @@
         "q1Allowed": 7,
         "h1Scored": 14,
         "h1Allowed": 21
+      },
+      {
+        "gameId": 401867864,
+        "date": "2026-11-21T20:00:00.000Z",
+        "opponent": "South Dakota State",
+        "location": "away",
+        "pointsScored": 13,
+        "pointsAllowed": 52,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 21,
+        "h1Scored": 7,
+        "h1Allowed": 28
       }
     ]
   },
@@ -13091,16 +13779,16 @@
     "classification": "fcs",
     "conference": "SWAC",
     "overall": {
-      "games": 10,
-      "wins": 7,
+      "games": 11,
+      "wins": 8,
       "losses": 3,
       "ties": 0,
-      "ppg": 33.6,
-      "allowed": 20.3,
-      "q1Scored": 7.3,
-      "q1Allowed": 5.9,
-      "h1Scored": 16.3,
-      "h1Allowed": 10.9
+      "ppg": 35.45,
+      "allowed": 22.09,
+      "q1Scored": 8.55,
+      "q1Allowed": 5.36,
+      "h1Scored": 17.64,
+      "h1Allowed": 10.55
     },
     "home": {
       "games": 6,
@@ -13115,16 +13803,16 @@
       "h1Allowed": 6.67
     },
     "away": {
-      "games": 4,
-      "wins": 1,
+      "games": 5,
+      "wins": 2,
       "losses": 3,
       "ties": 0,
-      "ppg": 24.5,
-      "allowed": 28.25,
-      "q1Scored": 5.25,
-      "q1Allowed": 10.5,
-      "h1Scored": 12.0,
-      "h1Allowed": 17.25
+      "ppg": 30.4,
+      "allowed": 30.6,
+      "q1Scored": 8.4,
+      "q1Allowed": 8.4,
+      "h1Scored": 15.8,
+      "h1Allowed": 15.2
     },
     "games": [
       {
@@ -13266,6 +13954,20 @@
         "q1Allowed": 14,
         "h1Scored": 10,
         "h1Allowed": 14
+      },
+      {
+        "gameId": 401868365,
+        "date": "2026-11-21T20:00:00.000Z",
+        "opponent": "Alcorn State",
+        "location": "away",
+        "pointsScored": 54,
+        "pointsAllowed": 40,
+        "won": true,
+        "tied": false,
+        "q1Scored": 21,
+        "q1Allowed": 0,
+        "h1Scored": 31,
+        "h1Allowed": 7
       }
     ]
   },
@@ -13869,28 +14571,28 @@
     "classification": "fcs",
     "conference": "Patriot",
     "overall": {
-      "games": 10,
+      "games": 11,
       "wins": 4,
-      "losses": 6,
+      "losses": 7,
       "ties": 0,
-      "ppg": 21.3,
-      "allowed": 28.4,
-      "q1Scored": 4.1,
-      "q1Allowed": 9.2,
-      "h1Scored": 10.5,
-      "h1Allowed": 19.0
+      "ppg": 23.73,
+      "allowed": 30.45,
+      "q1Scored": 4.36,
+      "q1Allowed": 8.64,
+      "h1Scored": 12.0,
+      "h1Allowed": 18.82
     },
     "home": {
-      "games": 4,
+      "games": 5,
       "wins": 1,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "ppg": 23.75,
-      "allowed": 32.75,
+      "ppg": 28.6,
+      "allowed": 36.4,
       "q1Scored": 7.0,
-      "q1Allowed": 11.75,
-      "h1Scored": 15.25,
-      "h1Allowed": 21.75
+      "q1Allowed": 10.0,
+      "h1Scored": 17.6,
+      "h1Allowed": 20.8
     },
     "away": {
       "games": 6,
@@ -14044,6 +14746,20 @@
         "q1Allowed": 3,
         "h1Scored": 7,
         "h1Allowed": 13
+      },
+      {
+        "gameId": 401868032,
+        "date": "2026-11-21T17:30:00.000Z",
+        "opponent": "Lehigh",
+        "location": "home",
+        "pointsScored": 48,
+        "pointsAllowed": 51,
+        "won": false,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 3,
+        "h1Scored": 27,
+        "h1Allowed": 17
       }
     ]
   },
@@ -14053,16 +14769,16 @@
     "classification": "fcs",
     "conference": "Southland",
     "overall": {
-      "games": 11,
-      "wins": 9,
+      "games": 12,
+      "wins": 10,
       "losses": 2,
       "ties": 0,
-      "ppg": 35.27,
-      "allowed": 23.36,
-      "q1Scored": 9.36,
-      "q1Allowed": 3.64,
-      "h1Scored": 21.0,
-      "h1Allowed": 11.18
+      "ppg": 33.92,
+      "allowed": 22.83,
+      "q1Scored": 9.17,
+      "q1Allowed": 3.92,
+      "h1Scored": 20.08,
+      "h1Allowed": 10.83
     },
     "home": {
       "games": 6,
@@ -14077,16 +14793,16 @@
       "h1Allowed": 8.67
     },
     "away": {
-      "games": 5,
-      "wins": 3,
+      "games": 6,
+      "wins": 4,
       "losses": 2,
       "ties": 0,
-      "ppg": 32.4,
-      "allowed": 26.0,
-      "q1Scored": 9.6,
-      "q1Allowed": 6.0,
-      "h1Scored": 19.2,
-      "h1Allowed": 14.2
+      "ppg": 30.17,
+      "allowed": 24.5,
+      "q1Scored": 9.17,
+      "q1Allowed": 6.17,
+      "h1Scored": 17.67,
+      "h1Allowed": 13.0
     },
     "games": [
       {
@@ -14242,6 +14958,20 @@
         "q1Allowed": 0,
         "h1Scored": 31,
         "h1Allowed": 7
+      },
+      {
+        "gameId": 401869141,
+        "date": "2026-11-22T00:00:00.000Z",
+        "opponent": "McNeese",
+        "location": "away",
+        "pointsScored": 19,
+        "pointsAllowed": 17,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 7,
+        "h1Scored": 10,
+        "h1Allowed": 7
       }
     ]
   },
@@ -14367,16 +15097,16 @@
     "classification": "fcs",
     "conference": "Patriot",
     "overall": {
-      "games": 11,
-      "wins": 9,
+      "games": 12,
+      "wins": 10,
       "losses": 2,
       "ties": 0,
-      "ppg": 31.18,
-      "allowed": 17.64,
-      "q1Scored": 6.45,
-      "q1Allowed": 2.82,
-      "h1Scored": 16.64,
-      "h1Allowed": 10.0
+      "ppg": 32.83,
+      "allowed": 20.17,
+      "q1Scored": 6.17,
+      "q1Allowed": 3.17,
+      "h1Scored": 16.67,
+      "h1Allowed": 11.42
     },
     "home": {
       "games": 5,
@@ -14391,16 +15121,16 @@
       "h1Allowed": 6.8
     },
     "away": {
-      "games": 6,
-      "wins": 4,
+      "games": 7,
+      "wins": 5,
       "losses": 2,
       "ties": 0,
-      "ppg": 29.5,
-      "allowed": 19.5,
-      "q1Scored": 6.33,
-      "q1Allowed": 3.5,
-      "h1Scored": 11.83,
-      "h1Allowed": 12.67
+      "ppg": 32.57,
+      "allowed": 23.57,
+      "q1Scored": 5.86,
+      "q1Allowed": 4.0,
+      "h1Scored": 12.57,
+      "h1Allowed": 14.71
     },
     "games": [
       {
@@ -14556,6 +15286,20 @@
         "q1Allowed": 0,
         "h1Scored": 6,
         "h1Allowed": 14
+      },
+      {
+        "gameId": 401868032,
+        "date": "2026-11-21T17:30:00.000Z",
+        "opponent": "Lafayette",
+        "location": "away",
+        "pointsScored": 51,
+        "pointsAllowed": 48,
+        "won": true,
+        "tied": false,
+        "q1Scored": 3,
+        "q1Allowed": 7,
+        "h1Scored": 17,
+        "h1Allowed": 27
       }
     ]
   },
@@ -14681,28 +15425,28 @@
     "classification": "fcs",
     "conference": "OVC",
     "overall": {
-      "games": 10,
+      "games": 11,
       "wins": 5,
-      "losses": 5,
+      "losses": 6,
       "ties": 0,
-      "ppg": 25.2,
-      "allowed": 24.9,
-      "q1Scored": 4.1,
-      "q1Allowed": 4.7,
-      "h1Scored": 13.5,
-      "h1Allowed": 12.0
+      "ppg": 23.55,
+      "allowed": 26.36,
+      "q1Scored": 3.73,
+      "q1Allowed": 4.91,
+      "h1Scored": 12.27,
+      "h1Allowed": 12.45
     },
     "home": {
-      "games": 4,
+      "games": 5,
       "wins": 3,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "ppg": 29.5,
-      "allowed": 16.0,
-      "q1Scored": 3.5,
-      "q1Allowed": 1.75,
-      "h1Scored": 16.25,
-      "h1Allowed": 6.75
+      "ppg": 25.0,
+      "allowed": 21.0,
+      "q1Scored": 2.8,
+      "q1Allowed": 2.8,
+      "h1Scored": 13.0,
+      "h1Allowed": 8.8
     },
     "away": {
       "games": 6,
@@ -14856,6 +15600,20 @@
         "q1Allowed": 0,
         "h1Scored": 21,
         "h1Allowed": 17
+      },
+      {
+        "gameId": 401868208,
+        "date": "2026-11-21T20:00:00.000Z",
+        "opponent": "Western Illinois",
+        "location": "home",
+        "pointsScored": 7,
+        "pointsAllowed": 41,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 7,
+        "h1Scored": 0,
+        "h1Allowed": 17
       }
     ]
   },
@@ -14865,16 +15623,16 @@
     "classification": "fcs",
     "conference": "NEC",
     "overall": {
-      "games": 11,
-      "wins": 4,
+      "games": 12,
+      "wins": 5,
       "losses": 7,
       "ties": 0,
-      "ppg": 14.64,
-      "allowed": 24.0,
-      "q1Scored": 0.91,
-      "q1Allowed": 6.82,
-      "h1Scored": 4.27,
-      "h1Allowed": 13.27
+      "ppg": 15.58,
+      "allowed": 23.83,
+      "q1Scored": 1.08,
+      "q1Allowed": 6.25,
+      "h1Scored": 4.17,
+      "h1Allowed": 12.75
     },
     "home": {
       "games": 5,
@@ -14889,16 +15647,16 @@
       "h1Allowed": 7.8
     },
     "away": {
-      "games": 6,
-      "wins": 2,
+      "games": 7,
+      "wins": 3,
       "losses": 4,
       "ties": 0,
-      "ppg": 11.83,
-      "allowed": 25.5,
-      "q1Scored": 0.5,
-      "q1Allowed": 8.17,
-      "h1Scored": 3.33,
-      "h1Allowed": 17.83
+      "ppg": 13.86,
+      "allowed": 25.0,
+      "q1Scored": 0.86,
+      "q1Allowed": 7.0,
+      "h1Scored": 3.29,
+      "h1Allowed": 16.29
     },
     "games": [
       {
@@ -15053,6 +15811,20 @@
         "q1Scored": 0,
         "q1Allowed": 0,
         "h1Scored": 7,
+        "h1Allowed": 7
+      },
+      {
+        "gameId": 401867915,
+        "date": "2026-11-21T17:00:00.000Z",
+        "opponent": "Robert Morris",
+        "location": "away",
+        "pointsScored": 26,
+        "pointsAllowed": 22,
+        "won": true,
+        "tied": false,
+        "q1Scored": 3,
+        "q1Allowed": 0,
+        "h1Scored": 3,
         "h1Allowed": 7
       }
     ]
@@ -15309,28 +16081,28 @@
     "classification": "fcs",
     "conference": "Coastal Athletic",
     "overall": {
-      "games": 10,
+      "games": 11,
       "wins": 1,
-      "losses": 9,
+      "losses": 10,
       "ties": 0,
-      "ppg": 12.3,
-      "allowed": 28.8,
-      "q1Scored": 1.2,
-      "q1Allowed": 5.6,
-      "h1Scored": 5.8,
-      "h1Allowed": 15.6
+      "ppg": 13.09,
+      "allowed": 28.36,
+      "q1Scored": 2.36,
+      "q1Allowed": 5.73,
+      "h1Scored": 7.18,
+      "h1Allowed": 16.09
     },
     "home": {
-      "games": 4,
+      "games": 5,
       "wins": 0,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "ppg": 12.5,
-      "allowed": 24.75,
-      "q1Scored": 3.0,
-      "q1Allowed": 3.5,
-      "h1Scored": 5.25,
-      "h1Allowed": 12.25
+      "ppg": 14.2,
+      "allowed": 24.6,
+      "q1Scored": 5.2,
+      "q1Allowed": 4.2,
+      "h1Scored": 8.4,
+      "h1Allowed": 14.0
     },
     "away": {
       "games": 6,
@@ -15484,6 +16256,20 @@
         "q1Allowed": 14,
         "h1Scored": 3,
         "h1Allowed": 23
+      },
+      {
+        "gameId": 401866699,
+        "date": "2026-11-21T18:00:00.000Z",
+        "opponent": "New Hampshire",
+        "location": "home",
+        "pointsScored": 21,
+        "pointsAllowed": 24,
+        "won": false,
+        "tied": false,
+        "q1Scored": 14,
+        "q1Allowed": 7,
+        "h1Scored": 21,
+        "h1Allowed": 21
       }
     ]
   },
@@ -15493,16 +16279,16 @@
     "classification": "fcs",
     "conference": "Pioneer",
     "overall": {
-      "games": 11,
-      "wins": 5,
+      "games": 12,
+      "wins": 6,
       "losses": 6,
       "ties": 0,
-      "ppg": 22.64,
-      "allowed": 23.09,
-      "q1Scored": 5.18,
-      "q1Allowed": 2.09,
-      "h1Scored": 12.27,
-      "h1Allowed": 12.27
+      "ppg": 23.67,
+      "allowed": 21.75,
+      "q1Scored": 6.5,
+      "q1Allowed": 1.92,
+      "h1Scored": 14.17,
+      "h1Allowed": 11.25
     },
     "home": {
       "games": 6,
@@ -15517,16 +16303,16 @@
       "h1Allowed": 12.5
     },
     "away": {
-      "games": 5,
-      "wins": 2,
+      "games": 6,
+      "wins": 3,
       "losses": 3,
       "ties": 0,
-      "ppg": 25.0,
-      "allowed": 22.4,
-      "q1Scored": 6.0,
-      "q1Allowed": 2.6,
-      "h1Scored": 14.0,
-      "h1Allowed": 12.0
+      "ppg": 26.67,
+      "allowed": 19.83,
+      "q1Scored": 8.5,
+      "q1Allowed": 2.17,
+      "h1Scored": 17.5,
+      "h1Allowed": 10.0
     },
     "games": [
       {
@@ -15682,6 +16468,20 @@
         "q1Allowed": 0,
         "h1Scored": 0,
         "h1Allowed": 7
+      },
+      {
+        "gameId": 401868226,
+        "date": "2026-11-21T18:00:00.000Z",
+        "opponent": "Davidson",
+        "location": "away",
+        "pointsScored": 35,
+        "pointsAllowed": 7,
+        "won": true,
+        "tied": false,
+        "q1Scored": 21,
+        "q1Allowed": 0,
+        "h1Scored": 35,
+        "h1Allowed": 0
       }
     ]
   },
@@ -15879,28 +16679,28 @@
     "classification": "fcs",
     "conference": "Southland",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 5,
-      "losses": 6,
+      "losses": 7,
       "ties": 0,
-      "ppg": 20.64,
-      "allowed": 23.82,
-      "q1Scored": 3.09,
-      "q1Allowed": 4.73,
-      "h1Scored": 7.64,
-      "h1Allowed": 12.55
+      "ppg": 20.33,
+      "allowed": 23.42,
+      "q1Scored": 3.42,
+      "q1Allowed": 4.92,
+      "h1Scored": 7.58,
+      "h1Allowed": 12.33
     },
     "home": {
-      "games": 5,
+      "games": 6,
       "wins": 3,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "ppg": 29.2,
-      "allowed": 18.4,
-      "q1Scored": 5.4,
-      "q1Allowed": 4.8,
-      "h1Scored": 11.6,
-      "h1Allowed": 10.2
+      "ppg": 27.17,
+      "allowed": 18.5,
+      "q1Scored": 5.67,
+      "q1Allowed": 5.17,
+      "h1Scored": 10.83,
+      "h1Allowed": 10.17
     },
     "away": {
       "games": 6,
@@ -16068,6 +16868,20 @@
         "q1Allowed": 0,
         "h1Scored": 14,
         "h1Allowed": 0
+      },
+      {
+        "gameId": 401869141,
+        "date": "2026-11-22T00:00:00.000Z",
+        "opponent": "Lamar",
+        "location": "home",
+        "pointsScored": 17,
+        "pointsAllowed": 19,
+        "won": false,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 7,
+        "h1Scored": 7,
+        "h1Allowed": 10
       }
     ]
   },
@@ -16135,28 +16949,28 @@
     "classification": "fcs",
     "conference": "Southern",
     "overall": {
-      "games": 11,
-      "wins": 9,
+      "games": 12,
+      "wins": 10,
       "losses": 2,
       "ties": 0,
-      "ppg": 29.55,
-      "allowed": 17.64,
-      "q1Scored": 7.36,
-      "q1Allowed": 4.45,
-      "h1Scored": 15.09,
-      "h1Allowed": 8.64
+      "ppg": 29.42,
+      "allowed": 18.25,
+      "q1Scored": 7.5,
+      "q1Allowed": 4.67,
+      "h1Scored": 14.58,
+      "h1Allowed": 8.5
     },
     "home": {
-      "games": 5,
-      "wins": 4,
+      "games": 6,
+      "wins": 5,
       "losses": 1,
       "ties": 0,
-      "ppg": 28.6,
-      "allowed": 14.2,
-      "q1Scored": 6.6,
-      "q1Allowed": 2.0,
-      "h1Scored": 13.4,
-      "h1Allowed": 4.6
+      "ppg": 28.5,
+      "allowed": 16.0,
+      "q1Scored": 7.0,
+      "q1Allowed": 2.83,
+      "h1Scored": 12.67,
+      "h1Allowed": 5.0
     },
     "away": {
       "games": 6,
@@ -16324,6 +17138,20 @@
         "q1Allowed": 0,
         "h1Scored": 17,
         "h1Allowed": 10
+      },
+      {
+        "gameId": 401868352,
+        "date": "2026-11-21T20:00:00.000Z",
+        "opponent": "East Tennessee State",
+        "location": "home",
+        "pointsScored": 28,
+        "pointsAllowed": 25,
+        "won": true,
+        "tied": false,
+        "q1Scored": 9,
+        "q1Allowed": 7,
+        "h1Scored": 9,
+        "h1Allowed": 7
       }
     ]
   },
@@ -16333,28 +17161,28 @@
     "classification": "fcs",
     "conference": "NEC",
     "overall": {
-      "games": 11,
-      "wins": 1,
+      "games": 12,
+      "wins": 2,
       "losses": 10,
       "ties": 0,
-      "ppg": 21.0,
-      "allowed": 38.27,
-      "q1Scored": 5.73,
-      "q1Allowed": 6.55,
-      "h1Scored": 10.45,
-      "h1Allowed": 20.0
+      "ppg": 21.83,
+      "allowed": 36.17,
+      "q1Scored": 5.25,
+      "q1Allowed": 6.83,
+      "h1Scored": 10.17,
+      "h1Allowed": 19.42
     },
     "home": {
-      "games": 3,
-      "wins": 1,
+      "games": 4,
+      "wins": 2,
       "losses": 2,
       "ties": 0,
-      "ppg": 39.0,
-      "allowed": 32.0,
-      "q1Scored": 13.0,
-      "q1Allowed": 7.0,
-      "h1Scored": 22.33,
-      "h1Allowed": 13.67
+      "ppg": 37.0,
+      "allowed": 27.25,
+      "q1Scored": 9.75,
+      "q1Allowed": 7.75,
+      "h1Scored": 18.5,
+      "h1Allowed": 13.5
     },
     "away": {
       "games": 8,
@@ -16522,6 +17350,20 @@
         "q1Allowed": 0,
         "h1Scored": 0,
         "h1Allowed": 10
+      },
+      {
+        "gameId": 401872643,
+        "date": "2026-11-21T17:00:00.000Z",
+        "opponent": "New Haven",
+        "location": "home",
+        "pointsScored": 31,
+        "pointsAllowed": 13,
+        "won": true,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 10,
+        "h1Scored": 7,
+        "h1Allowed": 13
       }
     ]
   },
@@ -16531,28 +17373,28 @@
     "classification": "fcs",
     "conference": "FCS Independents",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 5,
-      "losses": 6,
-      "ties": 0,
-      "ppg": 17.36,
-      "allowed": 31.73,
-      "q1Scored": 3.82,
-      "q1Allowed": 6.45,
-      "h1Scored": 9.91,
-      "h1Allowed": 15.73
-    },
-    "home": {
-      "games": 4,
-      "wins": 3,
-      "losses": 1,
+      "losses": 7,
       "ties": 0,
       "ppg": 16.75,
-      "allowed": 18.75,
+      "allowed": 32.0,
       "q1Scored": 3.5,
-      "q1Allowed": 4.25,
-      "h1Scored": 10.25,
-      "h1Allowed": 9.5
+      "q1Allowed": 7.08,
+      "h1Scored": 9.92,
+      "h1Allowed": 16.17
+    },
+    "home": {
+      "games": 5,
+      "wins": 3,
+      "losses": 2,
+      "ties": 0,
+      "ppg": 15.4,
+      "allowed": 22.0,
+      "q1Scored": 2.8,
+      "q1Allowed": 6.2,
+      "h1Scored": 10.2,
+      "h1Allowed": 11.8
     },
     "away": {
       "games": 7,
@@ -16719,6 +17561,20 @@
         "q1Scored": 6,
         "q1Allowed": 0,
         "h1Scored": 12,
+        "h1Allowed": 21
+      },
+      {
+        "gameId": 401866700,
+        "date": "2026-11-21T17:00:00.000Z",
+        "opponent": "Sacred Heart",
+        "location": "home",
+        "pointsScored": 10,
+        "pointsAllowed": 35,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 14,
+        "h1Scored": 10,
         "h1Allowed": 21
       }
     ]
@@ -17033,28 +17889,28 @@
     "classification": "fbs",
     "conference": "SEC",
     "overall": {
-      "games": 0,
-      "wins": 0,
+      "games": 1,
+      "wins": 1,
       "losses": 0,
       "ties": 0,
-      "ppg": null,
-      "allowed": null,
-      "q1Scored": null,
-      "q1Allowed": null,
-      "h1Scored": null,
-      "h1Allowed": null
+      "ppg": 34.0,
+      "allowed": 16.0,
+      "q1Scored": 7.0,
+      "q1Allowed": 3.0,
+      "h1Scored": 20.0,
+      "h1Allowed": 10.0
     },
     "home": {
-      "games": 0,
-      "wins": 0,
+      "games": 1,
+      "wins": 1,
       "losses": 0,
       "ties": 0,
-      "ppg": null,
-      "allowed": null,
-      "q1Scored": null,
-      "q1Allowed": null,
-      "h1Scored": null,
-      "h1Allowed": null
+      "ppg": 34.0,
+      "allowed": 16.0,
+      "q1Scored": 7.0,
+      "q1Allowed": 3.0,
+      "h1Scored": 20.0,
+      "h1Allowed": 10.0
     },
     "away": {
       "games": 0,
@@ -17068,7 +17924,22 @@
       "h1Scored": null,
       "h1Allowed": null
     },
-    "games": []
+    "games": [
+      {
+        "gameId": 401856750,
+        "date": "2026-11-21T18:00:00.000Z",
+        "opponent": "Tennessee Tech",
+        "location": "home",
+        "pointsScored": 34,
+        "pointsAllowed": 16,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 3,
+        "h1Scored": 20,
+        "h1Allowed": 10
+      }
+    ]
   },
   {
     "name": "Mississippi Valley State",
@@ -17076,28 +17947,28 @@
     "classification": "fcs",
     "conference": "SWAC",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 3,
-      "losses": 8,
+      "losses": 9,
       "ties": 0,
-      "ppg": 16.27,
-      "allowed": 34.45,
-      "q1Scored": 3.45,
-      "q1Allowed": 8.73,
-      "h1Scored": 7.09,
-      "h1Allowed": 19.55
+      "ppg": 16.5,
+      "allowed": 35.83,
+      "q1Scored": 3.75,
+      "q1Allowed": 8.58,
+      "h1Scored": 7.58,
+      "h1Allowed": 19.83
     },
     "home": {
-      "games": 5,
+      "games": 6,
       "wins": 2,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "ppg": 19.2,
-      "allowed": 30.8,
-      "q1Scored": 4.8,
-      "q1Allowed": 6.2,
-      "h1Scored": 8.8,
-      "h1Allowed": 16.0
+      "ppg": 19.17,
+      "allowed": 34.17,
+      "q1Scored": 5.17,
+      "q1Allowed": 6.33,
+      "h1Scored": 9.5,
+      "h1Allowed": 17.17
     },
     "away": {
       "games": 6,
@@ -17265,6 +18136,20 @@
         "q1Allowed": 3,
         "h1Scored": 7,
         "h1Allowed": 6
+      },
+      {
+        "gameId": 401868304,
+        "date": "2026-11-21T18:00:00.000Z",
+        "opponent": "Alabama A&M",
+        "location": "home",
+        "pointsScored": 19,
+        "pointsAllowed": 51,
+        "won": false,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 7,
+        "h1Scored": 13,
+        "h1Allowed": 23
       }
     ]
   },
@@ -17390,16 +18275,16 @@
     "classification": "fcs",
     "conference": "Coastal Athletic",
     "overall": {
-      "games": 11,
-      "wins": 8,
+      "games": 12,
+      "wins": 9,
       "losses": 3,
       "ties": 0,
-      "ppg": 30.27,
-      "allowed": 27.27,
-      "q1Scored": 7.55,
-      "q1Allowed": 4.27,
-      "h1Scored": 17.09,
-      "h1Allowed": 13.0
+      "ppg": 32.33,
+      "allowed": 29.08,
+      "q1Scored": 7.5,
+      "q1Allowed": 4.5,
+      "h1Scored": 18.0,
+      "h1Allowed": 14.25
     },
     "home": {
       "games": 5,
@@ -17414,16 +18299,16 @@
       "h1Allowed": 14.0
     },
     "away": {
-      "games": 6,
-      "wins": 4,
+      "games": 7,
+      "wins": 5,
       "losses": 2,
       "ties": 0,
-      "ppg": 29.67,
-      "allowed": 28.17,
+      "ppg": 33.29,
+      "allowed": 31.14,
       "q1Scored": 7.0,
-      "q1Allowed": 3.5,
-      "h1Scored": 15.17,
-      "h1Allowed": 12.17
+      "q1Allowed": 4.0,
+      "h1Scored": 17.0,
+      "h1Allowed": 14.43
     },
     "games": [
       {
@@ -17579,6 +18464,20 @@
         "q1Allowed": 6,
         "h1Scored": 21,
         "h1Allowed": 12
+      },
+      {
+        "gameId": 401866697,
+        "date": "2026-11-21T17:00:00.000Z",
+        "opponent": "Campbell",
+        "location": "away",
+        "pointsScored": 55,
+        "pointsAllowed": 49,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 7,
+        "h1Scored": 28,
+        "h1Allowed": 28
       }
     ]
   },
@@ -17588,16 +18487,16 @@
     "classification": "fcs",
     "conference": "Big Sky",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 8,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "ppg": 39.91,
-      "allowed": 28.27,
-      "q1Scored": 8.0,
-      "q1Allowed": 4.64,
-      "h1Scored": 19.73,
-      "h1Allowed": 11.27
+      "ppg": 37.92,
+      "allowed": 29.42,
+      "q1Scored": 7.33,
+      "q1Allowed": 4.25,
+      "h1Scored": 18.33,
+      "h1Allowed": 10.92
     },
     "home": {
       "games": 7,
@@ -17612,16 +18511,16 @@
       "h1Allowed": 6.71
     },
     "away": {
-      "games": 4,
+      "games": 5,
       "wins": 2,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "ppg": 41.25,
-      "allowed": 39.0,
-      "q1Scored": 7.75,
-      "q1Allowed": 6.0,
-      "h1Scored": 19.75,
-      "h1Allowed": 19.25
+      "ppg": 36.2,
+      "allowed": 39.6,
+      "q1Scored": 6.2,
+      "q1Allowed": 4.8,
+      "h1Scored": 16.4,
+      "h1Allowed": 16.8
     },
     "games": [
       {
@@ -17777,6 +18676,20 @@
         "q1Allowed": 7,
         "h1Scored": 24,
         "h1Allowed": 10
+      },
+      {
+        "gameId": 401868117,
+        "date": "2026-11-21T19:00:00.000Z",
+        "opponent": "Montana State",
+        "location": "away",
+        "pointsScored": 16,
+        "pointsAllowed": 42,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 0,
+        "h1Scored": 3,
+        "h1Allowed": 7
       }
     ]
   },
@@ -17786,28 +18699,28 @@
     "classification": "fcs",
     "conference": "Big Sky",
     "overall": {
-      "games": 11,
-      "wins": 10,
+      "games": 12,
+      "wins": 11,
       "losses": 1,
       "ties": 0,
-      "ppg": 39.64,
-      "allowed": 19.73,
-      "q1Scored": 8.0,
-      "q1Allowed": 3.0,
-      "h1Scored": 21.09,
-      "h1Allowed": 9.18
+      "ppg": 39.83,
+      "allowed": 19.42,
+      "q1Scored": 7.33,
+      "q1Allowed": 2.75,
+      "h1Scored": 19.92,
+      "h1Allowed": 8.67
     },
     "home": {
-      "games": 5,
-      "wins": 5,
+      "games": 6,
+      "wins": 6,
       "losses": 0,
       "ties": 0,
-      "ppg": 42.6,
-      "allowed": 21.6,
-      "q1Scored": 10.2,
-      "q1Allowed": 2.6,
-      "h1Scored": 23.2,
-      "h1Allowed": 11.6
+      "ppg": 42.5,
+      "allowed": 20.67,
+      "q1Scored": 8.5,
+      "q1Allowed": 2.17,
+      "h1Scored": 20.5,
+      "h1Allowed": 10.17
     },
     "away": {
       "games": 6,
@@ -17975,6 +18888,20 @@
         "q1Allowed": 7,
         "h1Scored": 14,
         "h1Allowed": 7
+      },
+      {
+        "gameId": 401868117,
+        "date": "2026-11-21T19:00:00.000Z",
+        "opponent": "Montana",
+        "location": "home",
+        "pointsScored": 42,
+        "pointsAllowed": 16,
+        "won": true,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 0,
+        "h1Scored": 7,
+        "h1Allowed": 3
       }
     ]
   },
@@ -17984,16 +18911,16 @@
     "classification": "fcs",
     "conference": "Pioneer",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 3,
-      "losses": 8,
+      "losses": 9,
       "ties": 0,
-      "ppg": 27.27,
-      "allowed": 39.09,
-      "q1Scored": 8.36,
-      "q1Allowed": 8.91,
-      "h1Scored": 17.27,
-      "h1Allowed": 18.82
+      "ppg": 25.58,
+      "allowed": 37.83,
+      "q1Scored": 7.67,
+      "q1Allowed": 8.75,
+      "h1Scored": 15.83,
+      "h1Allowed": 17.83
     },
     "home": {
       "games": 6,
@@ -18008,16 +18935,16 @@
       "h1Allowed": 15.33
     },
     "away": {
-      "games": 5,
+      "games": 6,
       "wins": 0,
-      "losses": 5,
+      "losses": 6,
       "ties": 0,
-      "ppg": 16.2,
-      "allowed": 45.2,
-      "q1Scored": 4.8,
-      "q1Allowed": 11.2,
-      "h1Scored": 11.6,
-      "h1Allowed": 23.0
+      "ppg": 14.67,
+      "allowed": 41.67,
+      "q1Scored": 4.0,
+      "q1Allowed": 10.5,
+      "h1Scored": 9.67,
+      "h1Allowed": 20.33
     },
     "games": [
       {
@@ -18173,6 +19100,20 @@
         "q1Allowed": 7,
         "h1Scored": 28,
         "h1Allowed": 10
+      },
+      {
+        "gameId": 401868218,
+        "date": "2026-11-21T18:00:00.000Z",
+        "opponent": "Butler",
+        "location": "away",
+        "pointsScored": 7,
+        "pointsAllowed": 24,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 7,
+        "h1Scored": 0,
+        "h1Allowed": 7
       }
     ]
   },
@@ -18254,16 +19195,16 @@
     "classification": "fcs",
     "conference": "MEAC",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 6,
-      "losses": 5,
+      "losses": 6,
       "ties": 0,
-      "ppg": 23.91,
-      "allowed": 27.09,
-      "q1Scored": 4.36,
-      "q1Allowed": 6.82,
-      "h1Scored": 11.73,
-      "h1Allowed": 12.64
+      "ppg": 24.5,
+      "allowed": 28.25,
+      "q1Scored": 4.58,
+      "q1Allowed": 6.83,
+      "h1Scored": 11.33,
+      "h1Allowed": 12.75
     },
     "home": {
       "games": 5,
@@ -18278,16 +19219,16 @@
       "h1Allowed": 8.2
     },
     "away": {
-      "games": 6,
+      "games": 7,
       "wins": 3,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "ppg": 22.17,
-      "allowed": 31.17,
-      "q1Scored": 4.67,
-      "q1Allowed": 9.0,
-      "h1Scored": 12.5,
-      "h1Allowed": 16.33
+      "ppg": 23.43,
+      "allowed": 32.57,
+      "q1Scored": 5.0,
+      "q1Allowed": 8.71,
+      "h1Scored": 11.71,
+      "h1Allowed": 16.0
     },
     "games": [
       {
@@ -18443,6 +19384,20 @@
         "q1Allowed": 0,
         "h1Scored": 7,
         "h1Allowed": 0
+      },
+      {
+        "gameId": 401867971,
+        "date": "2026-11-21T19:00:00.000Z",
+        "opponent": "North Carolina Central",
+        "location": "away",
+        "pointsScored": 31,
+        "pointsAllowed": 41,
+        "won": false,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 7,
+        "h1Scored": 7,
+        "h1Allowed": 14
       }
     ]
   },
@@ -18452,28 +19407,28 @@
     "classification": "fcs",
     "conference": "MVFC",
     "overall": {
-      "games": 11,
-      "wins": 2,
+      "games": 12,
+      "wins": 3,
       "losses": 9,
       "ties": 0,
-      "ppg": 19.18,
-      "allowed": 40.45,
-      "q1Scored": 4.36,
-      "q1Allowed": 6.91,
-      "h1Scored": 10.91,
-      "h1Allowed": 20.91
+      "ppg": 21.83,
+      "allowed": 38.25,
+      "q1Scored": 4.83,
+      "q1Allowed": 6.92,
+      "h1Scored": 11.42,
+      "h1Allowed": 19.75
     },
     "home": {
-      "games": 5,
-      "wins": 1,
+      "games": 6,
+      "wins": 2,
       "losses": 4,
       "ties": 0,
-      "ppg": 20.4,
-      "allowed": 40.4,
-      "q1Scored": 5.4,
-      "q1Allowed": 4.0,
-      "h1Scored": 11.0,
-      "h1Allowed": 19.8
+      "ppg": 25.5,
+      "allowed": 36.0,
+      "q1Scored": 6.17,
+      "q1Allowed": 4.5,
+      "h1Scored": 12.0,
+      "h1Allowed": 17.67
     },
     "away": {
       "games": 6,
@@ -18641,6 +19596,20 @@
         "q1Allowed": 7,
         "h1Scored": 21,
         "h1Allowed": 14
+      },
+      {
+        "gameId": 401867873,
+        "date": "2026-11-21T19:00:00.000Z",
+        "opponent": "Northern Iowa",
+        "location": "home",
+        "pointsScored": 51,
+        "pointsAllowed": 14,
+        "won": true,
+        "tied": false,
+        "q1Scored": 10,
+        "q1Allowed": 7,
+        "h1Scored": 17,
+        "h1Allowed": 7
       }
     ]
   },
@@ -18882,16 +19851,16 @@
     "classification": "fcs",
     "conference": "Coastal Athletic",
     "overall": {
-      "games": 11,
-      "wins": 4,
+      "games": 12,
+      "wins": 5,
       "losses": 7,
       "ties": 0,
-      "ppg": 19.82,
-      "allowed": 30.64,
-      "q1Scored": 5.55,
-      "q1Allowed": 7.18,
-      "h1Scored": 10.09,
-      "h1Allowed": 18.45
+      "ppg": 20.17,
+      "allowed": 29.83,
+      "q1Scored": 5.67,
+      "q1Allowed": 7.75,
+      "h1Scored": 11.0,
+      "h1Allowed": 18.67
     },
     "home": {
       "games": 6,
@@ -18906,16 +19875,16 @@
       "h1Allowed": 16.17
     },
     "away": {
-      "games": 5,
-      "wins": 0,
+      "games": 6,
+      "wins": 1,
       "losses": 5,
       "ties": 0,
-      "ppg": 14.8,
-      "allowed": 33.6,
-      "q1Scored": 5.4,
-      "q1Allowed": 6.2,
-      "h1Scored": 8.8,
-      "h1Allowed": 21.2
+      "ppg": 16.33,
+      "allowed": 31.5,
+      "q1Scored": 5.67,
+      "q1Allowed": 7.5,
+      "h1Scored": 10.83,
+      "h1Allowed": 21.17
     },
     "games": [
       {
@@ -19071,6 +20040,20 @@
         "q1Allowed": 3,
         "h1Scored": 6,
         "h1Allowed": 10
+      },
+      {
+        "gameId": 401866699,
+        "date": "2026-11-21T18:00:00.000Z",
+        "opponent": "Maine",
+        "location": "away",
+        "pointsScored": 24,
+        "pointsAllowed": 21,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 14,
+        "h1Scored": 21,
+        "h1Allowed": 21
       }
     ]
   },
@@ -19080,16 +20063,16 @@
     "classification": "fcs",
     "conference": "NEC",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 3,
-      "losses": 8,
+      "losses": 9,
       "ties": 0,
-      "ppg": 14.82,
-      "allowed": 27.0,
-      "q1Scored": 3.45,
-      "q1Allowed": 6.64,
-      "h1Scored": 5.27,
-      "h1Allowed": 18.82
+      "ppg": 14.67,
+      "allowed": 27.33,
+      "q1Scored": 4.0,
+      "q1Allowed": 6.08,
+      "h1Scored": 5.92,
+      "h1Allowed": 17.83
     },
     "home": {
       "games": 5,
@@ -19104,16 +20087,16 @@
       "h1Allowed": 16.0
     },
     "away": {
-      "games": 6,
+      "games": 7,
       "wins": 1,
-      "losses": 5,
+      "losses": 6,
       "ties": 0,
-      "ppg": 16.17,
-      "allowed": 31.17,
-      "q1Scored": 3.17,
-      "q1Allowed": 6.33,
-      "h1Scored": 5.33,
-      "h1Allowed": 21.17
+      "ppg": 15.71,
+      "allowed": 31.14,
+      "q1Scored": 4.14,
+      "q1Allowed": 5.43,
+      "h1Scored": 6.43,
+      "h1Allowed": 19.14
     },
     "games": [
       {
@@ -19269,6 +20252,20 @@
         "q1Allowed": 7,
         "h1Scored": 10,
         "h1Allowed": 14
+      },
+      {
+        "gameId": 401872643,
+        "date": "2026-11-21T17:00:00.000Z",
+        "opponent": "Mercyhurst",
+        "location": "away",
+        "pointsScored": 13,
+        "pointsAllowed": 31,
+        "won": false,
+        "tied": false,
+        "q1Scored": 10,
+        "q1Allowed": 0,
+        "h1Scored": 13,
+        "h1Allowed": 7
       }
     ]
   },
@@ -19606,28 +20603,28 @@
     "classification": "fcs",
     "conference": "MEAC",
     "overall": {
-      "games": 11,
-      "wins": 4,
+      "games": 12,
+      "wins": 5,
       "losses": 7,
       "ties": 0,
-      "ppg": 29.27,
-      "allowed": 24.36,
-      "q1Scored": 7.64,
-      "q1Allowed": 6.0,
-      "h1Scored": 16.18,
-      "h1Allowed": 12.36
+      "ppg": 29.75,
+      "allowed": 22.92,
+      "q1Scored": 7.58,
+      "q1Allowed": 6.08,
+      "h1Scored": 16.0,
+      "h1Allowed": 11.92
     },
     "home": {
-      "games": 5,
-      "wins": 3,
+      "games": 6,
+      "wins": 4,
       "losses": 2,
       "ties": 0,
-      "ppg": 44.2,
-      "allowed": 17.2,
-      "q1Scored": 12.4,
-      "q1Allowed": 2.8,
-      "h1Scored": 25.8,
-      "h1Allowed": 6.2
+      "ppg": 42.67,
+      "allowed": 15.5,
+      "q1Scored": 11.5,
+      "q1Allowed": 3.5,
+      "h1Scored": 23.83,
+      "h1Allowed": 6.33
     },
     "away": {
       "games": 6,
@@ -19795,6 +20792,20 @@
         "q1Allowed": 0,
         "h1Scored": 0,
         "h1Allowed": 7
+      },
+      {
+        "gameId": 401867965,
+        "date": "2026-11-21T17:00:00.000Z",
+        "opponent": "Howard",
+        "location": "home",
+        "pointsScored": 35,
+        "pointsAllowed": 7,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 7,
+        "h1Scored": 14,
+        "h1Allowed": 7
       }
     ]
   },
@@ -19804,28 +20815,28 @@
     "classification": "fcs",
     "conference": "UAC",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 7,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "ppg": 23.73,
-      "allowed": 20.18,
-      "q1Scored": 4.64,
-      "q1Allowed": 5.36,
-      "h1Scored": 13.45,
-      "h1Allowed": 9.36
+      "ppg": 23.75,
+      "allowed": 21.08,
+      "q1Scored": 4.83,
+      "q1Allowed": 5.5,
+      "h1Scored": 12.92,
+      "h1Allowed": 10.33
     },
     "home": {
-      "games": 6,
+      "games": 7,
       "wins": 4,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "ppg": 26.67,
-      "allowed": 21.5,
-      "q1Scored": 6.83,
-      "q1Allowed": 4.67,
-      "h1Scored": 15.33,
-      "h1Allowed": 8.67
+      "ppg": 26.29,
+      "allowed": 22.86,
+      "q1Scored": 6.86,
+      "q1Allowed": 5.0,
+      "h1Scored": 14.14,
+      "h1Allowed": 10.43
     },
     "away": {
       "games": 5,
@@ -19993,6 +21004,20 @@
         "q1Allowed": 7,
         "h1Scored": 21,
         "h1Allowed": 7
+      },
+      {
+        "gameId": 401868234,
+        "date": "2026-11-21T21:00:00.000Z",
+        "opponent": "Tarleton State",
+        "location": "home",
+        "pointsScored": 24,
+        "pointsAllowed": 31,
+        "won": false,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 7,
+        "h1Scored": 7,
+        "h1Allowed": 21
       }
     ]
   },
@@ -20060,28 +21085,28 @@
     "classification": "fcs",
     "conference": "Coastal Athletic",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 5,
-      "losses": 6,
+      "losses": 7,
       "ties": 0,
-      "ppg": 21.18,
-      "allowed": 25.55,
-      "q1Scored": 6.91,
-      "q1Allowed": 5.36,
-      "h1Scored": 14.45,
-      "h1Allowed": 12.45
+      "ppg": 20.0,
+      "allowed": 25.42,
+      "q1Scored": 6.33,
+      "q1Allowed": 4.92,
+      "h1Scored": 13.25,
+      "h1Allowed": 12.25
     },
     "home": {
-      "games": 5,
+      "games": 6,
       "wins": 4,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "ppg": 19.8,
-      "allowed": 16.8,
-      "q1Scored": 5.4,
-      "q1Allowed": 1.4,
-      "h1Scored": 14.0,
-      "h1Allowed": 4.6
+      "ppg": 17.67,
+      "allowed": 18.0,
+      "q1Scored": 4.5,
+      "q1Allowed": 1.17,
+      "h1Scored": 11.67,
+      "h1Allowed": 5.5
     },
     "away": {
       "games": 6,
@@ -20249,6 +21274,20 @@
         "q1Allowed": 0,
         "h1Scored": 27,
         "h1Allowed": 0
+      },
+      {
+        "gameId": 401866694,
+        "date": "2026-11-21T17:00:00.000Z",
+        "opponent": "UAlbany",
+        "location": "home",
+        "pointsScored": 7,
+        "pointsAllowed": 24,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 0,
+        "h1Scored": 0,
+        "h1Allowed": 10
       }
     ]
   },
@@ -20258,28 +21297,28 @@
     "classification": "fcs",
     "conference": "MEAC",
     "overall": {
-      "games": 11,
-      "wins": 5,
+      "games": 12,
+      "wins": 6,
       "losses": 6,
       "ties": 0,
-      "ppg": 25.36,
-      "allowed": 26.27,
-      "q1Scored": 7.55,
-      "q1Allowed": 7.45,
-      "h1Scored": 15.45,
-      "h1Allowed": 16.64
+      "ppg": 26.67,
+      "allowed": 26.67,
+      "q1Scored": 7.5,
+      "q1Allowed": 7.42,
+      "h1Scored": 15.33,
+      "h1Allowed": 15.83
     },
     "home": {
-      "games": 5,
-      "wins": 3,
+      "games": 6,
+      "wins": 4,
       "losses": 2,
       "ties": 0,
-      "ppg": 27.2,
-      "allowed": 16.6,
-      "q1Scored": 7.6,
-      "q1Allowed": 6.2,
-      "h1Scored": 17.0,
-      "h1Allowed": 10.4
+      "ppg": 29.5,
+      "allowed": 19.0,
+      "q1Scored": 7.5,
+      "q1Allowed": 6.33,
+      "h1Scored": 16.5,
+      "h1Allowed": 9.83
     },
     "away": {
       "games": 6,
@@ -20447,6 +21486,20 @@
         "q1Allowed": 14,
         "h1Scored": 24,
         "h1Allowed": 24
+      },
+      {
+        "gameId": 401867971,
+        "date": "2026-11-21T19:00:00.000Z",
+        "opponent": "Morgan State",
+        "location": "home",
+        "pointsScored": 41,
+        "pointsAllowed": 31,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 7,
+        "h1Scored": 14,
+        "h1Allowed": 7
       }
     ]
   },
@@ -20456,27 +21509,27 @@
     "classification": "fcs",
     "conference": "MVFC",
     "overall": {
-      "games": 11,
-      "wins": 7,
+      "games": 12,
+      "wins": 8,
       "losses": 4,
       "ties": 0,
-      "ppg": 35.73,
-      "allowed": 25.36,
-      "q1Scored": 9.45,
-      "q1Allowed": 8.18,
-      "h1Scored": 22.82,
-      "h1Allowed": 12.73
+      "ppg": 35.08,
+      "allowed": 25.17,
+      "q1Scored": 9.25,
+      "q1Allowed": 7.75,
+      "h1Scored": 22.08,
+      "h1Allowed": 12.5
     },
     "home": {
-      "games": 5,
-      "wins": 5,
+      "games": 6,
+      "wins": 6,
       "losses": 0,
       "ties": 0,
-      "ppg": 45.8,
-      "allowed": 21.2,
-      "q1Scored": 12.6,
-      "q1Allowed": 5.6,
-      "h1Scored": 32.6,
+      "ppg": 42.83,
+      "allowed": 21.5,
+      "q1Scored": 11.67,
+      "q1Allowed": 5.17,
+      "h1Scored": 29.5,
       "h1Allowed": 10.0
     },
     "away": {
@@ -20645,6 +21698,20 @@
         "q1Allowed": 14,
         "h1Scored": 35,
         "h1Allowed": 14
+      },
+      {
+        "gameId": 401867881,
+        "date": "2026-11-21T19:00:00.000Z",
+        "opponent": "Southern Illinois",
+        "location": "home",
+        "pointsScored": 28,
+        "pointsAllowed": 23,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 3,
+        "h1Scored": 14,
+        "h1Allowed": 10
       }
     ]
   },
@@ -20842,28 +21909,28 @@
     "classification": "fcs",
     "conference": "Big Sky",
     "overall": {
-      "games": 11,
-      "wins": 8,
+      "games": 12,
+      "wins": 9,
       "losses": 3,
       "ties": 0,
-      "ppg": 31.45,
-      "allowed": 27.55,
-      "q1Scored": 4.36,
-      "q1Allowed": 5.91,
-      "h1Scored": 15.27,
-      "h1Allowed": 13.09
+      "ppg": 31.75,
+      "allowed": 27.42,
+      "q1Scored": 4.58,
+      "q1Allowed": 5.42,
+      "h1Scored": 15.75,
+      "h1Allowed": 13.08
     },
     "home": {
-      "games": 5,
-      "wins": 4,
+      "games": 6,
+      "wins": 5,
       "losses": 1,
       "ties": 0,
-      "ppg": 36.0,
-      "allowed": 29.8,
-      "q1Scored": 5.4,
-      "q1Allowed": 8.2,
-      "h1Scored": 17.8,
-      "h1Allowed": 17.0
+      "ppg": 35.83,
+      "allowed": 29.17,
+      "q1Scored": 5.67,
+      "q1Allowed": 6.83,
+      "h1Scored": 18.33,
+      "h1Allowed": 16.33
     },
     "away": {
       "games": 6,
@@ -21031,6 +22098,20 @@
         "q1Allowed": 10,
         "h1Scored": 17,
         "h1Allowed": 16
+      },
+      {
+        "gameId": 401868128,
+        "date": "2026-11-21T21:00:00.000Z",
+        "opponent": "Northern Colorado",
+        "location": "home",
+        "pointsScored": 35,
+        "pointsAllowed": 26,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 0,
+        "h1Scored": 21,
+        "h1Allowed": 13
       }
     ]
   },
@@ -21040,16 +22121,16 @@
     "classification": "fcs",
     "conference": "Big Sky",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 3,
-      "losses": 8,
+      "losses": 9,
       "ties": 0,
-      "ppg": 21.82,
-      "allowed": 27.18,
-      "q1Scored": 3.18,
-      "q1Allowed": 6.0,
-      "h1Scored": 8.55,
-      "h1Allowed": 15.73
+      "ppg": 22.17,
+      "allowed": 27.83,
+      "q1Scored": 2.92,
+      "q1Allowed": 6.08,
+      "h1Scored": 8.92,
+      "h1Allowed": 16.17
     },
     "home": {
       "games": 6,
@@ -21064,16 +22145,16 @@
       "h1Allowed": 13.67
     },
     "away": {
-      "games": 5,
+      "games": 6,
       "wins": 0,
-      "losses": 5,
+      "losses": 6,
       "ties": 0,
-      "ppg": 15.8,
-      "allowed": 30.4,
+      "ppg": 17.5,
+      "allowed": 31.17,
       "q1Scored": 0.0,
-      "q1Allowed": 8.4,
-      "h1Scored": 4.6,
-      "h1Allowed": 18.2
+      "q1Allowed": 8.17,
+      "h1Scored": 6.0,
+      "h1Allowed": 18.67
     },
     "games": [
       {
@@ -21229,6 +22310,20 @@
         "q1Allowed": 7,
         "h1Scored": 7,
         "h1Allowed": 14
+      },
+      {
+        "gameId": 401868128,
+        "date": "2026-11-21T21:00:00.000Z",
+        "opponent": "Northern Arizona",
+        "location": "away",
+        "pointsScored": 26,
+        "pointsAllowed": 35,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 7,
+        "h1Scored": 13,
+        "h1Allowed": 21
       }
     ]
   },
@@ -21296,16 +22391,16 @@
     "classification": "fcs",
     "conference": "MVFC",
     "overall": {
-      "games": 10,
+      "games": 11,
       "wins": 4,
-      "losses": 6,
+      "losses": 7,
       "ties": 0,
-      "ppg": 26.1,
-      "allowed": 30.1,
-      "q1Scored": 7.2,
-      "q1Allowed": 8.9,
-      "h1Scored": 15.2,
-      "h1Allowed": 18.5
+      "ppg": 25.0,
+      "allowed": 32.0,
+      "q1Scored": 7.18,
+      "q1Allowed": 9.0,
+      "h1Scored": 14.45,
+      "h1Allowed": 18.36
     },
     "home": {
       "games": 5,
@@ -21320,16 +22415,16 @@
       "h1Allowed": 11.4
     },
     "away": {
-      "games": 5,
+      "games": 6,
       "wins": 0,
-      "losses": 5,
+      "losses": 6,
       "ties": 0,
-      "ppg": 18.6,
-      "allowed": 37.0,
-      "q1Scored": 4.8,
-      "q1Allowed": 11.0,
-      "h1Scored": 11.0,
-      "h1Allowed": 25.6
+      "ppg": 17.83,
+      "allowed": 39.33,
+      "q1Scored": 5.17,
+      "q1Allowed": 10.83,
+      "h1Scored": 10.33,
+      "h1Allowed": 24.17
     },
     "games": [
       {
@@ -21471,6 +22566,20 @@
         "q1Allowed": 7,
         "h1Scored": 17,
         "h1Allowed": 28
+      },
+      {
+        "gameId": 401867873,
+        "date": "2026-11-21T19:00:00.000Z",
+        "opponent": "Murray State",
+        "location": "away",
+        "pointsScored": 14,
+        "pointsAllowed": 51,
+        "won": false,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 10,
+        "h1Scored": 7,
+        "h1Allowed": 17
       }
     ]
   },
@@ -22156,28 +23265,28 @@
     "classification": "fbs",
     "conference": "SEC",
     "overall": {
-      "games": 0,
-      "wins": 0,
+      "games": 1,
+      "wins": 1,
       "losses": 0,
       "ties": 0,
-      "ppg": null,
-      "allowed": null,
-      "q1Scored": null,
-      "q1Allowed": null,
-      "h1Scored": null,
-      "h1Allowed": null
+      "ppg": 59.0,
+      "allowed": 17.0,
+      "q1Scored": 21.0,
+      "q1Allowed": 0.0,
+      "h1Scored": 49.0,
+      "h1Allowed": 3.0
     },
     "home": {
-      "games": 0,
-      "wins": 0,
+      "games": 1,
+      "wins": 1,
       "losses": 0,
       "ties": 0,
-      "ppg": null,
-      "allowed": null,
-      "q1Scored": null,
-      "q1Allowed": null,
-      "h1Scored": null,
-      "h1Allowed": null
+      "ppg": 59.0,
+      "allowed": 17.0,
+      "q1Scored": 21.0,
+      "q1Allowed": 0.0,
+      "h1Scored": 49.0,
+      "h1Allowed": 3.0
     },
     "away": {
       "games": 0,
@@ -22191,7 +23300,22 @@
       "h1Scored": null,
       "h1Allowed": null
     },
-    "games": []
+    "games": [
+      {
+        "gameId": 401856749,
+        "date": "2026-11-21T17:00:00.000Z",
+        "opponent": "Wofford",
+        "location": "home",
+        "pointsScored": 59,
+        "pointsAllowed": 17,
+        "won": true,
+        "tied": false,
+        "q1Scored": 21,
+        "q1Allowed": 0,
+        "h1Scored": 49,
+        "h1Allowed": 3
+      }
+    ]
   },
   {
     "name": "Oregon",
@@ -22315,16 +23439,16 @@
     "classification": "fcs",
     "conference": "Ivy",
     "overall": {
-      "games": 9,
-      "wins": 4,
+      "games": 10,
+      "wins": 5,
       "losses": 5,
       "ties": 0,
-      "ppg": 18.56,
-      "allowed": 21.89,
-      "q1Scored": 5.33,
-      "q1Allowed": 6.44,
-      "h1Scored": 11.0,
-      "h1Allowed": 13.33
+      "ppg": 18.6,
+      "allowed": 20.9,
+      "q1Scored": 5.5,
+      "q1Allowed": 5.8,
+      "h1Scored": 11.5,
+      "h1Allowed": 12.0
     },
     "home": {
       "games": 5,
@@ -22339,16 +23463,16 @@
       "h1Allowed": 15.8
     },
     "away": {
-      "games": 4,
-      "wins": 2,
+      "games": 5,
+      "wins": 3,
       "losses": 2,
       "ties": 0,
-      "ppg": 15.25,
-      "allowed": 17.5,
-      "q1Scored": 3.5,
-      "q1Allowed": 6.0,
-      "h1Scored": 6.75,
-      "h1Allowed": 10.25
+      "ppg": 16.0,
+      "allowed": 16.4,
+      "q1Scored": 4.2,
+      "q1Allowed": 4.8,
+      "h1Scored": 8.6,
+      "h1Allowed": 8.2
     },
     "games": [
       {
@@ -22476,6 +23600,20 @@
         "q1Allowed": 10,
         "h1Scored": 24,
         "h1Allowed": 17
+      },
+      {
+        "gameId": 401872619,
+        "date": "2026-11-21T17:00:00.000Z",
+        "opponent": "Princeton",
+        "location": "away",
+        "pointsScored": 19,
+        "pointsAllowed": 12,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 0,
+        "h1Scored": 16,
+        "h1Allowed": 0
       }
     ]
   },
@@ -22601,16 +23739,16 @@
     "classification": "fcs",
     "conference": "Big Sky",
     "overall": {
-      "games": 11,
-      "wins": 2,
+      "games": 12,
+      "wins": 3,
       "losses": 9,
       "ties": 0,
-      "ppg": 21.18,
-      "allowed": 42.18,
-      "q1Scored": 6.55,
-      "q1Allowed": 9.27,
-      "h1Scored": 11.91,
-      "h1Allowed": 21.09
+      "ppg": 22.75,
+      "allowed": 41.83,
+      "q1Scored": 6.0,
+      "q1Allowed": 9.67,
+      "h1Scored": 12.08,
+      "h1Allowed": 20.5
     },
     "home": {
       "games": 5,
@@ -22625,16 +23763,16 @@
       "h1Allowed": 14.0
     },
     "away": {
-      "games": 6,
-      "wins": 1,
+      "games": 7,
+      "wins": 2,
       "losses": 5,
       "ties": 0,
-      "ppg": 20.17,
-      "allowed": 51.83,
-      "q1Scored": 6.17,
-      "q1Allowed": 11.17,
-      "h1Scored": 9.67,
-      "h1Allowed": 27.0
+      "ppg": 23.0,
+      "allowed": 49.86,
+      "q1Scored": 5.29,
+      "q1Allowed": 11.57,
+      "h1Scored": 10.29,
+      "h1Allowed": 25.14
     },
     "games": [
       {
@@ -22790,6 +23928,20 @@
         "q1Allowed": 7,
         "h1Scored": 7,
         "h1Allowed": 13
+      },
+      {
+        "gameId": 401868092,
+        "date": "2026-11-21T21:00:00.000Z",
+        "opponent": "Eastern Washington",
+        "location": "away",
+        "pointsScored": 40,
+        "pointsAllowed": 38,
+        "won": true,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 14,
+        "h1Scored": 14,
+        "h1Allowed": 14
       }
     ]
   },
@@ -22799,16 +23951,16 @@
     "classification": "fcs",
     "conference": "SWAC",
     "overall": {
-      "games": 11,
-      "wins": 6,
+      "games": 12,
+      "wins": 7,
       "losses": 5,
       "ties": 0,
-      "ppg": 24.73,
-      "allowed": 25.91,
-      "q1Scored": 5.91,
-      "q1Allowed": 6.18,
-      "h1Scored": 13.09,
-      "h1Allowed": 14.36
+      "ppg": 26.42,
+      "allowed": 24.58,
+      "q1Scored": 6.0,
+      "q1Allowed": 6.25,
+      "h1Scored": 13.75,
+      "h1Allowed": 14.0
     },
     "home": {
       "games": 5,
@@ -22823,16 +23975,16 @@
       "h1Allowed": 13.8
     },
     "away": {
-      "games": 6,
-      "wins": 3,
+      "games": 7,
+      "wins": 4,
       "losses": 3,
       "ties": 0,
-      "ppg": 20.67,
-      "allowed": 27.33,
-      "q1Scored": 3.33,
-      "q1Allowed": 6.17,
-      "h1Scored": 12.5,
-      "h1Allowed": 14.83
+      "ppg": 24.14,
+      "allowed": 24.86,
+      "q1Scored": 3.86,
+      "q1Allowed": 6.29,
+      "h1Scored": 13.71,
+      "h1Allowed": 14.14
     },
     "games": [
       {
@@ -22988,6 +24140,20 @@
         "q1Allowed": 0,
         "h1Scored": 7,
         "h1Allowed": 7
+      },
+      {
+        "gameId": 401868353,
+        "date": "2026-11-21T20:00:00.000Z",
+        "opponent": "Alabama State",
+        "location": "away",
+        "pointsScored": 45,
+        "pointsAllowed": 10,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 7,
+        "h1Scored": 21,
+        "h1Allowed": 10
       }
     ]
   },
@@ -22997,28 +24163,28 @@
     "classification": "fcs",
     "conference": "Pioneer",
     "overall": {
-      "games": 10,
+      "games": 11,
       "wins": 4,
-      "losses": 6,
+      "losses": 7,
       "ties": 0,
-      "ppg": 25.3,
-      "allowed": 36.3,
-      "q1Scored": 4.7,
-      "q1Allowed": 10.4,
-      "h1Scored": 13.4,
-      "h1Allowed": 20.7
+      "ppg": 24.0,
+      "allowed": 35.45,
+      "q1Scored": 4.27,
+      "q1Allowed": 10.09,
+      "h1Scored": 12.91,
+      "h1Allowed": 21.0
     },
     "home": {
-      "games": 4,
+      "games": 5,
       "wins": 3,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "ppg": 37.5,
-      "allowed": 26.5,
-      "q1Scored": 8.25,
-      "q1Allowed": 8.75,
-      "h1Scored": 19.75,
-      "h1Allowed": 13.5
+      "ppg": 32.2,
+      "allowed": 26.6,
+      "q1Scored": 6.6,
+      "q1Allowed": 8.4,
+      "h1Scored": 17.4,
+      "h1Allowed": 15.6
     },
     "away": {
       "games": 6,
@@ -23172,6 +24338,20 @@
         "q1Allowed": 14,
         "h1Scored": 10,
         "h1Allowed": 28
+      },
+      {
+        "gameId": 401868253,
+        "date": "2026-11-21T18:00:00.000Z",
+        "opponent": "Dayton",
+        "location": "home",
+        "pointsScored": 11,
+        "pointsAllowed": 27,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 7,
+        "h1Scored": 8,
+        "h1Allowed": 24
       }
     ]
   },
@@ -23181,28 +24361,28 @@
     "classification": "fcs",
     "conference": "Ivy",
     "overall": {
-      "games": 9,
+      "games": 10,
       "wins": 6,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "ppg": 18.22,
-      "allowed": 16.44,
-      "q1Scored": 5.0,
-      "q1Allowed": 1.78,
-      "h1Scored": 11.78,
-      "h1Allowed": 8.22
+      "ppg": 17.6,
+      "allowed": 16.7,
+      "q1Scored": 4.5,
+      "q1Allowed": 2.3,
+      "h1Scored": 10.6,
+      "h1Allowed": 9.0
     },
     "home": {
-      "games": 4,
+      "games": 5,
       "wins": 4,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "ppg": 20.0,
-      "allowed": 11.0,
-      "q1Scored": 6.0,
-      "q1Allowed": 0.75,
-      "h1Scored": 14.25,
-      "h1Allowed": 5.0
+      "ppg": 18.4,
+      "allowed": 12.6,
+      "q1Scored": 4.8,
+      "q1Allowed": 2.0,
+      "h1Scored": 11.4,
+      "h1Allowed": 7.2
     },
     "away": {
       "games": 5,
@@ -23342,6 +24522,20 @@
         "q1Allowed": 7,
         "h1Scored": 0,
         "h1Allowed": 14
+      },
+      {
+        "gameId": 401872619,
+        "date": "2026-11-21T17:00:00.000Z",
+        "opponent": "Pennsylvania",
+        "location": "home",
+        "pointsScored": 12,
+        "pointsAllowed": 19,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 7,
+        "h1Scored": 0,
+        "h1Allowed": 16
       }
     ]
   },
@@ -23409,16 +24603,16 @@
     "classification": "fcs",
     "conference": "Coastal Athletic",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 5,
-      "losses": 6,
+      "losses": 7,
       "ties": 0,
-      "ppg": 22.45,
-      "allowed": 23.64,
-      "q1Scored": 5.09,
-      "q1Allowed": 4.0,
-      "h1Scored": 9.64,
-      "h1Allowed": 10.73
+      "ppg": 21.17,
+      "allowed": 24.0,
+      "q1Scored": 5.25,
+      "q1Allowed": 4.25,
+      "h1Scored": 9.42,
+      "h1Allowed": 10.42
     },
     "home": {
       "games": 5,
@@ -23433,16 +24627,16 @@
       "h1Allowed": 4.0
     },
     "away": {
-      "games": 6,
+      "games": 7,
       "wins": 2,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "ppg": 25.33,
-      "allowed": 28.33,
-      "q1Scored": 8.17,
-      "q1Allowed": 5.67,
-      "h1Scored": 14.83,
-      "h1Allowed": 16.33
+      "ppg": 22.71,
+      "allowed": 28.29,
+      "q1Scored": 8.0,
+      "q1Allowed": 5.86,
+      "h1Scored": 13.71,
+      "h1Allowed": 15.0
     },
     "games": [
       {
@@ -23598,6 +24792,20 @@
         "q1Allowed": 3,
         "h1Scored": 7,
         "h1Allowed": 3
+      },
+      {
+        "gameId": 401866696,
+        "date": "2026-11-21T18:20:00.000Z",
+        "opponent": "Bryant",
+        "location": "away",
+        "pointsScored": 7,
+        "pointsAllowed": 28,
+        "won": false,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 7,
+        "h1Scored": 7,
+        "h1Allowed": 7
       }
     ]
   },
@@ -23665,28 +24873,28 @@
     "classification": "fcs",
     "conference": "Patriot",
     "overall": {
-      "games": 11,
-      "wins": 6,
+      "games": 12,
+      "wins": 7,
       "losses": 5,
       "ties": 0,
-      "ppg": 17.73,
-      "allowed": 25.36,
-      "q1Scored": 6.18,
-      "q1Allowed": 5.64,
-      "h1Scored": 13.09,
-      "h1Allowed": 12.82
+      "ppg": 17.67,
+      "allowed": 24.58,
+      "q1Scored": 5.67,
+      "q1Allowed": 5.75,
+      "h1Scored": 12.25,
+      "h1Allowed": 12.5
     },
     "home": {
-      "games": 5,
-      "wins": 4,
+      "games": 6,
+      "wins": 5,
       "losses": 1,
       "ties": 0,
-      "ppg": 19.8,
-      "allowed": 14.2,
-      "q1Scored": 6.8,
-      "q1Allowed": 1.2,
-      "h1Scored": 17.2,
-      "h1Allowed": 5.6
+      "ppg": 19.33,
+      "allowed": 14.5,
+      "q1Scored": 5.67,
+      "q1Allowed": 2.17,
+      "h1Scored": 14.83,
+      "h1Allowed": 6.17
     },
     "away": {
       "games": 6,
@@ -23854,6 +25062,20 @@
         "q1Allowed": 0,
         "h1Scored": 14,
         "h1Allowed": 6
+      },
+      {
+        "gameId": 401868039,
+        "date": "2026-11-21T17:00:00.000Z",
+        "opponent": "William & Mary",
+        "location": "home",
+        "pointsScored": 17,
+        "pointsAllowed": 16,
+        "won": true,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 7,
+        "h1Scored": 3,
+        "h1Allowed": 9
       }
     ]
   },
@@ -23863,28 +25085,28 @@
     "classification": "fcs",
     "conference": "NEC",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 6,
-      "losses": 5,
+      "losses": 6,
       "ties": 0,
-      "ppg": 21.73,
-      "allowed": 23.0,
-      "q1Scored": 5.45,
-      "q1Allowed": 3.73,
-      "h1Scored": 11.73,
-      "h1Allowed": 10.73
+      "ppg": 21.75,
+      "allowed": 23.25,
+      "q1Scored": 5.0,
+      "q1Allowed": 3.67,
+      "h1Scored": 11.33,
+      "h1Allowed": 10.08
     },
     "home": {
-      "games": 5,
+      "games": 6,
       "wins": 4,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "ppg": 23.8,
-      "allowed": 16.6,
-      "q1Scored": 4.4,
-      "q1Allowed": 2.0,
-      "h1Scored": 11.4,
-      "h1Allowed": 7.0
+      "ppg": 23.5,
+      "allowed": 18.17,
+      "q1Scored": 3.67,
+      "q1Allowed": 2.17,
+      "h1Scored": 10.67,
+      "h1Allowed": 6.33
     },
     "away": {
       "games": 6,
@@ -24051,6 +25273,20 @@
         "q1Scored": 0,
         "q1Allowed": 0,
         "h1Scored": 0,
+        "h1Allowed": 3
+      },
+      {
+        "gameId": 401867915,
+        "date": "2026-11-21T17:00:00.000Z",
+        "opponent": "Long Island University",
+        "location": "home",
+        "pointsScored": 22,
+        "pointsAllowed": 26,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 3,
+        "h1Scored": 7,
         "h1Allowed": 3
       }
     ]
@@ -24505,16 +25741,16 @@
     "classification": "fcs",
     "conference": "Coastal Athletic",
     "overall": {
-      "games": 10,
-      "wins": 4,
+      "games": 11,
+      "wins": 5,
       "losses": 6,
       "ties": 0,
-      "ppg": 23.6,
-      "allowed": 27.5,
-      "q1Scored": 3.4,
-      "q1Allowed": 5.7,
-      "h1Scored": 11.9,
-      "h1Allowed": 13.1
+      "ppg": 24.64,
+      "allowed": 25.91,
+      "q1Scored": 4.36,
+      "q1Allowed": 5.18,
+      "h1Scored": 12.73,
+      "h1Allowed": 12.82
     },
     "home": {
       "games": 5,
@@ -24529,16 +25765,16 @@
       "h1Allowed": 11.4
     },
     "away": {
-      "games": 5,
-      "wins": 2,
+      "games": 6,
+      "wins": 3,
       "losses": 3,
       "ties": 0,
-      "ppg": 22.2,
-      "allowed": 27.8,
-      "q1Scored": 3.4,
-      "q1Allowed": 6.0,
-      "h1Scored": 11.0,
-      "h1Allowed": 14.8
+      "ppg": 24.33,
+      "allowed": 24.83,
+      "q1Scored": 5.17,
+      "q1Allowed": 5.0,
+      "h1Scored": 12.67,
+      "h1Allowed": 14.0
     },
     "games": [
       {
@@ -24680,6 +25916,20 @@
         "q1Allowed": 3,
         "h1Scored": 10,
         "h1Allowed": 10
+      },
+      {
+        "gameId": 401866700,
+        "date": "2026-11-21T17:00:00.000Z",
+        "opponent": "Merrimack",
+        "location": "away",
+        "pointsScored": 35,
+        "pointsAllowed": 10,
+        "won": true,
+        "tied": false,
+        "q1Scored": 14,
+        "q1Allowed": 0,
+        "h1Scored": 21,
+        "h1Allowed": 10
       }
     ]
   },
@@ -24747,16 +25997,16 @@
     "classification": "fcs",
     "conference": "Southern",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 4,
-      "losses": 7,
+      "losses": 8,
       "ties": 0,
-      "ppg": 18.36,
-      "allowed": 22.36,
-      "q1Scored": 4.0,
-      "q1Allowed": 6.18,
-      "h1Scored": 9.45,
-      "h1Allowed": 13.36
+      "ppg": 18.25,
+      "allowed": 25.42,
+      "q1Scored": 3.92,
+      "q1Allowed": 6.83,
+      "h1Scored": 8.92,
+      "h1Allowed": 16.58
     },
     "home": {
       "games": 5,
@@ -24771,16 +26021,16 @@
       "h1Allowed": 10.6
     },
     "away": {
-      "games": 6,
+      "games": 7,
       "wins": 2,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "ppg": 16.0,
-      "allowed": 26.67,
-      "q1Scored": 3.17,
-      "q1Allowed": 6.33,
-      "h1Scored": 8.67,
-      "h1Allowed": 15.67
+      "ppg": 16.14,
+      "allowed": 31.29,
+      "q1Scored": 3.14,
+      "q1Allowed": 7.43,
+      "h1Scored": 7.86,
+      "h1Allowed": 20.86
     },
     "games": [
       {
@@ -24936,6 +26186,20 @@
         "q1Allowed": 0,
         "h1Scored": 6,
         "h1Allowed": 7
+      },
+      {
+        "gameId": 401856747,
+        "date": "2026-11-21T20:30:00.000Z",
+        "opponent": "Auburn",
+        "location": "away",
+        "pointsScored": 17,
+        "pointsAllowed": 59,
+        "won": false,
+        "tied": false,
+        "q1Scored": 3,
+        "q1Allowed": 14,
+        "h1Scored": 3,
+        "h1Allowed": 52
       }
     ]
   },
@@ -24945,28 +26209,28 @@
     "classification": "fcs",
     "conference": "Pioneer",
     "overall": {
-      "games": 10,
-      "wins": 5,
+      "games": 11,
+      "wins": 6,
       "losses": 5,
       "ties": 0,
-      "ppg": 31.3,
-      "allowed": 35.5,
-      "q1Scored": 7.7,
-      "q1Allowed": 8.2,
-      "h1Scored": 15.9,
-      "h1Allowed": 18.6
+      "ppg": 33.82,
+      "allowed": 34.18,
+      "q1Scored": 7.64,
+      "q1Allowed": 8.0,
+      "h1Scored": 17.64,
+      "h1Allowed": 18.09
     },
     "home": {
-      "games": 4,
-      "wins": 3,
+      "games": 5,
+      "wins": 4,
       "losses": 1,
       "ties": 0,
-      "ppg": 39.75,
-      "allowed": 29.0,
-      "q1Scored": 12.5,
-      "q1Allowed": 5.0,
-      "h1Scored": 21.0,
-      "h1Allowed": 15.25
+      "ppg": 43.6,
+      "allowed": 27.4,
+      "q1Scored": 11.4,
+      "q1Allowed": 5.2,
+      "h1Scored": 23.8,
+      "h1Allowed": 14.8
     },
     "away": {
       "games": 6,
@@ -25120,6 +26384,20 @@
         "q1Allowed": 3,
         "h1Scored": 17,
         "h1Allowed": 3
+      },
+      {
+        "gameId": 401868287,
+        "date": "2026-11-22T01:00:00.000Z",
+        "opponent": "Stetson",
+        "location": "home",
+        "pointsScored": 59,
+        "pointsAllowed": 21,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 6,
+        "h1Scored": 35,
+        "h1Allowed": 13
       }
     ]
   },
@@ -25419,28 +26697,28 @@
     "classification": "fcs",
     "conference": "MEAC",
     "overall": {
-      "games": 11,
-      "wins": 9,
+      "games": 12,
+      "wins": 10,
       "losses": 2,
       "ties": 0,
-      "ppg": 41.0,
-      "allowed": 18.45,
-      "q1Scored": 12.18,
-      "q1Allowed": 4.73,
-      "h1Scored": 23.27,
-      "h1Allowed": 9.91
+      "ppg": 39.75,
+      "allowed": 18.25,
+      "q1Scored": 11.67,
+      "q1Allowed": 4.5,
+      "h1Scored": 22.08,
+      "h1Allowed": 9.83
     },
     "home": {
-      "games": 5,
-      "wins": 4,
+      "games": 6,
+      "wins": 5,
       "losses": 1,
       "ties": 0,
-      "ppg": 48.8,
-      "allowed": 13.0,
-      "q1Scored": 13.8,
-      "q1Allowed": 4.2,
-      "h1Scored": 27.2,
-      "h1Allowed": 8.2
+      "ppg": 45.0,
+      "allowed": 13.5,
+      "q1Scored": 12.5,
+      "q1Allowed": 3.83,
+      "h1Scored": 24.17,
+      "h1Allowed": 8.33
     },
     "away": {
       "games": 6,
@@ -25608,6 +26886,20 @@
         "q1Allowed": 14,
         "h1Scored": 24,
         "h1Allowed": 24
+      },
+      {
+        "gameId": 401867959,
+        "date": "2026-11-21T18:30:00.000Z",
+        "opponent": "Delaware State",
+        "location": "home",
+        "pointsScored": 26,
+        "pointsAllowed": 16,
+        "won": true,
+        "tied": false,
+        "q1Scored": 6,
+        "q1Allowed": 2,
+        "h1Scored": 9,
+        "h1Allowed": 9
       }
     ]
   },
@@ -25617,16 +26909,16 @@
     "classification": "fcs",
     "conference": "MVFC",
     "overall": {
-      "games": 11,
-      "wins": 8,
+      "games": 12,
+      "wins": 9,
       "losses": 3,
       "ties": 0,
-      "ppg": 36.45,
-      "allowed": 25.36,
-      "q1Scored": 7.91,
-      "q1Allowed": 4.45,
-      "h1Scored": 19.45,
-      "h1Allowed": 11.73
+      "ppg": 34.25,
+      "allowed": 23.5,
+      "q1Scored": 7.25,
+      "q1Allowed": 4.08,
+      "h1Scored": 17.83,
+      "h1Allowed": 11.0
     },
     "home": {
       "games": 6,
@@ -25641,16 +26933,16 @@
       "h1Allowed": 6.67
     },
     "away": {
-      "games": 5,
-      "wins": 2,
+      "games": 6,
+      "wins": 3,
       "losses": 3,
       "ties": 0,
-      "ppg": 31.8,
-      "allowed": 31.8,
-      "q1Scored": 4.2,
-      "q1Allowed": 7.0,
-      "h1Scored": 12.6,
-      "h1Allowed": 17.8
+      "ppg": 28.17,
+      "allowed": 27.0,
+      "q1Scored": 3.5,
+      "q1Allowed": 5.83,
+      "h1Scored": 10.5,
+      "h1Allowed": 15.33
     },
     "games": [
       {
@@ -25806,6 +27098,20 @@
         "q1Allowed": 7,
         "h1Scored": 28,
         "h1Allowed": 17
+      },
+      {
+        "gameId": 401867854,
+        "date": "2026-11-21T18:00:00.000Z",
+        "opponent": "Illinois State",
+        "location": "away",
+        "pointsScored": 10,
+        "pointsAllowed": 3,
+        "won": true,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 0,
+        "h1Scored": 0,
+        "h1Allowed": 3
       }
     ]
   },
@@ -25873,28 +27179,28 @@
     "classification": "fcs",
     "conference": "MVFC",
     "overall": {
-      "games": 11,
-      "wins": 9,
+      "games": 12,
+      "wins": 10,
       "losses": 2,
       "ties": 0,
-      "ppg": 38.27,
-      "allowed": 16.18,
-      "q1Scored": 8.18,
-      "q1Allowed": 1.27,
-      "h1Scored": 19.73,
-      "h1Allowed": 7.09
+      "ppg": 39.42,
+      "allowed": 15.92,
+      "q1Scored": 9.25,
+      "q1Allowed": 1.17,
+      "h1Scored": 20.42,
+      "h1Allowed": 7.08
     },
     "home": {
-      "games": 6,
-      "wins": 6,
+      "games": 7,
+      "wins": 7,
       "losses": 0,
       "ties": 0,
-      "ppg": 44.83,
+      "ppg": 45.86,
       "allowed": 13.0,
-      "q1Scored": 9.83,
+      "q1Scored": 11.43,
       "q1Allowed": 0.0,
-      "h1Scored": 26.17,
-      "h1Allowed": 4.33
+      "h1Scored": 26.43,
+      "h1Allowed": 4.71
     },
     "away": {
       "games": 5,
@@ -26062,6 +27368,20 @@
         "q1Allowed": 0,
         "h1Scored": 24,
         "h1Allowed": 7
+      },
+      {
+        "gameId": 401867864,
+        "date": "2026-11-21T20:00:00.000Z",
+        "opponent": "Indiana State",
+        "location": "home",
+        "pointsScored": 52,
+        "pointsAllowed": 13,
+        "won": true,
+        "tied": false,
+        "q1Scored": 21,
+        "q1Allowed": 0,
+        "h1Scored": 28,
+        "h1Allowed": 7
       }
     ]
   },
@@ -26129,28 +27449,28 @@
     "classification": "fcs",
     "conference": "OVC",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 7,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "ppg": 25.55,
-      "allowed": 23.09,
-      "q1Scored": 5.82,
-      "q1Allowed": 5.82,
-      "h1Scored": 11.73,
-      "h1Allowed": 12.27
+      "ppg": 27.33,
+      "allowed": 25.42,
+      "q1Scored": 7.83,
+      "q1Allowed": 5.92,
+      "h1Scored": 13.83,
+      "h1Allowed": 13.0
     },
     "home": {
-      "games": 4,
+      "games": 5,
       "wins": 2,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "ppg": 23.5,
-      "allowed": 23.25,
-      "q1Scored": 6.75,
-      "q1Allowed": 6.5,
-      "h1Scored": 10.75,
-      "h1Allowed": 13.25
+      "ppg": 28.2,
+      "allowed": 28.8,
+      "q1Scored": 11.4,
+      "q1Allowed": 6.6,
+      "h1Scored": 16.0,
+      "h1Allowed": 14.8
     },
     "away": {
       "games": 7,
@@ -26318,6 +27638,20 @@
         "q1Allowed": 7,
         "h1Scored": 19,
         "h1Allowed": 10
+      },
+      {
+        "gameId": 401868203,
+        "date": "2026-11-21T19:00:00.000Z",
+        "opponent": "UT Martin",
+        "location": "home",
+        "pointsScored": 47,
+        "pointsAllowed": 51,
+        "won": false,
+        "tied": false,
+        "q1Scored": 30,
+        "q1Allowed": 7,
+        "h1Scored": 37,
+        "h1Allowed": 21
       }
     ]
   },
@@ -26583,16 +27917,16 @@
     "classification": "fcs",
     "conference": "MVFC",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 5,
-      "losses": 6,
+      "losses": 7,
       "ties": 0,
-      "ppg": 23.27,
-      "allowed": 28.09,
-      "q1Scored": 3.82,
-      "q1Allowed": 6.18,
-      "h1Scored": 11.55,
-      "h1Allowed": 14.82
+      "ppg": 23.25,
+      "allowed": 28.08,
+      "q1Scored": 3.75,
+      "q1Allowed": 6.25,
+      "h1Scored": 11.42,
+      "h1Allowed": 14.75
     },
     "home": {
       "games": 5,
@@ -26607,15 +27941,15 @@
       "h1Allowed": 15.8
     },
     "away": {
-      "games": 6,
+      "games": 7,
       "wins": 3,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "ppg": 26.0,
-      "allowed": 26.17,
-      "q1Scored": 5.33,
-      "q1Allowed": 6.17,
-      "h1Scored": 14.5,
+      "ppg": 25.57,
+      "allowed": 26.43,
+      "q1Scored": 5.0,
+      "q1Allowed": 6.29,
+      "h1Scored": 13.86,
       "h1Allowed": 14.0
     },
     "games": [
@@ -26772,6 +28106,20 @@
         "q1Allowed": 14,
         "h1Scored": 7,
         "h1Allowed": 24
+      },
+      {
+        "gameId": 401867881,
+        "date": "2026-11-21T19:00:00.000Z",
+        "opponent": "North Dakota",
+        "location": "away",
+        "pointsScored": 23,
+        "pointsAllowed": 28,
+        "won": false,
+        "tied": false,
+        "q1Scored": 3,
+        "q1Allowed": 7,
+        "h1Scored": 10,
+        "h1Allowed": 14
       }
     ]
   },
@@ -26839,28 +28187,28 @@
     "classification": "fcs",
     "conference": "Big Sky",
     "overall": {
-      "games": 11,
-      "wins": 5,
+      "games": 12,
+      "wins": 6,
       "losses": 6,
       "ties": 0,
-      "ppg": 30.45,
-      "allowed": 31.27,
-      "q1Scored": 6.91,
-      "q1Allowed": 5.27,
-      "h1Scored": 15.09,
-      "h1Allowed": 17.64
+      "ppg": 33.33,
+      "allowed": 28.92,
+      "q1Scored": 8.67,
+      "q1Allowed": 4.83,
+      "h1Scored": 17.92,
+      "h1Allowed": 16.17
     },
     "home": {
-      "games": 5,
-      "wins": 3,
+      "games": 6,
+      "wins": 4,
       "losses": 2,
       "ties": 0,
-      "ppg": 33.4,
-      "allowed": 29.0,
-      "q1Scored": 7.4,
-      "q1Allowed": 1.4,
-      "h1Scored": 14.6,
-      "h1Allowed": 13.2
+      "ppg": 38.67,
+      "allowed": 24.67,
+      "q1Scored": 10.83,
+      "q1Allowed": 1.17,
+      "h1Scored": 20.33,
+      "h1Allowed": 11.0
     },
     "away": {
       "games": 6,
@@ -27028,6 +28376,20 @@
         "q1Allowed": 7,
         "h1Scored": 13,
         "h1Allowed": 7
+      },
+      {
+        "gameId": 401891330,
+        "date": "2026-11-21T19:00:00.000Z",
+        "opponent": "Chicago State",
+        "location": "home",
+        "pointsScored": 65,
+        "pointsAllowed": 3,
+        "won": true,
+        "tied": false,
+        "q1Scored": 28,
+        "q1Allowed": 0,
+        "h1Scored": 49,
+        "h1Allowed": 0
       }
     ]
   },
@@ -27095,16 +28457,16 @@
     "classification": "fcs",
     "conference": "Pioneer",
     "overall": {
-      "games": 11,
-      "wins": 8,
+      "games": 12,
+      "wins": 9,
       "losses": 3,
       "ties": 0,
-      "ppg": 36.27,
-      "allowed": 27.27,
-      "q1Scored": 8.55,
-      "q1Allowed": 6.82,
-      "h1Scored": 22.73,
-      "h1Allowed": 13.91
+      "ppg": 34.33,
+      "allowed": 25.58,
+      "q1Scored": 7.83,
+      "q1Allowed": 6.83,
+      "h1Scored": 21.67,
+      "h1Allowed": 13.33
     },
     "home": {
       "games": 7,
@@ -27119,16 +28481,16 @@
       "h1Allowed": 7.86
     },
     "away": {
-      "games": 4,
-      "wins": 1,
+      "games": 5,
+      "wins": 2,
       "losses": 3,
       "ties": 0,
-      "ppg": 24.0,
-      "allowed": 42.75,
-      "q1Scored": 1.75,
-      "q1Allowed": 11.0,
-      "h1Scored": 11.75,
-      "h1Allowed": 24.5
+      "ppg": 21.8,
+      "allowed": 35.6,
+      "q1Scored": 1.4,
+      "q1Allowed": 10.2,
+      "h1Scored": 11.4,
+      "h1Allowed": 21.0
     },
     "games": [
       {
@@ -27283,6 +28645,20 @@
         "q1Scored": 27,
         "q1Allowed": 0,
         "h1Scored": 34,
+        "h1Allowed": 7
+      },
+      {
+        "gameId": 401868283,
+        "date": "2026-11-21T19:00:00.000Z",
+        "opponent": "Valparaiso",
+        "location": "away",
+        "pointsScored": 13,
+        "pointsAllowed": 7,
+        "won": true,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 7,
+        "h1Scored": 10,
         "h1Allowed": 7
       }
     ]
@@ -27563,16 +28939,16 @@
     "classification": "fcs",
     "conference": "Pioneer",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 1,
-      "losses": 10,
+      "losses": 11,
       "ties": 0,
-      "ppg": 24.09,
-      "allowed": 41.45,
-      "q1Scored": 4.64,
-      "q1Allowed": 7.91,
-      "h1Scored": 10.64,
-      "h1Allowed": 18.18
+      "ppg": 23.83,
+      "allowed": 42.92,
+      "q1Scored": 4.75,
+      "q1Allowed": 7.83,
+      "h1Scored": 10.83,
+      "h1Allowed": 19.58
     },
     "home": {
       "games": 5,
@@ -27587,16 +28963,16 @@
       "h1Allowed": 10.6
     },
     "away": {
-      "games": 6,
+      "games": 7,
       "wins": 0,
-      "losses": 6,
+      "losses": 7,
       "ties": 0,
-      "ppg": 16.33,
-      "allowed": 48.83,
-      "q1Scored": 4.0,
-      "q1Allowed": 11.67,
-      "h1Scored": 7.5,
-      "h1Allowed": 24.5
+      "ppg": 17.0,
+      "allowed": 50.29,
+      "q1Scored": 4.29,
+      "q1Allowed": 11.0,
+      "h1Scored": 8.29,
+      "h1Allowed": 26.0
     },
     "games": [
       {
@@ -27752,6 +29128,20 @@
         "q1Allowed": 7,
         "h1Scored": 10,
         "h1Allowed": 16
+      },
+      {
+        "gameId": 401868287,
+        "date": "2026-11-22T01:00:00.000Z",
+        "opponent": "San Diego",
+        "location": "away",
+        "pointsScored": 21,
+        "pointsAllowed": 59,
+        "won": false,
+        "tied": false,
+        "q1Scored": 6,
+        "q1Allowed": 7,
+        "h1Scored": 13,
+        "h1Allowed": 35
       }
     ]
   },
@@ -27761,28 +29151,28 @@
     "classification": "fcs",
     "conference": "NEC",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 4,
-      "losses": 7,
+      "losses": 8,
       "ties": 0,
-      "ppg": 16.36,
-      "allowed": 22.55,
-      "q1Scored": 3.64,
-      "q1Allowed": 5.27,
-      "h1Scored": 9.18,
-      "h1Allowed": 7.82
+      "ppg": 17.58,
+      "allowed": 23.58,
+      "q1Scored": 4.5,
+      "q1Allowed": 6.08,
+      "h1Scored": 11.0,
+      "h1Allowed": 8.42
     },
     "home": {
-      "games": 4,
+      "games": 5,
       "wins": 1,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "ppg": 13.5,
-      "allowed": 24.25,
-      "q1Scored": 1.75,
-      "q1Allowed": 5.25,
-      "h1Scored": 7.5,
-      "h1Allowed": 8.75
+      "ppg": 17.0,
+      "allowed": 26.4,
+      "q1Scored": 4.2,
+      "q1Allowed": 7.2,
+      "h1Scored": 12.2,
+      "h1Allowed": 10.0
     },
     "away": {
       "games": 7,
@@ -27950,6 +29340,20 @@
         "q1Allowed": 0,
         "h1Scored": 3,
         "h1Allowed": 0
+      },
+      {
+        "gameId": 401867927,
+        "date": "2026-11-21T17:00:00.000Z",
+        "opponent": "Wagner",
+        "location": "home",
+        "pointsScored": 31,
+        "pointsAllowed": 35,
+        "won": false,
+        "tied": false,
+        "q1Scored": 14,
+        "q1Allowed": 15,
+        "h1Scored": 31,
+        "h1Allowed": 15
       }
     ]
   },
@@ -27959,28 +29363,28 @@
     "classification": "fcs",
     "conference": "Coastal Athletic",
     "overall": {
-      "games": 11,
-      "wins": 5,
+      "games": 12,
+      "wins": 6,
       "losses": 6,
       "ties": 0,
-      "ppg": 31.45,
-      "allowed": 31.18,
-      "q1Scored": 6.18,
-      "q1Allowed": 4.91,
-      "h1Scored": 15.91,
-      "h1Allowed": 15.55
+      "ppg": 30.5,
+      "allowed": 29.42,
+      "q1Scored": 6.25,
+      "q1Allowed": 4.5,
+      "h1Scored": 16.0,
+      "h1Allowed": 14.5
     },
     "home": {
-      "games": 4,
-      "wins": 2,
+      "games": 5,
+      "wins": 3,
       "losses": 2,
       "ties": 0,
-      "ppg": 38.5,
-      "allowed": 34.0,
-      "q1Scored": 5.25,
-      "q1Allowed": 5.75,
-      "h1Scored": 16.5,
-      "h1Allowed": 18.0
+      "ppg": 34.8,
+      "allowed": 29.2,
+      "q1Scored": 5.6,
+      "q1Allowed": 4.6,
+      "h1Scored": 16.6,
+      "h1Allowed": 15.0
     },
     "away": {
       "games": 7,
@@ -28148,6 +29552,20 @@
         "q1Allowed": 0,
         "h1Scored": 10,
         "h1Allowed": 6
+      },
+      {
+        "gameId": 401866695,
+        "date": "2026-11-21T17:00:00.000Z",
+        "opponent": "Hampton",
+        "location": "home",
+        "pointsScored": 20,
+        "pointsAllowed": 10,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 0,
+        "h1Scored": 17,
+        "h1Allowed": 3
       }
     ]
   },
@@ -28273,16 +29691,16 @@
     "classification": "fcs",
     "conference": "UAC",
     "overall": {
-      "games": 11,
-      "wins": 11,
+      "games": 12,
+      "wins": 12,
       "losses": 0,
       "ties": 0,
-      "ppg": 39.45,
-      "allowed": 22.64,
-      "q1Scored": 9.45,
-      "q1Allowed": 3.91,
-      "h1Scored": 21.73,
-      "h1Allowed": 11.09
+      "ppg": 38.75,
+      "allowed": 22.75,
+      "q1Scored": 9.25,
+      "q1Allowed": 4.17,
+      "h1Scored": 21.67,
+      "h1Allowed": 10.75
     },
     "home": {
       "games": 6,
@@ -28297,16 +29715,16 @@
       "h1Allowed": 13.67
     },
     "away": {
-      "games": 5,
-      "wins": 5,
+      "games": 6,
+      "wins": 6,
       "losses": 0,
       "ties": 0,
-      "ppg": 33.4,
-      "allowed": 18.4,
-      "q1Scored": 9.0,
-      "q1Allowed": 3.8,
-      "h1Scored": 20.6,
-      "h1Allowed": 8.0
+      "ppg": 33.0,
+      "allowed": 19.33,
+      "q1Scored": 8.67,
+      "q1Allowed": 4.33,
+      "h1Scored": 20.67,
+      "h1Allowed": 7.83
     },
     "games": [
       {
@@ -28462,6 +29880,20 @@
         "q1Allowed": 3,
         "h1Scored": 28,
         "h1Allowed": 10
+      },
+      {
+        "gameId": 401868234,
+        "date": "2026-11-21T21:00:00.000Z",
+        "opponent": "North Alabama",
+        "location": "away",
+        "pointsScored": 31,
+        "pointsAllowed": 24,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 7,
+        "h1Scored": 21,
+        "h1Allowed": 7
       }
     ]
   },
@@ -28587,16 +30019,16 @@
     "classification": "fcs",
     "conference": "OVC",
     "overall": {
-      "games": 11,
-      "wins": 3,
+      "games": 12,
+      "wins": 4,
       "losses": 8,
       "ties": 0,
-      "ppg": 15.18,
-      "allowed": 29.36,
-      "q1Scored": 4.0,
-      "q1Allowed": 5.36,
-      "h1Scored": 7.82,
-      "h1Allowed": 13.55
+      "ppg": 15.25,
+      "allowed": 27.92,
+      "q1Scored": 3.92,
+      "q1Allowed": 5.42,
+      "h1Scored": 7.92,
+      "h1Allowed": 13.17
     },
     "home": {
       "games": 6,
@@ -28611,16 +30043,16 @@
       "h1Allowed": 10.17
     },
     "away": {
-      "games": 5,
-      "wins": 1,
+      "games": 6,
+      "wins": 2,
       "losses": 4,
       "ties": 0,
-      "ppg": 11.2,
-      "allowed": 34.8,
-      "q1Scored": 2.8,
-      "q1Allowed": 10.4,
-      "h1Scored": 6.6,
-      "h1Allowed": 17.6
+      "ppg": 12.0,
+      "allowed": 31.0,
+      "q1Scored": 2.83,
+      "q1Allowed": 9.67,
+      "h1Scored": 7.0,
+      "h1Allowed": 16.17
     },
     "games": [
       {
@@ -28776,6 +30208,20 @@
         "q1Allowed": 0,
         "h1Scored": 0,
         "h1Allowed": 7
+      },
+      {
+        "gameId": 401868193,
+        "date": "2026-11-21T18:30:00.000Z",
+        "opponent": "Gardner-Webb",
+        "location": "away",
+        "pointsScored": 16,
+        "pointsAllowed": 12,
+        "won": true,
+        "tied": false,
+        "q1Scored": 3,
+        "q1Allowed": 6,
+        "h1Scored": 9,
+        "h1Allowed": 9
       }
     ]
   },
@@ -28785,16 +30231,16 @@
     "classification": "fcs",
     "conference": "Southern",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 9,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "ppg": 35.18,
-      "allowed": 21.91,
-      "q1Scored": 5.09,
-      "q1Allowed": 4.55,
-      "h1Scored": 18.91,
-      "h1Allowed": 11.91
+      "ppg": 33.58,
+      "allowed": 22.92,
+      "q1Scored": 4.92,
+      "q1Allowed": 4.75,
+      "h1Scored": 18.17,
+      "h1Allowed": 12.58
     },
     "home": {
       "games": 6,
@@ -28809,16 +30255,16 @@
       "h1Allowed": 8.33
     },
     "away": {
-      "games": 5,
+      "games": 6,
       "wins": 4,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "ppg": 27.6,
-      "allowed": 24.2,
-      "q1Scored": 2.8,
-      "q1Allowed": 6.0,
-      "h1Scored": 13.2,
-      "h1Allowed": 16.2
+      "ppg": 25.67,
+      "allowed": 25.83,
+      "q1Scored": 2.83,
+      "q1Allowed": 6.17,
+      "h1Scored": 12.67,
+      "h1Allowed": 16.83
     },
     "games": [
       {
@@ -28974,6 +30420,20 @@
         "q1Allowed": 10,
         "h1Scored": 10,
         "h1Allowed": 17
+      },
+      {
+        "gameId": 401856750,
+        "date": "2026-11-21T18:00:00.000Z",
+        "opponent": "Mississippi State",
+        "location": "away",
+        "pointsScored": 16,
+        "pointsAllowed": 34,
+        "won": false,
+        "tied": false,
+        "q1Scored": 3,
+        "q1Allowed": 7,
+        "h1Scored": 10,
+        "h1Allowed": 20
       }
     ]
   },
@@ -29041,28 +30501,28 @@
     "classification": "fcs",
     "conference": "SWAC",
     "overall": {
-      "games": 10,
+      "games": 11,
       "wins": 3,
-      "losses": 7,
+      "losses": 8,
       "ties": 0,
-      "ppg": 23.4,
-      "allowed": 39.0,
-      "q1Scored": 2.7,
-      "q1Allowed": 11.4,
-      "h1Scored": 10.8,
-      "h1Allowed": 19.7
+      "ppg": 22.82,
+      "allowed": 39.27,
+      "q1Scored": 2.45,
+      "q1Allowed": 12.27,
+      "h1Scored": 10.09,
+      "h1Allowed": 20.45
     },
     "home": {
-      "games": 5,
+      "games": 6,
       "wins": 3,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "ppg": 30.8,
-      "allowed": 28.6,
-      "q1Scored": 2.8,
-      "q1Allowed": 7.0,
-      "h1Scored": 13.8,
-      "h1Allowed": 11.0
+      "ppg": 28.5,
+      "allowed": 30.83,
+      "q1Scored": 2.33,
+      "q1Allowed": 9.33,
+      "h1Scored": 12.0,
+      "h1Allowed": 13.83
     },
     "away": {
       "games": 5,
@@ -29215,6 +30675,20 @@
         "q1Scored": 0,
         "q1Allowed": 14,
         "h1Scored": 0,
+        "h1Allowed": 28
+      },
+      {
+        "gameId": 401868941,
+        "date": "2026-11-21T20:00:00.000Z",
+        "opponent": "Arkansas-Pine Bluff",
+        "location": "home",
+        "pointsScored": 17,
+        "pointsAllowed": 42,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 21,
+        "h1Scored": 3,
         "h1Allowed": 28
       }
     ]
@@ -29399,16 +30873,16 @@
     "classification": "fcs",
     "conference": "Southern",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 3,
-      "losses": 8,
+      "losses": 9,
       "ties": 0,
-      "ppg": 18.64,
-      "allowed": 31.18,
-      "q1Scored": 4.36,
-      "q1Allowed": 5.27,
-      "h1Scored": 6.18,
-      "h1Allowed": 11.55
+      "ppg": 19.0,
+      "allowed": 31.75,
+      "q1Scored": 4.0,
+      "q1Allowed": 6.0,
+      "h1Scored": 6.25,
+      "h1Allowed": 12.58
     },
     "home": {
       "games": 5,
@@ -29423,16 +30897,16 @@
       "h1Allowed": 10.8
     },
     "away": {
-      "games": 6,
+      "games": 7,
       "wins": 3,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "ppg": 22.33,
-      "allowed": 34.0,
-      "q1Scored": 3.5,
-      "q1Allowed": 5.17,
-      "h1Scored": 5.67,
-      "h1Allowed": 12.17
+      "ppg": 22.43,
+      "allowed": 34.57,
+      "q1Scored": 3.0,
+      "q1Allowed": 6.43,
+      "h1Scored": 5.86,
+      "h1Allowed": 13.86
     },
     "games": [
       {
@@ -29588,6 +31062,20 @@
         "q1Allowed": 0,
         "h1Scored": 0,
         "h1Allowed": 0
+      },
+      {
+        "gameId": 401868396,
+        "date": "2026-11-21T18:00:00.000Z",
+        "opponent": "Western Carolina",
+        "location": "away",
+        "pointsScored": 23,
+        "pointsAllowed": 38,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 14,
+        "h1Scored": 7,
+        "h1Allowed": 24
       }
     ]
   },
@@ -29713,28 +31201,28 @@
     "classification": "fcs",
     "conference": "Coastal Athletic",
     "overall": {
-      "games": 11,
-      "wins": 3,
+      "games": 12,
+      "wins": 4,
       "losses": 8,
       "ties": 0,
-      "ppg": 26.0,
-      "allowed": 31.55,
-      "q1Scored": 3.91,
-      "q1Allowed": 7.82,
-      "h1Scored": 12.0,
-      "h1Allowed": 18.27
+      "ppg": 26.17,
+      "allowed": 30.92,
+      "q1Scored": 3.58,
+      "q1Allowed": 7.75,
+      "h1Scored": 11.58,
+      "h1Allowed": 17.92
     },
     "home": {
-      "games": 4,
-      "wins": 1,
+      "games": 5,
+      "wins": 2,
       "losses": 3,
       "ties": 0,
       "ppg": 28.0,
-      "allowed": 26.5,
-      "q1Scored": 3.25,
-      "q1Allowed": 5.25,
-      "h1Scored": 12.75,
-      "h1Allowed": 17.0
+      "allowed": 26.0,
+      "q1Scored": 2.6,
+      "q1Allowed": 5.6,
+      "h1Scored": 11.6,
+      "h1Allowed": 16.4
     },
     "away": {
       "games": 7,
@@ -29902,6 +31390,20 @@
         "q1Allowed": 7,
         "h1Scored": 3,
         "h1Allowed": 7
+      },
+      {
+        "gameId": 401866698,
+        "date": "2026-11-21T18:00:00.000Z",
+        "opponent": "Elon",
+        "location": "home",
+        "pointsScored": 28,
+        "pointsAllowed": 24,
+        "won": true,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 7,
+        "h1Scored": 7,
+        "h1Allowed": 14
       }
     ]
   },
@@ -30201,16 +31703,16 @@
     "classification": "fcs",
     "conference": "Coastal Athletic",
     "overall": {
-      "games": 11,
-      "wins": 7,
+      "games": 12,
+      "wins": 8,
       "losses": 4,
       "ties": 0,
-      "ppg": 27.55,
-      "allowed": 20.18,
-      "q1Scored": 7.27,
-      "q1Allowed": 4.09,
-      "h1Scored": 14.0,
-      "h1Allowed": 12.18
+      "ppg": 27.25,
+      "allowed": 19.08,
+      "q1Scored": 6.67,
+      "q1Allowed": 3.75,
+      "h1Scored": 13.67,
+      "h1Allowed": 11.17
     },
     "home": {
       "games": 5,
@@ -30225,16 +31727,16 @@
       "h1Allowed": 11.0
     },
     "away": {
-      "games": 6,
-      "wins": 3,
+      "games": 7,
+      "wins": 4,
       "losses": 3,
       "ties": 0,
-      "ppg": 24.17,
-      "allowed": 23.17,
-      "q1Scored": 5.17,
-      "q1Allowed": 2.33,
-      "h1Scored": 9.67,
-      "h1Allowed": 13.17
+      "ppg": 24.14,
+      "allowed": 20.86,
+      "q1Scored": 4.43,
+      "q1Allowed": 2.0,
+      "h1Scored": 9.71,
+      "h1Allowed": 11.29
     },
     "games": [
       {
@@ -30390,6 +31892,20 @@
         "q1Allowed": 0,
         "h1Scored": 23,
         "h1Allowed": 3
+      },
+      {
+        "gameId": 401866694,
+        "date": "2026-11-21T17:00:00.000Z",
+        "opponent": "North Carolina A&T",
+        "location": "away",
+        "pointsScored": 24,
+        "pointsAllowed": 7,
+        "won": true,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 0,
+        "h1Scored": 10,
+        "h1Allowed": 0
       }
     ]
   },
@@ -30399,28 +31915,28 @@
     "classification": "fcs",
     "conference": "Big Sky",
     "overall": {
-      "games": 11,
-      "wins": 7,
+      "games": 12,
+      "wins": 8,
       "losses": 4,
       "ties": 0,
-      "ppg": 29.27,
-      "allowed": 29.73,
-      "q1Scored": 4.45,
-      "q1Allowed": 8.0,
-      "h1Scored": 13.36,
-      "h1Allowed": 15.82
+      "ppg": 30.5,
+      "allowed": 30.83,
+      "q1Scored": 4.67,
+      "q1Allowed": 8.58,
+      "h1Scored": 14.0,
+      "h1Allowed": 16.92
     },
     "home": {
-      "games": 5,
-      "wins": 4,
+      "games": 6,
+      "wins": 5,
       "losses": 1,
       "ties": 0,
-      "ppg": 34.6,
-      "allowed": 26.0,
-      "q1Scored": 8.4,
-      "q1Allowed": 6.0,
-      "h1Scored": 17.6,
-      "h1Allowed": 12.0
+      "ppg": 36.17,
+      "allowed": 28.83,
+      "q1Scored": 8.17,
+      "q1Allowed": 7.5,
+      "h1Scored": 18.17,
+      "h1Allowed": 14.83
     },
     "away": {
       "games": 6,
@@ -30588,6 +32104,20 @@
         "q1Allowed": 7,
         "h1Scored": 7,
         "h1Allowed": 14
+      },
+      {
+        "gameId": 401868083,
+        "date": "2026-11-21T21:00:00.000Z",
+        "opponent": "Cal Poly",
+        "location": "home",
+        "pointsScored": 44,
+        "pointsAllowed": 43,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 15,
+        "h1Scored": 21,
+        "h1Allowed": 29
       }
     ]
   },
@@ -30829,16 +32359,16 @@
     "classification": "fcs",
     "conference": "OVC",
     "overall": {
-      "games": 11,
-      "wins": 5,
+      "games": 12,
+      "wins": 6,
       "losses": 6,
       "ties": 0,
-      "ppg": 23.91,
-      "allowed": 31.82,
-      "q1Scored": 2.73,
-      "q1Allowed": 8.73,
-      "h1Scored": 12.0,
-      "h1Allowed": 16.55
+      "ppg": 26.17,
+      "allowed": 33.08,
+      "q1Scored": 3.08,
+      "q1Allowed": 10.5,
+      "h1Scored": 12.75,
+      "h1Allowed": 18.25
     },
     "home": {
       "games": 5,
@@ -30853,16 +32383,16 @@
       "h1Allowed": 14.2
     },
     "away": {
-      "games": 6,
-      "wins": 2,
+      "games": 7,
+      "wins": 3,
       "losses": 4,
       "ties": 0,
-      "ppg": 21.0,
-      "allowed": 37.5,
-      "q1Scored": 3.83,
-      "q1Allowed": 10.33,
-      "h1Scored": 9.5,
-      "h1Allowed": 18.5
+      "ppg": 25.29,
+      "allowed": 38.86,
+      "q1Scored": 4.29,
+      "q1Allowed": 13.14,
+      "h1Scored": 11.14,
+      "h1Allowed": 21.14
     },
     "games": [
       {
@@ -31018,6 +32548,20 @@
         "q1Allowed": 7,
         "h1Scored": 17,
         "h1Allowed": 21
+      },
+      {
+        "gameId": 401868203,
+        "date": "2026-11-21T19:00:00.000Z",
+        "opponent": "Southeast Missouri State",
+        "location": "away",
+        "pointsScored": 51,
+        "pointsAllowed": 47,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 30,
+        "h1Scored": 21,
+        "h1Allowed": 37
       }
     ]
   },
@@ -31085,16 +32629,16 @@
     "classification": "fcs",
     "conference": "Southland",
     "overall": {
-      "games": 11,
-      "wins": 5,
+      "games": 12,
+      "wins": 6,
       "losses": 6,
       "ties": 0,
-      "ppg": 24.18,
-      "allowed": 25.82,
-      "q1Scored": 5.55,
-      "q1Allowed": 6.27,
-      "h1Scored": 12.82,
-      "h1Allowed": 14.36
+      "ppg": 24.33,
+      "allowed": 24.83,
+      "q1Scored": 5.33,
+      "q1Allowed": 6.33,
+      "h1Scored": 13.17,
+      "h1Allowed": 14.33
     },
     "home": {
       "games": 5,
@@ -31109,16 +32653,16 @@
       "h1Allowed": 9.6
     },
     "away": {
-      "games": 6,
-      "wins": 2,
+      "games": 7,
+      "wins": 3,
       "losses": 4,
       "ties": 0,
-      "ppg": 26.5,
-      "allowed": 28.5,
-      "q1Scored": 5.17,
-      "q1Allowed": 6.33,
-      "h1Scored": 14.83,
-      "h1Allowed": 18.33
+      "ppg": 26.43,
+      "allowed": 26.43,
+      "q1Scored": 4.86,
+      "q1Allowed": 6.43,
+      "h1Scored": 15.14,
+      "h1Allowed": 17.71
     },
     "games": [
       {
@@ -31274,6 +32818,20 @@
         "q1Allowed": 17,
         "h1Scored": 0,
         "h1Allowed": 24
+      },
+      {
+        "gameId": 401868294,
+        "date": "2026-11-21T22:00:00.000Z",
+        "opponent": "Houston Christian",
+        "location": "away",
+        "pointsScored": 26,
+        "pointsAllowed": 14,
+        "won": true,
+        "tied": false,
+        "q1Scored": 3,
+        "q1Allowed": 7,
+        "h1Scored": 17,
+        "h1Allowed": 14
       }
     ]
   },
@@ -31631,16 +33189,16 @@
     "classification": "fcs",
     "conference": "Big Sky",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 1,
-      "losses": 10,
+      "losses": 11,
       "ties": 0,
-      "ppg": 19.91,
-      "allowed": 37.73,
-      "q1Scored": 4.09,
-      "q1Allowed": 9.0,
-      "h1Scored": 8.91,
-      "h1Allowed": 21.55
+      "ppg": 20.25,
+      "allowed": 37.17,
+      "q1Scored": 4.33,
+      "q1Allowed": 8.83,
+      "h1Scored": 9.58,
+      "h1Allowed": 20.92
     },
     "home": {
       "games": 5,
@@ -31655,16 +33213,16 @@
       "h1Allowed": 19.8
     },
     "away": {
-      "games": 6,
+      "games": 7,
       "wins": 1,
-      "losses": 5,
+      "losses": 6,
       "ties": 0,
-      "ppg": 18.0,
-      "allowed": 35.83,
-      "q1Scored": 3.5,
-      "q1Allowed": 8.33,
-      "h1Scored": 9.0,
-      "h1Allowed": 23.0
+      "ppg": 18.86,
+      "allowed": 35.14,
+      "q1Scored": 4.0,
+      "q1Allowed": 8.14,
+      "h1Scored": 10.14,
+      "h1Allowed": 21.71
     },
     "games": [
       {
@@ -31820,6 +33378,20 @@
         "q1Allowed": 17,
         "h1Scored": 7,
         "h1Allowed": 17
+      },
+      {
+        "gameId": 401868167,
+        "date": "2026-11-21T20:00:00.000Z",
+        "opponent": "Weber State",
+        "location": "away",
+        "pointsScored": 24,
+        "pointsAllowed": 31,
+        "won": false,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 7,
+        "h1Scored": 17,
+        "h1Allowed": 14
       }
     ]
   },
@@ -31829,28 +33401,28 @@
     "classification": "fcs",
     "conference": "Southern",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 0,
-      "losses": 11,
+      "losses": 12,
       "ties": 0,
-      "ppg": 9.91,
-      "allowed": 40.36,
-      "q1Scored": 3.09,
-      "q1Allowed": 6.18,
-      "h1Scored": 4.27,
-      "h1Allowed": 20.36
+      "ppg": 9.33,
+      "allowed": 39.92,
+      "q1Scored": 2.83,
+      "q1Allowed": 6.83,
+      "h1Scored": 4.17,
+      "h1Allowed": 21.0
     },
     "home": {
-      "games": 4,
+      "games": 5,
       "wins": 0,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "ppg": 6.75,
-      "allowed": 32.5,
-      "q1Scored": 0.75,
-      "q1Allowed": 4.25,
-      "h1Scored": 1.5,
-      "h1Allowed": 11.0
+      "ppg": 6.0,
+      "allowed": 33.0,
+      "q1Scored": 0.6,
+      "q1Allowed": 6.2,
+      "h1Scored": 1.8,
+      "h1Allowed": 14.4
     },
     "away": {
       "games": 7,
@@ -32018,6 +33590,20 @@
         "q1Allowed": 0,
         "h1Scored": 0,
         "h1Allowed": 0
+      },
+      {
+        "gameId": 401868380,
+        "date": "2026-11-21T17:00:00.000Z",
+        "opponent": "Furman",
+        "location": "home",
+        "pointsScored": 3,
+        "pointsAllowed": 35,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 14,
+        "h1Scored": 3,
+        "h1Allowed": 28
       }
     ]
   },
@@ -32027,28 +33613,28 @@
     "classification": "fcs",
     "conference": "Pioneer",
     "overall": {
-      "games": 10,
+      "games": 11,
       "wins": 5,
-      "losses": 5,
+      "losses": 6,
       "ties": 0,
-      "ppg": 27.0,
-      "allowed": 23.5,
-      "q1Scored": 6.6,
-      "q1Allowed": 5.3,
-      "h1Scored": 12.9,
-      "h1Allowed": 13.0
+      "ppg": 25.18,
+      "allowed": 22.55,
+      "q1Scored": 6.64,
+      "q1Allowed": 4.82,
+      "h1Scored": 12.36,
+      "h1Allowed": 12.73
     },
     "home": {
-      "games": 4,
+      "games": 5,
       "wins": 3,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "ppg": 33.0,
-      "allowed": 16.5,
-      "q1Scored": 10.5,
-      "q1Allowed": 2.5,
-      "h1Scored": 18.25,
-      "h1Allowed": 10.75
+      "ppg": 27.8,
+      "allowed": 15.8,
+      "q1Scored": 9.8,
+      "q1Allowed": 2.0,
+      "h1Scored": 16.0,
+      "h1Allowed": 10.6
     },
     "away": {
       "games": 6,
@@ -32202,6 +33788,20 @@
         "q1Allowed": 10,
         "h1Scored": 16,
         "h1Allowed": 10
+      },
+      {
+        "gameId": 401868283,
+        "date": "2026-11-21T19:00:00.000Z",
+        "opponent": "St. Thomas (MN)",
+        "location": "home",
+        "pointsScored": 7,
+        "pointsAllowed": 13,
+        "won": false,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 0,
+        "h1Scored": 7,
+        "h1Allowed": 10
       }
     ]
   },
@@ -32269,28 +33869,28 @@
     "classification": "fcs",
     "conference": "Patriot",
     "overall": {
-      "games": 11,
-      "wins": 6,
+      "games": 12,
+      "wins": 7,
       "losses": 5,
       "ties": 0,
-      "ppg": 27.36,
-      "allowed": 25.27,
-      "q1Scored": 6.91,
-      "q1Allowed": 6.64,
-      "h1Scored": 16.27,
-      "h1Allowed": 11.55
+      "ppg": 27.92,
+      "allowed": 24.25,
+      "q1Scored": 6.92,
+      "q1Allowed": 6.08,
+      "h1Scored": 16.33,
+      "h1Allowed": 11.67
     },
     "home": {
-      "games": 5,
-      "wins": 2,
+      "games": 6,
+      "wins": 3,
       "losses": 3,
       "ties": 0,
-      "ppg": 28.4,
-      "allowed": 23.8,
+      "ppg": 29.33,
+      "allowed": 22.0,
       "q1Scored": 7.0,
-      "q1Allowed": 5.6,
-      "h1Scored": 17.2,
-      "h1Allowed": 9.6
+      "q1Allowed": 4.67,
+      "h1Scored": 17.17,
+      "h1Allowed": 10.17
     },
     "away": {
       "games": 6,
@@ -32458,6 +34058,20 @@
         "q1Allowed": 14,
         "h1Scored": 7,
         "h1Allowed": 21
+      },
+      {
+        "gameId": 401868021,
+        "date": "2026-11-21T18:00:00.000Z",
+        "opponent": "Georgetown",
+        "location": "home",
+        "pointsScored": 34,
+        "pointsAllowed": 13,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 0,
+        "h1Scored": 17,
+        "h1Allowed": 13
       }
     ]
   },
@@ -32755,16 +34369,16 @@
     "classification": "fcs",
     "conference": "NEC",
     "overall": {
-      "games": 11,
-      "wins": 3,
+      "games": 12,
+      "wins": 4,
       "losses": 8,
       "ties": 0,
-      "ppg": 15.09,
-      "allowed": 33.36,
-      "q1Scored": 5.0,
-      "q1Allowed": 10.55,
-      "h1Scored": 10.64,
-      "h1Allowed": 19.64
+      "ppg": 16.75,
+      "allowed": 33.17,
+      "q1Scored": 5.83,
+      "q1Allowed": 10.83,
+      "h1Scored": 11.0,
+      "h1Allowed": 20.58
     },
     "home": {
       "games": 5,
@@ -32779,16 +34393,16 @@
       "h1Allowed": 9.0
     },
     "away": {
-      "games": 6,
-      "wins": 1,
+      "games": 7,
+      "wins": 2,
       "losses": 5,
       "ties": 0,
-      "ppg": 15.33,
-      "allowed": 46.67,
-      "q1Scored": 5.17,
-      "q1Allowed": 15.83,
-      "h1Scored": 11.0,
-      "h1Allowed": 28.5
+      "ppg": 18.14,
+      "allowed": 44.43,
+      "q1Scored": 6.57,
+      "q1Allowed": 15.57,
+      "h1Scored": 11.57,
+      "h1Allowed": 28.86
     },
     "games": [
       {
@@ -32944,6 +34558,20 @@
         "q1Allowed": 0,
         "h1Scored": 14,
         "h1Allowed": 10
+      },
+      {
+        "gameId": 401867927,
+        "date": "2026-11-21T17:00:00.000Z",
+        "opponent": "Stonehill",
+        "location": "away",
+        "pointsScored": 35,
+        "pointsAllowed": 31,
+        "won": true,
+        "tied": false,
+        "q1Scored": 15,
+        "q1Allowed": 14,
+        "h1Scored": 15,
+        "h1Allowed": 31
       }
     ]
   },
@@ -33185,28 +34813,28 @@
     "classification": "fcs",
     "conference": "Big Sky",
     "overall": {
-      "games": 11,
-      "wins": 7,
+      "games": 12,
+      "wins": 8,
       "losses": 4,
       "ties": 0,
-      "ppg": 35.09,
-      "allowed": 31.45,
-      "q1Scored": 9.27,
-      "q1Allowed": 7.91,
-      "h1Scored": 19.09,
-      "h1Allowed": 16.36
+      "ppg": 34.75,
+      "allowed": 30.83,
+      "q1Scored": 9.08,
+      "q1Allowed": 7.83,
+      "h1Scored": 18.67,
+      "h1Allowed": 16.42
     },
     "home": {
-      "games": 5,
-      "wins": 4,
+      "games": 6,
+      "wins": 5,
       "losses": 1,
       "ties": 0,
-      "ppg": 38.6,
-      "allowed": 25.0,
-      "q1Scored": 11.6,
+      "ppg": 37.33,
+      "allowed": 24.83,
+      "q1Scored": 10.83,
       "q1Allowed": 7.0,
-      "h1Scored": 18.0,
-      "h1Allowed": 12.4
+      "h1Scored": 17.33,
+      "h1Allowed": 13.17
     },
     "away": {
       "games": 6,
@@ -33374,6 +35002,20 @@
         "q1Allowed": 7,
         "h1Scored": 16,
         "h1Allowed": 17
+      },
+      {
+        "gameId": 401868167,
+        "date": "2026-11-21T20:00:00.000Z",
+        "opponent": "Utah Tech",
+        "location": "home",
+        "pointsScored": 31,
+        "pointsAllowed": 24,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 7,
+        "h1Scored": 14,
+        "h1Allowed": 17
       }
     ]
   },
@@ -33441,16 +35083,16 @@
     "classification": "fcs",
     "conference": "UAC",
     "overall": {
-      "games": 9,
-      "wins": 4,
+      "games": 10,
+      "wins": 5,
       "losses": 5,
       "ties": 0,
-      "ppg": 23.0,
-      "allowed": 23.67,
-      "q1Scored": 4.44,
-      "q1Allowed": 6.11,
-      "h1Scored": 12.67,
-      "h1Allowed": 15.67
+      "ppg": 23.1,
+      "allowed": 22.9,
+      "q1Scored": 4.7,
+      "q1Allowed": 5.5,
+      "h1Scored": 13.1,
+      "h1Allowed": 14.1
     },
     "home": {
       "games": 4,
@@ -33465,16 +35107,16 @@
       "h1Allowed": 16.25
     },
     "away": {
-      "games": 5,
-      "wins": 2,
+      "games": 6,
+      "wins": 3,
       "losses": 3,
       "ties": 0,
-      "ppg": 20.6,
-      "allowed": 22.0,
-      "q1Scored": 4.8,
-      "q1Allowed": 4.8,
-      "h1Scored": 10.2,
-      "h1Allowed": 15.2
+      "ppg": 21.17,
+      "allowed": 21.0,
+      "q1Scored": 5.17,
+      "q1Allowed": 4.0,
+      "h1Scored": 11.33,
+      "h1Allowed": 12.67
     },
     "games": [
       {
@@ -33602,6 +35244,20 @@
         "q1Allowed": 14,
         "h1Scored": 10,
         "h1Allowed": 28
+      },
+      {
+        "gameId": 401868244,
+        "date": "2026-11-21T19:00:00.000Z",
+        "opponent": "West Georgia",
+        "location": "away",
+        "pointsScored": 24,
+        "pointsAllowed": 16,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 0,
+        "h1Scored": 17,
+        "h1Allowed": 0
       }
     ]
   },
@@ -33611,28 +35267,28 @@
     "classification": "fcs",
     "conference": "UAC",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 1,
-      "losses": 10,
+      "losses": 11,
       "ties": 0,
-      "ppg": 13.64,
-      "allowed": 35.45,
-      "q1Scored": 4.64,
-      "q1Allowed": 6.18,
-      "h1Scored": 8.73,
-      "h1Allowed": 18.27
+      "ppg": 13.83,
+      "allowed": 34.5,
+      "q1Scored": 4.25,
+      "q1Allowed": 6.25,
+      "h1Scored": 8.0,
+      "h1Allowed": 18.17
     },
     "home": {
-      "games": 5,
+      "games": 6,
       "wins": 1,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "ppg": 16.4,
-      "allowed": 26.4,
-      "q1Scored": 7.4,
-      "q1Allowed": 2.8,
-      "h1Scored": 11.6,
-      "h1Allowed": 10.4
+      "ppg": 16.33,
+      "allowed": 26.0,
+      "q1Scored": 6.17,
+      "q1Allowed": 3.5,
+      "h1Scored": 9.67,
+      "h1Allowed": 11.5
     },
     "away": {
       "games": 6,
@@ -33800,6 +35456,20 @@
         "q1Allowed": 7,
         "h1Scored": 7,
         "h1Allowed": 21
+      },
+      {
+        "gameId": 401868244,
+        "date": "2026-11-21T19:00:00.000Z",
+        "opponent": "West Florida",
+        "location": "home",
+        "pointsScored": 16,
+        "pointsAllowed": 24,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 7,
+        "h1Scored": 0,
+        "h1Allowed": 17
       }
     ]
   },
@@ -33925,28 +35595,28 @@
     "classification": "fcs",
     "conference": "Southern",
     "overall": {
-      "games": 11,
-      "wins": 6,
+      "games": 12,
+      "wins": 7,
       "losses": 5,
       "ties": 0,
-      "ppg": 28.09,
-      "allowed": 28.09,
-      "q1Scored": 5.27,
-      "q1Allowed": 5.0,
-      "h1Scored": 13.45,
-      "h1Allowed": 15.55
+      "ppg": 28.92,
+      "allowed": 27.67,
+      "q1Scored": 6.0,
+      "q1Allowed": 4.58,
+      "h1Scored": 14.33,
+      "h1Allowed": 14.83
     },
     "home": {
-      "games": 5,
-      "wins": 4,
+      "games": 6,
+      "wins": 5,
       "losses": 1,
       "ties": 0,
-      "ppg": 38.2,
-      "allowed": 21.2,
-      "q1Scored": 8.2,
-      "q1Allowed": 1.4,
-      "h1Scored": 16.6,
-      "h1Allowed": 11.6
+      "ppg": 38.17,
+      "allowed": 21.5,
+      "q1Scored": 9.17,
+      "q1Allowed": 1.17,
+      "h1Scored": 17.83,
+      "h1Allowed": 10.83
     },
     "away": {
       "games": 6,
@@ -34114,6 +35784,20 @@
         "q1Allowed": 3,
         "h1Scored": 7,
         "h1Allowed": 6
+      },
+      {
+        "gameId": 401868396,
+        "date": "2026-11-21T18:00:00.000Z",
+        "opponent": "The Citadel",
+        "location": "home",
+        "pointsScored": 38,
+        "pointsAllowed": 23,
+        "won": true,
+        "tied": false,
+        "q1Scored": 14,
+        "q1Allowed": 0,
+        "h1Scored": 24,
+        "h1Allowed": 7
       }
     ]
   },
@@ -34123,16 +35807,16 @@
     "classification": "fcs",
     "conference": "OVC",
     "overall": {
-      "games": 11,
-      "wins": 7,
+      "games": 12,
+      "wins": 8,
       "losses": 4,
       "ties": 0,
-      "ppg": 37.0,
-      "allowed": 24.18,
-      "q1Scored": 7.82,
-      "q1Allowed": 7.09,
-      "h1Scored": 16.45,
-      "h1Allowed": 11.91
+      "ppg": 37.33,
+      "allowed": 22.75,
+      "q1Scored": 7.75,
+      "q1Allowed": 6.5,
+      "h1Scored": 16.5,
+      "h1Allowed": 10.92
     },
     "home": {
       "games": 6,
@@ -34147,16 +35831,16 @@
       "h1Allowed": 9.67
     },
     "away": {
-      "games": 5,
-      "wins": 2,
+      "games": 6,
+      "wins": 3,
       "losses": 3,
       "ties": 0,
-      "ppg": 29.0,
-      "allowed": 31.4,
-      "q1Scored": 6.8,
-      "q1Allowed": 9.4,
-      "h1Scored": 13.0,
-      "h1Allowed": 14.6
+      "ppg": 31.0,
+      "allowed": 27.33,
+      "q1Scored": 6.83,
+      "q1Allowed": 7.83,
+      "h1Scored": 13.67,
+      "h1Allowed": 12.17
     },
     "games": [
       {
@@ -34312,6 +35996,20 @@
         "q1Allowed": 0,
         "h1Scored": 24,
         "h1Allowed": 0
+      },
+      {
+        "gameId": 401868208,
+        "date": "2026-11-21T20:00:00.000Z",
+        "opponent": "Lindenwood",
+        "location": "away",
+        "pointsScored": 41,
+        "pointsAllowed": 7,
+        "won": true,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 0,
+        "h1Scored": 17,
+        "h1Allowed": 0
       }
     ]
   },
@@ -34437,16 +36135,16 @@
     "classification": "fcs",
     "conference": "Patriot",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 4,
-      "losses": 7,
+      "losses": 8,
       "ties": 0,
-      "ppg": 20.36,
-      "allowed": 33.45,
-      "q1Scored": 6.55,
-      "q1Allowed": 7.09,
-      "h1Scored": 9.36,
-      "h1Allowed": 17.36
+      "ppg": 20.0,
+      "allowed": 32.08,
+      "q1Scored": 6.58,
+      "q1Allowed": 6.5,
+      "h1Scored": 9.33,
+      "h1Allowed": 16.17
     },
     "home": {
       "games": 6,
@@ -34461,16 +36159,16 @@
       "h1Allowed": 12.0
     },
     "away": {
-      "games": 5,
+      "games": 6,
       "wins": 2,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "ppg": 15.8,
-      "allowed": 37.8,
-      "q1Scored": 4.2,
-      "q1Allowed": 7.4,
-      "h1Scored": 6.2,
-      "h1Allowed": 23.8
+      "ppg": 15.83,
+      "allowed": 34.33,
+      "q1Scored": 4.67,
+      "q1Allowed": 6.17,
+      "h1Scored": 6.67,
+      "h1Allowed": 20.33
     },
     "games": [
       {
@@ -34625,6 +36323,20 @@
         "q1Scored": 14,
         "q1Allowed": 3,
         "h1Scored": 14,
+        "h1Allowed": 3
+      },
+      {
+        "gameId": 401868039,
+        "date": "2026-11-21T17:00:00.000Z",
+        "opponent": "Richmond",
+        "location": "away",
+        "pointsScored": 16,
+        "pointsAllowed": 17,
+        "won": false,
+        "tied": false,
+        "q1Scored": 7,
+        "q1Allowed": 0,
+        "h1Scored": 9,
         "h1Allowed": 3
       }
     ]
@@ -34809,16 +36521,16 @@
     "classification": "fcs",
     "conference": "Southern",
     "overall": {
-      "games": 11,
+      "games": 12,
       "wins": 5,
-      "losses": 6,
+      "losses": 7,
       "ties": 0,
-      "ppg": 22.18,
-      "allowed": 21.91,
-      "q1Scored": 4.45,
-      "q1Allowed": 4.18,
-      "h1Scored": 14.82,
-      "h1Allowed": 10.36
+      "ppg": 21.75,
+      "allowed": 25.0,
+      "q1Scored": 4.08,
+      "q1Allowed": 5.58,
+      "h1Scored": 13.83,
+      "h1Allowed": 13.58
     },
     "home": {
       "games": 5,
@@ -34833,16 +36545,16 @@
       "h1Allowed": 7.6
     },
     "away": {
-      "games": 6,
+      "games": 7,
       "wins": 2,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "ppg": 14.83,
-      "allowed": 23.0,
-      "q1Scored": 4.17,
-      "q1Allowed": 3.67,
-      "h1Scored": 11.0,
-      "h1Allowed": 12.67
+      "ppg": 15.14,
+      "allowed": 28.14,
+      "q1Scored": 3.57,
+      "q1Allowed": 6.14,
+      "h1Scored": 9.86,
+      "h1Allowed": 17.86
     },
     "games": [
       {
@@ -34998,6 +36710,20 @@
         "q1Allowed": 0,
         "h1Scored": 10,
         "h1Allowed": 7
+      },
+      {
+        "gameId": 401856749,
+        "date": "2026-11-21T17:00:00.000Z",
+        "opponent": "Ole Miss",
+        "location": "away",
+        "pointsScored": 17,
+        "pointsAllowed": 59,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 21,
+        "h1Scored": 3,
+        "h1Allowed": 49
       }
     ]
   },
@@ -35065,16 +36791,16 @@
     "classification": "fcs",
     "conference": "Ivy",
     "overall": {
-      "games": 9,
-      "wins": 5,
+      "games": 10,
+      "wins": 6,
       "losses": 4,
       "ties": 0,
-      "ppg": 27.78,
-      "allowed": 21.56,
-      "q1Scored": 5.44,
-      "q1Allowed": 7.78,
-      "h1Scored": 12.56,
-      "h1Allowed": 11.11
+      "ppg": 27.0,
+      "allowed": 21.1,
+      "q1Scored": 5.2,
+      "q1Allowed": 7.7,
+      "h1Scored": 12.6,
+      "h1Allowed": 11.0
     },
     "home": {
       "games": 5,
@@ -35089,16 +36815,16 @@
       "h1Allowed": 13.0
     },
     "away": {
-      "games": 4,
-      "wins": 2,
+      "games": 5,
+      "wins": 3,
       "losses": 2,
       "ties": 0,
-      "ppg": 27.5,
-      "allowed": 24.5,
-      "q1Scored": 3.5,
+      "ppg": 26.0,
+      "allowed": 23.0,
+      "q1Scored": 3.4,
       "q1Allowed": 7.0,
-      "h1Scored": 11.75,
-      "h1Allowed": 8.75
+      "h1Scored": 12.0,
+      "h1Allowed": 9.0
     },
     "games": [
       {
@@ -35226,6 +36952,20 @@
         "q1Allowed": 0,
         "h1Scored": 14,
         "h1Allowed": 0
+      },
+      {
+        "gameId": 401867844,
+        "date": "2026-11-21T20:30:00.000Z",
+        "opponent": "Harvard",
+        "location": "away",
+        "pointsScored": 20,
+        "pointsAllowed": 17,
+        "won": true,
+        "tied": false,
+        "q1Scored": 3,
+        "q1Allowed": 7,
+        "h1Scored": 13,
+        "h1Allowed": 10
       }
     ]
   },
