@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-11-22T19:31:45.251629+00:00",
+  "updated": "2026-11-23T23:49:02.113510+00:00",
   "games": [
     {
       "gameId": 401866532,
@@ -5684,6 +5684,13 @@
       "date": "2026-11-21T18:00:00.000Z",
       "homeTeam": "Presbyterian",
       "awayTeam": "Dayton",
+      "stats": []
+    },
+    {
+      "gameId": 401868396,
+      "date": "2026-11-21T18:00:00.000Z",
+      "homeTeam": "Western Carolina",
+      "awayTeam": "The Citadel",
       "stats": []
     },
     {
