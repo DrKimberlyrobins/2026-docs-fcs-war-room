@@ -603,28 +603,28 @@
     "classification": "fcs",
     "conference": "SWAC",
     "overall": {
-      "games": 11,
-      "wins": 6,
+      "games": 12,
+      "wins": 7,
       "losses": 5,
       "ties": 0,
-      "ppg": 24.73,
-      "allowed": 22.27,
-      "q1Scored": 6.27,
-      "q1Allowed": 5.55,
-      "h1Scored": 11.36,
-      "h1Allowed": 13.18
+      "ppg": 26.42,
+      "allowed": 20.42,
+      "q1Scored": 7.5,
+      "q1Allowed": 5.08,
+      "h1Scored": 12.75,
+      "h1Allowed": 12.08
     },
     "home": {
-      "games": 6,
-      "wins": 4,
+      "games": 7,
+      "wins": 5,
       "losses": 2,
       "ties": 0,
-      "ppg": 27.0,
-      "allowed": 19.67,
-      "q1Scored": 9.17,
-      "q1Allowed": 3.5,
-      "h1Scored": 14.5,
-      "h1Allowed": 11.33
+      "ppg": 29.57,
+      "allowed": 16.86,
+      "q1Scored": 10.86,
+      "q1Allowed": 3.0,
+      "h1Scored": 16.43,
+      "h1Allowed": 9.71
     },
     "away": {
       "games": 5,
@@ -792,6 +792,20 @@
         "q1Allowed": 7,
         "h1Scored": 10,
         "h1Allowed": 21
+      },
+      {
+        "gameId": 401868354,
+        "date": "2026-11-26T20:00:00.000Z",
+        "opponent": "Tuskegee",
+        "location": "home",
+        "pointsScored": 45,
+        "pointsAllowed": 0,
+        "won": true,
+        "tied": false,
+        "q1Scored": 21,
+        "q1Allowed": 0,
+        "h1Scored": 28,
+        "h1Allowed": 0
       }
     ]
   },
@@ -31587,16 +31601,16 @@
     "classification": "ii",
     "conference": "SIAC",
     "overall": {
-      "games": 1,
+      "games": 2,
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "ppg": 7.0,
-      "allowed": 41.0,
+      "ppg": 3.5,
+      "allowed": 43.0,
       "q1Scored": 0.0,
-      "q1Allowed": 0.0,
+      "q1Allowed": 10.5,
       "h1Scored": 0.0,
-      "h1Allowed": 10.0
+      "h1Allowed": 19.0
     },
     "home": {
       "games": 0,
@@ -31611,16 +31625,16 @@
       "h1Allowed": null
     },
     "away": {
-      "games": 1,
+      "games": 2,
       "wins": 0,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "ppg": 7.0,
-      "allowed": 41.0,
+      "ppg": 3.5,
+      "allowed": 43.0,
       "q1Scored": 0.0,
-      "q1Allowed": 0.0,
+      "q1Allowed": 10.5,
       "h1Scored": 0.0,
-      "h1Allowed": 10.0
+      "h1Allowed": 19.0
     },
     "games": [
       {
@@ -31636,6 +31650,20 @@
         "q1Allowed": 0,
         "h1Scored": 0,
         "h1Allowed": 10
+      },
+      {
+        "gameId": 401868354,
+        "date": "2026-11-26T20:00:00.000Z",
+        "opponent": "Alabama State",
+        "location": "away",
+        "pointsScored": 0,
+        "pointsAllowed": 45,
+        "won": false,
+        "tied": false,
+        "q1Scored": 0,
+        "q1Allowed": 21,
+        "h1Scored": 0,
+        "h1Allowed": 28
       }
     ]
   },
